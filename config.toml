@@ -1,5 +1,5 @@
 baseurl = "http://naes.unr.edu/shoemaker/"
-title = "Shoemaker Lab at UNR"
+title = "Applied Population Ecology Lab at UNR"
 copyright = "&copy; 2016 Kevin T Shoemaker"
 languageCode = "en-us"
 theme = "academic"
@@ -44,7 +44,7 @@ googleAnalytics = ""
       "Population Viability Analysis",
       "Wildlife Conservation and Management",
       "Bayesian Statistics",
-      "Machine Learning for Ecology" 
+      "Machine Learning for Ecology"
 
     ]
     str_interests = "Interests"
@@ -69,7 +69,7 @@ googleAnalytics = ""
   #   Section will only be displayed if there are publications with
   #   `selected = true` in their `+++` preamble.
   [params.publications_selected]
-    detailed_list = true
+    detailed_list = false
     title = "Selected Publications"
     subtitle = ""
 
