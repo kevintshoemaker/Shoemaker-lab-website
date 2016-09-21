@@ -1,4 +1,4 @@
-baseurl = "http://naes.unr.edu/shoemaker/"
+baseurl = "http://naes.unr.edu/shoemaker/lab/"
 title = "Shoemaker Lab at UNR"
 copyright = "&copy; 2016 Kevin T Shoemaker"
 languageCode = "en-us"

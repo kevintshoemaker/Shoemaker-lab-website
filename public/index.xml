@@ -1,30 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Applied Population Ecology Lab at UNR</title>
-    <link>http://naes.unr.edu/shoemaker/</link>
-    <description>Recent content on Applied Population Ecology Lab at UNR</description>
+    <title>Shoemaker Lab at UNR</title>
+    <link>http://naes.unr.edu/shoemaker/lab/</link>
+    <description>Recent content on Shoemaker Lab at UNR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Kevin T Shoemaker</copyright>
     <lastBuildDate>Sat, 17 Sep 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://naes.unr.edu/shoemaker/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>External Project</title>
-      <link>http://naes.unr.edu/shoemaker/project/example-external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://naes.unr.edu/shoemaker/project/example-external-project/</guid>
-      <description></description>
-    </item>
+    <atom:link href="http://naes.unr.edu/shoemaker/lab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Metamodeling for conservation</title>
-      <link>http://naes.unr.edu/shoemaker/project/deep-learning/</link>
+      <link>http://naes.unr.edu/shoemaker/lab/project/Metamodeling/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/project/deep-learning/</guid>
+      <guid>http://naes.unr.edu/shoemaker/lab/project/Metamodeling/</guid>
       <description>&lt;p&gt;As part of my postdoctoral postition at Stony Brook University I was lucky to be part of a large NSF-funded collaborative effort (Research Coordination Network, DEB-1146198) that is focused on developing and testing methods to facilitate &amp;ldquo;metamodel&amp;rdquo; linkages among existing ecological modeling platforms. This project was intended to bring multiple independently developed ecological software packages to bear in addressing complex conservation questions via an &amp;ldquo;open data&amp;rdquo; approach (whereby independent software modules can access and modify shared state variables at run-time). I co-led the development of software to facilitate metamodel linkages using the widely-used Ramas Metapop software for population viability analysis.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Australian turtle case study&lt;/strong&gt;: The northern long-necked turtle (&lt;em&gt;Chelodina rugosa&lt;/em&gt;) is a well-studied turtle species that inhabits the savanna ecosystems of northern Australia. Work by Fordham et al. (2008) suggested that the greatest current risk to long-necked turtle populations is posed by feral pig predation. However, the complex interactions between feral pig predation, human harvest, and climate change, may well determine the fate of this species over a longer term. Modeling northern long-necked turtle dynamics requires an ecosystem-level metamodeling approach. This case study is especially interesting because of the strong role of spatial and temporal environmental heterogeneity in driving these interactions. We are investigating dynamic stability operating at multiple scales, regulating the extinction dynamics of the northern long-necked turtle, with a particular focus on how these processes may be altered under climate change.&lt;/p&gt;
@@ -34,11 +25,21 @@
     </item>
     
     <item>
+      <title>Using capture-mark-recapture data to improve conservation theory and practice</title>
+      <link>http://naes.unr.edu/shoemaker/lab/project/CMR/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://naes.unr.edu/shoemaker/lab/project/CMR/</guid>
+      <description>&lt;p&gt;As part of my dissertation work at SUNY-ESF, I developed a new method for estimating yearling recruitment from mark-recapture data in cases where age information is available (for many turtles, age can be estimated on the basis of annuli &amp;ndash; rings on the scutes of the plastron and/or carapace). More recently, I have been working with colleagues to use a nationwide bird banding database (MAPS: Monitoring Avian Productivity and Survivorship) to parameterize metapopulation models for a broad spectrum of North American avifauna. Also, I am working with colleagues at the University of Rhode Island to use a 100-year mark recapture data set on eastern box turtles (&lt;em&gt;Terrapene c. carolina&lt;/em&gt;) to inform management practices and conservation strategies for this species.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Getting started with the Academic theme for Hugo</title>
-      <link>http://naes.unr.edu/shoemaker/post/getting-started/</link>
+      <link>http://naes.unr.edu/shoemaker/lab/post/getting-started/</link>
       <pubDate>Wed, 20 Apr 2016 12:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/post/getting-started/</guid>
+      <guid>http://naes.unr.edu/shoemaker/lab/post/getting-started/</guid>
       <description>
 
 &lt;p&gt;The Academic theme enables you to easily create a personal academic website using the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; static site generator.&lt;/p&gt;
@@ -98,7 +99,7 @@ cd my_website
 
 &lt;p&gt;For deployment, the &lt;code&gt;baseURL&lt;/code&gt; variable should be changed to match your website URL such as &lt;code&gt;baseURL = &amp;quot;http://your-site.org/&amp;quot;&lt;/code&gt;. The example Disqus commenting variable should be cleared (e.g. &lt;code&gt;disqusShortname = &amp;quot;&amp;quot;&lt;/code&gt;) or set to your own Disqus shortname to enable commenting. To enable Google Analytics, add your tracking code in &lt;code&gt;config.toml&lt;/code&gt; similarly to &lt;code&gt;googleAnalytics = &amp;quot;UA-12345678-9&amp;quot;&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Next, you may be interested to read the guide about &lt;a href=&#34;http://naes.unr.edu/shoemaker/post/managing-content/&#34;&gt;managing content&lt;/a&gt;, or continue reading below for advanced customization tips and instructions for keeping the theme up-to-date with any improvements that become available.&lt;/p&gt;
+&lt;p&gt;Next, you may be interested to read the guide about &lt;a href=&#34;http://naes.unr.edu/shoemaker/lab/post/managing-content/&#34;&gt;managing content&lt;/a&gt;, or continue reading below for advanced customization tips and instructions for keeping the theme up-to-date with any improvements that become available.&lt;/p&gt;
 
 &lt;h2 id=&#34;advanced-customization&#34;&gt;Advanced customization&lt;/h2&gt;
 
@@ -163,13 +164,13 @@ $ git pull upstream
     
     <item>
       <title>Managing content</title>
-      <link>http://naes.unr.edu/shoemaker/post/managing-content/</link>
+      <link>http://naes.unr.edu/shoemaker/lab/post/managing-content/</link>
       <pubDate>Wed, 20 Apr 2016 11:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/post/managing-content/</guid>
+      <guid>http://naes.unr.edu/shoemaker/lab/post/managing-content/</guid>
       <description>
 
-&lt;p&gt;This is a brief guide to managing content with the Academic theme. Content can include homepage sections, publications, projects, and news/blog articles. After you have read this guide about creating and managing content, you may also be interested to learn about &lt;a href=&#34;http://naes.unr.edu/shoemaker/post/writing-markdown-latex/&#34;&gt;writing content with Markdown, LaTeX, and Shortcodes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is a brief guide to managing content with the Academic theme. Content can include homepage sections, publications, projects, and news/blog articles. After you have read this guide about creating and managing content, you may also be interested to learn about &lt;a href=&#34;http://naes.unr.edu/shoemaker/lab/post/writing-markdown-latex/&#34;&gt;writing content with Markdown, LaTeX, and Shortcodes&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;To enable LaTeX math rendering for a page, you should include &lt;code&gt;math = true&lt;/code&gt; in the page&amp;rsquo;s &lt;code&gt;+++&lt;/code&gt; preamble, as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set &lt;code&gt;math = true&lt;/code&gt; in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
 
@@ -280,10 +281,10 @@ Further details on your publication can be written here using *Markdown* for for
     
     <item>
       <title>Writing content with Markdown, LaTeX, and Shortcodes</title>
-      <link>http://naes.unr.edu/shoemaker/post/writing-markdown-latex/</link>
+      <link>http://naes.unr.edu/shoemaker/lab/post/writing-markdown-latex/</link>
       <pubDate>Wed, 20 Apr 2016 10:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/post/writing-markdown-latex/</guid>
+      <guid>http://naes.unr.edu/shoemaker/lab/post/writing-markdown-latex/</guid>
       <description>
 
 &lt;p&gt;Content can be written using &lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34;&gt;Markdown&lt;/a&gt;, &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34;&gt;LaTeX math&lt;/a&gt;, and &lt;a href=&#34;http://gohugo.io/extras/shortcodes/&#34;&gt;Hugo Shortcodes&lt;/a&gt;. Additionally, HTML may be used for advanced formatting.&lt;/p&gt;
@@ -448,20 +449,20 @@ print(&amp;quot;You entered: {}&amp;quot;.format(input_string_var))
     
     <item>
       <title>Inferring the Nature of Anthropogenic Threats from Long-Term Abundance Records</title>
-      <link>http://naes.unr.edu/shoemaker/publication/inferring-threats/</link>
+      <link>http://naes.unr.edu/shoemaker/lab/publication/inferring-threats/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/publication/inferring-threats/</guid>
+      <guid>http://naes.unr.edu/shoemaker/lab/publication/inferring-threats/</guid>
       <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Migrate to Hugo from Jekyll</title>
-      <link>http://naes.unr.edu/shoemaker/post/migrate-from-jekyll/</link>
+      <link>http://naes.unr.edu/shoemaker/lab/post/migrate-from-jekyll/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/post/migrate-from-jekyll/</guid>
+      <guid>http://naes.unr.edu/shoemaker/lab/post/migrate-from-jekyll/</guid>
       <description>
 
 &lt;h2 id=&#34;move-static-content-to-static&#34;&gt;Move static content to &lt;code&gt;static&lt;/code&gt;&lt;/h2&gt;
@@ -486,7 +487,7 @@ With Jekyll, something that looked like&lt;/p&gt;
 
 &lt;h2 id=&#34;create-your-hugo-configuration-file&#34;&gt;Create your Hugo configuration file&lt;/h2&gt;
 
-&lt;p&gt;Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the &lt;a href=&#34;http://naes.unr.edu/shoemaker/overview/configuration/&#34;&gt;Hugo configuration documentation&lt;/a&gt; for details.&lt;/p&gt;
+&lt;p&gt;Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the &lt;a href=&#34;http://naes.unr.edu/shoemaker/lab/overview/configuration/&#34;&gt;Hugo configuration documentation&lt;/a&gt; for details.&lt;/p&gt;
 
 &lt;h2 id=&#34;set-your-configuration-publish-folder-to-site&#34;&gt;Set your configuration publish folder to &lt;code&gt;_site&lt;/code&gt;&lt;/h2&gt;
 
@@ -512,13 +513,13 @@ git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
 
 &lt;h2 id=&#34;convert-jekyll-templates-to-hugo-templates&#34;&gt;Convert Jekyll templates to Hugo templates&lt;/h2&gt;
 
-&lt;p&gt;That&amp;rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to &lt;a href=&#34;http://jekyllrb.com/docs/templates/&#34;&gt;Jekyll&amp;rsquo;s template documentation&lt;/a&gt; if you need to refresh your memory on how you built your blog and &lt;a href=&#34;http://naes.unr.edu/shoemaker/layout/templates/&#34;&gt;Hugo&amp;rsquo;s template&lt;/a&gt; to learn Hugo&amp;rsquo;s way.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to &lt;a href=&#34;http://jekyllrb.com/docs/templates/&#34;&gt;Jekyll&amp;rsquo;s template documentation&lt;/a&gt; if you need to refresh your memory on how you built your blog and &lt;a href=&#34;http://naes.unr.edu/shoemaker/lab/layout/templates/&#34;&gt;Hugo&amp;rsquo;s template&lt;/a&gt; to learn Hugo&amp;rsquo;s way.&lt;/p&gt;
 
 &lt;p&gt;As a single reference data point, converting my templates for &lt;a href=&#34;http://heyitsalex.net/&#34;&gt;heyitsalex.net&lt;/a&gt; took me no more than a few hours.&lt;/p&gt;
 
 &lt;h2 id=&#34;convert-jekyll-plugins-to-hugo-shortcodes&#34;&gt;Convert Jekyll plugins to Hugo shortcodes&lt;/h2&gt;
 
-&lt;p&gt;Jekyll has &lt;a href=&#34;http://jekyllrb.com/docs/plugins/&#34;&gt;plugins&lt;/a&gt;; Hugo has &lt;a href=&#34;http://naes.unr.edu/shoemaker/doc/shortcodes/&#34;&gt;shortcodes&lt;/a&gt;. It&amp;rsquo;s fairly trivial to do a port.&lt;/p&gt;
+&lt;p&gt;Jekyll has &lt;a href=&#34;http://jekyllrb.com/docs/plugins/&#34;&gt;plugins&lt;/a&gt;; Hugo has &lt;a href=&#34;http://naes.unr.edu/shoemaker/lab/doc/shortcodes/&#34;&gt;shortcodes&lt;/a&gt;. It&amp;rsquo;s fairly trivial to do a port.&lt;/p&gt;
 
 &lt;h3 id=&#34;implementation&#34;&gt;Implementation&lt;/h3&gt;
 

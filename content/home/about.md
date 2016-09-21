@@ -9,7 +9,7 @@ image = "UNRlogo-1.jpg"
 
 # Biography
 
-Kevin Shoemaker is a population ecologist in the department of Natural Resources & Environmental Science at the University of Nevada, Reno.  Broadly, his research couples ecological data (e.g., census records, mark-recapture data, remote sensing data) with simulation models, statistics and machine learning to support wildlife conservation and management. Current projects include:
+Kevin Shoemaker is the director of the Applied Population Ecology lab at the department of Natural Resources & Environmental Science at the University of Nevada, Reno. Broadly, his research couples ecological data (e.g., census records, mark-recapture data, remote sensing data) with simulation models, statistics and machine learning to support wildlife conservation and management. Current projects include:
 
 - Measuring the biodiversity impacts of pinyon and juniper removal in the Great Basin (focus on bats, reptiles and insects)
 - Assessing the regional population structure and conservation status of pygmy rabbits (*Brachylagus idahoensis*) in Nevada
