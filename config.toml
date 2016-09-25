@@ -1,10 +1,10 @@
-baseurl = "http://hugo.spf13.com/"
+baseurl = "http://naes.unr.edu/shoemaker/lab/"
 languageCode = "en-us"
 title = "Applied Population Ecology Lab at UNR"
 theme = "hugo-future-imperfect"
 preserveTaxonomyNames = true
 paginate = 3
-disqusShortname = "lab_website"
+disqusShortname = ""
 googleAnalytics = ""
 
 [params]
