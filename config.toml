@@ -9,14 +9,14 @@ googleAnalytics = ""
 
 [params]
     # Sets the meta tag description, usually reserved for the main page
-    description          = "HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo"
+    description          = "Applied Population Ecology Lab at UNR: practical applications of population ecology for wildlife management and conservation"
     # This will appear on the top left of the navigation bar
-    navbarTitle          = "A.P.E. Lab"
+    navbarTitle          = "Reno A.P.E. Lab"
     # Social media buttons that appear on the sidebar
     socialAppearAtTop    = true
     socialAppearAtBottom = true
     # set this to the section name if section is not post
-    viewMorePostLink     = "/blog/"
+    viewMorePostLink     = "/posts/"
 
 # Optional Params
     categoriesByCount    = true
@@ -43,9 +43,9 @@ googleAnalytics = ""
 [params.intro]
     header    = "Applied Population Ecology Lab at UNR"
 
-    paragraph = "The Applied Population Ecology lab at UNR focuses on supporting the conservation and management of wildlife populations using state-of-the-art analytical and simulation tools"
+    paragraph = "The Applied Population Ecology lab at UNR focuses on supporting the conservation and management of wildlife populations in the Great Basin and beyond using state-of-the-art analytical and simulation tools"
 
-    about     = ", auctor vehicula molestie quis, tempor quis velit. Quisque in quam ac leo efficitur vulputate. Phasellus ullamcorper aliquam sodales. Maecenas sit amet condimentum ipsum. Proin sit amet ligula elit. Mauris."
+    about     = "The current members of the A.P.E. lab are Kevin Shoemaker, Elizabeth Hunter, Margarete Walden, Miranda Crowell, and Danielle Miles. "
 
 # This will also appear on the sidebar.
 # A width of less than 100px is recommended
@@ -54,8 +54,8 @@ googleAnalytics = ""
     src       = "/img/main/logo.jpg"
     # modify your picture in the shape of a circle or
     # future imperfect's hexagonal shape
-    circle    = false
-    imperfect = true
+    circle    = true
+    imperfect = false
     width     = ""
     alt       = "Hugo Future Imperfect"
 
@@ -96,14 +96,14 @@ googleAnalytics = ""
     behance         = ""
     flickr          = ""
     instagram       = ""
-    youtube         = ""
+    youtube         = "UCTogBbjLnTqnZJl5w_PgmVw"
     vimeo           = ""
     vine            = ""
     medium          = ""
     wordpress       = ""
     tumblr          = ""
     xing            = ""
-    linkedin        = ""
+    linkedin        = "kevin-shoemaker-10a561a"
     slideshare      = ""
     stackoverflow   = ""
     reddit          = ""
