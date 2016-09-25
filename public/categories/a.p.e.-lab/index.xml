@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>A.P.E. Lab on Applied Population Ecology Lab at UNR</title>
-    <link>http://naes.unr.edu/shoemaker/Lab/categories/a.p.e/index.-lab/</link>
+    <link>http://naes.unr.edu/shoemaker/categories/a.p.e/index.-lab/</link>
     <description>Recent content in A.P.E. Lab on Applied Population Ecology Lab at UNR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 25 Sep 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://naes.unr.edu/shoemaker/Lab/categories/a.p.e.-lab/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://naes.unr.edu/shoemaker/categories/a.p.e.-lab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A.P.E. Lab at UNR</title>
-      <link>http://naes.unr.edu/shoemaker/Lab/posts/test-post/</link>
+      <link>http://naes.unr.edu/shoemaker/posts/test-post/</link>
       <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/Lab/posts/test-post/</guid>
+      <guid>http://naes.unr.edu/shoemaker/posts/test-post/</guid>
       <description>
 
 &lt;h2 id=&#34;hello-world&#34;&gt;Hello world!!&lt;/h2&gt;

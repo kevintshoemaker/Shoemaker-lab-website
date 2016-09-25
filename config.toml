@@ -1,4 +1,4 @@
-baseurl = "http://naes.unr.edu/shoemaker/lab/"
+baseurl = "http://naes.unr.edu/shoemaker"
 languageCode = "en-us"
 title = "Applied Population Ecology Lab at UNR"
 theme = "hugo-future-imperfect"
