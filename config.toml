@@ -1,4 +1,4 @@
-baseurl = "http://naes.unr.edu/shoemaker"
+baseurl = "http://naes.unr.edu/shoemaker/lab/"
 languageCode = "en-us"
 title = "Applied Population Ecology Lab at UNR"
 theme = "hugo-future-imperfect"
@@ -16,7 +16,7 @@ googleAnalytics = ""
     socialAppearAtTop    = true
     socialAppearAtBottom = true
     # set this to the section name if section is not post
-    viewMorePostLink     = "/posts/"
+    viewMorePostLink     = "/shoemaker/lab/posts/"
 
 # Optional Params
     categoriesByCount    = true
@@ -35,8 +35,8 @@ googleAnalytics = ""
     # customJS             = ["default", "/path/to/file"]
 
     # Loading min files for exampleSite
-    customCSS            = ["/css/main.min.css"]
-    customJS             = ["/js/main.min.js"]
+    customCSS            = ["/shoemaker/lab/css/main.min.css"]
+    customJS             = ["/shoemaker/lab/js/main.min.js"]
 
 # parms.intro will appear on the sidebar
 # This is optional, but it's suggested to use
@@ -51,7 +51,7 @@ googleAnalytics = ""
 # A width of less than 100px is recommended
 # This is optional
 [params.intro.pic]
-    src       = "/img/main/logo.jpg"
+    src       = "/shoemaker/lab/img/main/logo.jpg"
     # modify your picture in the shape of a circle or
     # future imperfect's hexagonal shape
     circle    = true
@@ -68,18 +68,18 @@ googleAnalytics = ""
 # You can use identifier to prepend a font awesome icon to your text
 [[menu.main]]
     name = "Posts"
-    url = "/posts"
+    url = "/shoemaker/lab/posts"
     identifier = "fa fa-newspaper-o"
     weight = 1
 
 [[menu.main]]
     name = "Categories"
-    url = "/categories"
+    url = "/shoemaker/lab/categories"
     weight = 2
 
 [[menu.main]]
     name = "About"
-    url = "/about"
+    url = "/shoemaker/lab/about"
     weight = 3
 
 # Insert your username and the icon will apear on the page as long as
