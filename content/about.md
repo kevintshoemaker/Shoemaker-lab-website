@@ -1,6 +1,6 @@
 +++
 title = "About the Applied Population Ecology Lab"
-date = "2016-09-16"
+date = "2016-09-27"
 +++
 
 ## Our mission

@@ -4,19 +4,19 @@ title = "Applied Population Ecology Lab at UNR"
 theme = "hugo-future-imperfect"
 preserveTaxonomyNames = true
 paginate = 3
-disqusShortname = ""
-googleAnalytics = ""
+disqusShortname = "lab-website"
+googleAnalytics = "UA-84942309-1"
 
 [params]
     # Sets the meta tag description, usually reserved for the main page
     description          = "Applied Population Ecology Lab at UNR: practical applications of population ecology for wildlife management and conservation"
     # This will appear on the top left of the navigation bar
-    navbarTitle          = "Reno A.P.E. Lab"
+    navbarTitle          = "A.P.E. Lab at UNR"
     # Social media buttons that appear on the sidebar
     socialAppearAtTop    = true
     socialAppearAtBottom = true
     # set this to the section name if section is not post
-    viewMorePostLink     = "/shoemaker/lab/posts/"
+    viewMorePostLink     = "/posts/"
 
 # Optional Params
     categoriesByCount    = true
@@ -34,7 +34,7 @@ googleAnalytics = ""
     # customCSS            = ["default", "/path/to/file"]
     # customJS             = ["default", "/path/to/file"]
 
-    # Loading min files for exampleSite
+    # Loading min files for APE lab Site
     customCSS            = ["/shoemaker/lab/css/main.min.css"]
     customJS             = ["/shoemaker/lab/js/main.min.js"]
 
@@ -68,18 +68,18 @@ googleAnalytics = ""
 # You can use identifier to prepend a font awesome icon to your text
 [[menu.main]]
     name = "Posts"
-    url = "/shoemaker/lab/posts"
+    url = "/posts/"    # correct syntax!!!
     identifier = "fa fa-newspaper-o"
     weight = 1
 
 [[menu.main]]
     name = "Categories"
-    url = "/shoemaker/lab/categories"
+    url = "/categories/"
     weight = 2
 
 [[menu.main]]
     name = "About"
-    url = "/shoemaker/lab/about"
+    url = "/about/"
     weight = 3
 
 # Insert your username and the icon will apear on the page as long as
