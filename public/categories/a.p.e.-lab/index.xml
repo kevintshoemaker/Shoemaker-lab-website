@@ -6,15 +6,27 @@
     <description>Recent content in A.P.E. Lab on Applied Population Ecology Lab at UNR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Sep 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Sep 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://naes.unr.edu/shoemaker/lab/categories/a.p.e.-lab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Test post from E!</title>
+      <link>http://naes.unr.edu/shoemaker/lab/posts/test2/</link>
+      <pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://naes.unr.edu/shoemaker/lab/posts/test2/</guid>
+      <description>&lt;p&gt;#This is header 1!&lt;/p&gt;
+
+&lt;p&gt;##Now here we&amp;rsquo;ve got header 2.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>A.P.E. Lab at UNR</title>
-      <link>http://naes.unr.edu/shoemaker/lab/posts/test-post/</link>
+      <link>http://naes.unr.edu/shoemaker/lab/posts/test-post-withimage/</link>
       <pubDate>Tue, 27 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/lab/posts/test-post/</guid>
+      <guid>http://naes.unr.edu/shoemaker/lab/posts/test-post-withimage/</guid>
       <description>
 
 &lt;h2 id=&#34;hello-world&#34;&gt;Hello world!!&lt;/h2&gt;
