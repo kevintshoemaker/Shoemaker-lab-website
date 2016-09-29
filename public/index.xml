@@ -6,13 +6,13 @@
     <description>Recent content on Applied Population Ecology Lab at UNR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Sep 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Sep 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://naes.unr.edu/shoemaker/lab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About the Applied Population Ecology Lab</title>
       <link>http://naes.unr.edu/shoemaker/lab/about/</link>
-      <pubDate>Tue, 27 Sep 2016 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>http://naes.unr.edu/shoemaker/lab/about/</guid>
       <description>
@@ -28,21 +28,43 @@
 
 &lt;h2 id=&#34;who-we-are&#34;&gt;Who we are&lt;/h2&gt;
 
+&lt;p&gt;The A.P.E. lab currently includes Kevin Shoemaker (asst. prof.), Elizabeth Hunter (postdoc), and doctoral students Danielle Miles, Margarete Walden and Miranda Crowell.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;photo&#34; alt=&#34;insert photo of lab group here!&#34; /&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;contact-us&#34;&gt;Contact us&lt;/h2&gt;
+
+&lt;p&gt;Please email us if you have any questions!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Modeling population growth of COTS in Australia&#39;s Great Barrier Reef</title>
+      <link>http://naes.unr.edu/shoemaker/lab/posts/COTSproject/</link>
+      <pubDate>Thu, 29 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://naes.unr.edu/shoemaker/lab/posts/COTSproject/</guid>
+      <description>
+
+&lt;h2 id=&#34;crown-of-thorns-starfish-project&#34;&gt;Crown-of-Thorns Starfish project&lt;/h2&gt;
+
+&lt;p&gt;Crown-of-Thorns Starfish (C.O.T.S.) is a native predator of coral. On occasion, C.O.T.S. populations &amp;ldquo;explode&amp;rdquo;, and these outbreaks represent one of the major recognized threats to the Great Barrier Reef in Australia. The A.P.E. lab is collaborating with researchers at James Cook University in Queensland (Sam Matthews), University of Adelaide (Damien Fordham), and the Australian Institute of Marine Science (Camille Mellin) to better understand the drivers of C.O.T.S. population explosions and potentially develop strategies for how to reduce this threat to the Great Barrier Reef.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/img/GreatBarrierReefMap.gif&#34; alt=&#34;Map of the Great Barrier Reef&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Dr. Kevin Shoemaker</title>
-      <link>http://naes.unr.edu/shoemaker/lab/people/shoemaker/</link>
+      <link>http://naes.unr.edu/shoemaker/lab/posts/shoemaker/</link>
       <pubDate>Tue, 27 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/lab/people/shoemaker/</guid>
+      <guid>http://naes.unr.edu/shoemaker/lab/posts/shoemaker/</guid>
       <description>
 
-&lt;h2 id=&#34;dr-kevin-shoemaker&#34;&gt;Dr. Kevin Shoemaker&lt;/h2&gt;
+&lt;h2 id=&#34;kevin-shoemaker&#34;&gt;Kevin Shoemaker&lt;/h2&gt;
 
-&lt;p&gt;Here is a &lt;a href=&#34;http://naes.unr.edu/shoemaker/&#34;&gt;link&lt;/a&gt; to my homepage at UNR!&lt;/p&gt;
+&lt;p&gt;Hi, I am the director of the Applied Population Ecology lab at UNR. Please visit my &lt;a href=&#34;http://naes.unr.edu/shoemaker/&#34;&gt;UNR homepage&lt;/a&gt; for more information!&lt;/p&gt;
 </description>
     </item>
     

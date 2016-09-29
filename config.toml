@@ -16,7 +16,7 @@ googleAnalytics = "UA-84942309-1"
     socialAppearAtTop    = true
     socialAppearAtBottom = true
     # set this to the section name if section is not post
-    viewMorePostLink     = "/posts/"
+    viewMorePostLink     = "/shoemaker/lab/posts/"
 
 # Optional Params
     categoriesByCount    = true
@@ -68,24 +68,33 @@ googleAnalytics = "UA-84942309-1"
 # You can use identifier to prepend a font awesome icon to your text
 [[menu.main]]
     name = "Posts"
-    url = "/posts/"    # correct syntax!!!
+    url = "/categories/Posts/"    # correct syntax!!!
     identifier = "fa fa-newspaper-o"
     weight = 1
 
 [[menu.main]]
     name = "Categories"
     url = "/categories/"
+    identifier = "fa fa-folder"
     weight = 2
 
 [[menu.main]]
     name = "About"
     url = "/about/"
+    identifier = "fa fa-camera"
     weight = 3
 
 [[menu.main]]
     name = "People"
-    url = "/people/"
-    weight = 3
+    url = "/categories/people/"
+    identifier = "fa fa-users"
+    weight = 4
+
+[[menu.main]]
+    name = "Projects"
+    url = "/categories/projects/"
+    identifier = "fa fa-folder"
+    weight = 5
 
 # Insert your username and the icon will apear on the page as long as
 # socialAppearAtTop or socialAppearAtBottom is set to true in the params area

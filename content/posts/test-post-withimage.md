@@ -1,6 +1,6 @@
 +++
 author = "Kevin Shoemaker"
-categories = ["Wildlife Conservation", "A.P.E. Lab"]
+categories = ["Wildlife Conservation", "A.P.E. Lab","Posts"]
 date = "2016-09-27"
 description = "A.P.E. Lab!"
 featured = "turtle-banner.jpg"
