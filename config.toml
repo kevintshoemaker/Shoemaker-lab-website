@@ -82,6 +82,11 @@ googleAnalytics = "UA-84942309-1"
     url = "/about/"
     weight = 3
 
+[[menu.main]]
+    name = "People"
+    url = "/people/"
+    weight = 3
+
 # Insert your username and the icon will apear on the page as long as
 # socialAppearAtTop or socialAppearAtBottom is set to true in the params area
 # The social media icons will appear on the sidebar
@@ -109,7 +114,7 @@ googleAnalytics = "UA-84942309-1"
     reddit          = ""
     pinterest       = ""
     googleplus      = ""
-    facebook        = ""
+    facebook        = "/groups/1845083339044006/"
     facebook_admin  = ""
     twitter_domain  = ""
     twitter         = "KevinT_Kevin"
