@@ -75,7 +75,7 @@ googleAnalytics = "UA-84942309-1"
 [[menu.main]]
     name = "Categories"
     url = "/categories/"
-    identifier = "fa fa-folder"
+    identifier = "fa fa-suitcase"
     weight = 2
 
 [[menu.main]]
@@ -93,7 +93,7 @@ googleAnalytics = "UA-84942309-1"
 [[menu.main]]
     name = "Projects"
     url = "/categories/projects/"
-    identifier = "fa fa-suitcase"
+    identifier = "fa fa-folder"
     weight = 5
 
 # Insert your username and the icon will apear on the page as long as
