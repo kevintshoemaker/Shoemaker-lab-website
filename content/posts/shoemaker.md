@@ -14,4 +14,4 @@ type = "post"
 
 ## Kevin Shoemaker
 
-Hi, I am the director of the Applied Population Ecology lab at UNR. Please visit my [UNR homepage](http://naes.unr.edu/shoemaker/) for more information!
+Kevin Shoemaker is the director of the Applied Population Ecology lab at the department of Natural Resources & Environmental Science at the University of Nevada, Reno. Broadly, his research couples ecological data (e.g., census records, mark-recapture data, remote sensing data) with simulation models, statistics and machine learning to support wildlife conservation and management.
