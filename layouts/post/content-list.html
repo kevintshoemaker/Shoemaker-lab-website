@@ -1,4 +1,17 @@
 <article class="post">
+  {{ if and (isset .Params "featuredpath") (ne .Params.featuredpath "") }}
+      {{ $.Scratch.Set "path" .Params.featuredpath }}
+
+      {{ if and (isset .Params "featured") (ne .Params.featuredpath "") }}
+          {{ $.Scratch.Set "structType" "page" }}
+          {{ partial "img-path" . }}
+          {{ $path := $.Scratch.Get "path" }}
+
+          <a href="{{ .Permalink }}" class="logo" >
+              <img src="{{ $path }}/{{ .Params.featured }}" alt="{{ .Params.featuredalt }}" width = "120" />
+          </a>
+      {{ end }}
+  {{ end }}
     {{ .Render "header" }}
     <p>{{ printf "%s" .Summary | markdownify }}</p>
     <footer>

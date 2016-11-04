@@ -1,5 +1,6 @@
 <!-- Header -->
 <header id="header">
+    <img src="/shoemaker/lab/img/UNRlogo-small.jpg" width="57" />
     {{ if and (.IsNode) (or (.IsHome) (eq .Title "Posts")) }}
         <h1><a href={{ .Site.BaseURL }}>{{ .Site.Params.navbarTitle }}</i></a></h1>
     {{ else }}

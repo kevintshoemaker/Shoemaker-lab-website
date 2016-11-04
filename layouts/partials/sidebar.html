@@ -82,35 +82,6 @@
             </ul>
         </section>
 
-    <!-- This if statement only applies if someone goes to the /categories url -->
-    <!-- Otherwise this section is shown for all other links -->
-    {{ if ne ($.Scratch.Get "showCategories") false }}
-    <!-- Categories List -->
-        <section id="categories">
-            <ul class="posts">
-                <header>
-                    <h3><a href="/shoemaker/lab/categories/">Categories</a></h3>
-                </header>
-
-                {{ if .Site.Params.categoriesByCount }}
-                    {{ $.Scratch.Set "categories" .Site.Taxonomies.categories.ByCount }}
-                {{ else }}
-                    {{ $.Scratch.Set "categories" .Site.Taxonomies.categories.Alphabetical }}
-                {{ end }}
-
-                {{ range $key, $value := $.Scratch.Get "categories" }}
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/shoemaker/lab/categories/{{ $value.Name | urlize }}/">{{ $value.Name }}</a>
-                                <span style="float:right;">{{ $value.Count }}</span>
-                            </header>
-                        </article>
-                    </li>
-                {{ end }}
-            </ul>
-        </section>
-    {{ end }}
 
     <!-- About -->
         {{ with .Site.Params.intro.about }}
@@ -123,6 +94,9 @@
             </ul>
         </section>
         {{ end }}
+
+    <!-- Twitter -->
+    <a class="twitter-timeline" href="https://twitter.com/kevint_kevin">Tweets by kevint_kevin</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
     <!-- Footer -->
         <section id="footer">

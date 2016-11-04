@@ -1,0 +1,21 @@
++++
+author = "Danielle C Miles"
+categories = ["People", "A.P.E. Lab"]
+date = "2016-10-04"
+description = "Doctoral Candidate - Ecology, Evolution, and Conservation Biology"
+featured = "danielle1.jpg"
+featuredalt = ""
+featuredpath = "/shoemaker/lab/img/"  # can say "date", so images can be organized by date. Good for blog posts?
+linktitle = "Danielle C Miles"
+title = "Danielle C Miles"
+type = "post"
+
++++
+
+## Danielle C Miles
+
+I am a PhD student in my first year here at UNR in the APE lab. I will be working on measuring the impacts of pinyon and juniper tree removal in sagebrush ecosystems on bat, reptile, and insect populations, with a possible addition to monitoring sagebrush dependent bird species. Besides this ecological model, I am interested in exploring anthropogenic effects on the environment such as climate change and deforestation with specific emphasis on the implications for amphibians.
+
+My previous lab: https://msu.edu/~plz/people.html
+My linkedin: https://www.linkedin.com/in/danielle-miles-79a08489
+My experience in Madagascar: http://www.cnn.com/videos/world/2016/02/05/african-voices-the-disruptors-spc-b.cnn
