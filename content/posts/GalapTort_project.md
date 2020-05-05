@@ -5,7 +5,7 @@ date = "2017-01-23"
 description = "Galapagos giant tortoise restoration"
 featured = "Wolf_tortoise2.jpg"
 featuredalt = ""
-featuredpath = "/shoemaker/lab/img/"
+featuredpath = "/img"
 title = "Simulation modeling to support population restoration of 'lost' Galapagos giant tortoise species"
 type = "post"
 +++

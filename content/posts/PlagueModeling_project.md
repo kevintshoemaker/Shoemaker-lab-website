@@ -17,7 +17,7 @@ Prairie dogs are keystone species of North America’s central grasslands, and h
 
 We will use a flexible lattice population structure in which each node contains a stage-structured host population, allowing integration of spatial raster data of environmental variables and enabling multiple modes of dispersal and disease transmission. Natural selection will be modeled as vital rate reductions contingent upon population-level genetic makeup. Selection pressures will emerge from a statistical epidemiological model of disease incidence and spread. Resistance-conferring, diploid gene loci will be modeled with arbitrary numbers of genes, allelic variants, dominance of resistance, gene interactions (epistasis; we will not model chromosomal linkage) and alternative modes of resistance (i.e., alternative sets of genes/alleles that confer resistance). Coevolution will be modeled as a change in virulence over time. This modeling framework will be written in R/C++.
 
-![Schematic of plague model](/shoemaker/lab/img/Plague Model Schematic1.png)
+![Schematic of plague model](/img/Plague Model Schematic1.png)
 
 ### Some example videos...
 
