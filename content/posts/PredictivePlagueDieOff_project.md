@@ -4,7 +4,7 @@ categories = ["Population modeling", "Central grasslands ecosystem", "prairie do
 date = "2017-01-23"
 featured = "pdog2.jpg"
 featuredalt = ""
-featuredpath = "/shoemaker/lab/img/"
+featuredpath = "/img/"
 title = "Predictive modeling of plague die-offs in prairie dog colonies"
 type = "post"
 +++

@@ -1,11 +1,11 @@
 +++
 author = "Kevin Shoemaker"
 categories = ["People", "A.P.E. Lab"]
-date = "2016-10-24"
+date = "2020-5-4"
 description = "Assistant professor at UNR"
 featured = "KTSwithtortoise_effects.jpg"
 featuredalt = ""
-featuredpath = "/shoemaker/lab/img/"  # can say "date", so images can be organized by date. Good for blog posts?
+featuredpath = "/img/"  # can say "date", so images can be organized by date. Good for blog posts?
 linktitle = "Dr. Shoemaker"
 title = "Dr. Kevin Shoemaker"
 type = "post"

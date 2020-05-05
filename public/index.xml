@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Dr. Elizabeth Hunter</title>
+      <link>/posts/epost20161003/</link>
+      <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/epost20161003/</guid>
+      <description>I was a postdoctoral researcher in the A.P.E. lab from 2016-2018 where I worked on several population modeling projects including: predicting plague outbreaks in black-tailed prairie dogs, using abundance data to predict the effects of competition on songbird responses to climate change, and simulation modeling to inform restoration of giant tortoise populations in the Galapagos Islands.
+Visit my personal webpage here</description>
+    </item>
+    
+    <item>
       <title>Predictive modeling of plague die-offs in prairie dog colonies</title>
       <link>/posts/predictiveplaguedieoff_project/</link>
       <pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate>
@@ -48,28 +58,6 @@
 UNR collaborators:
 Marjorie Matocq Peter Weisberg and Tom Dilts Jim Sedinger
 Other collaborators: Sheldon and Hart National Wildlife Refuges Nevada Department of Wildlife Great Basin Landscape Conservation Cooperative Greater Hart-Sheldon Fund</description>
-    </item>
-    
-    <item>
-      <title>Dr. Kevin Shoemaker</title>
-      <link>/posts/shoemaker/</link>
-      <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/shoemaker/</guid>
-      <description>Dr. Shoemaker is the director of the Applied Population Ecology (A.P.E) lab at the department of Natural Resources &amp;amp; Environmental Science at the University of Nevada, Reno. Broadly, his research couples ecological data (e.g., census records, mark-recapture data, remote sensing data) with simulation models, statistics and machine learning to support wildlife conservation and management.
-Visit Shoemaker&amp;rsquo;s UNR site
-Contact  Kevin T Shoemaker
-Assistant Professor, Natural Resources &amp;amp; Environmental Science</description>
-    </item>
-    
-    <item>
-      <title>Dr. Elizabeth Hunter</title>
-      <link>/posts/epost20161003/</link>
-      <pubDate>Sat, 22 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/epost20161003/</guid>
-      <description>I am a postdoctoral researcher in the A.P.E. lab working on several population modeling projects including: predicting plague outbreaks in black-tailed prairie dogs, using abundance data to predict the effects of competition on songbird responses to climate change, and simulation modeling to inform restoration of giant tortoise populations in the Galapagos Islands.
-Visit my personal webpage here</description>
     </item>
     
     <item>
@@ -137,6 +125,18 @@ University of Nevada, Reno / mail stop 186</description>
       
       <guid>/posts/test-post-withimage/</guid>
       <description>Hello world!! We are the APE lab.</description>
+    </item>
+    
+    <item>
+      <title>Dr. Kevin Shoemaker</title>
+      <link>/posts/shoemaker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/shoemaker/</guid>
+      <description>Dr. Shoemaker is the director of the Applied Population Ecology (A.P.E) lab at the department of Natural Resources &amp;amp; Environmental Science at the University of Nevada, Reno. Broadly, his research couples ecological data (e.g., census records, mark-recapture data, remote sensing data) with simulation models, statistics and machine learning to support wildlife conservation and management.
+Visit Shoemaker&amp;rsquo;s UNR site
+Contact  Kevin T Shoemaker
+Assistant Professor, Natural Resources &amp;amp; Environmental Science</description>
     </item>
     
   </channel>
