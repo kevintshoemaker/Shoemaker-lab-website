@@ -14,4 +14,4 @@ type = "post"
 
 ## Hello world!!
 
-Hello world, we are the *APE lab*.
+We are the *APE lab*.

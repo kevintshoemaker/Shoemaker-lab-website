@@ -1,0 +1,389 @@
+(function () {
+	function WidgetValueStorage(name, userPrefix) {
+		var suffix = '.' + clientOrgContext() + '.' + clientLoginContext() + (name.indexOf('.') === 0 ? '' : '.') + name;
+		if(userPrefix) {
+			this.oldKey = userPrefix + '.old' + suffix;
+			this.key = userPrefix + suffix;
+		}
+		else {
+			this.oldKey = window.WidgetValueStorageConfig.oldKey + suffix;
+			this.key = window.WidgetValueStorageConfig.key + suffix;
+		}
+		this.get = function () {
+			var json = {};
+			try {
+				var value = localStorage.getItem(this.key);
+				if(null === value) {
+					value = localStorage.getItem(this.oldKey);
+					localStorage.removeItem(this.oldKey);
+					localStorage.setItem(this.key, value);
+				}
+				json = JSON.parse(value);
+			} catch (e) {
+				json = {};
+			}
+			return json;
+		};
+		this.set = function (json) {
+			var value = JSON.stringify(json);
+			if (value && value.length > 0) {
+				localStorage.setItem(this.key, value);
+			} else {
+				this.clear();
+			}
+		};
+		this.clear = function () {
+			localStorage.removeItem(this.key);
+		}
+	}
+
+	var pasteBoardStorage = new WidgetValueStorage('survey.pasteBoard.value');
+
+	function Point(x, y) {
+		this.x = x;
+		this.y = y;
+	}
+	Point.origin = new Point(0, 0);
+	Point.prototype.getX = function() {
+		return this.x;
+	};
+	Point.prototype.getY = function() {
+		return this.y;
+	};
+	Point.translate = function(point, vector) {
+		return new Point(point.getX() + vector.getX(), point.getY() + vector.getY());
+	};
+
+	function Vector(x, y) {
+		this.x = x;
+		this.y = y;
+	}
+	Vector.identity = new Vector(0, 0);
+	Vector.prototype.getX = function() {
+		return this.x;
+	};
+	Vector.prototype.getY = function() {
+		return this.y;
+	};
+	Vector.prototype.getWidth = Vector.prototype.getX;
+	Vector.prototype.getHeight = Vector.prototype.getY;
+	Vector.fromPoints = function(p1, p2) {
+		return new Vector(p2.getX() - p1.getX(), p2.getY() - p1.getY());
+	};
+	Vector.add = function(v1, v2) {
+		return new Vector(v1.getX() + v2.getX(), v1.getY() + v2.getY());
+	};
+
+	function Rectangle(position, size) {
+		this.position = position;
+		this.size = size;
+	}
+	Rectangle.prototype.getPosition = function() {
+		return this.position;
+	};
+	Rectangle.prototype.getSize = function() {
+		return this.size;
+	};
+	Rectangle.prototype.getTop = function() {
+		return this.position.getY();
+	};
+	Rectangle.prototype.getRight = function() {
+		return this.position.getX() + this.size.getWidth();
+	};
+	Rectangle.prototype.getBottom = function() {
+		return this.position.getY() + this.size.getHeight();
+	};
+	Rectangle.prototype.getLeft = function() {
+		return this.position.getX();
+	};
+	Rectangle.prototype.getWidth = function() {
+		return this.size.getX();
+	};
+	Rectangle.prototype.getHeight = function() {
+		return this.size.getY();
+	};
+	Rectangle.fromTRBL = function(top, right, bottom, left) {
+		var tl = new Point(left, top);
+		var br = new Point(right, bottom);
+		return new Rectangle(tl, Vector.fromPoints(tl, br));
+	};
+	Rectangle.fromXYWH = function(x, y, w, h) {
+		return new Rectangle(new Point(x, y), new Vector(w, h));
+	};
+	Rectangle.fromWindow = function() {
+		var $window = $(window);
+		return new Rectangle(Point.origin, new Vector($window.width(), $window.height()));
+	};
+	Rectangle.fromElement = function($element) {
+		var position = $element.position();
+		return new Rectangle(
+				new Point(position.left, position.top),
+				new Vector($element.outerWidth(), $element.outerHeight())
+		);
+	};
+	Rectangle.translate = function(rectangle, vector) {
+		return new Rectangle(
+				Point.translate(rectangle.getPosition(), vector),
+				rectangle.getSize()
+		);
+	};
+	Rectangle.constrain = function(desired, constraint) {
+		var size = new Vector(
+			Math.min(desired.getWidth(), constraint.getWidth()),
+			Math.min(desired.getHeight(), constraint.getHeight())
+		);
+		var position = new Point(
+			Math.max(Math.min(desired.getLeft(), constraint.getRight()-size.getWidth()), constraint.getLeft()),
+			Math.max(Math.min(desired.getTop(), constraint.getBottom()-size.getHeight()), constraint.getTop())
+		);
+		return new Rectangle(position, size);
+	};
+	Rectangle.constrainSize = function(desired, constraint) {
+		return Rectangle.fromTRBL(
+				desired.getTop(),
+				Math.min(desired.getRight(), constraint.getRight()),
+				Math.min(desired.getBottom(), constraint.getBottom()),
+				desired.getLeft());
+	};
+
+
+	function Draggable($container, $draggable) {
+		this.$container = $container;
+		this.$draggable = $draggable;
+		this.isDragging = false;
+		this.eventNamespace = Draggable.getEventNamespace();
+
+		this.containerRect = null;
+		this.clickPoint = null;
+	}
+	Draggable.prototype.delegateEvents = function() {
+		var $document = $(document);
+		$document.on('mousedown' + this.eventNamespace, $.proxy(this.onMouseDown, this));
+		$document.on('mouseup' + this.eventNamespace, $.proxy(this.onMouseUp, this));
+		$document.on('mousemove' + this.eventNamespace, $.proxy(this.onMouseMove, this));
+	};
+	Draggable.prototype.undelegateEvents = function() {
+		$(document).off(this.eventNamespace);
+	};
+	Draggable.prototype.onMouseDown = function(e) {
+		if(e.target === this.$draggable[0] || this.$draggable.has(e.target).length) {
+			this.isDragging = true;
+			this.clickPoint = new Point(e.clientX, e.clientY);
+			this.containerRect = Rectangle.fromElement(this.$container);
+			this.$draggable.trigger('dragStart', [{
+				clickPoint: this.clickPoint,
+				mousePoint: this.clickPoint,
+				dragVector: Vector.identity,
+				containerRect: this.containerRect
+			}]);
+			e.preventDefault();
+			return false;
+		}
+	};
+	Draggable.prototype.onMouseUp = function(e) {
+		if(this.isDragging) {
+			this.isDragging = false;
+			var mousePoint = new Point(e.clientX, e.clientY);
+			var dragVector = Vector.fromPoints(this.clickPoint, mousePoint);
+			this.$draggable.trigger('dragFinish', [{
+				clickPoint: this.clickPoint,
+				mousePoint: mousePoint,
+				dragVector: dragVector,
+				containerRect: this.containerRect
+			}]);
+		}
+	};
+	Draggable.prototype.onMouseMove = function(e) {
+		if(this.isDragging) {
+			var mousePoint = new Point(e.clientX, e.clientY);
+			var dragVector = Vector.fromPoints(this.clickPoint, mousePoint);
+			this.$draggable.trigger('drag', [{
+				clickPoint: this.clickPoint,
+				mousePoint: mousePoint,
+				dragVector: dragVector,
+				containerRect: this.containerRect
+			}]);
+			e.preventDefault();
+			return false;
+		}
+	};
+	Draggable.eventNamespace = 0;
+	Draggable.getEventNamespace = function(){
+		Draggable.eventNamespace = Draggable.eventNamespace + 1;
+		return ".dmDraggable" + Draggable.eventNamespace;
+	};
+
+
+	function Pasteboard() {
+		this.$base = $('#pasteboard-container');
+		this.$header = this.$base.find('.header');
+		this.$close = this.$base.find('.close');
+		this.$resize = this.$base.find('.resize');
+		this.$textarea = this.$base.find('textarea');
+
+		this.draggableHeader = new Draggable(this.$base, this.$header);
+		this.draggableResize = new Draggable(this.$base, this.$resize);
+
+		this.dimensions = new Rectangle(Point.origin, Vector.identity);
+		this.visible = false;
+
+		this.load();
+		this.pasteboardId = (new Date()).getTime();
+
+		$(window).on('storage', $.proxy(this.onStorageChange, this));
+	}
+
+	Pasteboard.prototype = {
+		getDimensions: function () {
+			return this.dimensions;
+		},
+		setDimensions: function (dim) {
+			this.$base.css({
+				top: dim.getTop(),
+				left: dim.getLeft()
+			});
+			this.$base.outerWidth(dim.getWidth());
+			this.$base.outerHeight(dim.getHeight());
+			this.dimensions = Rectangle.fromElement(this.$base);
+		},
+		setVisible: function (visible) {
+			if(this.visible == visible){
+				return;
+			}
+
+			if(visible) {
+				this.visible = true;
+				this.$base.css('display', 'block');
+				this.resizeToFitWindow(this.getDimensions());
+				this.delegateEvents();
+			}
+			else {
+				this.visible = false;
+				this.$base.css('display', 'none');
+				this.undelegateEvents();
+			}
+		},
+		resizeToFitWindow: function(desiredRect) {
+			var actualRect = Rectangle.constrain(desiredRect, Rectangle.fromWindow());
+			this.setDimensions(actualRect);
+			return actualRect;
+		},
+		onToggleVisibility: function() {
+			this._toggleVisibility(!this.visible);
+		},
+		onShow: function() {
+			this._toggleVisibility(true);
+		},
+		onHide: function() {
+			this._toggleVisibility(false);
+		},
+		_toggleVisibility:function(_visible) {
+			this._forceIeValueUpdate();
+			this.setVisible(_visible);
+			this.persist();
+		},
+		onContentChange: function() {
+			this.persist();
+		},
+		onDragStart: function() {
+			this.$base.addClass('dragging');
+		},
+		onDragFinish: function() {
+			this.$base.removeClass('dragging');
+			this.persist();
+		},
+		onDrag: function(e, data) {
+			var desiredRect = Rectangle.translate(data.containerRect, data.dragVector);
+			var actualRect = Rectangle.constrain(desiredRect, Rectangle.fromWindow());
+			this.setDimensions(actualRect);
+		},
+		onResize: function(e, data) {
+			var desiredSize = Vector.add(data.containerRect.getSize(), data.dragVector);
+			desiredSize = new Vector(Math.max(100, desiredSize.getX()), Math.max(100, desiredSize.getY()));
+
+			var desiredRect = new Rectangle(data.containerRect.getPosition(), desiredSize);
+			var actualRect = Rectangle.constrainSize(desiredRect, Rectangle.fromWindow());
+			this.setDimensions(actualRect);
+		},
+		onWindowResize: function() {
+			this.resizeToFitWindow(this.getDimensions());
+			this.persist();
+		},
+		onStorageChange: function() {
+			this.load();
+		},
+		setStorageKey: function(key) {
+			pasteBoardStorage = new WidgetValueStorage('survey.pasteBoard.value', key);
+			this.load();
+		},
+		load: function () {
+			var config = $.extend({}, {
+				pasteboardId: 0,
+				top: 5000,
+				left: 5000,
+				width: 600,
+				height: 200,
+				visible: false,
+				content: ''
+			}, pasteBoardStorage.get());
+
+			// guard against IE sending storage events to the tab that triggered the event
+			if((typeof this.pasteboardId === 'undefined') || this.pasteboardId !== config.pasteboardId) {
+				var desiredRect = Rectangle.fromXYWH(config.left, config.top, config.width, config.height);
+
+				this.dimensions = this.resizeToFitWindow(desiredRect);
+				this.$textarea.val(config.content);
+				this.setVisible(config.visible);
+			}
+		},
+		persist: function () {
+			var config = {
+				pasteboardId: this.pasteboardId,
+				top: this.dimensions.getTop(),
+				left: this.dimensions.getLeft(),
+				width: this.dimensions.getWidth(),
+				height: this.dimensions.getHeight(),
+				visible: this.visible,
+				content: this.$textarea.val()
+			};
+			pasteBoardStorage.set(config);
+		},
+
+		delegateEvents: function () {
+			this.draggableHeader.delegateEvents();
+			this.$header.on('dragStart.dmPasteboard', $.proxy(this.onDragStart, this))
+					.on('drag.dmPasteboard', $.proxy(this.onDrag, this))
+					.on('dragFinish.dmPasteboard', $.proxy(this.onDragFinish, this));
+
+			this.draggableResize.delegateEvents();
+			this.$resize.on('dragStart.dmPasteboard', $.proxy(this.onDragStart, this))
+					.on('drag.dmPasteboard', $.proxy(this.onResize, this))
+					.on('dragFinish.dmPasteboard', $.proxy(this.onDragFinish, this));
+
+			$(window).on('resize.dmPasteboard', $.proxy(this.onWindowResize, this));
+			this.$textarea.on('input.dmPasteboard change.dmPasteboard', $.proxy(this.onContentChange, this));
+			this.$close.on('click.dmPasteboard', $.proxy(this.onHide, this));
+		},
+		undelegateEvents: function() {
+			this.draggableHeader.undelegateEvents();
+			this.$header.off('.dmPasteboard');
+
+			this.draggableResize.undelegateEvents();
+			this.$resize.off('.dmPasteboard');
+
+			$(window).off('.dmPasteboard');
+			this.$textarea.off('.dmPasteboard');
+			this.$close.off('.dmPasteboard');
+		},
+		/*
+		IE does not show placeholder text after a drag and drop of textarea content (IE does a cut-paste to do this).
+		This will force IE to recognize that content changes have been made and thus show placeholder text if the
+		contents became empty.
+		*/
+		_forceIeValueUpdate: function(){
+			this.$textarea.val(this.$textarea.val());
+		}
+	};
+
+	window.Pasteboard = Pasteboard;
+}());

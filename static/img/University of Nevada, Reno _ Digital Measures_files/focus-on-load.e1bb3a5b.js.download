@@ -1,0 +1,6 @@
+$(function() {
+	var $document = $(document);	// cannot use window.scroll properties in IE10
+	var currentVerticalScroll = $document.scrollTop(), currentHorizontalScroll = $document.scrollLeft();
+	$('#maincontent, #content').attr({'tabindex': -1}).css({'outline': 'none'}).focus();
+	window.scrollTo(currentVerticalScroll, currentHorizontalScroll);
+});

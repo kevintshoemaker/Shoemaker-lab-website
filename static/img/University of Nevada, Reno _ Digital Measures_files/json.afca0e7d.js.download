@@ -1,0 +1,48 @@
+toJson = function(object)
+{
+	var escapeString = function(str)
+	{
+		str = new String(str);
+		return ('"' + str.replace(/(["\\])/g, '\\$1') + '"'
+			).replace(/[\f]/g, "\\f"
+			).replace(/[\b]/g, "\\b"
+			).replace(/[\n]/g, "\\n"
+			).replace(/[\t]/g, "\\t"
+			).replace(/[\r]/g, "\\r");
+	};
+
+	var objectType = typeof(object);
+	if(objectType == "undefined")
+		return "undefined";
+	else if(object === null)
+		return "null";
+	else if((objectType == "number")||(objectType == "boolean"))
+		return object + "";
+	else if (objectType == "string" || object instanceof String || new String(object.constructor).indexOf("function String") != -1 || typeof(object.charAt) == "function")
+		return escapeString(object);
+	else if(objectType == "array" || object instanceof Array || (objectType != "function" && typeof(object.length) == "number"))
+	{
+		var result = [];
+		for(var i = 0; i < object.length; i++)
+			result[result.length] = toJson(object[i]);
+		return "[" + result.join(",") + "]";
+	}
+	else
+	{
+		var result = [];
+		for (var key in object)
+		{
+			var keyType = typeof(key);
+			var jsonKey;
+			if (keyType == "number")
+				jsonKey = '"' + key + '"';
+			else if (keyType == "string")
+				jsonKey = escapeString(key);
+			else
+				continue;
+				
+			result[result.length] = jsonKey + ":" + toJson(object[key]);
+		};
+		return "{" + result.join(",") + "}";
+	};
+};

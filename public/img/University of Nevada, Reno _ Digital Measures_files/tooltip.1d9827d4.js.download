@@ -1,0 +1,541 @@
+/*
+ * Example usage:
+ * Tooltip.onHover($('#p-test').get(0), {text: 'Some informational text', orientation: 'top'});
+ */
+var Tooltip = (function() {
+	function addEventListener(el, eventName, handler) {
+		var proxyHandler = function(e) {
+			e.target = e.target || e.srcElement;
+			e.which = e.which || e.keyCode;
+			handler.call(el, e);
+		};
+
+		$(el).on(eventName, proxyHandler);
+	}
+
+	function outerHeight(el, includeMargin) {
+		var height = el.offsetHeight;
+
+		if(includeMargin) {
+			var style = el.currentStyle || getComputedStyle(el);
+			height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+		}
+
+		return height;
+	}
+
+	function outerWidth(el, includeMargin) {
+		var width = el.offsetWidth;
+
+		if (includeMargin) {
+			var style = el.currentStyle || getComputedStyle(el);
+			width += parseInt(style.marginLeft) + parseInt(style.marginRight);
+		}
+
+		return width;
+	}
+
+	function offset(el) {
+		var rect = el.getBoundingClientRect();
+
+		return {
+			top: rect.top + (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0),
+			left: rect.left + (window.pageXOffset || document.documentElement.scrollLeft) - (document.documentElement.clientLeft || 0)
+		};
+	}
+
+	var TOOLTIP_CLASS = 'tooltip';
+	var TOOLTIP_TEXT_CLASS = 'tooltip-text';
+	var TOOLTIP_ARROW_CLASS = 'tooltip-arrow';
+	var TOOLTIP_ARROW_BORDER_CLASS = 'tooltip-arrow-border';
+	var TOOLTIP_ASSISTIVE_TEXT_CLASS = 'assistive-text';
+	var TOOLTIP_TARGET_ID_ATTR = 'tooltip-target-id';
+
+	var DisplayCache = {
+		incrementingId: 0,
+		displays: {},
+
+		get: function(target) {
+			var id = $(target).data(TOOLTIP_TARGET_ID_ATTR);
+			return this.displays[id];
+		},
+
+		getOrCreate: function(target, config) {
+			var $target = $(target);
+			var id = config.hasOwnProperty('id') ? config.id : $target.data(TOOLTIP_TARGET_ID_ATTR);
+
+			if(!id) {
+				id = this._assignNewTargetId($target);
+			}
+			
+			var display = this.displays[id];
+			if(!display || !display.isHidden) {
+				display = this.displays[id] = new Display(id, target);
+			}
+
+			return display;
+		},
+
+		remove: function(target) {
+			var $target = $(target);
+			var id = $target.data(TOOLTIP_TARGET_ID_ATTR);
+			if(id !== undefined) {
+				delete this.displays[id];
+			}
+		},
+
+		_assignNewTargetId: function($target) {
+			var id = 'tooltip_target_' + this.incrementingId++;
+
+			var $popupContainer = $('.popup-content');
+			if ($popupContainer.length) {
+				id = $.contains($popupContainer[0], $target[0]) ?
+						'popup_' + id :
+						id;
+			}
+			$target.data('tooltip-target-id', id);
+
+			return id;
+		}
+	};
+
+	var Arrow = function() {
+		this.arrowDiv = document.createElement('div');
+		this.arrowDiv.className = TOOLTIP_ARROW_CLASS;
+
+		this.arrowBorderDiv = document.createElement('div');
+		this.arrowBorderDiv.className = TOOLTIP_ARROW_BORDER_CLASS;
+
+		this.setOrientation('top');
+	};
+
+	Arrow.prototype = {
+		setOrientation: function(orientation) {
+			this.orientation = orientation;
+		},
+		setPosition: function(position) {
+			var top = position.top + 2, left = position.left;
+
+			this.arrowDiv.style.top = top + 'px';
+			this.arrowDiv.style.left = left + 'px';
+			this.arrowBorderDiv.style.top = top + 'px';
+			this.arrowBorderDiv.style.left = left + 'px';
+		},
+		getHeight: function() {
+			return outerHeight(this.arrowBorderDiv);
+		},
+		getWidth: function() {
+			return outerWidth(this.arrowBorderDiv);
+		}
+	};
+
+	var Display = function(id, target) {
+		this.id = id;
+		this._target = target;
+
+		this.toolTipDiv = document.createElement('div');
+		this.toolTipDiv.className = TOOLTIP_CLASS;
+		this.toolTipDiv.setAttribute('role', 'tooltip');
+		this.toolTipDiv.setAttribute('aria-hidden', 'true');
+		if (id) {
+			this.toolTipDiv.id = 'tooltip_' + id;
+		}
+
+		this.toolTipTextDiv = document.createElement('div');
+		this.toolTipTextDiv.className = TOOLTIP_TEXT_CLASS;
+
+		this.arrow = new Arrow();
+		this.showArrow = true;
+
+		this.toolTipDiv.appendChild(this.toolTipTextDiv);
+		this.toolTipDiv.appendChild(this.arrow.arrowBorderDiv);
+		this.toolTipDiv.appendChild(this.arrow.arrowDiv);
+
+		this.locatorPoint = {};
+
+		var $display = this;
+		$(window).on('scroll.appTripodTooltip resize.appTripodTooltip', function(event) {
+			$display.reposition();
+		});
+		
+		if(['input', 'select'].indexOf(target.nodeName.toLowerCase()) != -1) {
+			assistiveTargets = $('label[for="' + target.id + '"]');
+			this.assistiveTarget = (assistiveTargets.length) ? assistiveTargets[0] : null;
+		}
+		else {
+			this.assistiveTarget = target;
+		}
+		
+		if(this.assistiveTarget) {
+            if (!this.assistiveTarget.getAttribute('aria-live')) {
+			    this.assistiveTarget.setAttribute('aria-live', 'polite');
+            }
+
+			this.assistiveText = document.createElement('span');
+			this.assistiveText.className = TOOLTIP_ASSISTIVE_TEXT_CLASS;
+		}
+
+		this.hide();
+
+		document.body.appendChild(this.toolTipDiv);
+	};
+
+	Display.prototype = {
+		setText: function(text) {
+			this.toolTipTextDiv.innerHTML = text;
+			if(this.assistiveText) {
+				this.assistiveText.innerHTML = text;
+			}
+			this.displayArrow();
+		},
+		setStyle: function(styles) {
+			for (var styleName in styles) {
+				this.toolTipTextDiv.style[styleName] = styles[styleName];
+			}
+		},
+		setClassName: function(className) {
+			this.toolTipDiv.className = className;
+		},
+		setDelay: function(delay) {
+			this.delay = +delay;
+		},
+		setWidth: function(width) {
+			this.toolTipDiv.style.width = width + 'px';
+		},
+		show: function() {
+			var that = this;
+			var doShow = function() {
+				that.timeoutId = null;
+
+				if(that.showPredicate()) {
+					that.isHidden = false;
+					that.toolTipDiv.style.visibility = 'visible';
+
+                    if (that.assistiveHidden) {
+                        that.toolTipDiv.setAttribute('aria-hidden', 'true');
+                    }
+                    else {
+					    that.toolTipDiv.setAttribute('aria-hidden', 'false');
+                    }
+					if (that.fetchText) {
+						that.setText(that.fetchText());
+					}
+					
+					if(that.assistiveTarget && that.assistiveText) {
+						that.assistiveTarget.appendChild(that.assistiveText);
+					}
+					
+					that.reposition();
+				}
+			};
+
+			if(this.delay > 0) {
+				this.timeoutId = setTimeout(doShow, this.delay);
+			}
+			else {
+				doShow();
+			}
+		},
+		hide: function() {
+			if(this.timeoutId) {
+				clearTimeout(this.timeoutId);
+				this.timeoutId = null;
+			}
+
+			this.isHidden = true;
+			this.toolTipDiv.style.visibility = 'hidden';
+			this.toolTipDiv.setAttribute('aria-hidden', 'true');
+
+			try {
+				this.assistiveTarget.removeChild(this.assistiveText);
+			} catch(ignore) {
+				// Assistive text not attached during initial .hide() call, or no available target
+			}
+		},
+		reposition: function()
+		{
+			if (this.isHidden) {
+				return;
+			}
+
+			var startWidth, endWidth;
+			do {
+				startWidth = this.getWidth();
+				this.setPosition({left: this.getLeftPosition(), top: this.getTopPosition()});
+				endWidth = this.getWidth();
+			} while (Math.abs(startWidth - endWidth) > 2);
+		},
+		getTopPosition: function() {
+			var top;
+
+			var locatorElement = this.locatorPoint.topElement || this._target;
+			var locatorOffset = offset(locatorElement);
+			var locatorElementHeight = outerHeight(locatorElement, true);
+			var locatorOffsetTop = locatorOffset.top;
+			if (this.locatorPoint.hasOwnProperty("top")) {
+				locatorElementHeight = 0;
+				locatorOffsetTop = this.locatorPoint.top;
+			}
+			if (this.locatorPoint.hasOwnProperty("topOffset")) {
+				locatorOffsetTop += this.locatorPoint.topOffset;
+			}
+			var valign = this.locatorPoint.valign;
+
+			var topOffset;
+			switch (valign) {
+				case "center":
+					topOffset = locatorOffsetTop + (locatorElementHeight / 2);
+					break;
+				case "bottom":
+					topOffset = locatorOffsetTop + locatorElementHeight;
+					break;
+				case "top":
+				default:
+					topOffset = locatorOffsetTop;
+					break;
+			}
+
+            // 6 pixels was chosen to get the overlap effect
+			if(this.arrow.orientation === 'top') {
+				if (valign) {
+					top = topOffset - (this.getHeight() / 2) + 6;
+				} else {
+					top = topOffset - this.getHeight() + 6;
+				}
+			}
+			else if(this.arrow.orientation === 'bottom') {
+				if (valign) {
+					top = topOffset + this.getHeight() - 6;
+				} else {
+					top = topOffset + outerHeight(locatorElement) - 6;
+				}
+			}
+			else {
+				top = topOffset + (outerHeight(locatorElement) / 2) - (this.getHeight() / 2);
+			}
+
+			return top;
+		},
+		getLeftPosition: function() {
+			var locatorElement = this.locatorPoint.leftElement || this._target;
+			var locatorOffset = offset(locatorElement);
+			var locatorElementWidth = outerWidth(locatorElement);
+			var locatorOffsetLeft = locatorOffset.left;
+			
+			if(this.arrow.orientation === 'left') {
+				return locatorOffsetLeft - this.getWidth() - 2;
+			}
+			else if(this.arrow.orientation === 'right') {
+				return locatorOffsetLeft + locatorElementWidth + 2;
+			}
+
+			
+			if (this.locatorPoint.hasOwnProperty("left")) {
+				locatorElementWidth = 0;
+				locatorOffsetLeft = this.locatorPoint.left;
+			}
+			if (this.locatorPoint.hasOwnProperty("leftOffset")) {
+				locatorOffsetLeft += this.locatorPoint.leftOffset;
+			}
+			var align = this.locatorPoint.align;
+
+			var leftOffset;
+			switch (align) {
+				case "left":
+					leftOffset = locatorOffsetLeft;
+					break;
+				case "right":
+					leftOffset = locatorOffsetLeft + locatorElementWidth - this.getWidth();
+					break;
+				case "center":
+				default:
+					leftOffset = locatorOffsetLeft + (locatorElementWidth / 2) - (this.getWidth() / 2);
+					break;
+			}
+			var leftBoundary = (this.locatorPoint.leftBoundary || 0);
+			if (leftOffset < leftBoundary) {
+				leftOffset = leftBoundary;
+			}
+			if (this.locatorPoint.rightBoundary) {
+				var rightOffset = leftOffset + this.getWidth();
+				if (rightOffset > this.locatorPoint.rightBoundary) {
+					leftOffset = leftOffset - (rightOffset - this.locatorPoint.rightBoundary);
+				}
+			}
+
+			return leftOffset;
+		},
+		setPosition: function(position) {
+			this.toolTipDiv.style.top = position.top + 'px';
+			this.toolTipDiv.style.left = position.left + 'px';
+			this.calculateArrowPosition();
+		},
+		getHeight: function() {
+			return outerHeight(this.toolTipDiv);
+		},
+		getWidth: function() {
+			return outerWidth(this.toolTipDiv);
+		},
+		setOrientation: function(orientation) {
+			this.arrow.setOrientation(orientation);
+			this.calculateArrowPosition();
+		},
+		displayArrow: function() {
+			if (!this.showArrow) {
+				 return;
+			}
+			this.calculateArrowPosition();
+		},
+		calculateArrowPosition: function() {
+			var height = outerHeight(this.toolTipDiv);
+			var width = outerWidth(this.toolTipDiv);
+
+			var arrowHeight = this.arrow.getHeight();
+			var arrowWidth = this.arrow.getWidth();
+
+			var top, left;
+
+			if(this.arrow.orientation === 'top') {
+				left = (width / 2) - (arrowWidth / 2);
+				top = height - arrowHeight;
+			}
+			else if(this.arrow.orientation === 'bottom') {
+				left = (width / 2) - (arrowWidth / 2);
+				top = 0;
+			}
+			else if(this.arrow.orientation === 'right') {
+				left = 4 - arrowWidth;
+				top = ((height - arrowHeight) / 2) - 2;
+			}
+			else if(this.arrow.orientation === 'left') {
+				left = width - 4;
+				top = ((height - arrowHeight) / 2) - 2;
+			}
+
+			this.arrow.setPosition({top: top, left: left});
+		}
+	};
+
+	var translate = function(element, config) {
+		var display = DisplayCache.getOrCreate(element, config);
+
+		display.setOrientation(config.orientation);
+
+		if (config.locatorPoint) {
+			display.locatorPoint = config.locatorPoint;
+		}
+		if (config.hasOwnProperty('showArrow')) {
+			display.showArrow = config.showArrow;
+		}
+		if (config.style) {
+			display.setStyle(config.style);
+		}
+		if (config.width) {
+			display.setWidth(config.width);
+		}
+		var className = config.className ? config.className : TOOLTIP_CLASS;
+		display.setClassName(className + " " + config.orientation);
+		display.setDelay(config.delay || 500);
+
+		if (config.fetchText) {
+			display.fetchText = config.fetchText;
+			display.setText("");
+		}
+		else {
+			display.setText(config.text);
+		}
+
+		if (config.showPredicate) {
+			display.showPredicate = config.showPredicate;
+		}
+		else {
+			display.showPredicate = function() { return true; }
+		}
+
+        if(config.assistiveHidden) {
+            display.assistiveHidden = config.assistiveHidden;
+        }
+
+		return display;
+	};
+
+	var displayLock = {};
+	Tooltip = {
+		_events: {
+			'mouseenter.appTripodTooltip': true,
+			'mouseleave.appTripodTooltip': false,
+			'mouseover.appTripodTooltip': true,
+			'mouseout.appTripodTooltip': false,
+			'focus.appTripodTooltip': true,
+			'blur.appTripodTooltip': false
+		},
+		hoverOff:function(element){
+			$(element).off(Object.keys(this._events).join(' '));
+		},
+		onHover: function(element, config) {
+			var display = translate(element, config);
+
+			var showFunction = function(event) {
+				if(!displayLock[element] && display) {
+					display.show();
+					displayLock[element] = true;
+				}
+			};
+			
+			var hideFunction = function(event) {
+				if (display) {
+					display.hide();
+					displayLock[element] = false;
+				}
+			};
+
+			this.hoverOff(element);
+
+			// Not all browsers support mouse[over|out] on all element types (i.e. <div> tags)
+			// Plus, JQuery translates mouse[enter|leave] to mouse[over|out]
+			// So, add event listeners with addEventListener, instead of JQuery.on directly(...)
+			$.each(this._events, function(event, show) {
+				addEventListener(element, event, show ? showFunction : hideFunction);
+			});
+			
+			if(['input', 'select', 'button'].indexOf(element.nodeName.toLowerCase()) === -1) {
+				// Needed for display issue when hiding clicked elements, other than form fields
+                var $element = $(element);
+                if (!$element.hasClass('disabled') || !$element.is(':disabled')) {
+				    addEventListener(element, 'click', hideFunction);
+                }
+			}
+		},
+		show: function(element) {
+			var display = DisplayCache.get(element);
+			if (display) {
+				display.show();
+				displayLock[element] = true;
+			}
+		},
+		hide: function(element) {
+			var display = DisplayCache.get(element);
+			if (display) {
+				display.hide();
+				displayLock[element] = false;
+			}
+		},
+		remove: function(element) {
+			this.hoverOff(element);
+			var $target = $(element);
+			var id = $target.data('tooltip-target-id');
+			if(id !== undefined) {
+				DisplayCache.remove(element);
+				$target.removeData('tooltip-target-id');
+				$('#tooltip_' + id).remove();
+			}
+		},
+		static: function(element, config) {
+			// Don't need locking in static case
+			var display = translate(element, config);
+			display.show();
+		}
+	};
+
+	return Tooltip;
+}());

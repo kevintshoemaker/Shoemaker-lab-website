@@ -1,0 +1,13 @@
+function ariaAlert(message) {
+    return ariaAnnounce($('#aria-errors'), message);
+}
+
+function ariaTooltip(message) {
+    return ariaAnnounce($('#aria-tooltip'), message);
+}
+
+function ariaAnnounce(element, message) {
+    element.html('');
+    element.html(message);
+    return this;
+}

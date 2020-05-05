@@ -1,0 +1,180 @@
+function FileUploadService($fileContainer) {
+	this.initialize($fileContainer);
+};
+
+FileUploadService.prototype = {
+	initialize: function($fileContainer) {
+		this.$container = $fileContainer;
+
+		var hasSavedFile = $fileContainer.data('savedfile');
+		this.hasSavedFile = (hasSavedFile && hasSavedFile === true);
+		var hasUploadedFile = $fileContainer.data('uploadedfile');
+		this.hasUploadedFile = (hasUploadedFile && hasUploadedFile === true);
+
+		this.$selectedFileName = $('[data-fileinfo="selectedfilename"]', $fileContainer);
+		this.$fileChangeMessages = $('[data-fileinfo="filechangemessage"]', $fileContainer);
+		this.currentMessage = this.$fileChangeMessages.first().text();
+
+
+		this.$uploadContainer = $('.upload-container', $fileContainer);
+		this.$fileUploadButtonLabel = $('[data-fileinfo="uploadbuttonlabel"]', $fileContainer);
+		this.fileUploadButtonLabel = this.$fileUploadButtonLabel.first().text();
+		this.$fileUploadInput = $('input[type="file"].upload', this.$uploadContainer);
+		this.$fileUploadButton = $('button', this.$uploadContainer);
+
+
+		this.$deleteContainer = $('.delete-container', $fileContainer);
+		if (this.hasSavedFile || this.hasUploadedFile) {
+			this.showDeleteContainer();
+		}
+		this.$fileDeleteButton = $('button', this.$deleteContainer);
+		this.$fileDeleteButtonLabel = $('[data-fileinfo="deletebuttonlabel"]', $fileContainer);
+		this.fileDeleteButtonLabel = this.$fileDeleteButtonLabel.first().text();
+		this.$fileDeleteInput = $('input.deletefile', this.$deleteContainer);
+	},
+
+	handleFileUploads: function() {
+		this.forwardFileUploadButtonEvents();
+		if (this.hasSavedFile) {
+			this.forwardEventsForExistingFile();
+		}
+		else {
+			this.forwardEventsForNewFile();
+		}
+	},
+
+	forwardFileUploadButtonEvents: function() {
+		var fileUploadButtonClickHandler = $.proxy(function(event) {
+			this._haltEvent(event);
+			if ($(this).hasClass('disabled')) {
+				return;
+			}
+			this.$fileUploadInput.click();
+		}, this);
+
+		this.$fileUploadButton.click(fileUploadButtonClickHandler);
+	},
+
+	forwardEventsForExistingFile: function() {
+		var fileToUploadHandler = $.proxy(function(event) {
+			this._haltEvent(event);
+			if (this.$fileUploadInput.hasClass('disabled')) {
+				return;
+			}
+			this.showFileReplacementMessage();
+			this.$fileDeleteInput.val('false');
+			this.$fileUploadButton.focus();
+		}, this);
+		this.$fileUploadInput.on('change.appFileUpload', fileToUploadHandler);
+
+		var deleteFileHandler = $.proxy(function(event) {
+			this._haltEvent(event);
+			if (this.$fileDeleteButton.hasClass('disabled')) {
+				return;
+			}
+			this.showDeleteMessage();
+			this.$fileDeleteInput.val('true');
+			this.removeSelectedFile();
+		}, this);
+		this.$fileDeleteButton.on('click.appFileUpload', deleteFileHandler);
+	},
+
+	forwardEventsForNewFile: function() {
+		var fileToUploadHandler = $.proxy(function(event) {
+			/**
+			 * Halting is not done here since Sensor is also listening for these events
+			 */
+//			this._haltEvent(event);
+			if ($(this).hasClass('disabled')) {
+				return;
+			}
+			var inputVal = this.$fileUploadInput.val();
+			if (inputVal !== '') {
+				this.updateSelectedFileName();
+				this.updateUploadButtonLabel('hasfile');
+				this.showDeleteContainer();
+			}
+			this.$fileUploadButton.focus();
+		}, this);
+		this.$fileUploadInput.on('change.appFileUpload', fileToUploadHandler);
+
+		var fileToDeleteHandler = $.proxy(function(event) {
+			this._haltEvent(event);
+			if ($(this).hasClass('disabled')) {
+				return;
+			}
+			this.removeSelectedFile();
+			this.$container.find("input[id*='@tempFile']").remove();
+
+			this.showNoFileSelectedMessage();
+			this.updateUploadButtonLabel('nofile');
+
+			this.hideDeleteContainer();
+			this.$fileUploadButton.focus();
+		}, this);
+		this.$fileDeleteButton.on('click.appFileUpload', fileToDeleteHandler);
+	},
+
+	_haltEvent: function(event) {
+		event.preventDefault();
+		event.stopPropagation();
+		event.stopImmediatePropagation();
+	},
+
+	showMessage: function(message) {
+		this.$fileChangeMessages.removeClass("assistive-text");
+		this.$fileChangeMessages.text(message);
+		this.currentMessage = message;
+		this._updateUploadButtonLabel();
+		this._updateDeleteButtonLabel();
+	},
+	showFileReplacementMessage: function() {
+		this.showMessage("File will be replaced upon saving this record.");
+	},
+	showDeleteMessage: function() {
+		this.showMessage("File will be deleted upon saving this record.");
+	},
+	showDeleteContainer: function() {
+		this.$deleteContainer.css('visibility', 'visible');
+	},
+	hideDeleteContainer: function() {
+		this.$deleteContainer.css('visibility', 'hidden');
+	},
+	removeSelectedFile: function() {
+		this.$fileUploadInput.val('');
+	},
+	_updateUploadButtonLabel: function() {
+		var buttonLabel = this.fileUploadButtonLabel.replace("...", "");
+		if (this.currentMessage) {
+			buttonLabel += ".  " + this.currentMessage;
+		}
+		this.$fileUploadButtonLabel.text(buttonLabel);
+
+		this.$fileUploadButton.text(this.fileUploadButtonLabel);
+	},
+	updateUploadButtonLabel: function(uploadButtonDataAttribute) {
+		this.fileUploadButtonLabel = this.$fileUploadButton.data(uploadButtonDataAttribute);
+		this._updateUploadButtonLabel();
+	},
+	_updateDeleteButtonLabel: function() {
+		var buttonLabel = this.fileDeleteButtonLabel;
+		if (this.currentMessage) {
+			buttonLabel += ".  " + this.currentMessage;
+		}
+		this.$fileDeleteButtonLabel.text(buttonLabel);
+
+		this.$fileDeleteButton.html(this.$fileDeleteButton.html());	// needed to get NVDA to recognize label update
+	},
+	updateSelectedFileName: function() {
+		this.$selectedFileName.text(this.$fileUploadInput.val().replace("C:\\fakepath\\", ""));
+	},
+	showNoFileSelectedMessage: function() {
+		this.$selectedFileName.text(this.$fileDeleteButton.data('fileselectdefault'));
+	}
+};
+
+$(function() {
+	$('.file-container[data-savedfile]').each(function() {
+		new FileUploadService($(this)).handleFileUploads();
+	});
+});

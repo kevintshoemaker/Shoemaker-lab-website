@@ -1,0 +1,11 @@
+function cancelIfTargetIsDisabled($event) {
+	if ($($event.delegateTarget).hasClass('disabled')) {
+		$event.preventDefault();
+		$event.stopPropagation();
+		$event.stopImmediatePropagation();
+	}
+}
+
+$(function() {
+	$('button, input[type="file"]').on('click', cancelIfTargetIsDisabled);
+});

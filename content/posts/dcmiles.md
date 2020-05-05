@@ -14,7 +14,7 @@ type = "post"
 
 ## Danielle C Miles
 
-I am a PhD student in my first year here at UNR in the APE lab. I will be working on measuring the impacts of pinyon and juniper tree removal in sagebrush ecosystems on bat, reptile, and insect populations, with a possible addition to monitoring sagebrush dependent bird species. Besides this ecological model, I am interested in exploring anthropogenic effects on the environment such as climate change and deforestation with specific emphasis on the implications for amphibians.
+I am a PhD student in my first year here at UNR in the APE lab. I will be working on measuring the broad impacts of pinyon and juniper tree removal in sagebrush ecosystems on bat, bird, reptile, small mammal and insect populations. Besides this ecological study, I am interested in exploring anthropogenic effects on the environment such as climate change and deforestation with specific emphasis on the implications for amphibians.
 
 My previous lab: https://msu.edu/~plz/people.html
 My linkedin: https://www.linkedin.com/in/danielle-miles-79a08489

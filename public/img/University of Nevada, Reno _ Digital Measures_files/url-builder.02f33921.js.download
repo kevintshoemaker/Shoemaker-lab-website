@@ -1,0 +1,115 @@
+	window.ClientUrlBuilder = (
+		function(){
+
+			var appendToUrlWithChar = function(url, appendingString, character){
+				var newUrl = url;
+				if(appendingString){
+					newUrl += appendingString + character;
+				}
+				return newUrl;
+			};
+
+			var doesUrlHaveQueryParameters = function(url){
+				var hasSymbol  = /[?&][^/S*=^/S*]/.test(url);
+				return hasSymbol;
+			};
+
+			var buildQueryParameterString = function(queryParameters){
+				var queryParameterString = '';
+				var hasQueryParameters = false;
+
+				for(var queryParameterKey in queryParameters) {
+					var value = queryParameters[queryParameterKey];
+					if(hasQueryParameters) {
+						queryParameterString += '&' + queryParameterKey + '=' + value;
+					} else {
+						queryParameterString += queryParameterKey + '=' + value;
+						hasQueryParameters = true;
+					}
+				}
+				return queryParameterString;
+			};
+
+			var doesUrlHaveSymbol = function(url, symbol){
+				var hasSymbol = true;
+				var index = url.indexOf(symbol);
+				if(index === -1) {
+					hasSymbol = false;
+				}
+				return hasSymbol;
+			};
+
+			var ClientUrlBuilder = function(url){
+				this.queryParameters =  {};
+				this.clientUrl =  url;
+				this.serverContext = null;
+				this.orgContext = null;
+				this.anchorString = null;
+				this.loginContext = null;
+			};
+
+			ClientUrlBuilder.prototype = {
+
+				addQueryParameter : function(key, value) {
+					this.queryParameters[key] = value;
+					return this;
+				},
+
+				addLoginContext : function(value) {
+					this.loginContext = value;
+					return this;
+				},
+
+				addServerContext : function(value){
+					this.serverContext = value;
+					return this;
+				},
+
+				addOrgContext : function(value){
+					this.orgContext = value;
+					return this;
+				},
+
+				addAnchorString: function(value){
+					this.anchorString = value;
+					return this;
+				},
+
+				addUrl: function(value){
+					this.clientUrl = value;
+					return this;
+				},
+
+				build : function(){
+					var fullUrl = '';
+					var containsQuestionMarkSymbol = doesUrlHaveSymbol(this.clientUrl, '?');
+					var hasQueryParameters = doesUrlHaveQueryParameters(this.clientUrl);
+
+					fullUrl = appendToUrlWithChar(fullUrl, this.serverContext, '/');
+					fullUrl = appendToUrlWithChar(fullUrl, this.orgContext, '/');
+					fullUrl = appendToUrlWithChar(fullUrl, this.loginContext, '/');
+
+					if(containsQuestionMarkSymbol){
+						fullUrl = appendToUrlWithChar(fullUrl, this.clientUrl, '');
+					}else{
+						fullUrl = appendToUrlWithChar(fullUrl, this.clientUrl, '?');
+					}
+
+					if(hasQueryParameters && this.queryParameters){
+						fullUrl += '&'
+					}
+
+					fullUrl = appendToUrlWithChar(fullUrl, buildQueryParameterString(this.queryParameters), '');
+
+					if(this.anchorString){
+						fullUrl += '/#' + this.anchorString;
+					}
+					return fullUrl;
+				}
+
+			};
+			return ClientUrlBuilder;
+		}()
+	)
+
+

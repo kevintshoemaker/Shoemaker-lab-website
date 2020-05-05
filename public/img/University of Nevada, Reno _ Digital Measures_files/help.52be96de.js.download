@@ -1,0 +1,77 @@
+var currentHelpText = null;
+function showHelp(url, helpText)
+{
+	if (helpText)
+		currentHelpText = helpText;
+
+	var newWindow = window.open(url, 'DMHelp', 'dependent=yes,directories=no,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,top=50,left=50,width=450,height=400');
+	newWindow.focus();
+};
+
+
+var showHelpModal = (function() {
+	var addEventListener = function(el, eventName, handler) {
+		if (el.addEventListener) {
+			el.addEventListener(eventName, handler);
+		} else {
+			el.attachEvent('on' + eventName, handler);
+		}
+	};
+
+	var getModalWidth = function($modal) {
+		var $body = $modal.find('.modal-body');
+		var maxWidth = 500;
+		$body.find('table, select').each(function(){
+			var width = $(this).outerWidth(false);
+			if(width > maxWidth) {
+				maxWidth = width;
+			}
+		});
+		return maxWidth;
+	};
+	var setModalWidth = function($modal, width) {
+		var $surveyForm = $modal.find('form, .survey-ui, .popup-content');
+		var $body = $modal.find('.modal-body');
+		$body.trigger("update", [{width: width}]);
+		$surveyForm.width(width);
+	};
+	var adjustWidth = function(modalEl) {
+		var $modal = $(modalEl);
+		var width = getModalWidth($modal);
+		if(width > 500) {
+			setModalWidth($modal, width);
+		}
+	};
+
+	var attached = false;
+	return function(url, helpText) {
+		var frameEl = document.getElementById('helpModalFrame');
+		var helpModalEl = document.getElementById('helpModal');
+		if(!attached) {
+			addEventListener(frameEl, 'load', function() {
+				var content = frameEl.contentWindow.document.querySelector('.modal-dialog').innerHTML;
+				helpModalEl.querySelector('.modal-dialog').innerHTML = content;
+				Modal(helpModalEl).show();
+				adjustWidth(helpModalEl);
+			});
+			attached = true;
+		}
+
+		if(url.indexOf('/Help.htm') !== -1) {
+			helpModalEl.querySelector('.modal-header .title').innerHTML = 'Help';
+			helpModalEl.querySelector('.modal-body').innerHTML = helpText;
+			Modal(helpModalEl).show();
+			adjustWidth(helpModalEl);
+		} else if(url.indexOf('.htm') !== -1) {
+			frameEl.setAttribute('src', url.replace('/help/', '/help/modal/'));
+		} else {
+			showHelp(url, helpText);
+		}
+	}
+}());
+
+function getCurrentHelpText()
+{
+	return currentHelpText;
+};
+

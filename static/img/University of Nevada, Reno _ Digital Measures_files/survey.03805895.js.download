@@ -1,0 +1,2026 @@
+if (!Array.prototype.indexOf) {
+	Array.prototype.indexOf = function (searchElement, fromIndex) {
+		if ( this === undefined || this === null ) {
+			throw new TypeError( '"this" is null or not defined' );
+		}
+
+		var length = this.length >>> 0;
+
+		fromIndex = +fromIndex || 0;
+
+		if (Math.abs(fromIndex) === Infinity) {
+			fromIndex = 0;
+		}
+
+		if (fromIndex < 0) {
+			fromIndex += length;
+			if (fromIndex < 0) {
+				fromIndex = 0;
+			}
+		}
+
+		for (;fromIndex < length; fromIndex++) {
+			if (this[fromIndex] === searchElement) {
+				return fromIndex;
+			}
+		}
+
+		return -1;
+	};
+}
+if(typeof String.prototype.trim !== 'function') {
+	String.prototype.trim = function() {
+		return this.replace(/^\s+|\s+$/g, '');
+	}
+}
+
+function toggleNumberToAddDisplayForDsaRows() {
+	var $dsaAddButtonNumberLabels = $('[data-addnumberedby]');
+	$dsaAddButtonNumberLabels.each(function() {
+		var $numberDisplay = $(this);
+		var $rowLabelPortion = $numberDisplay.parent().find('[data-addnumber="row"]');
+		var $selectDdl = $(document.getElementById($numberDisplay.data('addnumberedby')));
+		var $addButton = $selectDdl.next('button');
+		$selectDdl.on('change', function() {
+			var currentValue = this.value;
+			$numberDisplay.html(currentValue);
+			if (currentValue > 1) {
+				$rowLabelPortion.text("rows");
+			}
+			else {
+				$rowLabelPortion.text("row");
+			}
+			// setting html of addbutton again so NVDA picks up new label
+			$addButton.html($addButton.html());
+		});
+	});
+}
+
+function addEvent(event, elem, func)
+{
+	if (elem.addEventListener)  // W3C DOM
+	{
+		elem.addEventListener(event, func, false);
+	}
+	else if (elem.attachEvent) // IE DOM
+	{
+		elem.attachEvent("on"+event, func);
+	}
+	else
+	{
+		elem[event] = func;
+	}
+}
+
+function getFormByNameOrId(name)
+{
+	return $(name + ', form[name="'+ name +'"]').get(0);
+}
+function getSurveyForm()
+{
+	return getFormByNameOrId('surveyForm');
+}
+function getPopupForm()
+{
+	return getFormByNameOrId('popupSurveyForm');
+}
+function getTopLevelForm()
+{
+	return getPopupForm() || getSurveyForm();
+}
+
+function removeSaveParam()
+{
+	var form = getSurveyForm();
+	form.setAttribute('action', form.getAttribute('action').replace('?action=save', ''));
+}
+
+function submitEvent(eventName, eventData)
+{
+    if (!setEvent(eventName, eventData))
+    {
+        return false;
+    }
+    var includingDynAnchor = ('true' == $('#includingDynAnchor').val());
+    switch(eventName)
+    {
+        case "AUTHOR_ADD":
+        case "RESTRICTION_CHANGE":
+        case "ROW_ADD":
+        case "ROW_DELETE":
+        case "ROW_MOVE":
+            markDirty();
+			if(!getPopupForm()) {
+				removeSaveParam();
+            	disableExitConfirmation();
+			}
+            includingDynAnchor = true;
+            break;
+        case "COMPONENT_SAVE_BLANK":
+        case "COMPONENT_SAVE":
+			disableExitConfirmation();
+			break;
+        case "POPUP_SAVE":
+			markDirty();
+            break;
+        case "COMPONENT_EXIT":
+            break;
+        default:
+			removeSaveParam();
+			break;
+    }
+    submitTopLevelForm(includingDynAnchor);
+    return true;
+}
+
+function submitTopLevelForm(includingDynAnchor)
+{
+	if(getPopupForm())
+	{
+		submitPopupComponent();
+	}
+	else
+	{
+        var surveyForm = getSurveyForm();
+        if(includingDynAnchor){
+            surveyForm.action = surveyForm.action + '#dynAnchor';
+        }
+        surveyForm.submit();
+	}
+}
+
+function setEvent(eventName, eventData)
+{
+    var form = getTopLevelForm();
+    if (!form)
+    {
+        return false;
+    }
+
+    var eventNameField = form.elements["eventName"];
+    var eventDataField = form.elements["eventData"];
+
+    if (!eventNameField || !eventDataField)
+    {
+        return false;
+    }
+
+    eventNameField.value = eventName;
+    eventDataField.value = eventData ? toJson(eventData) : "";
+
+    return true;
+}
+
+function ready(fn) {
+	if (document.addEventListener) {
+		document.addEventListener('DOMContentLoaded', fn);
+	} else {
+		document.attachEvent('onreadystatechange', function() {
+			if (document.readyState === 'interactive' || document.readyState === 'complete') {
+				fn();
+			}
+		});
+	}
+}
+
+function exitComponent(button, isToInstrument, isPage)
+{
+    if ($(button).hasClass('disabled')) {
+        return;
+    }
+
+    button.disabled = true;
+    setTimeout(function(){
+        button.disabled = false;
+    }, 1000);
+
+    if (isPage)
+    {
+        submitEvent(isToInstrument ? "COMPONENT_EXIT_INSTRUMENT" : "COMPONENT_EXIT", null);
+    }
+    else
+    {
+		closePopupComponent();
+    }
+
+    return false;
+}
+
+function saveComponent(button, isAddAnother, isPage, userId, userName)
+{
+    button.disabled = true;
+    if (validateForm(userId, userName))
+    {
+        if (!isPage)
+        {
+            getPopupForm().elements["maxId"].value = getMaxId();
+        }
+
+        submitEvent(
+                isPage
+                        ? isAddAnother
+                        ? "COMPONENT_SAVE_BLANK"
+                        : "COMPONENT_SAVE"
+                        : "POPUP_SAVE",
+                isSurveyDeclined()
+                        ? { decline: true }
+                        : {});
+    }
+    else
+    {
+        button.disabled = false;
+    }
+
+    return false;
+}
+
+function deleteRowInComponent(button, id, confirmationText)
+{
+    button.disabled = true;
+
+    if (confirm(confirmationText))
+    {
+        submitEvent("ROW_DELETE", { componentAnswerId: id });
+    }
+    else
+    {
+        button.disabled = true;
+    }
+    return false;
+}
+
+function reorderRowInComponent(button, id, rows)
+{
+    button.disabled = true;
+    submitEvent("ROW_MOVE", { componentAnswerId: id, rows: rows });
+    return false;
+}
+
+function addRowToComponent(button, siblingId, count)
+{
+    button.disabled = true;
+    submitEvent("ROW_ADD", { componentAnswerId: siblingId, count: count });
+    return false;
+}
+
+function handleAddRowToComponentWithSelection(button, nodeId, siblingId)
+{
+    var selector = document.getElementById("numbertoAdd-" + nodeId + '-' + siblingId);
+    var selection = 0;
+
+    if($(selector).is("select")) {
+        var selected = selector.options[selector.selectedIndex];
+        selection = selected.value || selected.text;
+    } else if($(selector).attr('type') == 'hidden') {
+        //selector = document.getElementById("numbertoAdd-" + nodeId + "_hidden");
+        selection = parseInt(selector.value);
+    }
+
+    if (!isNaN(selection) && selection > 0)
+    {
+        addRowToComponent(button, siblingId, selection);
+    }
+}
+
+function hasClass(element, classNameToTestFor) {
+	var classNames = element.className.split(' ');
+	for (var i = 0; i < classNames.length; i++) {
+		if (classNames[i].toLowerCase() == classNameToTestFor.toLowerCase()) {
+			return true;
+		}
+	}
+	return false;
+}
+
+function offset(el) {
+	var rect = el.getBoundingClientRect();
+
+	return {
+		top: rect.top + (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0),
+		left: rect.left + (window.pageXOffset || document.documentElement.scrollLeft) - (document.documentElement.clientLeft || 0)
+	};
+}
+function outerHeight(el, includeMargin) {
+	var height = el.offsetHeight;
+
+	if(includeMargin) {
+		var style = el.currentStyle || getComputedStyle(el);
+		height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+	}
+
+	return height;
+}
+function outerWidth(el, includeMargin) {
+	var width = el.offsetWidth;
+
+	if (includeMargin) {
+		var style = el.currentStyle || getComputedStyle(el);
+		width += parseInt(style.marginLeft) + parseInt(style.marginRight);
+	}
+
+	return width;
+}
+
+
+function getOrganizationName() {
+	var result = "Your University";
+	var orgName = document.getElementById('orgName');
+	if (orgName && orgName.value && orgName.value != 'Demo') {
+		result = orgName.value;
+	}
+	return result;
+}
+
+/*
+ * Reloading form when customization question changes value, with user's permission when appropriate
+ */
+function restrictionChange(answerPath, dataPathId, oldValue, customizedValues, nonCustomizedValues)
+{
+    var form = getSurveyForm();
+    var field = form.elements[answerPath];
+    var currentValue = "" + field.value;
+
+    if (currentValue == oldValue)
+    {
+        return;
+    }
+
+    var isInArray = function(arrayToSearch, valueToFind)
+    {
+        if (0 == arrayToSearch.length)
+        {
+            return false;
+        }
+
+        for (index in arrayToSearch)
+        {
+            if (arrayToSearch[index] == valueToFind)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    };
+
+    var isCustomization = function(value)
+    {
+        if (null != customizedValues)
+        {
+            return isInArray(customizedValues, value);
+        }
+        else
+        {
+            if (null != nonCustomizedValues)
+            {
+                return !isInArray(nonCustomizedValues, value);
+            }
+            else
+            {
+                return true;
+            }
+        }
+    };
+
+    var currentValueIsCustomization = isCustomization(currentValue);
+    var oldValueIsCustomization = isCustomization(oldValue);
+
+    var reload = oldValueIsCustomization || currentValueIsCustomization;
+    var confirmation = null;
+
+    if (oldValueIsCustomization)
+    {
+        if (currentValue.length != 0)
+        {
+            confirmation = "If you continue, the fields on this page will need to change to reflect the selection you just made.  This will only result in loss of data for fields no longer available based on the new selection.\n\nDo you want to continue?";
+        }
+        else
+        {
+            confirmation = "If you continue, this page will need to refresh to reflect the selection you just made.\n\nDo you want to continue?";
+        }
+    }
+
+    if (reload)
+    {
+        if (confirmation && !confirm(confirmation))
+        // User does not want to proceed; revert to previous value
+        {
+            field.value = oldValue;
+        }
+        else
+        // Reload form with new customization
+        {
+            submitEvent(
+                    "RESTRICTION_CHANGE",
+            {
+                dataPathId: dataPathId,
+                oldValue: oldValue,
+                answerPath: answerPath
+            });
+        }
+    }
+}
+
+
+function savePopupComponent(rowId, data, protectedData)
+{
+    var dataField = document.getElementById(rowId);
+    var protectedDataField = document.getElementById(rowId + "_protected");
+    if (dataField != null && protectedDataField != null)
+    {
+        dataField.value = data;
+        protectedDataField.value = protectedData;
+        markDirty();
+    }
+    else
+    {
+        alert("Error: Unable to save data from popup window. rowId: " + rowId);
+    }
+}
+
+function getMaxId()
+{
+    return getSurveyForm().elements["maxId"].value;
+}
+
+function setMaxId(maxId)
+{
+    getSurveyForm().elements["maxId"].value = maxId;
+}
+
+function addReferenceValues(questionId, elementId)
+{
+	var values = referenceValues[questionId];
+	var element = document.getElementById(elementId);
+
+    if(typeof SelectTypeAhead === "object" && element.getAttribute("typeahead") === "true")
+    {
+        var refValues = referenceValues[questionId];
+        if(refValues.length > 0 && refValues[0].length > 0 && refValues[0][0] != 'placeHolderText') {
+            refValues.unshift(['placeHolderText', 'Select or type a name...']);
+        }
+
+        var escapedElementId = elementId.replace( /(:|\.|\[|\]|,|\/)/g, "\\$1" );
+        initSelectTypeAhead('#maincontent', '#' + escapedElementId, 'userselect', questionId);
+        initSelectTypeAhead('.popup-content', '#' + escapedElementId, 'userselect', questionId);
+        return;
+    }
+
+    if (!element || element.populated || !values)
+    {
+        return;
+    }
+
+    var handler = function()
+    {
+        if (element.populated)
+        {
+            return;
+        }
+        var optionGroup = null, lastLetter = '';
+
+        if ("true" == element.getAttribute("groupedDisplay"))
+        {
+            for (var i = 0; i < values.length; i++)
+            {
+                var value = values[i];
+                var display = value[1];
+                if (parseInt(value) < 0)
+                {
+                    optionGroup = null;
+                    var option = document.createElement("option");
+                    option.setAttribute("value", value);
+                    element.appendChild(document.createTextNode(display));
+                }
+                else
+                {
+                    if (optionGroup == null || display.charAt(0).toUpperCase() != lastLetter)
+                    {
+                        lastLetter = display.charAt(0).toUpperCase();
+                        optionGroup = document.createElement("optGroup");
+                        optionGroup.setAttribute("label", lastLetter.toUpperCase());
+                        element.appendChild(optionGroup);
+                    }
+
+                    var option = document.createElement("option");
+                    option.setAttribute("value", value[0]);
+                    option.appendChild(document.createTextNode(display));
+                    optionGroup.appendChild(option);
+                }
+            }
+        }
+        else
+        {
+            optionGroup = document.createElement("optGroup");
+            optionGroup.setAttribute("label", "----------");
+
+            for (var i = 0; i < values.length; i++)
+            {
+                var value = values[i];
+                var display = value[1];
+
+                var option = document.createElement("option");
+                option.setAttribute("value", value[0]);
+                option.appendChild(document.createTextNode(display));
+                optionGroup.appendChild(option);
+            }
+            element.appendChild(optionGroup);
+        }
+
+        element.removeAttribute("style");
+        element.style.width = element.offsetWidth + "px";
+		element.style.minWidth = '160px';
+        element.populated = true;
+    };
+
+    var agent = navigator.userAgent.toUpperCase();
+    if (agent.indexOf("GECKO") != -1 || agent.indexOf("WEBKIT") != -1 || agent.indexOf("MSIE 7") != -1)
+    {
+        if (element.addEventListener)
+        {
+            element.addEventListener("mousedown", handler, false);
+            element.addEventListener("keydown", handler, false);
+        }
+        else
+        {
+            if (element.attachEvent)
+            {
+                element.attachEvent("onmousedown", handler);
+                element.attachEvent("onkeydown", handler);
+            }
+        }
+    }
+    else
+    {
+        if (window.addEventListener)
+        {
+            window.addEventListener("load", handler, false);
+        }
+        else
+        {
+            if (window.attachEvent)
+            {
+                window.attachEvent("onload", handler);
+            }
+            else
+            {
+                handler();
+            }
+        }
+    }
+}
+
+var showAuthorParsingModal = (function(){
+	var $authorModal = null;
+
+	return function(button, surveyId, surveyDataId, nodeId, parentId, childPath){
+		if(!$authorModal){
+			var modalHtml = "<div class='modal' id='authorParseModal'>" +
+                "<div class='modal-backdrop'></div>" +
+                "<div class='modal-dialog'>" +
+                "<button type='button' class='link close' data-dismiss='modal'>" +
+                "<span class='dismiss glyphicons glyphicons-remove-2'></span>" +
+                "</button>" +
+                "<div class='modal-header'>" +
+                "<h1 class='title'>Add a List of Names</h1>" +
+                "</div>" +
+                "<div class='modal-body'></div>" +
+                "</div>" +
+                "</div>";
+			$authorModal = $(modalHtml);
+			$("body").append($authorModal)
+		}
+		$.ajax({
+			url: new ClientUrlBuilder('survey/author/showMatches.do')
+			.addServerContext(appURL(''))
+			.addOrgContext(clientOrgContext())
+			.addLoginContext(clientLoginContext())
+			.addQueryParameter($("meta[name='_httpSessionAliasParamName']").attr("content"),
+				$("meta[name='_httpSessionAlias']").attr("content"))
+			.build(),
+			data: {
+				surveyId: surveyId,
+				surveyDataId: surveyDataId,
+				topComponentId: getSurveyForm().elements["nodeId"].value,
+				nodeId: nodeId,
+				parentId: parentId,
+				childPath: childPath,
+				dataLookupJson: getSurveyForm().elements["dataLookupJson"].value
+			},
+			success: function(data){
+				$authorModal.find('.modal-body').html(data);
+				Modal($authorModal.get(0), {width: 825}).show();
+			}
+		});
+	}
+}());
+
+function showAuthorParsing(button, surveyId, surveyDataId, nodeId, parentId, childPath)
+{
+    button.disabled = true;
+
+	var url = new ClientUrlBuilder('survey/author/showMatches.do')
+	.addServerContext(appURL(''))
+	.addOrgContext(clientOrgContext())
+	.addLoginContext(clientLoginContext())
+	.addQueryParameter($("meta[name='_httpSessionAliasParamName']").attr("content"),
+		$("meta[name='_httpSessionAlias']").attr("content"))
+	.addQueryParameter("surveyId",surveyId)
+	.addQueryParameter("surveyDataId",surveyDataId)
+	.addQueryParameter("topComponentId",getSurveyForm().elements["nodeId"].value)
+	.addQueryParameter("nodeId",nodeId)
+	.addQueryParameter("parentId",parentId)
+	.addQueryParameter("childPath",childPath)
+	.addQueryParameter("dataLookupJson",escape(getSurveyForm().elements["dataLookupJson"].value))
+	.build();
+
+    var newWindow = window.open(
+			url,
+            "AuthorParsing",
+            "dependent=yes,directories=no,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,top=50,left=50,width=800,height=500");
+    newWindow.focus();
+    button.disabled = false;
+}
+
+function addAuthors(topComponentId, surveyDataId, dataLookupJson, parentId, childPath, authorJson)
+{
+    var form = getSurveyForm();
+
+    if ((form["surveyDataId"].value || "0") != surveyDataId
+            || (form["nodeId"].value || "0") != topComponentId)
+    {
+        alert("Error: Unable to save data from popup window.");
+    }
+    else
+    {
+        submitEvent(
+                "AUTHOR_ADD",
+        {
+            componentAnswerId: parentId,
+			childPath: childPath,
+            authors: authorJson
+        });
+    }
+}
+
+function validateForm(userId, userName)
+{
+	var form = getTopLevelForm();
+    var elements = form.elements;
+    var spanTags = form.getElementsByTagName('span');
+    var isValid = true;
+    var selectOrTextGroupMap = {};
+    var requiredMap = {};
+    var checkboxMap = {};
+    var significantUserReferenceMap = {};
+	var isDateRequiredFound = false;
+	var isDateRequiredPopulated = false;
+	var requiredDateFields = [];
+
+    for (var i = 0; i < elements.length; i++)
+    {
+        var field = elements[i];
+        var isRequired = ("true" == field.getAttribute("uiRequired"));
+		var isFieldEmpty = isEmpty(getSelectedValueOrValue(field));
+
+		if (isRequired && isFieldEmpty)
+        {
+            isValid = invalid("Please complete all required fields.", field);
+            break;
+        }
+
+        function getDateRequired(field){
+            var dateType = field.getAttribute("dateType");
+
+            return "true" == field.getAttribute("dateRequired") && dateType.indexOf('YEAR') > -1;
+        }
+
+		var isDateRequired = getDateRequired(field);
+		if(isDateRequired)
+		{
+			isDateRequiredFound = true;
+			if(isFieldEmpty)
+			{
+				var dateLabel = getDateLabel(field);
+				if(requiredDateFields.indexOf(dateLabel) == -1)
+				{
+					requiredDateFields.push(dateLabel);
+				}
+			}
+			else
+			{
+				isDateRequiredPopulated = true;
+			}
+		}
+
+        var numericType = field.getAttribute("requiredType");
+        if (numericType != null)
+    	{
+    		if(field.value.length > 0 && !validateNumeric(field, numericType))
+    		{
+    			isValid = false;
+    			break;
+    		}
+    	}
+        else
+        {
+        	if((field.type == "text" || field.type == "textarea") && field.value.length > 0 && !validateLength(field))
+            {
+            	isValid = false;
+            	break;
+            }
+        }
+
+		if (isFileInput(field) && !validateFileNameLength(field)) {
+			isValid = false;
+			break;
+		}
+
+        if (isFileInput(field) && fileUploadRule && !validateFileUploadRule(field, fileUploadRule))
+        {
+        	isValid = false;
+        	break;
+        }
+
+
+        if (isRequired && (field.type == "radio" || field.type == "checkbox"))
+        {
+            var count = requiredMap[field.name];
+            if (count == null)
+            {
+                requiredMap[field.name] = 0;
+            }
+            if (field.checked)
+            {
+                requiredMap[field.name] = 1;
+            }
+        }
+        if (field.type == "checkbox" && field.checked)
+        {
+            var checkbox = checkboxMap[field.name];
+            if (checkbox == null)
+            {
+                checkboxMap[field.name] = checkbox = {
+                		field: field,
+                		count: 0
+                };
+            }
+        	checkbox.count++;
+        }
+
+        var significantUserReference = field.getAttribute("significantUserReference");
+        if (significantUserReference == "true")
+        {
+            significantUserReferenceMap[field.name] = field;
+        }
+
+        appendToSelectOrTextGroupMap(selectOrTextGroupMap, field);
+    }
+
+    for (var i = 0; i < spanTags.length; i++)
+    {
+        var span = spanTags[i];
+        var isSpanEmpty = isEmpty(span.textContent || span.innerText);
+        var isDateRequired = getDateRequired(span);
+
+        if(isDateRequired && !isSpanEmpty)
+        {
+            isDateRequiredFound = true;
+            isDateRequiredPopulated = true;
+        }
+
+		var nonEditableSignificantUserReference = span.getAttribute("significantUserReference");
+		if (nonEditableSignificantUserReference == "true")
+		{
+			significantUserReferenceMap[span.id] = span;
+		}
+    }
+
+    if (isValid)
+    {
+        for (var key in requiredMap)
+        {
+            if (requiredMap[key] == 0)
+            {
+                invalid("Please complete all required fields.");
+                isValid = false;
+                break;
+            }
+        }
+    }
+
+    if (isValid)
+    {
+	   isValid = validateCheckboxes(checkboxMap);
+    }
+    if (isValid)
+    {
+        isValid = validateDates(form);
+    }
+    if (isValid)
+    {
+        isValid = validateSelectOrTextGroups(selectOrTextGroupMap);
+    }
+    if (isValid && validationRequiredSelfUserReference)
+    {
+        isValid = validateSignificantUserReferences(userId, userName, significantUserReferenceMap);
+    }
+
+	if(isValid && isDateRequiredFound && !isDateRequiredPopulated)
+	{
+		isValid = false;
+		invalid("To ensure this record appears on reports, enter at least one of these dates prior to saving:<br><ul><li>" + requiredDateFields.join('</li><li>') + "</li></ul>");
+	}
+
+    return isValid;
+}
+
+var invalid = (function(){
+    var isShown = false;
+    return function(message, field)
+    {
+        if(isShown) {
+            return false;
+        }
+
+        var $alert = $('#survey-ui-alert');
+        var $body = $alert.find('.modal-body');
+		var assistiveAlertText = '<span class="assistive-text">Alert!</span>'
+        $body.html(assistiveAlertText + '\n' + message);
+
+        var modal = Modal($alert.get(0));
+        modal.on('hidden.dmModal.dmSurveyUI', function()  {
+            if (field && !(field.type && field.type == "input" && field.getAttribute && field.getAttribute("type") == "hidden"))
+            {
+            	// IE doesn't like focus() on a hidden form input field.
+				// However our custom type-ahead fields rely on hidden input fields
+				// We can check if a type-ahead field if exists and if so, place the focus there
+				if (field.tagName && field.tagName.toLowerCase() === "input" &&
+					field.getAttribute && field.getAttribute("type").toLowerCase() === "hidden") {
+					var fieldId = field.id;
+					var typeAheadField = document.getElementById(fieldId + '_input');
+					field = typeAheadField
+						? typeAheadField
+						: field;
+				}
+                field.focus();
+                anchorToElement(field);
+            }
+            modal.off('.dmSurveyUI');
+            isShown = false;
+        });
+        modal.show();
+        isShown = true;
+
+        var width = $body.outerWidth();
+        modal.update(null, {width: width});
+
+        return false;
+    }
+}());
+
+
+function isEmpty(value)
+{
+    return value == null || value.length == 0;
+}
+
+function getInputFieldsByAttribute(attributeName)
+{
+	var form = getSurveyForm();
+	var formInputs = form.getElementsByTagName('input');
+	var alternativeNameGroupElements = [];
+	for (var i = 0, input; input = formInputs[i]; i++)
+	{
+		if (input.getAttribute(attributeName))
+		{
+			alternativeNameGroupElements.push(input);
+		}
+	}
+	return alternativeNameGroupElements;
+}
+
+function getLabelFor(element)
+{
+	var labels = document.getElementsByTagName('label');
+	for (var i = 0, label; label = labels[i]; i++)
+	{
+		if (label.getAttribute('for') == element.id)
+		{
+			return label;
+		}
+	}
+}
+
+function getSelectedIndexOrValue(field) {
+	if (isSelect(field)) {
+		return field.selectedIndex || null;
+	}
+
+	if (isFileInput(field)) {
+		return getFileValue(field) || null;
+	}// strip @newFile
+
+    if(field.tagName.toLowerCase() === 'span') {
+        return field.textContent || field.innerText || null;
+    }
+
+    return field.value || null;
+}
+
+function getSelectedValueOrValue(field) {
+	if (isSelect(field)) {
+		return field.options[field.selectedIndex].value || null;
+	}
+
+	if (isFileInput(field)) {
+		return getFileValue(field);
+	}
+
+	if (field.tagName.toLowerCase() === 'span') {
+		return field.textContent || field.innerText || null;
+	}
+
+    return field.value || null;
+}
+
+function getFileValue(field) {
+
+	if (field.value && field.value.length > 0) {
+		return field.value;
+	}
+
+	var baseId = field.id.substring(0, field.id.indexOf("/@newFile"));
+	var hiddenElement = document.getElementById(baseId);
+	if (hiddenElement) {
+		return hiddenElement.value || null;
+	}
+
+	hiddenElement = document.getElementById(baseId + "/@tempFile");
+	if (hiddenElement) {
+		return hiddenElement.value || null;
+	}
+
+	return null;
+}
+
+function isFileInput(field) {
+	return field.type == "file";
+}
+
+function isSelect(field) {
+	var type = field.type;
+
+	if (!type) {
+		return false;
+	}
+	if (type.length > "select".length) {
+		type = type.substring(0, "select".length);
+	}
+	return (type == "select");
+}
+
+/**
+ * Checks if an element is a SelectTypeAhead
+ * @param  {HTMLElement}  field
+ * @return {Boolean}
+ */
+function isSelectTypeAhead (field) {
+	return !!field.getAttribute('data-typeahead');
+}
+
+function isTypeAhead(field)
+{
+	if(field.getAttribute('typeahead') === 'true')
+	{
+		return true;
+	}
+	return false;
+}
+
+function isArrayInstance(object)
+{
+    return typeof(object) == "array" || object instanceof Array || (object.constructor && object.constructor.toString().indexOf("Array") > -1);
+}
+
+function validateNumeric(field, numericType)
+{
+    switch (numericType)
+    {
+        case "INTEGER":
+            return validateInteger(field);
+        case "PERCENT":
+            if (-1 != field.value.indexOf(locale.number.percent.symbol))
+            {
+            	field.value = field.value.replace(locale.number.percent.symbol, "");
+            }
+            return validateDouble(field);
+        case "CURRENCY":
+        	if (-1 != field.value.indexOf(locale.currency.symbol))
+        	{
+        		field.value = field.value.replace(locale.currency.symbol, "");
+        	}
+        	return validateDouble(field);
+        case "DOUBLE":
+        	return validateDouble(field);
+    }
+    return true;
+}
+
+function inferSeparators(inputValue)
+{
+	var posPeriod = inputValue.indexOf("."), posComma = inputValue.indexOf(",");
+
+	if(-1 != posPeriod && -1 != posComma)
+	{
+		// Infer based on relative position if both are present
+		if(posComma < posPeriod && -1 == inputValue.substring(posPeriod + 1).indexOf(","))
+		{
+			return {decimal: ".", group: ","};
+		}
+		else if(posPeriod < posComma && -1 == inputValue.substring(posComma + 1).indexOf("."))
+		{
+			return {decimal: ",", group: "."};
+		}
+		else
+		{
+			// Both comma and period present, but unable to make sense from order.
+			return {decimal: null, group: null};
+		}
+	}
+	else
+	{
+		if(-1 != posComma && -1 != inputValue.substring(posComma + 1).indexOf(","))
+		{
+			// Infer from multiple commas
+			return {decimal: ".", group: ","};
+		}
+		else if(-1 != posPeriod && -1 != inputValue.substring(posPeriod + 1).indexOf("."))
+		{
+			// Infer from multiple periods
+			return {decimal: ",", group: "."};
+		}
+		else
+		{
+			// Locale settings
+			return {decimal: locale.currency.decimal.symbol, group: locale.number.grouping.symbol};
+		}
+	}
+}
+
+function normalizeNumeric(inputValue)
+{
+        var separators = inferSeparators(inputValue);
+
+        // Remove group separators
+        if(separators.group)
+        {
+               inputValue = inputValue.split(separators.group).join("");
+        }
+
+        // Normalize decimal separators, leading zeros
+        if(separators.decimal)
+        {
+               inputValue = inputValue.replace(separators.decimal, ".");
+
+               // Add leading zero to decimal values
+               if(0 == inputValue.indexOf("."))
+               {
+                       inputValue = "0" + inputValue;
+               }
+        }
+
+        return inputValue;
+}
+
+function getValidationFieldLabelPrefix(field) {
+    var $label = $("label[for='" + field.id + "']");
+    if($label.length == 1) {
+        return $label.text() + ': ';
+    }
+    return '';
+}
+
+function validateDouble(field)
+{
+	var inputValue = normalizeNumeric(field.value);
+
+	var fieldPrefix = getValidationFieldLabelPrefix(field);
+
+    if (isNaN(inputValue))
+    {
+        return invalid(fieldPrefix + '"' + field.value + '" is not a valid number.', field);
+    }
+
+    field.value = inputValue;
+    return validateRangeNumeric(field, parseFloat(inputValue, 10));
+}
+
+var JAVA_MIN_INTEGER_32 = -2147483648;
+var JAVA_MAX_INTEGER_32 = 2147483647;
+
+/** Converts a number to a string value with the appropriate commas (e.g., 1000000.0012 => 1,000,000.0012). */
+function numberWithCommas(x) {
+	var parts = x.toString().split(".");
+	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	return parts.join(".");
+}
+
+function validateInteger(field) {
+	var inputValue = normalizeNumeric(field.value);
+
+	var fieldPrefix = getValidationFieldLabelPrefix(field);
+
+	// unbounded integer check
+	if(isNaN(inputValue) || !isStringNumericalInteger(
+		String(inputValue) // String(x) for sanity
+	)) {
+		return invalid(fieldPrefix + '"' + field.value + '" is not a whole number.', field);
+	}
+
+	// check if the integer is within the supported range by Java
+	if(!isIntegerValueA32BitSignedJavaInteger(inputValue)) {
+		return invalid(fieldPrefix  + '"' + field.value + '" is not within the supported integer range of '
+			+ numberWithCommas(JAVA_MIN_INTEGER_32)
+			+ ' to ' + numberWithCommas(JAVA_MAX_INTEGER_32) + '.', field);
+	}
+
+    field.value = inputValue;
+	// validate against dynamically defined ranges for survey-ui fields
+    return validateRangeNumeric(field, parseInt(inputValue, 10));
+}
+
+/** Tests if a string value is an integer (unbounded range). */
+function isStringNumericalInteger(testValue) {
+	return typeof testValue === "string" && /^[\-+]?\d+$|^[\-+]?0$/.test(testValue);
+}
+
+function isIntegerValueA32BitSignedJavaInteger(integerValue) {
+	return integerValue >= JAVA_MIN_INTEGER_32 && integerValue <= JAVA_MAX_INTEGER_32;
+}
+
+function validateRangeNumeric(field, value)
+{
+    var fieldPrefix = getValidationFieldLabelPrefix(field);
+
+    var rangeMin = parseFloat(field.getAttribute("rangeMin"), 10);
+    if (!isNaN(rangeMin) && value < rangeMin)
+    {
+        var message = fieldPrefix + '"' + field.value + '" must be greater than or equal to "' + rangeMin + '"';
+        if(field.getAttribute("datetype") == "YEAR")
+        {
+            message = fieldPrefix + 'The value must be "' + rangeMin + '" or later.';
+        }
+        return invalid(message, field);
+    }
+
+    var rangeMax = parseFloat(field.getAttribute("rangeMax"), 10);
+    if (!isNaN(rangeMax) && value > rangeMax)
+    {
+        var message = fieldPrefix + '"' + field.value + '" must be less than or equal to "' + rangeMax + '"';
+        if(field.getAttribute("datetype") == "YEAR")
+        {
+            message = fieldPrefix + 'The value must be "' + rangeMax + '" or earlier.';
+        }
+        return invalid(message, field);
+    }
+    return true;
+}
+
+function validateLength(field)
+{
+	var lengthMin = parseInt(field.getAttribute("minlength"), 10);
+	if (!isNaN(lengthMin) && field.value.length < lengthMin)
+	{
+		return invalid("Text must be at least " + lengthMin + " characters.", field);
+	}
+
+	var lengthMax = parseInt(field.getAttribute("maxlength"), 10);
+	if (!isNaN(lengthMax) && field.value.length > lengthMax)
+	{
+		return invalid("Text must be no more than " + lengthMax + " characters.", field);
+	}
+	return true;
+}
+
+function validateFileNameLength(field) {
+	var inputValue = getFileValue(field);
+	var maxFileNameLength = 140;
+	if (null != inputValue) {
+		var fileName = inputValue.substring(inputValue.lastIndexOf("\\") + 1);
+		if (fileName.length > maxFileNameLength) {
+			return invalid("Filename cannot be more than " + maxFileNameLength + " characters. Rename your file and try this upload again.", field);
+		}
+		return true;
+	}
+	return true;
+}
+
+function validateFileUploadRule(field, fileUploadRule)
+{
+	var inputValue = getFileValue(field);
+	if(null != inputValue && !enforceFileUploadRule(inputValue, fileUploadRule))
+	{
+		var filename = inputValue;
+		filename = filename.substring(filename.lastIndexOf('\\') + 1);
+		filename = filename.substring(filename.lastIndexOf('/') + 1);
+		var message = "Type of file " + filename + " is not allowed.";
+		if("INCLUDE" == fileUploadRule.type)
+			message += " Must be one of the following types: " + fileUploadRule.extensions.join(", ");
+		return invalid(message, field);
+	}
+	return true;
+}
+
+function enforceFileUploadRule(value, fileUploadRule)
+{
+	var extension = value.substring(value.lastIndexOf(".") + 1);
+
+	var containsExtension = function(array, value)
+	{
+		var i = array.length;
+		while (i--)
+			if (array[i] == value)
+			  return true;
+		return false;
+	};
+
+	switch(fileUploadRule.type)
+	{
+		case "INCLUDE":
+			return containsExtension(fileUploadRule.extensions, extension);
+		case "EXCLUDE":
+			return !containsExtension(fileUploadRule.extensions, extension);
+		case "ANY":
+		default:
+			return true;
+	}
+}
+
+function appendToSelectOrTextGroupMap(selectOrTextGroupMap, field)
+{
+    var selectOrTextGroup = field.getAttribute("selectOrTextGroup");
+    if (null == selectOrTextGroup || "" == selectOrTextGroup)
+    {
+        return;
+    }
+
+    var key = "_" + selectOrTextGroup;
+
+    var fields = selectOrTextGroupMap[key];
+    if (null == fields)
+    {
+        selectOrTextGroupMap[key] = fields = [];
+    }
+    fields[fields.length] = field;
+}
+
+function validateSelectOrTextGroups(selectOrTextGroupMap)
+{
+    for (var selectOrTextGroupKey in selectOrTextGroupMap)
+    {
+        if (selectOrTextGroupKey.charAt(0) != "_")
+        {
+            continue;
+        }
+
+        var fields = selectOrTextGroupMap[selectOrTextGroupKey];
+        var selectField = null;
+        var isSelected = false;
+        var hasText = false;
+
+        for (var i = 0; i < fields.length; i++)
+        {
+            var field = fields[i];
+
+            if (isSelect(field))
+            {
+                if (selectField == null)
+                {
+                    selectField = field;
+                    if (field.options[field.selectedIndex].value != "")
+                    {
+                        isSelected = true;
+                    }
+                }
+            }
+			else if (isTypeAhead(field))
+			{
+				if (selectField == null)
+				{
+					selectField = field;
+					if (field.value !== "")
+					{
+						isSelected = true;
+					}
+				}
+			}
+            else
+            {
+                if (field.value != "")
+                {
+                    hasText = true;
+                }
+            }
+        }
+        if (isSelected && hasText)
+        {
+            selectField.focus();
+            invalid("You have entered text AND made a selection from a drop-down menu when you should only do one or the other.");
+            return false;
+        }
+    }
+    return true;
+}
+
+function validateSignificantUserReferences(userId, userName, significantUserReferenceMap)
+{
+    var count = 0, userCount = 0;
+    var firstField = null;
+    for (var key in significantUserReferenceMap)
+    {
+        var field = significantUserReferenceMap[key];
+
+        if (firstField == null)
+        {
+            firstField = field;
+        }
+
+        var value = field.value || field.getAttribute('data-userid');
+        if (value == userId)
+        {
+            userCount++;
+        }
+        count++;
+    }
+
+    if (count > 0 && userCount == 0)
+    {
+        firstField.focus();
+        invalid("You must choose '" + $('<div/>').text(userName).html() + "' in at least one User dropdown.");
+        return false;
+    }
+
+    return true;
+}
+
+function validateCheckboxes(checkboxMap) {
+	for (var key in checkboxMap) {
+		var checkbox = checkboxMap[key];
+		var lengthMin = parseInt(checkbox.field.getAttribute("minlength"), 10);
+		if (!isNaN(lengthMin) && checkbox.count < lengthMin) {
+			return invalid("You have selected fewer than the minimum number of " + lengthMin + " checkboxes required.",
+                checkbox.field);
+		}
+
+		var lengthMax = parseInt(checkbox.field.getAttribute("maxlength"), 10);
+		if (!isNaN(lengthMax) && checkbox.count > lengthMax) {
+			return invalid("You have selected more than the maximum number of " + lengthMax + " checkboxes allowed.",
+                checkbox.field);
+		}
+	}
+	return true;
+}
+
+function validateDates(form) {
+	var success = true;
+
+	var groupedDateParts = fetchGroupedDateElements(form);
+
+	var previousDateGroup = null;
+
+	for (var groupedDatePart in groupedDateParts) {
+		var dateParts = groupedDateParts[groupedDatePart];
+		if (!isArrayInstance(dateParts)) {
+			dateParts = [dateParts];
+		}
+
+		var dateGroup = new DateGroup().parseDateParts(dateParts);
+
+		if (!dateGroup.isValid()) {
+			invalid(dateGroup.toString() + " is an invalid date.");
+			success = false;
+			break;
+		}
+
+		if (dateGroup.isSignificant() && dateGroup != null && !dateGroup.isEmpty() && previousDateGroup != null && !dateGroup.isEqualOrAfter(previousDateGroup)) {
+			invalid("Dates must be entered in chronological order.<br>" + previousDateGroup.toString() + " must occur before " + dateGroup.toString() + ".");
+			success = false;
+			break;
+		}
+
+		if (dateGroup.isSignificant() && !dateGroup.isEmpty()) {
+			previousDateGroup = dateGroup;
+		}
+	}
+
+	return success;
+}
+
+function fetchGroupedDateElements(form) {
+	var groups = {};
+	$('[data-dategroup]', form).each(function(index, element) {
+		var groupId = $(element).data('dategroup');
+		if (!groups[groupId]) {
+			groups[groupId] = [];
+		}
+		var currentGroups = groups[groupId];
+		currentGroups.push(element);
+	});
+	return groups;
+}
+
+function getDateLabel(element)
+{
+
+	var elementId = element.getAttribute('id');
+	var $label = findLabel(elementId);
+	if($label) {
+		return $label.text();
+	}
+
+	if(element.getAttribute('dateGroupLabel'))
+		return element.getAttribute("dateGroupLabel");
+
+	// No dateGroupLabel.  Attempt to find a label that refs for.
+	var labels = document.getElementsByTagName('label');
+	for(var i = 0; i < labels.length; i++) {
+		var e = labels[i];
+		if(e.getAttribute('for') == element.getAttribute('name')) {
+            return e.textContent || e.innerText;
+        }
+	}
+}
+
+function findLabel(elementId) {
+	var $label = $("label[for='" + elementId + "']");
+	if($label && $label.length == 1) {
+		return $label;
+	}
+	$label = $("label[for='" + elementId + "_input']"); //type ahead
+	if($label && $label.length == 1) {
+		return $label;
+	}
+	return null;
+}
+
+function DateGroup() {
+	this.month = null;
+	this.day = null;
+	this.year = null;
+	this.label = null;
+
+	/* Term case */
+	this.term = null;
+	this.termStartDate = null;
+	this.termEndDate = null;
+
+	/* AcademicYear case */
+	this.academicYear = null;
+
+	this.significant = false;
+}
+
+DateGroup.prototype = {
+	months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+	setMonth: function(month) {
+		this.month = month;
+	},
+	setDay: function(day) {
+		this.day = day;
+	},
+	setYear: function(year) {
+		this.year = year;
+	},
+	setLabel: function(label) {
+		this.label = label;
+	},
+	setTerm: function(term) {
+		this.term = term;
+	},
+	setTermStartDate: function(termStartDate) {
+		this.termStartDate = termStartDate;
+	},
+	setTermEndDate: function(termEndDate) {
+		this.termEndDate = termEndDate;
+	},
+	setAcademicYear: function(academicYear) {
+		this.academicYear = academicYear;
+	},
+	/**
+	 * @param {boolean} significant
+	 */
+	setSignificant : function(significant){
+		this.significant = significant;
+	},
+	getMonth: function() {
+		return this.month;
+	},
+	getDay: function() {
+		return this.day;
+	},
+	getYear: function() {
+		return this.year;
+	},
+	getLabel: function() {
+		return this.label;
+	},
+	getTerm: function() {
+		return this.term;
+	},
+	getTermStartDate: function() {
+		return this.termStartDate;
+	},
+	getTermEndDate: function() {
+		return this.termEndDate;
+	},
+	getAcademicYear: function() {
+		return this.academicYear;
+	},
+	isTerm: function() {
+		return this.term !== null;
+	},
+	isAcademicYear: function() {
+		return this.academicYear !== null;
+	},
+	isSignificant: function() {
+		return this.significant;
+	},
+	isEmpty: function() {
+		var emptyDay = isEmpty(this.getDay());
+		var emptyYear = isEmpty(this.getYear());
+		var emptyMonth = isEmpty(this.getMonth());
+
+		return emptyDay && emptyYear && emptyMonth && !this.isTerm() && !this.isAcademicYear();
+	},
+    isNumber: function (n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    },
+    parseMonthIndex: function(month){
+        var lMonth = month.toLowerCase();
+
+        /*
+        In addition to the standard 12 months, we also store values such as:
+        January (1st Quarter/Winter)
+        April (2nd Quarter/Spring)
+        July (3rd Quarter/Summer)
+        October (4th Quarter/Fall)
+        We want to match on the first part of the month value and nothing else
+         */
+        if (lMonth.indexOf(" ") > -1) {
+            lMonth = lMonth.split(" ")[0];
+        }
+        for(var i = 0; i < this.months.length; ++i){
+            if(lMonth === this.months[i].toLowerCase()) {
+                return i + 1;
+            }
+        }
+        return null;
+    },
+	/**
+	 * Given an array of Date Part HTML Elements, create a DateGroup
+	 * @param {HTMLElement[]} dateParts
+	 */
+	parseDateParts: function(dateParts){
+		for (var j = 0; j < dateParts.length; j++) {
+			var datePart = dateParts[j];
+			var dateType = datePart.getAttribute("dateType");
+
+			if (datePart.getAttribute("dateSignificant") == "true") {
+				this.significant = true;
+			}
+
+			if (dateType.indexOf("ACADEMIC_YEAR") > -1) {
+				this.setAcademicYear(getSelectedValueOrValue(datePart));
+			}
+			else if (dateType.indexOf("YEAR") > -1) {
+				this.setYear(getSelectedValueOrValue(datePart));
+			}
+			else if (dateType.indexOf("MONTH") > -1) {
+                var _month = getSelectedIndexOrValue(datePart);
+                var _empty = isEmpty(_month);
+                var _number = !_empty && this.isNumber(_month);
+
+                if (!_empty && _number && _month > 12) {
+                    _month = null;
+                } else if (!(_empty || _number)) {
+                    _month = this.parseMonthIndex(_month);
+                }
+
+                this.setMonth(_month);
+			}
+			else if (dateType.indexOf("DAY") > -1) {
+				this.setDay(getSelectedIndexOrValue(datePart));
+			}
+			else if (dateType.indexOf("TERM") > -1) {
+				var term = getSelectedValueOrValue(datePart);
+
+				if (!isEmpty(term)) {
+					/**
+					 * COL-68 (https://digitalmeasures.atlassian.net/browse/COL-68)
+					 * Validation didn't have a way of knowing what a SelectTypeAhead was.
+					 * Added new check and grab the daterange from the hidden input.
+					 */
+					this.setTerm(term);
+					var dateRange = null;
+					if (isSelectTypeAhead(datePart)) {
+						dateRange = datePart.getAttribute('daterange');
+					} else if (isSelect(datePart)) {
+						dateRange = datePart.options[datePart.selectedIndex].getAttribute("dateRange");
+					}
+					this.parseTermDateRangeString(dateRange);
+				}
+			}
+		}
+
+		this.setLabel(getDateLabel(dateParts[0]));
+		return this;
+	},
+	parseTermDateRangeString: function(dateRangeString) {
+		if ( !dateRangeString ) { return; }
+		var dateRangeParts = dateRangeString.split(':');
+
+		var startDateParts = dateRangeParts[0].split('-');
+		var endDateParts = dateRangeParts[1].split('-');
+
+		var startDate = new DateGroup();
+		var endDate = new DateGroup();
+
+		startDate.setYear(0);
+		startDate.setMonth(startDateParts[0]);
+		startDate.setDay(startDateParts[1]);
+
+		endDate.setYear(0);
+		endDate.setMonth(endDateParts[0]);
+		endDate.setDay(endDateParts[1]);
+
+		this.setTermStartDate(startDate);
+		this.setTermEndDate(endDate);
+	},
+	toString: function() {
+		var message = '';
+
+		var emptyDay = isEmpty(this.getDay());
+		var emptyYear = isEmpty(this.getYear());
+		var emptyMonth = isEmpty(this.getMonth());
+
+		var day = this.getDay();
+		var month = this.getMonth();
+		var year = this.getYear();
+		var term = this.getTerm();
+
+		if (!emptyDay && day.charAt(0) === '0')
+		{
+			day = day.substring(1);
+		}
+
+		if (!isEmpty(month))
+		{
+			month = this.months[month - 1];
+		}
+
+		if (this.isTerm() && !emptyYear)
+		{
+			message = term + " " + year;
+		}
+		else if (!emptyYear && !emptyMonth && !emptyDay)
+		{
+			message = month + " " + day + ", " + year;
+		}
+		else if(!emptyYear && !emptyMonth)
+		{
+			message = month + " " + year;
+		}
+		else if(!emptyYear && !emptyDay)
+		{
+			message = day + ", " + year;
+		}
+		else if(!emptyMonth && !emptyDay)
+		{
+			message = month + " " + day;
+		}
+		else if(!emptyYear)
+		{
+			message = year;
+		}
+		else if(!emptyMonth)
+		{
+			message = month;
+		}
+		else if(!emptyDay)
+		{
+			message = day;
+		}
+		else if(this.isTerm())
+		{
+			message = term;
+		}
+
+		if(this.label)
+		{
+			return this.label + " (" + message + ")";
+		}
+		else
+		{
+			return message;
+		}
+	},
+	isValid: function() {
+		var emptyDay = isEmpty(this.getDay());
+		var emptyYear = isEmpty(this.getYear());
+		var emptyMonth = isEmpty(this.getMonth());
+
+		if(this.isAcademicYear()) return true;
+
+		if(!emptyYear && parseInt(this.getYear()) != this.getYear()) return false;
+
+		if(emptyYear && this.isTerm()) return false;
+
+		if(emptyDay && emptyYear && emptyMonth) return true;
+
+		if (emptyYear) return false;
+		if (emptyMonth && !emptyDay) return false;
+
+		var date = new Date(this.getYear(), parseInt(this.getMonth()) - 1, this.getDay());
+
+		if (!emptyDay)
+		{
+			if(date.getMonth() != parseInt(this.getMonth()) - 1) return false;
+			if(date.getDate() != this.getDay()) return false;
+			if(date.getFullYear() != this.getYear()) return false;
+		}
+
+		return true;
+	},
+	isEqualOrAfter: function(dateGroup) {
+		var yearsAreDefined = dateGroup.getYear() != null && this.getYear() != null;
+		var yearIsAfter = parseInt(dateGroup.getYear()) > parseInt(this.getYear());
+		var yearsAreEqual = dateGroup.getYear() == this.getYear();
+
+		if(this.isAcademicYear() || dateGroup.isAcademicYear()) return true;
+
+		if(this.isTerm() && dateGroup.isTerm() && yearsAreDefined && yearsAreEqual)
+		{
+			if(this.getTerm() === dateGroup.getTerm())
+			{
+				return true;
+			}
+
+			return this.getTermStartDate().isEqualOrAfter(dateGroup.getTermEndDate());
+		}
+
+		var monthsAreDefined = dateGroup.getMonth() != null && this.getMonth() != null;
+		var daysAreDefined = dateGroup.getDay() != null && this.getDay() != null;
+
+		var monthIsAfter = parseInt(dateGroup.getMonth()) > parseInt(this.getMonth());
+		var dayIsAfter = parseInt(dateGroup.getDay()) > parseInt(this.getDay());
+
+		var monthsAreEqual = dateGroup.getMonth() == this.getMonth();
+
+		if(yearsAreDefined && yearIsAfter) return false;
+		if(yearsAreEqual && monthsAreDefined && monthIsAfter) return false;
+		if(yearsAreEqual && monthsAreEqual && daysAreDefined && dayIsAfter) return false;
+
+		return true;
+	}
+};
+
+function getSurveyDecline()
+{
+    return getSurveyForm().elements["decline"];
+}
+
+function isSurveyDeclined()
+{
+    var decline = getSurveyDecline();
+    return decline && decline.checked;
+}
+
+function declineSurvey()
+{
+    var decline = getSurveyDecline();
+    var disable = isSurveyDeclined();
+    var form = getSurveyForm();
+    for (var i = 0; i < form.length; i++)
+    {
+        var element = form.elements[i];
+        if (decline != element)
+        {
+            switch (element.type.toString())
+            {
+                case "radio":
+                case "checkbox":
+                case "select-one":
+                case "select-multiple":
+                case "text":
+                case "textarea":
+                case "file":
+                    element.disabled = disable;
+                    break;
+            }
+        }
+    }
+}
+
+function getDirtyField()
+{
+    var form = getSurveyForm();
+    if(!form)
+    {
+        return null;
+    }
+    return form.elements["dirty"];
+}
+
+function isDirty()
+{
+    var dirtyField = getDirtyField();
+    if(!dirtyField)
+    {
+        return false;
+    }
+    return "true" == dirtyField.value.toLowerCase();
+}
+
+function markDirty()
+{
+    var dirtyField = getDirtyField();
+    if(!dirtyField)
+    {
+        return;
+    }
+    dirtyField.value = "true";
+}
+
+function attachEventHandler(target, event, handler)
+{
+    if(target.addEventListener)
+    {
+        target.addEventListener(event, handler, false);
+    }
+    else
+    {
+        target.attachEvent("on" + event, handler);
+    }
+}
+
+function focusOnFieldInDsa()
+{
+	require(['jquery', 'vendor/jquery/jquery.ui'], function($) {
+		var $focusOnLoad = $('[data-focusonload]');
+		if ($focusOnLoad.length === 1) {
+			var elementIdToFocus = $focusOnLoad.data('focusonload');
+			var $elemToFocus;
+
+			var $helpContainer = $('[data-tabbedbefore="' + elementIdToFocus + '"]');
+			if ($helpContainer.length > 0 && $helpContainer.find(':tabbable').length > 0) {
+				$elemToFocus = $helpContainer.find(':tabbable').first();
+			}
+			else {
+				var $elemSpecified = $(document.getElementById(elementIdToFocus));
+				if ($elemSpecified.is(':tabbable')) {
+					$elemToFocus = $elemSpecified;
+				}
+				else {
+					$elemToFocus = $elemSpecified.find(':tabbable').first();
+				}
+			}
+			// timeout needed to ensure screen readers (VoiceOver) honor focusing after load
+			setTimeout(function() {
+				$elemToFocus.focus();
+				$elemToFocus.blur(function() {
+					$(this).attr('tabindex', '-1');
+				})
+			}, 1000);
+		}
+	});
+}
+
+function enableExitConfirmation()
+{
+	$(window).on('beforeunload', exitConfirmation);
+	$(addChangeDetection);
+}
+
+function disableExitConfirmation()
+{
+	$(window).off('beforeunload', exitConfirmation);
+}
+
+function exitConfirmation()
+{
+    if(surveyFormChanged())
+    {
+        return "All unsaved data will be lost.";
+    }
+}
+
+function addChangeDetection()
+{
+    var form = getTopLevelForm();
+    if(!form)
+    {
+        return;
+    }
+
+    var elements = form.elements;
+    for (var i = 0; i < elements.length; i++)
+    {
+        var field = elements[i];
+        if(field.type == "file")
+        {
+			if(field.addEventListener)
+			{
+				field.addEventListener("change", function(){ markDirty(); });
+			}
+			else
+			{
+				field.attachEvent("onchange", function(){ markDirty(); });
+			}
+        }
+    }
+
+    var links = document.links;
+    for(var i = 0; i < links.length; i++)
+    {
+        var link = links[i];
+        if(link.href == "javascript:void(0);")
+        {
+            if(link.addEventListener)
+            {
+                link.addEventListener("click", function(event){
+                    event.preventDefault();
+                }, false);
+            }
+            else
+            {
+                link.attachEvent("onclick", function(event){
+                    event.preventDefault();
+                })
+            }
+        }
+    }
+}
+
+function surveyFormChanged()
+{
+	return isDirty()
+		|| checkSurveyFormChanged(getPopupForm())
+		|| checkSurveyFormChanged(getSurveyForm());
+}
+
+function checkSurveyFormChanged(form)
+{
+	if(!form)
+	{
+		return false;
+	}
+
+	var elements = form.elements;
+	for (var i = 0; i < elements.length; i++)
+	{
+		var field = elements[i];
+
+		if(field.getAttribute('data-modified') === 'ignore') {
+			continue;
+		}
+
+		if(field.type == "text" || field.type == "textarea")
+		{
+			if(field.value != field.defaultValue)
+			{
+				return true;
+			}
+		}
+		else if(field.type == "radio" || field.type == "checkbox")
+		{
+			if(field.checked != field.defaultChecked)
+			{
+				return true;
+			}
+		}
+		else if(field.type == "select-one" && field.name != "numbertoAdd")
+		{
+			var selectedIndex = field.selectedIndex;
+			if(!field.options[selectedIndex].defaultSelected)
+			{
+				if(selectedIndex === 0)
+				{
+					for (var child = 0; child < field.options.length; child++)
+					{
+						var option = field.options[child];
+						if(option.defaultSelected)
+						{
+							return true;
+						}
+					}
+				}
+				else
+				{
+					return true;
+				}
+			}
+		}
+	}
+	return false;
+}

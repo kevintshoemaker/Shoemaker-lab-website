@@ -1,0 +1,109 @@
+var GridUiStickyHeader = (function() {
+
+	var generateTranslateX = function(x) {
+		var translate = x ? 'translateX(-' + x + 'px)' : '';
+
+		return {
+			'-moz-transform': translate,
+			'-ms-transform': translate,
+			'-webkit-transform': translate,
+			'transform': translate
+		}
+	};
+
+	var wrapHeader = function($header, clazz) {
+		var $spacer = $('<div/>')
+			.addClass(clazz)
+			.height($header.outerHeight(true));
+
+		$header.wrap($spacer);
+		return $header.parent(); // Old $spacer reference not "live" - missing parent/offset info
+	};
+
+	var handleControls = function($header) {
+		// jQuery has selector returns set of elements - not a boolean
+		if ($header.has('input:not(:hidden), select:not(:hidden)').length) {
+			$header.addClass('input-controls');
+		};
+	}
+
+	GridUiStickyHeader = {
+		$fixedHeaderSpacer: null,
+		$floatingHeaderSpacer: null,
+
+		repositionFixedHeader: function() {
+			this.$fixedHeader.css(generateTranslateX(window.pageXOffset));
+		},
+
+		repositionFloatingHeader: function() {
+			if (!(this.$floatingHeaderSpacer)) {
+				return;
+			}
+
+			var x = window.pageXOffset;
+			var y = window.pageYOffset;
+
+			var fixedHeaderBottom = this.$fixedHeader.offset().top + this.$fixedHeader.outerHeight(true);
+
+			var floatingHeaderSpacerTop = this.$floatingHeaderSpacer.offset().top;
+			var floatingHeaderTopBorder = parseInt(this.$floatingHeader.find(':first-child').css('border-top-width'), 10);
+
+			var css, translateX;
+			if ((y === 0 && floatingHeaderSpacerTop == fixedHeaderBottom) ||	// top of page, and fixed/floating headers are touching
+				floatingHeaderSpacerTop < fixedHeaderBottom)	// floating header has moved beneath fixed header
+			{
+				css = {
+					'top': (fixedHeaderBottom - y - floatingHeaderTopBorder) + 'px',
+					'position': 'fixed'
+				};
+				translateX = x;
+			}
+			else {
+				css = {
+					'top': '',
+					'position': ''
+				};
+				translateX = null;
+			}
+			$.extend(
+				css,
+				generateTranslateX(translateX));
+
+			this.$floatingHeader.css(css);
+		},
+
+		repositionHeaders: function() {
+			this.repositionFixedHeader();
+			this.repositionFloatingHeader();
+		},
+
+		initializeFixedHeader: function() {
+			this.$fixedHeader = $('.fixed-header');
+			this.$fixedHeaderSpacer = wrapHeader(this.$fixedHeader, 'fixed-header-spacer');
+			handleControls(this.$fixedHeader);
+		},
+		initializeFloatingHeader: function() {
+			this.$floatingHeader = $('.floating-header');
+			if (this.$floatingHeader.length) {
+				this.$floatingHeaderSpacer = wrapHeader(this.$floatingHeader, 'floating-header-spacer');
+			}
+		},
+
+		initialize: function () {
+			this.initializeFixedHeader();
+			this.initializeFloatingHeader();
+			this.repositionHeaders();
+
+			var that = this;
+			$(window).scroll(function () {
+				that.repositionHeaders();
+			});
+		}
+	};
+
+	return GridUiStickyHeader;
+})();
+
+$(function() {
+	GridUiStickyHeader.initialize();
+});

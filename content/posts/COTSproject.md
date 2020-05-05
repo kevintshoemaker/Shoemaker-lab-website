@@ -1,6 +1,6 @@
 +++
 author = "Kevin Shoemaker"
-categories = ["Population modeling", "Projects"]
+categories = ["Population modeling", "Projects", "Posts"]
 date = "2016-09-29"
 description = "Crown of thorns starfish project"
 featured = "COTS2.jpg"

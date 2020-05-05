@@ -1,6 +1,6 @@
 +++
 author = "Kevin Shoemaker and Danielle Miles"
-categories = ["Population modeling", "Great Basin ecosystem", "Wildlife Management", "Projects"]
+categories = ["Population modeling", "Great Basin ecosystem", "Wildlife Management", "Projects", "Posts"]
 date = "2016-10-12"
 description = "Effects of PJ removal on non-target species"
 featured = "sagebrush1.jpg"
@@ -19,3 +19,19 @@ Thousands of acres of pinyon and juniper woodlands (PJ) will be removed over the
 At each project area, three transects will be established: one control transect (no tree removal at any point during the four-year study), one pre-treatment transect (tree removal scheduled for year 2 or 3 of the study), and one post-treatment transect (tree removal conducted 1-5 years prior to the initiation of research activities). At regular intervals along each transect, we will monitor the diversity and density of bats, reptiles and insects using an array of active trapping and passive survey methods. Data analysis will focus on evaluating the community-level effects of PJ removal and modeling bat, reptile and insect diversity and abundance as a function of environmental drivers such as vegetation structure, distance from water source, and climate.   
 
 ![Pinyon and Juniper woodland](/shoemaker/lab/img/PJ1.jpg)
+
+Project lead: [Kevin Shoemaker](http://naes.unr.edu/shoemaker/)
+Graduate student lead: [Danielle Miles](https://www.linkedin.com/in/danielle-miles-79a08489)
+
+Key UNR collaborators:
+
+[Matt Forister](https://sites.google.com/site/greatbasinbuglab/)
+[Chris Feldman](http://wolfweb.unr.edu/~ophis/Feldman_Lab/Welcome.html)
+[Peter Weisberg and Tom Dilts](https://naes.unr.edu/weisberg/)
+
+Other collaborators
+
+Bryan Hamilton, NPS
+Jane VanGunst, NDOW
+Gail Collins, USFWS
+Jason Williams, NDOW

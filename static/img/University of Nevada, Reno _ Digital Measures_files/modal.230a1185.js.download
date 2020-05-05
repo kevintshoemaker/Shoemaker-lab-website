@@ -1,0 +1,438 @@
+var Modal = (function() {
+	var zIndex = 5000;
+
+	function Modal(modalId, selector, config) {
+		this.modalId = modalId;
+		this.$baseEl = $(selector);
+		this.$body = $(document.body);
+		this.$window = $(window);
+		this.zIndex = -1;
+
+		this.cacheChildElements();
+
+		var elConfig = {};
+		for(var prop in this._defaults) {
+			if (this._defaults.hasOwnProperty(prop)) {
+				var elVal = this.$baseEl.attr("data-modal-" + prop);
+				if (elVal) {
+					elConfig[prop] = elVal;
+				}
+			}
+		}
+
+		this.$isAlert = this.$baseEl.hasClass('alert');
+        this.$isPopup = this.$baseEl.hasClass('popup-modal');
+		this.$isHighPriority = this.$baseEl.hasClass('high-priority');
+        this.$isFormModal = this.$baseEl.hasClass('form-modal');
+
+		var typeConfig = this.$isAlert ? this._typeDefaults['alert'] : {};
+		typeConfig = this.$isHighPriority ?
+				$.extend({}, typeConfig, this._typeDefaults['high_priority']) :
+				typeConfig;
+        typeConfig = this.$isFormModal ?
+                $.extend({}, typeConfig, this._typeDefaults['form_modal']) :
+                typeConfig;
+		this.config = $.extend({}, this._defaults, typeConfig, elConfig, config || {});
+
+		zIndex = this.config.priority === 'high' ? 6100 : 5000;
+
+		this.addAccessibilityAttributes();
+	}
+
+	Modal.prototype = {
+		_defaults: {
+			top: 60,
+			right: 60,
+			bottom: 60,
+			left: 60,
+			width: 500,
+			verticalAlign: 'top',
+			horizontalAlign: 'center',
+			priority: 'standard'
+		},
+		_typeDefaults: {
+			alert: {
+				verticalAlign: 'middle',
+				width: 320,
+				priority: 'high',
+                role: 'alert'
+			},
+			high_priority: {
+				priority: 'high'
+			},
+            form_modal: {
+                role: 'form'
+            }
+		},
+		cacheChildElements: function() {
+			this.$backdropEl = this.$baseEl.find('.modal-backdrop');
+			this.$dialogEl = this.$baseEl.find('.modal-dialog');
+			this.$headerEl = this.$baseEl.find('.modal-header');
+			this.$dismissEl = this.$baseEl.find('[data-dismiss="modal"]');
+			this.$bodyEl = this.$baseEl.find('.modal-body');
+		},
+		uniqueId: ( function() {
+			var uuid = 0;
+			return function($element) {
+				return $element.each( function() {
+					if ( !this.id ) {
+						this.id = "ui-id-" + ( ++uuid );
+					}
+				} );
+			};
+		})(),
+		addAccessibilityAttributes: function() {
+			this.uniqueId(this.$headerEl);
+			this.uniqueId(this.$bodyEl);
+
+			var hasHeader = this.$headerEl.length > 0;
+			var hasBody = this.$bodyEl.length > 0;
+			var hasDismiss = this.$dismissEl.length > 0;
+
+			if(hasDismiss) {
+                this.$dismissEl.each(function() {
+                    var assistiveLabel = $(this).attr('aria-label') || 'Close Dialog';
+                    $(this).attr('aria-label', assistiveLabel);
+                });
+			}
+
+            var role;
+            if (this.config.role) {
+                role = this.config.role;
+            }
+            else {
+                role = this.$isAlert ? 'alertdialog' : 'dialog';
+            }
+			this.$dialogEl.attr({
+				'role': role,
+				'tabindex': -1
+			});
+
+
+			if(hasBody) {
+				this.$bodyEl.attr({
+					'role': 'document'
+				});
+
+				if(hasHeader) {
+					this.$dialogEl.attr({
+						'aria-labelledby': this.$headerEl[0].id
+					});
+                    this.$headerEl.attr({
+                        'tabindex': -1
+                    });
+				} else {
+					this.$dialogEl.attr({
+						'aria-labelledby': this.$bodyEl[0].id
+					});
+				}
+			}
+		},
+		delegateEvents: function() {
+			this.$window.on('resize.dmModal' + this.modalId, $.proxy(this.resize, this));
+			this.$window.on('keydown.dmModal' + this.modalId, $.proxy(this.keydown, this));
+			this.$baseEl.on('update.dmModal' + this.modalId, $.proxy(this.update, this));
+			this.$baseEl.on('close.dmModal' + this.modalId, $.proxy(this.close, this));
+			this.$dismissEl.on('click.dmModal' + this.modalId, $.proxy(this.onDismiss, this));
+            this.$backdropEl.on('click.dmModal' + this.modalId, $.proxy(this.triggerDismiss, this));
+		},
+		undelegateEvents: function() {
+			this.$dismissEl.off('.dmModal' + this.modalId);
+			this.$window.off('.dmModal' + this.modalId);
+			this.$baseEl.off('.dmModal' + this.modalId);
+			this.$backdropEl.off('.dmModal' + this.modalId);
+		},
+		on: function(e,n,r,i,o) {
+			return this.$baseEl.on(e,n,r,i,o);
+		},
+		off: function(e,n,r,i,o) {
+			return this.$baseEl.off(e,n,r,i,o);
+		},
+
+		show: function($target) {
+			this.savedState = {
+				bodyOverflow: this.$body.css('overflow'),
+				$focus: $target || $(':focus')
+			};
+
+            var numberOfHighPriorityModalsVisible = $('.high-priority:visible, .alert:visible').length;
+			zIndex = zIndex + numberOfHighPriorityModalsVisible + 1;
+			this.zIndex = zIndex;
+
+			this.$baseEl.css({
+				'display': 'block',
+				'z-index': this.zIndex
+			});
+			this.$body.css('overflow', 'hidden');
+
+			this.resize();
+			this.delegateEvents();
+			this.$baseEl.trigger('shown.dmModal');
+
+            var $focusTarget = this.$headerEl.length > 0 ?
+                    this.$headerEl :
+                    this.$dialogEl;
+			this.focusWithDelay($focusTarget);
+		},
+		focusWithDelay: function($elToFocus) {
+			// delay to help NVDA keep up 
+			var $oldFocus = $(':focus');
+			setTimeout(function() {
+				/*
+				 As we are delaying, another element may have captured focus already
+				 	In this case, we won't change focus
+					This is needed for SPA framework as loading a sub-app will show
+					the loading-modal. If the SPA directs focus on load, it will be
+					over-ridden when the modal is closed
+				*/
+				var $newFocus = $(':focus');
+				if ($newFocus.length === 0 || $oldFocus.is($newFocus)) {
+					var currentVerticalScroll = window.pageXOffset, currentHorizontalScroll = window.pageYOffset;
+					$elToFocus.focus();
+					window.scrollTo(currentVerticalScroll, currentHorizontalScroll);
+				}
+
+			}, 500);
+		},
+		close: function(event) {
+			zIndex = zIndex - 1;
+			this.zIndex = -1;
+
+			this.$baseEl.css('display', 'none');
+
+			if (this.savedState) {
+				this.$body.css('overflow', this.savedState.bodyOverflow);
+				this.focusWithDelay(this.savedState.$focus);
+			}
+
+			this.undelegateEvents();
+
+			if (event) {
+				event.preventDefault();
+			}
+			this.$baseEl.trigger('hidden.dmModal');
+		},
+		update: function(event, config) {
+			this.config = $.extend({}, this.config, config || {});
+			this.undelegateEvents();
+			this.cacheChildElements();
+			this.addAccessibilityAttributes();
+			this.delegateEvents();
+			this.resize();
+			this.$baseEl.trigger('updated.dmModal');
+		},
+		resize: function() {
+			this.$dialogEl.css({
+				'width': this.config.width + 'px',
+				'margin-top': this.config.top + 'px',
+				'margin-right': this.config.right + 'px',
+				'margin-bottom': this.config.bottom + 'px',
+				'margin-left': this.config.left + 'px'
+			});
+
+			var pos;
+
+			pos = this.calculatePosition(
+					this.$window.height(),
+					this.$dialogEl.outerHeight(false),
+					this.config.top,
+					this.config.bottom,
+					this.config.verticalAlign);
+			this.$dialogEl.css('margin-top', pos.dialogMarginBefore + 'px');
+			this.$backdropEl.css('height', pos.backdropSize + 'px');
+			this.$baseEl.css('overflow-y', pos.baseOverflow);
+
+			pos = this.calculatePosition(
+					this.$window.width(),
+					this.$dialogEl.outerWidth(false),
+					this.config.left,
+					this.config.right,
+					this.config.horizontalAlign);
+			this.$dialogEl.css('margin-left', pos.dialogMarginBefore + 'px');
+			this.$backdropEl.css('width', pos.backdropSize + 'px');
+			this.$baseEl.css('overflow-x', pos.baseOverflow);
+		},
+		calculatePosition: function(windowSize, dialogContentSize, dialogMarginBefore, dialogMarginAfter, dialogAlignment){
+			var dialogSize = dialogContentSize + dialogMarginBefore + dialogMarginAfter;
+			var pos = {};
+			if((dialogAlignment == 'center' || dialogAlignment == 'middle') && (windowSize > dialogSize)) {
+				var calculatedMargin = ((windowSize - dialogSize) / 2) + dialogMarginBefore;
+
+				calculatedMargin = dialogAlignment == 'middle' ? calculatedMargin - (dialogSize / 2) : calculatedMargin;
+				if (calculatedMargin < dialogMarginBefore) {
+					calculatedMargin = dialogMarginBefore;
+				}
+
+				pos.dialogMarginBefore = calculatedMargin;
+			}
+			else {
+				pos.dialogMarginBefore = dialogMarginBefore;
+			}
+
+			if(windowSize > dialogSize) {
+				pos.backdropSize = windowSize;
+				pos.baseOverflow = 'hidden';
+			}
+			else {
+				pos.backdropSize = dialogSize;
+				pos.baseOverflow = 'auto';
+			}
+
+			return pos;
+		},
+		onDismiss: function(event) {
+			var $target = $(event.target);
+            var dirty = false;
+            if (this.$isPopup) {
+                dirty = checkSurveyFormChanged(getPopupForm());
+            }
+			if(!$target.hasClass('disabled') && !dirty) {
+				this.$baseEl.trigger('dismiss.dmModal');
+				this.close();
+			}
+		},
+		triggerDismiss: function(event) {
+            if (!this.$isAlert) {
+                if (this.$dismissEl.length > 1) {
+                    this.$dismissEl.first().trigger('click');
+                }
+                else {
+                    this.$dismissEl.trigger('click');
+                }
+            }
+		},
+        /*
+         * TODO:  Remove this method; use jquery ui :tabbable selector instead [e.g., $el.find(':tabbable') ]
+         */
+		getTabbables: function() {
+            var tabbables = this.$dialogEl.find('*').filter(function(index, element) {
+                var $element = $(element);
+                if ($element.parent().is('.modal-dialog') && $element.data('dismiss') == 'modal') {
+                    return false;
+                }
+
+                var tabIndex = $.attr(element, 'tabindex');
+                var hasTabindex = tabIndex != null;
+
+                var elementIsTabbable = false;
+                if ($element.is("input[type!='hidden'], select, textarea, button, object, a[href]")) {
+                    elementIsTabbable = true;
+                }
+
+                return ( elementIsTabbable ||
+                (hasTabindex && tabIndex >= 0 ));
+            });
+            return tabbables;
+		},
+		keydown: function(event) {
+			if(this.zIndex == zIndex) {
+				switch(event.which) {
+					case 27: // ESC
+						if (!this.$isAlert) {
+                            this.triggerDismiss(event);
+                        }
+						break;
+					case 9: // TAB
+						var $tabbables = this.getTabbables();
+
+						var $first = $tabbables.filter(':first');
+						var $last = $tabbables.filter(':last');
+
+						var $closeX = $('> button[data-dismiss="modal"]', this.$dialogEl);
+
+						var $elementToFocus;
+						if ($.contains(this.$dialogEl.get(0), event.target) ||
+                            this.$dialogEl.is($(event.target))) {
+                            if ($tabbables.length === 0) {
+                                $elementToFocus = $closeX;
+                            }
+							else if (event.target == $closeX[0] ||
+                                this.$dialogEl.is($(event.target))) {
+								$elementToFocus = event.shiftKey ? $last : $first;
+							}
+							else if(event.target == $last[0] && !event.shiftKey) {
+								$elementToFocus = $closeX.length ? $closeX : $first;
+							}
+							else if(event.target == $first[0] && event.shiftKey) {
+								$elementToFocus = $closeX.length ? $closeX : $last;
+							}
+						}
+						else {
+							$elementToFocus = $first;
+						}
+						if ($elementToFocus) {
+							$elementToFocus.focus();
+							event.preventDefault();
+						}
+
+						break;
+				}
+			}
+		},
+		includesModal: function($target, dataAttr){
+			var value = $target.data(dataAttr);
+			return !!value && value.toLowerCase().indexOf('modal') > -1;
+		}
+	};
+
+	var currentId = 0;
+	var modalFactory = function(selector, config) {
+		currentId = currentId + 1;
+		return new Modal(currentId, selector, config);
+	};
+	modalFactory.fromHTML = function(html, selector, config) {
+		var $container = $('<div/>');
+		$container.html(html)
+				.appendTo('body');
+		selector = selector || '.modal';
+		$container.find(selector).on('hidden.dmModal', function(e){
+			$container.off('.dmModal');
+			$container.remove();
+		});
+		return modalFactory($container.find(selector).get(0), config);
+	};
+	modalFactory.on = function(eventName, $els) {
+		$els.on(eventName, function (e) {
+			e.preventDefault();
+
+			var $target = $(this);
+			if ($target.data('modal-trigger-enabled') === 'false') {
+				return;
+			}
+			$target.data('modal-trigger-enabled', 'false');
+
+			var $ind = null;
+			if($target.data('loading-indicator') == true) {
+				$ind = $target;
+			} else {
+				$ind = $target.find('[data-loading-indicator=true]');
+				$ind = $ind.length > 0 ? $ind : null;
+			}
+            var loadingIndicator = $ind
+                    ? LoadingIndicator($ind, {position: 'left'}).show()
+                    : null;
+
+            var selector = $target.attr('data-target');
+            var href = $target.attr('data-href');
+            var config = {};
+
+            $.get(href).done(function(data){
+                var modal = modalFactory.fromHTML(data, selector, config);
+                modal.on('hidden.dmModal', function(){
+                    $target.removeAttr('disabled');
+					$target.data('modal-trigger-enabled', 'true');
+                });
+                modal.show($target);
+				$target.attr('disabled', 'disabled');
+                if(loadingIndicator) {
+                    loadingIndicator.hide();
+                }
+            });
+
+		});
+	};
+	return modalFactory;
+}());
+$(function(){
+	Modal.on('click', $('a[data-toggle="modal"], button[data-toggle="modal"]'));
+});

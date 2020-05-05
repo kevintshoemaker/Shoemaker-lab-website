@@ -1,0 +1,693 @@
+
+.client-color1-fg{color:#013263;}
+		
+.client-color1-fg-white-10{color:#1a4773;}
+.client-color1-fg-gray-10{color:#083460;}
+.client-color1-fg-black-10{color:#012d59;}
+		
+.client-color1-fg-white-15{color:#27517a;}
+.client-color1-fg-gray-15{color:#0b355e;}
+.client-color1-fg-black-15{color:#012b54;}
+		
+.client-color1-fg-white-20{color:#345b82;}
+.client-color1-fg-gray-20{color:#0e365d;}
+.client-color1-fg-black-20{color:#01284f;}
+		
+.client-color1-fg-white-25{color:#41658a;}
+.client-color1-fg-gray-25{color:#12375b;}
+.client-color1-fg-black-25{color:#01264a;}
+		
+.client-color1-fg-white-40{color:#6784a1;}
+.client-color1-fg-gray-40{color:#1c3957;}
+.client-color1-fg-black-40{color:#011e3b;}
+		
+.client-color1-fg-white-50{color:#8099b1;}
+.client-color1-fg-gray-50{color:#233b54;}
+.client-color1-fg-black-50{color:#011932;}
+		
+.client-color1-fg-white-75{color:#c0ccd8;}
+.client-color1-fg-gray-75{color:#33404c;}
+.client-color1-fg-black-75{color:#000d19;}
+		
+.client-color1-bg{background-color:#013263;}
+		
+.client-color1-bg-white-10{background-color:#1a4773;}
+.client-color1-bg-gray-10{background-color:#083460;}
+.client-color1-bg-black-10{background-color:#012d59;}
+		
+.client-color1-bg-white-15{background-color:#27517a;}
+.client-color1-bg-gray-15{background-color:#0b355e;}
+.client-color1-bg-black-15{background-color:#012b54;}
+		
+.client-color1-bg-white-20{background-color:#345b82;}
+.client-color1-bg-gray-20{background-color:#0e365d;}
+.client-color1-bg-black-20{background-color:#01284f;}
+		
+.client-color1-bg-white-25{background-color:#41658a;}
+.client-color1-bg-gray-25{background-color:#12375b;}
+.client-color1-bg-black-25{background-color:#01264a;}
+		
+.client-color1-bg-white-40{background-color:#6784a1;}
+.client-color1-bg-gray-40{background-color:#1c3957;}
+.client-color1-bg-black-40{background-color:#011e3b;}
+		
+.client-color1-bg-white-50{background-color:#8099b1;}
+.client-color1-bg-gray-50{background-color:#233b54;}
+.client-color1-bg-black-50{background-color:#011932;}
+		
+.client-color1-bg-white-75{background-color:#c0ccd8;}
+.client-color1-bg-gray-75{background-color:#33404c;}
+.client-color1-bg-black-75{background-color:#000d19;}
+		
+.client-color1-bd{border-color:#013263;}
+		
+.client-color1-bd-white-10{border-color:#1a4773;}
+.client-color1-bd-gray-10{border-color:#083460;}
+.client-color1-bd-black-10{border-color:#012d59;}
+		
+.client-color1-bd-white-15{border-color:#27517a;}
+.client-color1-bd-gray-15{border-color:#0b355e;}
+.client-color1-bd-black-15{border-color:#012b54;}
+		
+.client-color1-bd-white-20{border-color:#345b82;}
+.client-color1-bd-gray-20{border-color:#0e365d;}
+.client-color1-bd-black-20{border-color:#01284f;}
+		
+.client-color1-bd-white-25{border-color:#41658a;}
+.client-color1-bd-gray-25{border-color:#12375b;}
+.client-color1-bd-black-25{border-color:#01264a;}
+		
+.client-color1-bd-white-40{border-color:#6784a1;}
+.client-color1-bd-gray-40{border-color:#1c3957;}
+.client-color1-bd-black-40{border-color:#011e3b;}
+		
+.client-color1-bd-white-50{border-color:#8099b1;}
+.client-color1-bd-gray-50{border-color:#233b54;}
+.client-color1-bd-black-50{border-color:#011932;}
+		
+.client-color1-bd-white-75{border-color:#c0ccd8;}
+.client-color1-bd-gray-75{border-color:#33404c;}
+.client-color1-bd-black-75{border-color:#000d19;}
+		
+.client-color1-fill{fill:#013263;}
+		
+.client-color1-fill-white-10{fill:#1a4773;}
+.client-color1-fill-gray-10{fill:#083460;}
+.client-color1-fill-black-10{fill:#012d59;}
+		
+.client-color1-fill-white-15{fill:#27517a;}
+.client-color1-fill-gray-15{fill:#0b355e;}
+.client-color1-fill-black-15{fill:#012b54;}
+		
+.client-color1-fill-white-20{fill:#345b82;}
+.client-color1-fill-gray-20{fill:#0e365d;}
+.client-color1-fill-black-20{fill:#01284f;}
+		
+.client-color1-fill-white-25{fill:#41658a;}
+.client-color1-fill-gray-25{fill:#12375b;}
+.client-color1-fill-black-25{fill:#01264a;}
+		
+.client-color1-fill-white-40{fill:#6784a1;}
+.client-color1-fill-gray-40{fill:#1c3957;}
+.client-color1-fill-black-40{fill:#011e3b;}
+		
+.client-color1-fill-white-50{fill:#8099b1;}
+.client-color1-fill-gray-50{fill:#233b54;}
+.client-color1-fill-black-50{fill:#011932;}
+		
+.client-color1-fill-white-75{fill:#c0ccd8;}
+.client-color1-fill-gray-75{fill:#33404c;}
+.client-color1-fill-black-75{fill:#000d19;}
+		
+.client-color2-fg{color:#b8dbfe;}
+		
+.client-color2-fg-white-10{color:#bfdffe;}
+.client-color2-fg-gray-10{color:#accceb;}
+.client-color2-fg-black-10{color:#a6c5e5;}
+		
+.client-color2-fg-white-15{color:#c3e0fe;}
+.client-color2-fg-gray-15{color:#a7c4e2;}
+.client-color2-fg-black-15{color:#9cbad8;}
+		
+.client-color2-fg-white-20{color:#c6e2fe;}
+.client-color2-fg-gray-20{color:#a1bdd9;}
+.client-color2-fg-black-20{color:#93afcb;}
+		
+.client-color2-fg-white-25{color:#cae4fe;}
+.client-color2-fg-gray-25{color:#9bb5d0;}
+.client-color2-fg-black-25{color:#8aa4bf;}
+		
+.client-color2-fg-white-40{color:#d4e9fe;}
+.client-color2-fg-gray-40{color:#8a9fb4;}
+.client-color2-fg-black-40{color:#6e8398;}
+		
+.client-color2-fg-white-50{color:#dcedff;}
+.client-color2-fg-gray-50{color:#7e90a1;}
+.client-color2-fg-black-50{color:#5c6e7f;}
+		
+.client-color2-fg-white-75{color:#edf6ff;}
+.client-color2-fg-gray-75{color:#616a73;}
+.client-color2-fg-black-75{color:#2e3740;}
+		
+.client-color2-bg{background-color:#b8dbfe;}
+		
+.client-color2-bg-white-10{background-color:#bfdffe;}
+.client-color2-bg-gray-10{background-color:#accceb;}
+.client-color2-bg-black-10{background-color:#a6c5e5;}
+		
+.client-color2-bg-white-15{background-color:#c3e0fe;}
+.client-color2-bg-gray-15{background-color:#a7c4e2;}
+.client-color2-bg-black-15{background-color:#9cbad8;}
+		
+.client-color2-bg-white-20{background-color:#c6e2fe;}
+.client-color2-bg-gray-20{background-color:#a1bdd9;}
+.client-color2-bg-black-20{background-color:#93afcb;}
+		
+.client-color2-bg-white-25{background-color:#cae4fe;}
+.client-color2-bg-gray-25{background-color:#9bb5d0;}
+.client-color2-bg-black-25{background-color:#8aa4bf;}
+		
+.client-color2-bg-white-40{background-color:#d4e9fe;}
+.client-color2-bg-gray-40{background-color:#8a9fb4;}
+.client-color2-bg-black-40{background-color:#6e8398;}
+		
+.client-color2-bg-white-50{background-color:#dcedff;}
+.client-color2-bg-gray-50{background-color:#7e90a1;}
+.client-color2-bg-black-50{background-color:#5c6e7f;}
+		
+.client-color2-bg-white-75{background-color:#edf6ff;}
+.client-color2-bg-gray-75{background-color:#616a73;}
+.client-color2-bg-black-75{background-color:#2e3740;}
+		
+.client-color2-bd{border-color:#b8dbfe;}
+		
+.client-color2-bd-white-10{border-color:#bfdffe;}
+.client-color2-bd-gray-10{border-color:#accceb;}
+.client-color2-bd-black-10{border-color:#a6c5e5;}
+		
+.client-color2-bd-white-15{border-color:#c3e0fe;}
+.client-color2-bd-gray-15{border-color:#a7c4e2;}
+.client-color2-bd-black-15{border-color:#9cbad8;}
+		
+.client-color2-bd-white-20{border-color:#c6e2fe;}
+.client-color2-bd-gray-20{border-color:#a1bdd9;}
+.client-color2-bd-black-20{border-color:#93afcb;}
+		
+.client-color2-bd-white-25{border-color:#cae4fe;}
+.client-color2-bd-gray-25{border-color:#9bb5d0;}
+.client-color2-bd-black-25{border-color:#8aa4bf;}
+		
+.client-color2-bd-white-40{border-color:#d4e9fe;}
+.client-color2-bd-gray-40{border-color:#8a9fb4;}
+.client-color2-bd-black-40{border-color:#6e8398;}
+		
+.client-color2-bd-white-50{border-color:#dcedff;}
+.client-color2-bd-gray-50{border-color:#7e90a1;}
+.client-color2-bd-black-50{border-color:#5c6e7f;}
+		
+.client-color2-bd-white-75{border-color:#edf6ff;}
+.client-color2-bd-gray-75{border-color:#616a73;}
+.client-color2-bd-black-75{border-color:#2e3740;}
+		
+.client-color2-fill{fill:#b8dbfe;}
+		
+.client-color2-fill-white-10{fill:#bfdffe;}
+.client-color2-fill-gray-10{fill:#accceb;}
+.client-color2-fill-black-10{fill:#a6c5e5;}
+		
+.client-color2-fill-white-15{fill:#c3e0fe;}
+.client-color2-fill-gray-15{fill:#a7c4e2;}
+.client-color2-fill-black-15{fill:#9cbad8;}
+		
+.client-color2-fill-white-20{fill:#c6e2fe;}
+.client-color2-fill-gray-20{fill:#a1bdd9;}
+.client-color2-fill-black-20{fill:#93afcb;}
+		
+.client-color2-fill-white-25{fill:#cae4fe;}
+.client-color2-fill-gray-25{fill:#9bb5d0;}
+.client-color2-fill-black-25{fill:#8aa4bf;}
+		
+.client-color2-fill-white-40{fill:#d4e9fe;}
+.client-color2-fill-gray-40{fill:#8a9fb4;}
+.client-color2-fill-black-40{fill:#6e8398;}
+		
+.client-color2-fill-white-50{fill:#dcedff;}
+.client-color2-fill-gray-50{fill:#7e90a1;}
+.client-color2-fill-black-50{fill:#5c6e7f;}
+		
+.client-color2-fill-white-75{fill:#edf6ff;}
+.client-color2-fill-gray-75{fill:#616a73;}
+.client-color2-fill-black-75{fill:#2e3740;}
+		
+.client-color3-fg{color:#013263;}
+		
+.client-color3-fg-white-10{color:#1a4773;}
+.client-color3-fg-gray-10{color:#083460;}
+.client-color3-fg-black-10{color:#012d59;}
+		
+.client-color3-fg-white-15{color:#27517a;}
+.client-color3-fg-gray-15{color:#0b355e;}
+.client-color3-fg-black-15{color:#012b54;}
+		
+.client-color3-fg-white-20{color:#345b82;}
+.client-color3-fg-gray-20{color:#0e365d;}
+.client-color3-fg-black-20{color:#01284f;}
+		
+.client-color3-fg-white-25{color:#41658a;}
+.client-color3-fg-gray-25{color:#12375b;}
+.client-color3-fg-black-25{color:#01264a;}
+		
+.client-color3-fg-white-40{color:#6784a1;}
+.client-color3-fg-gray-40{color:#1c3957;}
+.client-color3-fg-black-40{color:#011e3b;}
+		
+.client-color3-fg-white-50{color:#8099b1;}
+.client-color3-fg-gray-50{color:#233b54;}
+.client-color3-fg-black-50{color:#011932;}
+		
+.client-color3-fg-white-75{color:#c0ccd8;}
+.client-color3-fg-gray-75{color:#33404c;}
+.client-color3-fg-black-75{color:#000d19;}
+		
+.client-color3-bg{background-color:#013263;}
+		
+.client-color3-bg-white-10{background-color:#1a4773;}
+.client-color3-bg-gray-10{background-color:#083460;}
+.client-color3-bg-black-10{background-color:#012d59;}
+		
+.client-color3-bg-white-15{background-color:#27517a;}
+.client-color3-bg-gray-15{background-color:#0b355e;}
+.client-color3-bg-black-15{background-color:#012b54;}
+		
+.client-color3-bg-white-20{background-color:#345b82;}
+.client-color3-bg-gray-20{background-color:#0e365d;}
+.client-color3-bg-black-20{background-color:#01284f;}
+		
+.client-color3-bg-white-25{background-color:#41658a;}
+.client-color3-bg-gray-25{background-color:#12375b;}
+.client-color3-bg-black-25{background-color:#01264a;}
+		
+.client-color3-bg-white-40{background-color:#6784a1;}
+.client-color3-bg-gray-40{background-color:#1c3957;}
+.client-color3-bg-black-40{background-color:#011e3b;}
+		
+.client-color3-bg-white-50{background-color:#8099b1;}
+.client-color3-bg-gray-50{background-color:#233b54;}
+.client-color3-bg-black-50{background-color:#011932;}
+		
+.client-color3-bg-white-75{background-color:#c0ccd8;}
+.client-color3-bg-gray-75{background-color:#33404c;}
+.client-color3-bg-black-75{background-color:#000d19;}
+		
+.client-color3-bd{border-color:#013263;}
+		
+.client-color3-bd-white-10{border-color:#1a4773;}
+.client-color3-bd-gray-10{border-color:#083460;}
+.client-color3-bd-black-10{border-color:#012d59;}
+		
+.client-color3-bd-white-15{border-color:#27517a;}
+.client-color3-bd-gray-15{border-color:#0b355e;}
+.client-color3-bd-black-15{border-color:#012b54;}
+		
+.client-color3-bd-white-20{border-color:#345b82;}
+.client-color3-bd-gray-20{border-color:#0e365d;}
+.client-color3-bd-black-20{border-color:#01284f;}
+		
+.client-color3-bd-white-25{border-color:#41658a;}
+.client-color3-bd-gray-25{border-color:#12375b;}
+.client-color3-bd-black-25{border-color:#01264a;}
+		
+.client-color3-bd-white-40{border-color:#6784a1;}
+.client-color3-bd-gray-40{border-color:#1c3957;}
+.client-color3-bd-black-40{border-color:#011e3b;}
+		
+.client-color3-bd-white-50{border-color:#8099b1;}
+.client-color3-bd-gray-50{border-color:#233b54;}
+.client-color3-bd-black-50{border-color:#011932;}
+		
+.client-color3-bd-white-75{border-color:#c0ccd8;}
+.client-color3-bd-gray-75{border-color:#33404c;}
+.client-color3-bd-black-75{border-color:#000d19;}
+		
+.client-color3-fill{fill:#013263;}
+		
+.client-color3-fill-white-10{fill:#1a4773;}
+.client-color3-fill-gray-10{fill:#083460;}
+.client-color3-fill-black-10{fill:#012d59;}
+		
+.client-color3-fill-white-15{fill:#27517a;}
+.client-color3-fill-gray-15{fill:#0b355e;}
+.client-color3-fill-black-15{fill:#012b54;}
+		
+.client-color3-fill-white-20{fill:#345b82;}
+.client-color3-fill-gray-20{fill:#0e365d;}
+.client-color3-fill-black-20{fill:#01284f;}
+		
+.client-color3-fill-white-25{fill:#41658a;}
+.client-color3-fill-gray-25{fill:#12375b;}
+.client-color3-fill-black-25{fill:#01264a;}
+		
+.client-color3-fill-white-40{fill:#6784a1;}
+.client-color3-fill-gray-40{fill:#1c3957;}
+.client-color3-fill-black-40{fill:#011e3b;}
+		
+.client-color3-fill-white-50{fill:#8099b1;}
+.client-color3-fill-gray-50{fill:#233b54;}
+.client-color3-fill-black-50{fill:#011932;}
+		
+.client-color3-fill-white-75{fill:#c0ccd8;}
+.client-color3-fill-gray-75{fill:#33404c;}
+.client-color3-fill-black-75{fill:#000d19;}
+		
+.client-color4-fg{color:#f3b93a;}
+		
+.client-color4-fg-white-10{color:#f4c04e;}
+.client-color4-fg-gray-10{color:#e2ad3b;}
+.client-color4-fg-black-10{color:#dba734;}
+		
+.client-color4-fg-white-15{color:#f5c458;}
+.client-color4-fg-gray-15{color:#d9a73c;}
+.client-color4-fg-black-15{color:#cf9d31;}
+		
+.client-color4-fg-white-20{color:#f5c761;}
+.client-color4-fg-gray-20{color:#d0a23c;}
+.client-color4-fg-black-20{color:#c2942e;}
+		
+.client-color4-fg-white-25{color:#f6cb6b;}
+.client-color4-fg-gray-25{color:#c79c3d;}
+.client-color4-fg-black-25{color:#b68b2c;}
+		
+.client-color4-fg-white-40{color:#f8d589;}
+.client-color4-fg-gray-40{color:#ad8a3e;}
+.client-color4-fg-black-40{color:#926f23;}
+		
+.client-color4-fg-white-50{color:#f9dc9d;}
+.client-color4-fg-gray-50{color:#9c7f3f;}
+.client-color4-fg-black-50{color:#7a5d1d;}
+		
+.client-color4-fg-white-75{color:#fceece;}
+.client-color4-fg-gray-75{color:#706142;}
+.client-color4-fg-black-75{color:#3d2e0f;}
+		
+.client-color4-bg{background-color:#f3b93a;}
+		
+.client-color4-bg-white-10{background-color:#f4c04e;}
+.client-color4-bg-gray-10{background-color:#e2ad3b;}
+.client-color4-bg-black-10{background-color:#dba734;}
+		
+.client-color4-bg-white-15{background-color:#f5c458;}
+.client-color4-bg-gray-15{background-color:#d9a73c;}
+.client-color4-bg-black-15{background-color:#cf9d31;}
+		
+.client-color4-bg-white-20{background-color:#f5c761;}
+.client-color4-bg-gray-20{background-color:#d0a23c;}
+.client-color4-bg-black-20{background-color:#c2942e;}
+		
+.client-color4-bg-white-25{background-color:#f6cb6b;}
+.client-color4-bg-gray-25{background-color:#c79c3d;}
+.client-color4-bg-black-25{background-color:#b68b2c;}
+		
+.client-color4-bg-white-40{background-color:#f8d589;}
+.client-color4-bg-gray-40{background-color:#ad8a3e;}
+.client-color4-bg-black-40{background-color:#926f23;}
+		
+.client-color4-bg-white-50{background-color:#f9dc9d;}
+.client-color4-bg-gray-50{background-color:#9c7f3f;}
+.client-color4-bg-black-50{background-color:#7a5d1d;}
+		
+.client-color4-bg-white-75{background-color:#fceece;}
+.client-color4-bg-gray-75{background-color:#706142;}
+.client-color4-bg-black-75{background-color:#3d2e0f;}
+		
+.client-color4-bd{border-color:#f3b93a;}
+		
+.client-color4-bd-white-10{border-color:#f4c04e;}
+.client-color4-bd-gray-10{border-color:#e2ad3b;}
+.client-color4-bd-black-10{border-color:#dba734;}
+		
+.client-color4-bd-white-15{border-color:#f5c458;}
+.client-color4-bd-gray-15{border-color:#d9a73c;}
+.client-color4-bd-black-15{border-color:#cf9d31;}
+		
+.client-color4-bd-white-20{border-color:#f5c761;}
+.client-color4-bd-gray-20{border-color:#d0a23c;}
+.client-color4-bd-black-20{border-color:#c2942e;}
+		
+.client-color4-bd-white-25{border-color:#f6cb6b;}
+.client-color4-bd-gray-25{border-color:#c79c3d;}
+.client-color4-bd-black-25{border-color:#b68b2c;}
+		
+.client-color4-bd-white-40{border-color:#f8d589;}
+.client-color4-bd-gray-40{border-color:#ad8a3e;}
+.client-color4-bd-black-40{border-color:#926f23;}
+		
+.client-color4-bd-white-50{border-color:#f9dc9d;}
+.client-color4-bd-gray-50{border-color:#9c7f3f;}
+.client-color4-bd-black-50{border-color:#7a5d1d;}
+		
+.client-color4-bd-white-75{border-color:#fceece;}
+.client-color4-bd-gray-75{border-color:#706142;}
+.client-color4-bd-black-75{border-color:#3d2e0f;}
+		
+.client-color4-fill{fill:#f3b93a;}
+		
+.client-color4-fill-white-10{fill:#f4c04e;}
+.client-color4-fill-gray-10{fill:#e2ad3b;}
+.client-color4-fill-black-10{fill:#dba734;}
+		
+.client-color4-fill-white-15{fill:#f5c458;}
+.client-color4-fill-gray-15{fill:#d9a73c;}
+.client-color4-fill-black-15{fill:#cf9d31;}
+		
+.client-color4-fill-white-20{fill:#f5c761;}
+.client-color4-fill-gray-20{fill:#d0a23c;}
+.client-color4-fill-black-20{fill:#c2942e;}
+		
+.client-color4-fill-white-25{fill:#f6cb6b;}
+.client-color4-fill-gray-25{fill:#c79c3d;}
+.client-color4-fill-black-25{fill:#b68b2c;}
+		
+.client-color4-fill-white-40{fill:#f8d589;}
+.client-color4-fill-gray-40{fill:#ad8a3e;}
+.client-color4-fill-black-40{fill:#926f23;}
+		
+.client-color4-fill-white-50{fill:#f9dc9d;}
+.client-color4-fill-gray-50{fill:#9c7f3f;}
+.client-color4-fill-black-50{fill:#7a5d1d;}
+		
+.client-color4-fill-white-75{fill:#fceece;}
+.client-color4-fill-gray-75{fill:#706142;}
+.client-color4-fill-black-75{fill:#3d2e0f;}
+		
+
+.client-primary-text
+{
+	color: #013263;
+}
+
+.client-primary-trim-text
+{
+	color: #345b82 !important;
+}
+
+.client-primary-trim-background
+{
+	background-color: #013263 !important;
+}
+
+.client-secondary-text
+{
+	color: #cf9d31;
+}
+
+.client-secondary-highlight-text
+{
+	color: #FFFFFF !important;
+	font-weight: bold;
+}
+
+.client-secondary-trim-background
+{
+	background-color: #f3b93a !important;
+}
+
+.client-record-highlight-background
+{
+	background-color: #cae4fe;
+}
+
+a.missing-summary
+{
+    color: #f3b93a !important;
+}
+
+#menu .primary .active,
+#menu .primary li.group.onhover,
+#menu .primary li.group:hover,
+#menu .secondary ul,
+#banner-menu li.onhover,
+#banner-menu li:hover
+{
+	background-color: #f3b93a;
+}
+
+#menu .primary li.widgets,
+#banner-menu
+{
+	background-color: #f9dc9d;
+}
+
+#menu .secondary ul li.onhover,
+#menu .secondary ul li:hover,
+#menu .secondary ul li.active
+{
+	background-color: #ad8a3e;
+}
+
+#banner
+{
+	background-color: #013263;
+}
+
+#banner button#logoff,
+#banner-menu-button span.halflings,
+#banner-menu-button span.glyphicons
+{
+	color: #b8dbfe !important;
+}
+#banner button#logoff:focus,
+#banner button#logoff.onhover,
+#banner button#logoff:hover,
+#banner-menu-button span.halflings-triangle-bottom.hover
+{
+    color: #accceb !important;
+}
+
+#banner-menu-arrow
+{
+	border-bottom: 8px solid #f9dc9d;
+}
+
+#banner #search-button
+{
+	background-color: #f3b93a;
+}
+
+#banner #search-button:hover,
+#banner #search-button:focus,
+#banner #search-button:active
+{
+	background-color: #e2ad3b;
+}
+
+#banner .disabled-search
+{
+	background-color: #41658a;
+}
+
+#banner #search-button.disabled-search {
+    background-color: #7a764f !important;
+}
+
+#search-button.disabled-search .glyphicons-search {
+    color: #345b82 !important;
+}
+
+
+#return-menu li:hover,
+#return-menu li.onhover,
+#return-menu a:focus
+{
+    background-color: #f3b93a;
+}
+
+#menu .primary li.widgets,
+#return-menu
+{
+    background-color: #f9dc9d;
+}
+
+#return-menu-button span.halflings-triangle-bottom.hover
+{
+    color: #accceb !important;
+}
+
+#return-menu-arrow
+{
+    border-bottom: 8px solid #f9dc9d;
+}
+
+
+/* Error Text */
+.error-text,
+button.error-link,
+button.error-link:visited,
+a.error-link,
+a.error-link:visited
+{
+    color: #cf9d31 !important;
+}
+button.error-link:hover,
+a.error-link:hover,
+button.error-link:focus,
+button.error-link:active,
+a.error-link:focus,
+a.error-link:active
+{
+    color: #013263 !important;
+}
+
+/* Sensor duplicates screen */
+.duplicate-filter-choices .filter-choice.decision {
+    background-color: #f3b93a;
+    color: #ffffff;
+}
+
+/* Work Request Ratings */
+#stars span.glyphicons {
+    color: #f3b93a;
+}
+
+/* Generated by Grid UI */
+a,
+button.link,
+a:link,
+button.link:link,
+a:visited,
+button.link:visited,
+a:active,
+button.link:active {
+	color: #013263;
+}
+a.secondary-utility,
+button.link.secondary-utility,
+a:link.secondary-utility,
+button.link:link.secondary-utility,
+a:visited.secondary-utility,
+button.link:visited.secondary-utility,
+a:active.secondary-utility,
+button.link:active.secondary-utility {
+	color: #b8dbfe;
+}
+a:hover,
+button.link:hover,
+a:focus,
+button.link:focus {
+	color: #f3b93a;
+}
+a:hover.utility,
+button.link:hover.utility,
+a:focus.utility,
+button.link:focus.utility {
+	color: #013263;
+}
+a:hover.secondary-utility,
+button.link:hover.secondary-utility,
+a:focus.secondary-utility,
+button.link:focus.secondary-utility {
+	color: #b8dbfe;
+}
+.grid-ui .error,
+.grid-ui .manage-data-text {
+	color: #f3b93a;
+}

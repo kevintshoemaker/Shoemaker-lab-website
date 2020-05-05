@@ -1,0 +1,22 @@
+Scan code for YouTube videos illustrating population and disease dynamics and development of plague resistance in artificial landscapes.
+
+
+Sylvatic plague, caused by the bacterium Yersinia pestis, poses a major threat to prairie dog complexes and the Central Grasslands ecosystems they maintain. Recent field and genetic evidence suggests that some populations may be developing limited plague resistance. However, the processes governing rapid evolution in complex, real-world landscapes are poorly understood. As part of a large collaborative effort, we are building a simulation modeling framework to aid in understanding and predicting the evolution of widespread plague resistance in black-tailed and Gunnison’s prairie dogs
+
+
+Sylvatic plague, caused by the bacterium Yersinia pestis, poses a major threat to prairie dog complexes and the Central Grasslands ecosystems they maintain. Recent field and genetic evidence suggests that some populations may be developing limited plague resistance. As part of a large collaborative effort, we are building a simulation modeling framework to aid in understanding and predicting the evolution of widespread plague resistance in black-tailed and Gunnison’s prairie dogs.
+
+
+Sylvatic plague, caused by the exotic bacterium Yersinia pestis, represents an extremely strong yet intermittent and spatially disjunct selection pressure in prairie dog complexes (ca. 99% mortality[1,2], cycling every 5-10 yrs[1,3]). Although resistance to plague is not yet widespread, several populations seem to be developing limited resistance[4-6]. The processes governing plague resistance are complex, yet must be reckoned with to predict and potentially manage (through facilitated adaptation[7,8]) the recovery of prairie dogs and the ecosystem functions they maintain.
+1.	Cully, J. F. & Williams, E. S. Interspecific comparisons of sylvatic plague in prairie dogs. J. Mammal. 82, 894–905 (2001).
+2.	Augustine, D. J., Matchett, M. R., Toombs, T. P., Cully, J. F., Johnson, T. L. & Sidle, J. G. Spatiotemporal dynamics of black-tailed prairie dog colonies affected by plague. Landsc. Ecol. 23, 255–267 (2008).
+3.	Salkeld, D. J., Stapp, P., Tripp, D. W., Gage, K. L., Lowell, J., Webb, C. T., Brinkerhoff, R. J. & Antolin, M. F. Ecological traits driving the outbreaks and emergence of zoonotic pathogens. Bioscience 66, 118–129 (2016).
+4.	Busch, J. D. et al. The Innate Immune Response May Be Important for Surviving Plague in Wild Gunnison’s Prairie Dogs. J. Wildl. Dis. 49, 920–931 (2013).
+5.	Busch, J. D. et al. Population differences in host immune factors may influence survival of Gunnison’s prairie dogs (Cynomys gunnisoni) during plague outbreaks. J. Wildl. Dis. 47, 968–73 (2011).
+6.	Rocke, T. E. et al. Vector-Borne and Zoonotic Diseases. 111–116 (2012).
+7.	Thomas, M. A. et al. Nature 5–6 (2013).
+8.	van Oppen, M. J. H. et al. Proc. Natl. Acad. Sci. 112, 1–7 (2015).
+
+multiple modes of disease transmission (including alternative hosts), metapopulation processes (spatial structure, local extinction and recolonization), demographic and environmental stochasticity, spatiotemporal fluctuations in disease-induced selection, fitness costs, multiple resistance loci, dominance of resistance, epistasis, gene swamping, and pathogen evolutionary response (co-evolution)
+
+ER was most likely under scenarios with isolated habitat patches and limited disease-induced dispersal (Fig. 1), indicating gene swamping may play an important role in this (artificial) system.

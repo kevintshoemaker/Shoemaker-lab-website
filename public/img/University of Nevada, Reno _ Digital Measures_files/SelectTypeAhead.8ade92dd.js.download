@@ -1,0 +1,1372 @@
+var definedTypeAheadLists = {};
+
+function isToggleStateSupported(){
+    return (typeof ToggleStateHandler != 'undefined')
+}
+
+var SelectTypeAhead = (function() {
+    function hasValue(o) {
+        return (typeof(o) === 'undefined' ? null : o) != null;
+    }
+
+    function setText(el, text) {
+        if (el.textContent !== undefined)
+            el.textContent = text;
+        else
+            el.innerText = text;
+    }
+
+    function addEventListener(el, eventName, handler) {
+        var proxyHandler = function(e) {
+            e.target = e.target || e.srcElement;
+            e.which = e.which || e.keyCode;
+            handler.call(el, e);
+        };
+
+        if (el.addEventListener) {
+            el.addEventListener(eventName, proxyHandler);
+        } else {
+            el.attachEvent('on' + eventName, proxyHandler);
+        }
+    }
+
+    function outerHeight(el, includeMargin) {
+        var height = el.offsetHeight;
+
+        if(includeMargin) {
+            var style = el.currentStyle || getComputedStyle(el);
+            height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+        }
+
+        return height;
+    }
+
+    function outerWidth(el, includeMargin) {
+        var width = el.offsetWidth;
+
+        if(includeMargin) {
+            var style = el.currentStyle || getComputedStyle(el);
+            width += parseInt(style.marginRight) + parseInt(style.marginLeft);
+        }
+
+        return width;
+    }
+
+    function getPosition(el) {
+        var offset = $(el).position();
+        var style = el.currentStyle || getComputedStyle(el);
+        offset.top = offset.top - parseInt(style.borderBottomWidth);
+        return offset;
+    }
+
+    function getStyle(style, attributeName) {
+        if(style != null) {
+            for(var i = 0; i < style.length; i++) {
+                var styleItem = style[i];
+                if(attributeName == styleItem[0]) {
+                    return styleItem[1];
+                }
+            }
+        }
+        return null;
+    }
+
+    function TypeAheadElementData() {
+        this.elements = [];
+        this.options = [];
+    }
+
+    TypeAheadElementData.prototype = {
+        push: function(element) {
+            this.elements.push(element);
+            this.options.push({});
+        },
+        getOption: function(element) {
+            var i = this._find(element);
+            if(i !== null) {
+                return this.options[i];
+            }
+            return null;
+        },
+        setOption: function(element, option) {
+            var i = this._find(element);
+            if(i !== null) {
+                this.options[i] = option;
+            }
+        },
+        _find: function(element) {
+            for(var i = 0; i < this.elements.length; i++) {
+                if(this.elements[i] === element) {
+                    return i;
+                }
+            }
+            return null;
+        }
+    };
+
+    function Provider(options) {
+        this.options = options;
+        this._index();
+
+        this.defaultDataToggle = null;
+        this.defaultDataTarget = null;
+
+        this.initializeDataValues();
+    }
+    Provider.prototype = {
+        initializeDataValues: function() {
+            if(isToggleStateSupported()) {
+                for(var i = 0; i < this.options.length; i++) {
+                    var option = this.options[i];
+
+                    if(option['data-toggle'] != null && option['data-target'] != null){
+                        this.defaultDataToggle = option['data-toggle'];
+                        this.defaultDataTarget = option['data-target'];
+                        break;
+                    }
+                }
+            }
+        },
+        getDefaultDataToggle: function() {
+            return this.defaultDataToggle;
+        },
+        getDefaultDataTarget: function() {
+            return this.defaultDataTarget;
+        },
+        search: function(str) {
+            var index = new RegExp(this._strip(str));
+            var result = [];
+            for(var i = 0; i < this.options.length; i++) {
+                var option = this.options[i];
+                if(index.test(option.index)) {
+                    result.push(option);
+                }
+            }
+            return result;
+        },
+        getById: function(id) {
+            for(var i = 0; i < this.options.length; i++) {
+                var option = this.options[i];
+                if(option.id == id) {
+                    return option;
+                }
+            }
+            return null;
+        },
+        hasId: function(id) {
+            if(id == null || id == '') return false;
+
+            if(this.getById(id) != null) {
+                return true;
+            }
+            return false;
+        },
+        _index: function() {
+            for(var i = 0; i < this.options.length; i++) {
+                var option = this.options[i];
+                this.options[i].index = this._strip(option.value);
+            }
+        },
+        _strip: function(str) {
+            return str.replace(/[^A-Za-z0-9\u00C0-\u017F]+|\s+/gi, '').toLowerCase();
+        }
+    };
+
+    var listInputUUID = 0;
+    function ListDisplay(paddingLeft, paddingRight, targetClassPrefix) {
+        this.UUID = listInputUUID++;
+
+        this.itemHeight = 0;
+        this.minDefaultDisplay = 5;
+        this.maxDefaultDisplay = 20;
+        this.orientation = 'bottom';
+
+        this.selectCallback = null;
+        this.changeCallback = null;
+        this.ariaCallback = null;
+
+        this.baseElement = null;
+        this.innerElement = null;
+        this.listElement = null;
+        this.listElementId = null;
+        this.parentElement = document.body;
+
+        this.itemElements = [];
+        this.currentItemElement = null;
+        this.optionElementData = new TypeAheadElementData();
+
+        this.optionsView = [];
+
+        this.isVisible = false;
+
+        this.width = null;
+        this.paddingLeft = paddingLeft;
+        this.paddingRight = paddingRight;
+
+        this.targetClassPrefix = targetClassPrefix;
+    }
+
+    ListDisplay.prototype = {
+        setParentElement: function(parentElement) {
+            this.parentElement = parentElement;
+        },
+        setOptions: function(options) {
+            this.optionsView = options;
+            this.renderChange();
+            return this;
+        },
+        onSelect: function(callback) {
+            this.selectCallback = callback;
+        },
+        onChange: function(callback) {
+            this.changeCallback = callback;
+        },
+        onAria: function(callback) {
+            this.ariaCallback = callback;
+        },
+        setCurrentItemElement: function(selectedElement) {
+            var option = this.optionElementData.getOption(selectedElement);
+
+            if(option === undefined) {
+                return;
+            }
+
+            for(var i = 0; i < this.itemElements.length; i++) {
+                var element = this.itemElements[i];
+                if(selectedElement === element) {
+                    element.style.backgroundColor = '#EEE';
+                    this.currentItemElement = element;
+                } else {
+                    element.style.backgroundColor = 'white';
+                }
+            }
+
+            if(typeof this.changeCallback === 'function') {
+                this.changeCallback.call(this, this.currentItemElement, option);
+            }
+        },
+        setCurrentItemElementByOption: function(option) {
+            var displayListLength = Math.floor(this.getCurrentDisplayHeight() / this.itemHeight);
+
+            for(var i = 0; i < this.optionsView.length; i++) {
+                var optionView = this.optionsView[i];
+                if(optionView.id === option.id) {
+                    if(displayListLength + i < this.optionsView.length) {
+                        this.renderScroll(i);
+                    } else {
+                        this.renderScroll(this.optionsView.length - displayListLength);
+                    }
+                    for(var x = 0; x < this.itemElements.length; x++) {
+                        if(option === this.optionElementData.getOption(this.itemElements[x])) {
+                            this.setCurrentItemElement(this.itemElements[x]);
+                        }
+                    }
+                }
+            }
+        },
+        getCurrentItemElementIndex: function() {
+            for(var i = 0; i < this.itemElements.length; i++) {
+                if(this.itemElements[i] === this.currentItemElement) {
+                    return i;
+                }
+            }
+            return null;
+        },
+        moveCurrentItemElementUp: function() {
+            var index = this.getCurrentItemElementIndex();
+
+            if(index === 0 && this.baseElement.scrollTop === 0) {
+                return;
+            } else if(index === 1 && this.baseElement.scrollTop > 0) {
+                this.baseElement.scrollTop -= this.itemHeight * 2;
+                this.renderScroll();
+                this.setCurrentItemElement(this.itemElements[index + 1]);
+            } else {
+                this.setCurrentItemElement(this.itemElements[index - 1]);
+            }
+
+            if(typeof this.ariaCallback === 'function') {
+                var option = this.optionElementData.getOption(this.currentItemElement);
+                this.ariaCallback.call(this, this.currentItemElement, option);
+            }
+        },
+        moveCurrentItemElementDown: function() {
+            var index = this.getCurrentItemElementIndex();
+            var maxHeight = outerHeight(this.innerElement) - this.getCurrentDisplayHeight();
+
+            if(index === (this.itemElements.length - 1)) {
+                if(this.baseElement.scrollTop >= maxHeight) {
+                    return;
+                } else {
+                    this.baseElement.scrollTop += this.itemHeight * 2;
+                    this.renderScroll();
+                    this.setCurrentItemElement(this.itemElements[index - 1]);
+                }
+            } else {
+                this.setCurrentItemElement(this.itemElements[index + 1]);
+            }
+
+            if(typeof this.ariaCallback === 'function') {
+                var option = this.optionElementData.getOption(this.currentItemElement);
+                this.ariaCallback.call(this, this.currentItemElement, option);
+            }
+        },
+        selectCurrentItem: function() {
+            var option = this.optionElementData.getOption(this.currentItemElement);
+            if(typeof markDirty === 'function') {
+                markDirty();
+            }
+            if(typeof this.selectCallback === 'function' && typeof option === 'object') {
+                this.selectCallback.call(this, option);
+            }
+        },
+        getCurrentDisplayHeight: function() {
+            return outerHeight(this.baseElement);
+        },
+        renderScroll: function(indexOverride) {
+            var height = this.optionsView.length * this.itemHeight;
+            this.innerElement.style.height = height + 'px';
+
+            var top = this.baseElement.scrollTop;
+            var index = Math.ceil(top / this.itemHeight);
+            if(typeof indexOverride === 'number') {
+                this.baseElement.scrollTop = this.itemHeight * indexOverride;
+                index = indexOverride;
+            }
+
+            if(this.index != index || this.index === 0) {
+                var displayIndex = index == 0 ? 0 : index - 1;
+                var offset = (displayIndex * this.itemHeight);
+
+                this.listElement.style.top = offset + 'px';
+
+                for(var i = 0; i < this.itemElements.length; i++) {
+                    var element = this.itemElements[i];
+                    var option = this.optionsView[displayIndex + i];
+
+                    if(option === undefined) {
+                        element.style.display = 'none';
+                        element.setAttribute('id', '');
+                    } else {
+                        element.setAttribute('aria-setsize', this.optionsView.length);
+                        element.setAttribute('aria-posinset', (displayIndex + i).toString());
+                        element.setAttribute('id', this.targetClassPrefix + '-item-' + option.id);
+                        element.setAttribute('type-ahead-value', option.id);
+                        // COL-68: Add daterange from original `option` element
+                        element.setAttribute('daterange', option.daterange);
+
+                        if(isToggleStateSupported()) {
+                            if(option['data-toggle'] != null && option['data-target'] != null) {
+                                element.setAttribute('data-toggle', option['data-toggle']);
+                                element.setAttribute('data-target', option['data-target']);
+                            }
+                        }
+                        setText(element, option.value);
+                        element.style.display = '';
+                    }
+                    this.optionElementData.setOption(element, option);
+                }
+                this.index = index;
+            }
+        },
+        renderChange: function() {
+            this.index = 0;
+            this.baseElement.scrollTop = 0;
+            this.setCurrentItemElement(this.itemElements[0]);
+            this.renderScroll();
+        },
+        show: function() {
+            if(!this.isVisible) {
+                this.orientation = 'bottom';
+                this.parentElement.appendChild(this.baseElement);
+                this.listElement.setAttribute('aria-expanded', 'true');
+                this.isVisible = true;
+                this.itemHeight = $(this.itemElements[0]).outerHeight(true);
+                this.baseElement.style.maxHeight = (this.maxDefaultDisplay * this.itemHeight) + 'px';
+            }
+        },
+        setPosition: function(pos, loopCount) {
+            if(loopCount > 5) {
+                return; // endless loop detected
+            }
+
+            var displayItems = Math.min(this.optionsView.length, this.maxDefaultDisplay);
+            var availableHeight = 0;
+
+            if(this.orientation === 'top') {
+                availableHeight = pos.offset.top - pos.document.top;
+            }
+            else {
+                availableHeight = pos.document.bottom - pos.offset.bottom;
+            }
+
+            var availableItems = Math.floor(availableHeight / this.itemHeight);
+            if(availableItems < this.minDefaultDisplay) {
+                this.orientation = (this.orientation === 'top') ? 'bottom' : 'top';
+                return this.setPosition(pos, loopCount+1);
+            }
+
+            displayItems = Math.min(displayItems, availableItems);
+
+            var maxHeight = displayItems * this.itemHeight;
+            this.baseElement.style.maxHeight = maxHeight + 'px';
+
+            if(this.orientation === 'top') {
+                this.baseElement.style.top = (pos.position.top - maxHeight) + 'px';
+            }
+            else {
+                this.baseElement.style.top = pos.position.bottom + 'px';
+            }
+            this.baseElement.style.left = pos.position.left + 'px';
+
+            this.baseElement.style.maxHeight = (displayItems * this.itemHeight) + 'px';
+            this.baseElement.style.left = pos.left + 'px';
+        },
+        hide: function() {
+            if(this.isVisible) {
+                this.parentElement.removeChild(this.baseElement);
+                this.listElement.setAttribute('aria-expanded', 'false');
+                this.isVisible = false;
+            }
+        },
+        containsElement: function(element) {
+            if(this.baseElement === element) return true;
+            if(this.innerElement === element) return true;
+            if(this.listElement === element) return true;
+            for(var i = 0; i < this.itemElements.length; i++) {
+                if(this.itemElements[i] === element) return true;
+            }
+            return false;
+        },
+        createElements: function(widthCSS) {
+            this.baseElement = document.createElement('div');
+            this.innerElement = document.createElement('div');
+            this.listElement = document.createElement('div');
+
+            this.baseElement.className = this.targetClassPrefix + '-base';
+            this.baseElement.setAttribute('tabindex', '-1');
+            this.baseElement.setAttribute('aria-live', 'polite');
+
+            this.innerElement.className = this.targetClassPrefix + '-inner';
+            this.innerElement.setAttribute('tabindex', '-1');
+
+            this.listElement.className = this.targetClassPrefix + '-list';
+            this.listElementId = this.targetClassPrefix + '-list-' + this.UUID;
+            this.listElement.setAttribute('id', this.listElementId);
+            this.listElement.setAttribute('role', 'listbox');
+            this.listElement.setAttribute('aria-expanded', 'false');
+            this.listElement.setAttribute('tabindex', '-1');
+
+            var itemElementBase = document.createElement('div');
+            itemElementBase.setAttribute('role', 'option');
+            itemElementBase.className = this.targetClassPrefix + '-item';
+
+            if(widthCSS != null && widthCSS != '') {
+                this.width = widthCSS;
+            }
+
+            if(this.width != null) {
+                itemElementBase.style.width = this.width;
+            }
+            if(this.paddingLeft != null) itemElementBase.style.paddingLeft = this.paddingLeft;
+            if(this.paddingRight != null) itemElementBase.style.paddingRight = this.paddingRight;
+
+            for(var i = 0; i < this.maxDefaultDisplay + 1; i++) {
+                var itemElement = itemElementBase.cloneNode(true);
+
+                this.itemElements.push(itemElement);
+                this.optionElementData.push(itemElement);
+
+                this.listElement.appendChild(itemElement);
+            }
+
+            this.innerElement.appendChild(this.listElement);
+            this.baseElement.appendChild(this.innerElement);
+
+            var self = this;
+
+            addEventListener(this.baseElement, 'scroll', function() {
+                self.renderScroll();
+            });
+
+            addEventListener(this.listElement, 'mouseover', function(e) {
+                self.setCurrentItemElement(e.target);
+            });
+
+            addEventListener(this.listElement, 'mouseup', function(e) {
+                self.setCurrentItemElement(e.target);
+                self.selectCurrentItem();
+            });
+        }
+    };
+
+    function ListInput(input, options, option, style, attributes, revertToDefault, targetClassPrefix) {
+        this.hiddenInputElement = input;
+        this.inputElement = null;
+        this.clearElement = null;
+        this.containerElement = null;
+        this.selectElement = null;
+
+        if(options[0] != null && options[0].id == 'placeHolderText') {
+            this.placeHolderText = options[0].value;
+            options.shift();
+        } else {
+            this.placeHolderText = '';
+        }
+
+        if(!revertToDefault) {
+            options.unshift({
+                id: '',
+                value: ''
+            });
+        }
+
+        this.sudoFocus = false;
+        this.focus = false;
+        this.enableTabSelect = false;
+
+        this.initialOption = option;
+        this.currentOption;
+
+        this.style = style;
+        this.attributes = attributes;
+
+        this.listDisplay = new ListDisplay(getStyle(style, 'paddingLeft'), getStyle(style, 'paddingRight'), targetClassPrefix);
+        this.provider = new Provider(options);
+
+        this.revertToDefault = revertToDefault;
+
+        this.targetClassPrefix = targetClassPrefix;
+
+        this.attachElement();
+    }
+    ListInput.prototype = {
+        getRelativePosition: function() {
+            var $inputElement = $(this.inputElement);
+            var pos = getPosition(this.inputElement);
+            var height = outerHeight(this.inputElement);
+            var width = $inputElement.innerWidth();
+
+            var elPosition = {
+                top: pos.top,
+                right: pos.left + width,
+                bottom: pos.top + height,
+                left: pos.left
+            };
+            var elOffset = $inputElement.offset();
+            elOffset.right = elOffset.left + width;
+            elOffset.bottom = elOffset.top + height;
+
+            var $document = $(document);
+            var $window = $(window);
+
+            var headerHeight = 0;
+            if ($(this.inputElement).closest('.modal').length == 0) {
+                headerHeight = ($('#header').outerHeight(true) || 0) + ($('.sticky-header').outerHeight(true) || 0);
+            }
+            var docOffset = {
+                top: $document.scrollTop() + headerHeight,
+                left: $document.scrollLeft()
+            };
+            docOffset.right = docOffset.left + $window.width();
+            docOffset.bottom = docOffset.top + $window.height() - headerHeight;
+
+            return {
+                position: elPosition,
+                offset: elOffset,
+                document: docOffset
+            };
+        },
+        showDisplay: function() {
+            this.enableTabSelect = false;
+            this.listDisplay.show();
+            var self = this;
+            this.searchAndDisplay('', function() {
+                if(self.currentOption !== null && self.currentOption !== undefined) {
+                    self.listDisplay.setCurrentItemElementByOption(self.currentOption);
+                }
+            });
+            this.inputElement.setAttribute('aria-expanded', 'true');
+        },
+        hideDisplay: function() {
+            this.sudoFocus = false;
+            this.listDisplay.hide();
+            this.inputElement.setAttribute('aria-expanded', 'false');
+            this.inputElement.setAttribute('aria-activedescendant', '');
+        },
+        changeHandler: function(e, callback) {
+            if(e.propertyName && e.propertyName !== 'value') return;
+
+            this.enableTabSelect = true;
+
+            this.searchAndDisplay(this.inputElement.value, callback);
+        },
+        searchAndDisplay: function(str, callback) {
+            this.listDisplay
+              .setOptions(this.provider.search(str))
+              .setPosition(this.getRelativePosition(), 0);
+
+            if(typeof callback === 'function') {
+                callback.call(this);
+            }
+        },
+        hasOption: function(id) {
+            return this.provider.hasId(id);
+        },
+        attachElement: function() {
+
+            var isWidthComputed = this.targetClassPrefix == 'selecttypeahead';
+
+            var baseId = this.hiddenInputElement.id;
+            this.hiddenInputElement.id = baseId;
+
+            this.inputElement = document.createElement('input');
+            this.inputElement.style = document.createElement('style');
+            this.inputElement.id = baseId + '_input';
+            this.inputElement.setAttribute('type', 'text');
+            this.inputElement.setAttribute('spellcheck', 'false');
+            this.inputElement.setAttribute('aria-autocomplete', 'list');
+            this.inputElement.setAttribute('autocomplete', 'off');
+            this.inputElement.setAttribute('role', 'combobox');
+            this.inputElement.setAttribute('data-modified', 'ignore');
+            this.inputElement.setAttribute('aria-owns', this.listDisplay.listElementId);
+            this.inputElement.className = this.targetClassPrefix + '-input ' + this.targetClassPrefix + '-noplace ' + this.hiddenInputElement.className;
+
+            //apply styles from source field
+            if(this.style != null) {
+                for (var i = 0; i < this.style.length; i++) {
+                    var styleValues = this.style[i];
+                    this.inputElement.style.setProperty(styleValues[0], styleValues[1]);
+                }
+            }
+
+            //apply transferring attributes from source field
+            if(this.attributes != null) {
+                for(var i = 0; i < this.attributes.length; i++) {
+                    var attributeEntry = this.attributes[i];
+                    this.inputElement.setAttribute(attributeEntry[0], attributeEntry[1]);
+                }
+            }
+
+            this.clearElement = document.createElement('img');
+            this.clearElement.id = baseId + '_clear';
+            this.clearElement.src = '/login/images/shared/ico_cancel_clear.png';
+            this.clearElement.className = this.targetClassPrefix + '-clear';
+            this.clearElement.setAttribute('alt', 'Clear value');
+
+            this.selectElement = document.createElement('img');
+            this.selectElement.id = baseId + '_select';
+            this.selectElement.src = '/login/images/shared/down_arrow.gif';
+            this.selectElement.className = this.targetClassPrefix + '-select';
+            this.selectElement.setAttribute('alt', 'Select value');
+
+            this.containerElement = document.createElement('div');
+            this.containerElement.id = baseId + '_container';
+
+            this.containerElement.style = document.createElement('style');
+
+            if(isWidthComputed) {
+                this.containerElement.style.setProperty('width', (parseInt(getStyle(this.style, 'width')) + 20) + 'px'); //add spacing for clear button alignment
+            }
+
+            this.containerElement.className = this.targetClassPrefix + '-container';
+            this.containerElement.appendChild(this.inputElement);
+            this.containerElement.appendChild(this.clearElement);
+            this.containerElement.appendChild(this.selectElement);
+
+
+            this.listDisplay.setParentElement(this.containerElement);
+
+            this.hiddenInputElement.parentNode.insertBefore(this.containerElement, this.hiddenInputElement);
+
+            //Even though a provided width is used to create the container, parent container constraints
+            //may force the field to be slightly smaller, so the adjusted value after rendering the input field
+            //should be used to provide the width to child menu.
+            this.listDisplay.createElements(isWidthComputed ? $(this.inputElement).width() + 'px' : '');
+
+            var ariaOwns = this.inputElement.getAttribute('aria-owns');
+            if (null === ariaOwns ||
+                "null" === ariaOwns) {
+                this.inputElement.setAttribute('aria-owns', this.listDisplay.listElementId);
+            }
+
+            var inputTop = $(this.inputElement).css('top');
+            if(inputTop != 'auto' && !isNaN(parseInt(inputTop))) {
+                this.clearElement.style = document.createElement('style');
+                this.clearElement.style.setProperty('top', inputTop);
+                this.selectElement.style = document.createElement('style');
+                this.selectElement.style.setProperty('top', inputTop);
+            }
+
+            var option = this.provider.getById(this.initialOption);
+            this.setCurrentOption(option); //pass in even if null
+
+
+            this.showPlaceHolder();
+
+            this.rebindLabel(baseId);
+            this.rebindHelp(baseId);
+
+            var self = this;
+
+            var $modal = $(this.inputElement).closest('.modal');
+            var bodyContent = $modal.length ? $modal.get(0) : window;
+            addEventListener(bodyContent, 'scroll', function() {
+                self.listDisplay.setPosition(self.getRelativePosition(), 0);
+            });
+
+            addEventListener(this.inputElement, 'keydown', function(e) {
+                switch(e.which) {
+                    case 9:     // TAB
+                        if(self.enableTabSelect && self.inputElement.value !== '') {
+                            self.listDisplay.selectCurrentItem();
+                        }
+                        break;
+                    case 13:    // Enter
+                        (e.preventDefault) ? e.preventDefault() : e.returnValue = false;
+                        self.listDisplay.selectCurrentItem();
+                        break;
+                    case 27:    // ESC
+                        (e.preventDefault) ? e.preventDefault() : e.returnValue = false;
+                        self.inputElement.value = '';
+                        self.changeHandler(e);
+                        break;
+                    case 37:    // Left Arrow
+                    case 38:    // Up Arrow
+                        (e.preventDefault) ? e.preventDefault() : e.returnValue = false;
+                        self.enableTabSelect = true;
+                        self.listDisplay.moveCurrentItemElementUp();
+                        break;
+                    case 39:    // Right Arrow
+                    case 40:    // Down Arrow
+                        (e.preventDefault) ? e.preventDefault() : e.returnValue = false;
+                        self.enableTabSelect = true;
+                        self.listDisplay.moveCurrentItemElementDown();
+                        break;
+                }
+            });
+
+            addEventListener(this.inputElement, 'keyup', function(e) {
+                var keyCode = e.which;
+                switch(keyCode) {
+                    case 7:
+                    case 9:     // TAB
+                    case 13:    // Enter
+                    case 16:    // Shift
+                    case 18:    // Alt
+                    case 27:    // ESC
+                    case 37:    // Left Arrow
+                    case 38:    // Up Arrow
+                    case 39:    // Right Arrow
+                    case 40:    // Down Arrow
+                        (e.preventDefault) ? e.preventDefault() : e.returnValue = false;
+                        break;
+                    case 8:     // Backspace
+                    case 46:    // Delete
+                        self.changeHandler(e, function() {
+                            //show as callback to prevent flicker - case when focus still on field after selected
+                            //but user starts to delete data
+                            self.listDisplay.show();
+                        });
+                        break;
+                    default:
+                        self.changeHandler(e);
+                }
+            });
+
+            addEventListener(this.clearElement, 'click', function() {
+                self.handleClear(true);
+            });
+
+            addEventListener(this.selectElement, 'click', function() {
+                //delegate action to focus event of input element
+                self.inputElement.focus();
+            });
+
+            addEventListener(this.inputElement, 'focus', function() {
+                self.handleInputFocusClick();
+
+                var option = self.currentOption;
+
+                if(option == null && self.hiddenInputElement.value != null && self.hiddenInputElement.value != "") {
+                    //see if text/hidden were updated to match an option (example: by toggle state pages)
+                    var optionLookup = self.provider.getById(self.hiddenInputElement.value);
+                    if(optionLookup != null) {
+                        option = optionLookup;
+                        self.setCurrentOption(option);
+                    }
+                }
+
+                if(option == null && self.provider.options.length > 0) {
+                    option = self.provider.options[0];
+                }
+
+                if(option != null) {
+                    var targetDivId = self.listDisplay.targetClassPrefix + '-item-' + option.value;
+                    self.handleAriaFocus(targetDivId ,option);
+                }
+            });
+
+            addEventListener(this.inputElement, 'click', function() {
+                self.handleInputFocusClick();
+            });
+
+            addEventListener(document, 'mousedown', function(e) {
+                if(self.listDisplay.containsElement(e.target)) {
+                    self.sudoFocus = true;
+                } else if(e.target !== self.inputElement && self.sudoFocus && self.listDisplay.isVisible) {
+                    self.hideDisplay();
+                }
+            });
+
+            addEventListener(this.inputElement, 'blur', function() {
+                self.focus = false;
+                if(!self.sudoFocus && self.listDisplay.isVisible) {
+                    self.hideDisplay();
+
+                    if(self.inputElement.value === '' || self.currentOption === null) {
+                        self.handleBlurReset();
+                    }
+
+                    if(self.currentOption !== null) {
+                        self.setCurrentOption(self.currentOption);
+                    }
+                } else if(!self.sudoFocus && self.inputElement.value === '') {
+                     self.handleBlurReset();
+                }
+            });
+
+            this.listDisplay.onSelect(function(option) {
+                self.inputElement.focus();
+                self.hideDisplay();
+                self.setCurrentOption(option);
+            });
+
+            this.listDisplay.onAria(function(element, option) {
+                var id = element.getAttribute('id');
+                self.handleAriaFocus(id ,option);
+            });
+        },
+        handleAriaFocus: function(targetId, option) {
+            this.inputElement.setAttribute('aria-activedescendant', targetId);
+            this.inputElement.value = hasValue(option.value) ? option.value : '';
+            this.inputElement.select();
+        },
+        //handleClear also called by outside pages when focus control not desired
+        handleClear: function(forceFocus) {
+            if(this.revertToDefault && this.placeHolderText == '') {
+                this.setCurrentOption(this.provider.getById(this.initialOption));
+            } else {
+                this.setCurrentOption(null);
+                this.showPlaceHolder();
+            }
+
+            if(forceFocus) {
+                this.inputElement.value = '';
+                this.inputElement.focus();
+            }
+
+            if(typeof markDirty === 'function') {
+                markDirty();
+            }
+        },
+        handleInputFocusClick: function() {
+            this.focus = true;
+            if(!this.sudoFocus) {
+                this.showDisplay();
+                this.hidePlaceHolder();
+            }
+        },
+        handleBlurReset: function() {
+            if(this.revertToDefault && this.placeHolderText == '') {
+                this.setCurrentOption(this.provider.getById(this.initialOption));
+            } else {
+                this.setCurrentOption(null);
+                this.showPlaceHolder();
+            }
+        },
+        setCurrentOption: function(option) {
+            this.currentOption = option;
+
+            var inputElement = this.inputElement;
+            var fireOptionValueChangeEvent = function() {
+                if ('fireEvent' in inputElement)
+                    inputElement.fireEvent('onchange');
+                else {
+                    var evt = document.createEvent('HTMLEvents');
+                    evt.initEvent('change', false, true);
+                    inputElement.dispatchEvent(evt);
+                }
+            };
+            if (hasValue(option) && hasValue(option.id) && hasValue(option.value)) {
+                this.hiddenInputElement.value = option.id;
+                this.hiddenInputElement.setAttribute('data-optionDisplay', option.value);
+                if ( option.daterange ) {
+                    // COL-68: copy daterange of option to hidden input for later validation
+                    this.hiddenInputElement.setAttribute('daterange', option.daterange);
+                }
+                this.inputElement.value = option.value;
+                fireOptionValueChangeEvent();
+            } else {
+                this.hiddenInputElement.value = '';
+                this.hiddenInputElement.removeAttribute('data-optiondisplay');
+                this.inputElement.value = '';
+                fireOptionValueChangeEvent();
+            }
+
+            var $option = $(option);
+            var $hiddenElement = $(this.hiddenInputElement);
+
+            if(isToggleStateSupported()) {
+                var dataToggle = $option.attr('data-toggle');
+                var dataTarget = $option.attr('data-target');
+
+                if(typeof(dataToggle) == 'undefined') dataToggle = this.provider.getDefaultDataToggle();
+                if(typeof(dataTarget) == 'undefined') dataTarget = this.provider.getDefaultDataTarget();
+
+                $hiddenElement.attr('data-toggle', dataToggle);
+                $hiddenElement.attr('data-target', dataTarget);
+            }
+
+            $hiddenElement.trigger('change');
+        },
+        isPlaceHolderOn: function() {
+            return this.inputElement.className.indexOf(this.targetClassPrefix + '-place') > -1;
+        },
+        showPlaceHolder: function() {
+            if(this.inputElement.value === '') {
+                this.inputElement.value = hasValue(this.placeHolderText) ? this.placeHolderText : '';
+                this.inputElement.className = this.inputElement.className.replace(this.targetClassPrefix + '-noplace', this.targetClassPrefix + '-place');
+                this.clearElement.style.display = 'none';
+
+                var inputDisplay = this.inputElement.style.display;
+
+                if(inputDisplay == 'none') {
+                    this.selectElement.style.display = 'none';
+                } else {
+                    this.selectElement.style.display = 'inline';
+                }
+            } else {
+                this.clearElement.style.display = 'inline';
+                this.selectElement.style.display = 'none';
+            }
+        },
+        hidePlaceHolder: function() {
+            if(this.isPlaceHolderOn()) {
+                this.inputElement.value = '';
+                this.inputElement.className = this.inputElement.className.replace(this.targetClassPrefix + '-place', this.targetClassPrefix + '-noplace');
+                this.clearElement.style.display = '';
+                this.selectElement.style.display = 'none';
+            }
+        },
+        resetState: function(visible) {
+            //used by toggle-state library, passing in if field is visible
+            if(visible) {
+                this.inputElement.style.display = 'inline';
+                this.showPlaceHolder();
+            } else {
+                this.inputElement.style.display = 'none';
+                this.clearElement.style.display = 'none';
+                this.selectElement.style.display = 'none';
+            }
+        },
+        rebindLabel: function(baseId) {
+            //Look for labels with for="[baseId]" and point to new "[baseId]_input", as the hidden field must maintain
+            //the true id, but will not be interacted with directly by the end user.
+            //Note: In the case where fields are labelled with an id and using labelled by,
+            //these items do not need dynamic conversion, as the new field will take on the new labelled by attribute.
+            var label = $('label[for="' + baseId + '"]');
+            if(label != null) {
+                label.attr('for', baseId + '_input');
+            }
+        },
+        rebindHelp: function(baseId) {
+            //Look for icon spans with data-tabbedbefore="[baseId]" and point to new "[baseId]_input"
+            //See above notes about rebinding the label, as it is a similar solution
+            var helpIcon = $('span[data-tabbedbefore="' + baseId + '"]');
+            if(helpIcon != null && helpIcon.length == 1) {
+                helpIcon.attr('data-tabbedbefore', baseId + '_input');
+            }
+        },
+        getHiddenInputElement: function() {
+            return this.hiddenInputElement;
+        }
+    };
+
+    return {
+        attach: function(element, options, currentValue, style, attributes, revertToDefault, targetClassPrefix) {
+            return new ListInput(element, options, currentValue, style, attributes, revertToDefault, targetClassPrefix);
+        },
+        formatValues: function(values) {
+            var options = [];
+            for(var i = 0; i < values.length; i++) {
+                var option = values[i];
+                if(option !== undefined) {
+                    var localOption = {id: option[0], value: option[1]};
+                    var lastOption = option[option.length - 1];
+                    if(isToggleStateSupported()) {
+                        if(option[2] != null) localOption['data-toggle'] = option[2];
+                        if(option[3] != null) localOption['data-target'] = option[3];
+                    }
+                    if ( typeof lastOption === 'object' && lastOption != null ) {
+                        // COL-68: if we grabbed a daterange from the `option`, it's stored
+                        // in the last index of option array. Add prop to localOption.
+                        localOption.daterange = lastOption.daterange;
+                    }
+                    options.push(localOption);
+                }
+            }
+            return options;
+        }
+    };
+}());
+
+/**
+ * Create a cloned version of the field in the target dom element (string or reference)
+ * @param jqueryField
+ * @param baseElement
+ * @returns {*}
+ */
+function cloneField(jqueryField, baseElement){
+    return jqueryField.clone()
+        .appendTo(baseElement)
+        .css({'display':'block', 'visibility': 'hidden', 'opacity': 0})
+        .addClass('cloned-field');
+}
+
+/**
+ * Helper function to derive width for a given field.  In some cases, the field is not visible
+ * at the time that type ahead is executed.  Some browsers will then return a negative value
+ * for the width, throwing off page alignment. (Use case - popups)  This function clones a hidden version of the field
+ * to get the derived width, and then removes the field.  When browsers properly return a field width
+ * in all scenarios, then width() of the attribute should replace this call.
+ *
+ * @param jqueryField
+ * @returns {*}
+ */
+function deriveWidth(jqueryField) {
+
+    var width = jqueryField.width();
+
+    if(width < 1 || isReferenceTypeAheadField(jqueryField)) {
+
+        var tempClone = cloneField(jqueryField, jqueryField.parent());
+
+        if(isReferenceTypeAheadField(jqueryField)) {
+            //clear the provided width
+            tempClone.css('width', '');
+
+            var cloneValues = selectCheckForReferenceValues(jqueryField.attr("name"));
+            for(var i = 0; i < cloneValues.length; i++) {
+                var valuePair = cloneValues[i];
+                tempClone
+                    .append($("<option></option>")
+                        .attr("value",valuePair[0])
+                        .text(valuePair[1]));
+            }
+        }
+
+        var cloneWidth = tempClone.width();
+
+        if(cloneWidth == null || cloneWidth <= 0) {
+            //retry in body, because div calculation results negative
+            tempClone = cloneField(jqueryField, 'body');
+            cloneWidth = tempClone.width();
+        }
+
+        if(cloneWidth > width) {
+            width = cloneWidth;
+        }
+        $('.cloned-field').remove();
+    }
+    return width;
+}
+
+/**
+ * Work to make dynamic field swapping pixel exact to original as to not affect surrounding elements from
+ * prior select list configuration.
+ *
+ * @param jqueryField
+ * @returns {string}
+ */
+function introspectFieldStyle(jqueryField) {
+
+    // padding right offset for typeahead, derived from runtime user search implementation
+    var forcedPadding = 3;
+
+    var width = deriveWidth(jqueryField);
+    var paddingRight = parseInt(jqueryField.css('padding-right'));
+    var paddingLeft = parseInt(jqueryField.css('padding-left'));
+    var adjustment = 0;
+
+
+    if($.isNumeric(paddingRight)) adjustment += paddingRight - forcedPadding;
+    if($.isNumeric(paddingLeft)) adjustment += paddingLeft - forcedPadding;
+
+    var fldWidth = (width + adjustment) + 'px';
+    var fldHeight = jqueryField.height() + 'px';
+    var fldPaddingLeft = forcedPadding + 'px';
+    var fldPaddingRight = forcedPadding + 'px';
+    var fldPaddingTop = jqueryField.css('padding-top');
+    var fldPaddingBottom = jqueryField.css('padding-bottom');
+    var fldDisplay = jqueryField.css('display');
+
+    var styles = [['width', fldWidth],
+        ['height' + fldHeight],
+        ['paddingLeft', fldPaddingLeft],
+        ['paddingRight', fldPaddingRight],
+        ['paddingTop', fldPaddingTop],
+        ['paddingBottom', fldPaddingBottom]];
+
+    if(fldDisplay == 'none') {
+        styles[styles.length] = ['display', fldDisplay];
+    }
+
+    return styles;
+}
+
+function introspectFieldAttributes(jqueryField) {
+    var attributeNames =  ['aria-labelledby',
+		'aria-describedby',
+		'aria-expanded',
+		'aria-activedescendant',
+		'aria-required',
+		'dmpubliclyavailable',
+		'dmreadonly',
+		'dmlocked',
+		'dmhidden'];
+    var transferAttributes = [];
+    for(var i = 0; i < attributeNames.length; i++) {
+        var entry = findAttributeEntry(jqueryField, attributeNames[i]);
+        if(entry.length > 0) {
+            transferAttributes[transferAttributes.length] = entry;
+        }
+    }
+    return transferAttributes;
+}
+
+/**
+ * Inspect the source field for an attribute and return attribute html string
+ * if it is present.
+ *
+ * @param jqueryField
+ * @param attribute
+ */
+function findAttributeEntry(jqueryField, attributeName) {
+    var attributeValue = jqueryField.attr(attributeName);
+    var attributeEntry = [];
+    if(attributeValue != undefined) {
+        attributeEntry = [attributeName, attributeValue];
+    }
+    return attributeEntry;
+}
+
+function introspectCurrentValue(selectField){
+    var value = null;
+    if(selectField.options) {
+        var selectedIndex = selectField.options.selectedIndex;
+        if (selectedIndex > -1) {
+            value = selectField.options[selectedIndex].value || selectField.options[selectedIndex].text;
+            if (value == 'placeHolderText') {
+                value = null;
+            }
+        }
+    } else {
+        value = selectField.value;
+    }
+    return value;
+}
+
+function selectNameToReferenceKey(fieldName) {
+    var revisedFieldName = fieldName;
+    var startPos;
+    while((startPos = revisedFieldName.indexOf("[")) > -1) {
+        var endPos = revisedFieldName.indexOf(']', startPos);
+
+        if(endPos > -1) {
+            revisedFieldName =  revisedFieldName.substring(0, startPos)
+                                + revisedFieldName.substring(endPos + 1);
+        } else {
+            console.log("Malformed survey field name: " + fieldName + "; Parsing stopped at: " + revisedFieldName);
+            revisedFieldName = "";
+            break;
+        }
+    }
+    return revisedFieldName;
+}
+
+function selectCheckForReferenceValues(fieldName) {
+    if(typeof referenceValues != 'undefined' && referenceValues != null) {
+        var selectReferenceValues = referenceValues['/Survey' + selectNameToReferenceKey(fieldName)];
+        if(selectReferenceValues != null && selectReferenceValues.length > 0){
+            return selectReferenceValues;
+        }
+    }
+    return [];
+}
+
+function isReferenceTypeAheadField(jqueryField) {
+    return jqueryField.attr('reference-value-type-ahead') == 'true';
+}
+
+function getTypeAheadSelectValues(selectField, referenceValueKey){
+
+    var $selectField = $(selectField);
+
+    var values = null;
+    if(referenceValueKey != null) {
+        values = referenceValues[referenceValueKey];
+    } else {
+        values = selectCheckForReferenceValues($selectField.attr("name"));
+    }
+
+    if(values == null || values.length == 0) {
+
+        //not local, with placeholder, first element is populated
+        //without placeholder, each is populated
+        var primaryDataToggle = null;
+        var primaryDataTarget = null;
+
+        for(var i = 0; i < selectField.options.length; i++){
+            var option = selectField.options[i];
+            var jqueryOption = $(option);
+            var daterange = option.getAttribute('daterange');
+
+            if(!$.isEmptyObject(option.value) && !$.isEmptyObject(option.text)){
+                var pos = values.length;
+                values[pos] = [option.value, option.text];
+
+                if(isToggleStateSupported()) {
+                    //test for local data values
+                    var localDataToggle = jqueryOption.attr('data-toggle');
+                    var localDataTarget = jqueryOption.attr('data-target');
+
+                    //set primary data values if present (first in wins - place holder options)
+                    if (primaryDataToggle == null) primaryDataToggle = localDataToggle;
+                    if (primaryDataTarget == null) primaryDataTarget = localDataTarget;
+
+                    //if local values not present, use primary (could have been set in previous iteration)
+                    if (typeof(localDataToggle) == 'undefined') localDataToggle = primaryDataToggle;
+                    if (typeof(localDataTarget) == 'undefined') localDataTarget = primaryDataTarget;
+
+                    //set from local values if available
+                    if (typeof(localDataToggle) != 'undefined' && typeof(localDataTarget) != 'undefined') {
+                        values[pos][2] = localDataToggle;
+                        values[pos][3] = localDataTarget;
+                        $selectField.attr('toggle-type-ahead', 'true');
+                    }
+                }
+                if ( daterange ) {
+                    // COL-68: When parsing original `select` and `option`s, if there is a
+                    // daterange, grab it and add it to interim values array, so we can pass
+                    // it into the new markup.
+                    values[pos].push({ daterange: daterange });
+                }
+            } else {
+                $selectField.attr('type-ahead-supports-empty', 'true');
+            }
+        }
+    } else {
+        $selectField.attr('reference-value-type-ahead', 'true');
+        var firstOption = $selectField.find("option").first();
+        if (firstOption != null) {
+            var firstOptionValue = firstOption.attr("value");
+            if (firstOption.text() !== values[0][1] && values[0][0] != 'placeHolderText'
+                    && (firstOptionValue == null || firstOptionValue == '')) {
+                var entry = ['placeHolderText', firstOption.text()];
+                values.unshift(entry);
+            }
+        }
+    }
+    return values;
+}
+
+function createSelectTypeAhead(values, initialValue, srcField, style, attributes, targetClassPrefix) {
+
+    var elementId = srcField.attr('id');
+    var element = document.getElementById(elementId);
+
+    var hiddenInput = document.createElement('input');
+    hiddenInput.setAttribute('type', 'hidden');
+    // COL-68: Add custom attribute to hidden input so validation picks it up properly.
+    hiddenInput.setAttribute('data-typeahead', 'true');
+    hiddenInput.value = element.value;
+
+    for(var i = 0; i < element.attributes.length; i++) {
+        var name = element.attributes[i].nodeName;
+        var value = element.attributes[i].nodeValue;
+
+        var invalidAttribute = value == null || value == undefined || value == '' || name == 'type';
+        if(!invalidAttribute)
+        {
+            hiddenInput.setAttribute(name, value);
+        }
+    }
+
+    element.parentNode.insertBefore(hiddenInput, element);
+    element.parentNode.removeChild(element);
+
+    var revertToDefault = false;
+    var emptySupportAttribute = srcField.attr('type-ahead-supports-empty');
+    if(emptySupportAttribute == null || emptySupportAttribute == undefined || emptySupportAttribute != 'true') {
+        revertToDefault = true;
+    }
+
+    var options = SelectTypeAhead.formatValues(values);
+    var listInput = SelectTypeAhead.attach(hiddenInput, options, initialValue, style, attributes, revertToDefault, targetClassPrefix);
+
+    definedTypeAheadLists[elementId] = listInput;
+
+    if(isToggleStateSupported() && srcField.attr('toggle-type-ahead') == 'true') {
+        ToggleStateHandler.registerTypeAhead($(listInput.getHiddenInputElement()));
+    }
+}
+
+function transformSelect(selectField, targetClassPrefix, referenceValueKey) {
+
+    var $srcField = $(selectField);
+
+    if ($srcField.attr("multiple") == null) {
+        var dataValues = getTypeAheadSelectValues(selectField, referenceValueKey);
+        var currentValue = introspectCurrentValue(selectField);
+        var fieldStyle = ((targetClassPrefix == 'selecttypeahead') ? introspectFieldStyle($srcField) : []);
+        var fieldAttributes = introspectFieldAttributes($srcField);
+
+        createSelectTypeAhead(dataValues, currentValue, $srcField, fieldStyle, fieldAttributes, targetClassPrefix);
+    }
+}
+
+function validateConversion(field, fieldSelectorText) {
+    var $field = $(field);
+    var valid = true;
+
+    //User reference fields may not be initiated with broad jquery search parameters, as they require data to be
+    //preloaded in data array. Block these cases with broad jquery selectors, and rely on addReferenceValues
+    //calls in survey.js that are specific with data keys, and assure proper load timing.
+    var userReferenceAttribute = $field.attr('significantuserreference');
+    var isUserReference = (typeof(userReferenceAttribute) != 'undefined' && userReferenceAttribute == "true");
+    var isBroadSelector = (fieldSelectorText == 'select' || fieldSelectorText.substring(0,1) == '.');
+    if(isUserReference && isBroadSelector) {
+        valid = false;
+    }
+
+    return valid;
+}
+
+function initSelectTypeAhead(containerSelectorText, fieldSelectorText, targetClassPrefix, referenceValueKey) {
+    if(containerSelectorText == undefined) containerSelectorText = '#maincontent';
+    if(fieldSelectorText == undefined) fieldSelectorText = 'select';
+    if(targetClassPrefix == undefined) targetClassPrefix = 'selecttypeahead';
+    if(referenceValueKey == undefined) referenceValueKey = null;
+
+    var selectFields = $(containerSelectorText).find(fieldSelectorText);
+    selectFields.each(function() {
+        if(validateConversion(this, fieldSelectorText)) {
+            transformSelect(this, targetClassPrefix, referenceValueKey);
+        }
+    });
+}
+
+$(function () {
+    initSelectTypeAhead();
+});

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tortoises on Applied Population Ecology Lab at UNR</title>
+    <link>http://naes.unr.edu/shoemaker/lab/categories/tortoises/</link>
+    <description>Recent content in Tortoises on Applied Population Ecology Lab at UNR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://naes.unr.edu/shoemaker/lab/categories/tortoises/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Simulation modeling to support population restoration of &#39;lost&#39; Galapagos giant tortoise species</title>
+      <link>http://naes.unr.edu/shoemaker/lab/posts/GalapTort_project/</link>
+      <pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://naes.unr.edu/shoemaker/lab/posts/GalapTort_project/</guid>
+      <description>
+
+&lt;p&gt;In the 19th century, populations of giant tortoises in the Galapagos Islands were decimated by whalers and pirates, who kept and killed tortoises on their ships as a resilient source of fresh meat for long ocean voyages. Particularly hard-hit were &amp;ldquo;saddlebacked&amp;rdquo; species that inhabited the islands&amp;rsquo; arid lowlands closer to the coasts.  Of the five saddlebacked species, two have been declared extinct: &lt;em&gt;Chelonoidis elephantopus&lt;/em&gt; from Floreana Island and &lt;em&gt;C. abingdonii&lt;/em&gt; from Pinta Island (the latter only recently declared extinct in 2012 with the death of the Lonesome George).  However, &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S0960982211013765&#34;&gt;geneticists have recently discovered&lt;/a&gt; that, through the translocating behaviors of the very same sailors, the &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S000632071200434X&#34;&gt;genotypes of these extinct species still exist&lt;/a&gt; within individuals of mixed ancestry on Wolf Volcano on Isabela Island.  An expedition in 2015 recovered some of these mixed ancestry tortoises and brought them into captivity with the hope of starting a captive breeding program to restore tortoise populations on Floreana and Pinta Islands that represent the original genotype of the native species.&lt;/p&gt;
+
+&lt;h2 id=&#34;simulation-modeling-to-support-decision-making&#34;&gt;Simulation modeling to support decision-making&lt;/h2&gt;
+
+&lt;p&gt;Building on previous work from our group on the population dynamics of reintroduced populations of saddlebacked giant tortoises (&lt;a href=&#34;http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0110742&#34;&gt;Gibbs, Hunter, Shoemaker et al. 2014&lt;/a&gt;) and the ecosystem effects of tortoise populations (&lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1111/rec.12055/full&#34;&gt;Hunter and Gibbs 2014&lt;/a&gt;), we are creating a simulation model to find a breeding program strategy that simultaneously maximizes the percentage of the native genotype in the restored population, the population growth rate, and the beneficial ecological effects of tortoises, all while minimizing costs.  We are using the individual-based modeling software NetLogo to create a model that incorporates genetic information from program STRUCTURE and population parameters estimated using the Bayesian estimation software WinBUGS.  Ultimately, we hope these efforts will assist the &lt;a href=&#34;http://www.galapagos.gob.ec/&#34;&gt;Galapagos National Park&lt;/a&gt; and the &lt;a href=&#34;http://www.galapagos.org/conservation/conservation/project-areas/ecosystem-restoration/tortoise-restoration/&#34;&gt;Galapagos Conservancy&lt;/a&gt; in implementing effective strategies for restoring tortoise populations to Floreana and Pinta Islands.&lt;/p&gt;
+
+&lt;p&gt;Project lead: &lt;a href=&#34;http://elizabethhunter.weebly.com/&#34;&gt;Elizabeth Hunter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

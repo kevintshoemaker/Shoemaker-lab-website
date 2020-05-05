@@ -1,0 +1,55 @@
+function initAssistiveText() {
+	$('*[dmpubliclyavailable=true], *[dmreadonly=true], *[dmlocked=true], *[dmhidden=true]').each(function() {
+		var $field = $(this);
+		var $label = $('label[for="' + this.id + '"]');
+
+		// Fields in DSA's use different IDs for the labels
+		if (!$label.length) {
+			$label = $(document.getElementById(this.id + '_label'));
+		}
+
+		if ($label.length) {
+			var tooltipText = $label.siblings('span.indicator').data('tooltip') ||
+				$($label.parents('table').get(1)).find('span.indicator').data('tooltip');
+
+			if (tooltipText && tooltipText.length) {
+				var tooltipId;
+				$('.info-tooltip').each(function() {
+					if ($(this).find('.tooltip-text').text() === tooltipText) {
+						tooltipId = $(this).attr('id');
+						return false;
+					}
+				});
+				$field.attr('aria-describedby', tooltipId);
+			}
+		}
+	});
+}
+
+function initBooleanFields() {
+	$('input[type=radio], input[type=checkbox]').each(function() {
+		var $field = $(this);
+		var $label = $(document.getElementById($field.attr('name') + '_label'));
+
+		var tooltipText;
+		if ($label.length) {
+			tooltipText = $label.siblings('span.indicator').data('tooltip') || '';
+		}
+
+		if (tooltipText && tooltipText.length) {
+			var tooltipId;
+			$('.info-tooltip').each(function() {
+				if ($(this).find('.tooltip-text').text() === tooltipText) {
+					tooltipId = $(this).attr('id');
+					return false;
+				}
+			});
+			var existingAria = $field.attr('aria-describedby');
+			$field.attr('aria-describedby', existingAria + ' ' + tooltipId);
+		}
+	});
+}
+$(function() {
+	initAssistiveText();
+	initBooleanFields();
+});

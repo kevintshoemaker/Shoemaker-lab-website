@@ -1,0 +1,292 @@
+var SurveyEditor = {};
+SurveyEditor.clazz = {};
+SurveyEditor.util = {};
+
+
+SurveyEditor.util.isEmpty = function(value) {
+	return value == null || value.length == 0 || /^\s*$/.test(value);
+};
+
+SurveyEditor.util.getDisplay = function($element) {
+	var value = $element.attr('data-userdisplay') || $element.attr('data-optiondisplay');
+	if (!SurveyEditor.util.isEmpty(value)) {
+		return $.trim(value);
+	}
+
+	var tagName = $element.prop("tagName").toLowerCase();
+	switch(tagName) {
+		case 'input':
+		case 'textarea':
+			value = $element.val();
+			break;
+		case 'select':
+			value = $element.text();
+			break;
+		default:
+			value = $element.text();
+	}
+
+	return $.trim(value);
+};
+
+
+SurveyEditor.clazz.NameField = function(element) {
+	this.$el = $(element);
+	this.id = this.$el.attr("id");
+	if (this.id.match(/_hidden/))
+	{
+		this.id = this.$el.attr("name");
+	}
+	this.idSelector = '#' + this.id.replace( /(:|\.|\/|\[|\]|,)/g, "\\$1");
+
+	this.group = this.$el.attr("data-nameGroup");
+	this.isUserReference = (this.group == this.id);
+	this.$input = this.isUserReference ?
+		$(this.idSelector + '_input') :
+		this.$el;
+	this.$clear = $(this.idSelector + '_clear');
+};
+
+SurveyEditor.clazz.NameField.prototype.getValue = function() {
+	return SurveyEditor.util.getDisplay(this.$el);
+};
+
+SurveyEditor.clazz.NameField.prototype.isEmpty = function() {
+	return SurveyEditor.util.isEmpty(this.getValue());
+};
+
+SurveyEditor.clazz.NameGroup = function(id, nameFields) {
+	this.id = id;
+	this.fields = nameFields;
+	this.selectOrText = false;
+	this.userReference = {
+		getValue: function() {return ''}
+	};
+	this.nameParts = [];
+
+	var self = this;
+	_.each(nameFields, function(nameField) {
+		if (nameField.isUserReference) {
+			self.userReference = nameField;
+			if (nameField.$el.attr("selectortextgroup")) {
+				self.selectOrText = true;
+			}
+		}
+		else {
+			self.nameParts.push(nameField);
+		}
+	});
+};
+
+SurveyEditor.clazz.NameGroup.prototype.getSelectedUser = function() {
+	var selectedUser = this.userReference.getValue();
+	if (selectedUser.indexOf(':') > -1) {
+		selectedUser = selectedUser.substr(0, selectedUser.lastIndexOf(':'));
+	}
+	if (selectedUser.indexOf(',') > -1) {
+		var pivotPoint = selectedUser.lastIndexOf(',');
+		selectedUser = selectedUser.substr(pivotPoint + 1) + ' ' + selectedUser.substr(0, pivotPoint);
+	}
+	return selectedUser.trim();
+};
+
+SurveyEditor.clazz.NameGroup.prototype.hasSelectedUser = function() {
+	return !SurveyEditor.util.isEmpty(this.getSelectedUser());
+};
+
+SurveyEditor.clazz.NameGroup.prototype.getLastRow = function() {
+	return _.reduce(this.fields, function(memo, field) {
+		var fieldTr = field.$el.closest("tr");
+		if (fieldTr.position().top > memo.position().top) {
+			return fieldTr;
+		}
+		return memo;
+	}, this.fields[0].$el.closest("tr"));
+};
+
+SurveyEditor.clazz.NameGroup.prototype.getNameValue = function() {
+	var namePartsToNameValue = function(memo, nameField) {
+		return (memo + " " + nameField.getValue()).trim();
+	}
+	return _.reduce(this.nameParts, namePartsToNameValue, "");
+};
+
+SurveyEditor.clazz.NameGroup.prototype.hasNameValue = function() {
+	return !SurveyEditor.util.isEmpty(this.getNameValue());
+};
+
+SurveyEditor.clazz.NameGroup.prototype.hasFocus = function() {
+	var focusedElement = $( document.activeElement );
+	if (focusedElement == this.userReference.$input) {
+		return true;
+	}
+
+	var focusedNamePart = _.find(this.nameParts, function(namePart) {
+		return focusedElement == namePart.$input;
+	});
+	if (focusedNamePart) {
+		return true;
+	}
+	return false;
+};
+
+SurveyEditor.clazz.AlternateNames = function() {
+	this.nameGroups = this.getNameGroups();
+	this.$elements = this.getTooltipContainers();
+};
+
+SurveyEditor.clazz.AlternateNames.prototype.getNameGroups = function() {
+	return _.chain($("[data-nameGroup]"))
+		.map(function(element) {
+			return new SurveyEditor.clazz.NameField(element);
+		})
+		.groupBy('group')
+		.map(function(nameFields, groupValue) {
+			return new SurveyEditor.clazz.NameGroup(groupValue, nameFields);
+		})
+		.filter(function(nameGroup) {
+			return !nameGroup.selectOrText;
+		})
+		.value();
+};
+
+SurveyEditor.clazz.AlternateNames.prototype.getAlternateNameElementId = function(nameGroup) {
+	return nameGroup.id + "_alternateName";
+};
+
+SurveyEditor.clazz.AlternateNames.prototype.getTooltipContainers = function() {
+	var result = {};
+	var classesMovingToNewElement = ["bottom", "decorated-after"];
+
+	var that = this;
+	_.each(this.nameGroups, function(nameGroup) {
+		if (nameGroup.nameParts.length === 0) {
+			return;
+		}
+
+		var row = nameGroup.getLastRow();
+		var childCells = row.children("td");
+		childCells.addClass("nameGroupRow");
+		var numTableCells = childCells.length;
+
+		var leftAlignNameField = _.reduce(nameGroup.nameParts, function(memo, namePart) {
+			var fieldTd = namePart.$el.closest("td");
+			if (fieldTd.position().left < memo.position().left) {
+				return fieldTd;
+			}
+			return memo;
+		}, nameGroup.nameParts[0].$el.closest("td"));
+		var firstCellColspan = leftAlignNameField.prevAll().length;
+
+		var newElement = $("<tr></tr>")
+			.append($('<td></td>', {
+				"class": "left",
+				colspan: firstCellColspan
+			}))
+			.append($('<td></td>', {
+					"id": that.getAlternateNameElementId(nameGroup),
+					"class": "alternateNameMessage client-secondary-text right",
+					"aria-hidden": "true",
+				colspan: (numTableCells > 2) ? numTableCells - firstCellColspan : 1
+			}).html("&nbsp;"));
+		row.after(newElement);
+
+		_.each(classesMovingToNewElement, function(className) {
+			if (row.hasClass(className)) {
+				row.removeClass(className);
+				if (className !== "decorated-after") {
+					newElement.addClass(className);
+				}
+			}
+		});
+
+		result[nameGroup.id] = newElement;
+	});
+	return result;
+};
+
+SurveyEditor.clazz.AlternateNames.prototype.showEnteringAlternateNameText = function(nameGroup) {
+	var $element = this.$elements[nameGroup.id];
+	if ($element) {
+		var instructions = 'Provide a maiden or pen name, if applicable';
+		$element.find(".alternateNameMessage").text(instructions);
+		ariaTooltip(instructions);
+	}
+};
+
+SurveyEditor.clazz.AlternateNames.prototype.showAllEnteredAlternateNameText = function() {
+	_.each(this.nameGroups, _.bind(this.toggleEnteredAlternateNameText, this));
+};
+
+SurveyEditor.clazz.AlternateNames.prototype.showEnteredAlternateNameText = function(nameGroup) {
+	var $element = this.$elements[nameGroup.id];
+	if ($element) {
+		var message = "You've specified " + nameGroup.getSelectedUser() + " with a maiden/pen name of " + nameGroup.getNameValue() + ".";
+		$element.find(".alternateNameMessage").text(message);
+		ariaTooltip(message);
+	}
+};
+
+SurveyEditor.clazz.AlternateNames.prototype.removeAlternateNameText = function(nameGroup) {
+	var $element = this.$elements[nameGroup.id];
+	if ($element) {
+		$element.find(".alternateNameMessage").html("&nbsp;");
+	}
+};
+
+SurveyEditor.clazz.AlternateNames.prototype.toggleEnteredAlternateNameText = function(nameGroup) {
+	if (nameGroup.hasSelectedUser() && nameGroup.hasNameValue() && !nameGroup.hasFocus()) {
+		this.showEnteredAlternateNameText(nameGroup);
+	}
+	else {
+		this.removeAlternateNameText(nameGroup);
+	}
+};
+
+SurveyEditor.clazz.AlternateNames.prototype.addAlternateNameEvents = function() {
+	var toggleEnteringAlternateNameText = $.proxy(function(event) {
+		var nameGroup = event.data.nameGroup;
+		var field = event.data.field;
+
+		if (!field.isUserReference && nameGroup.hasSelectedUser()) {
+			this.showEnteringAlternateNameText(nameGroup);
+		}
+	}, this);
+
+	var toggleAlternateNameText = $.proxy(function(event) {
+		var nameGroup = event.data.nameGroup;
+		this.toggleEnteredAlternateNameText(nameGroup);
+	}, this);
+
+	var that = this;
+	_.each(this.nameGroups, function(nameGroup) {
+		var userReferenceEventData = {
+			field: nameGroup.userReference,
+			nameGroup: nameGroup
+		};
+		if (nameGroup.userReference && nameGroup.userReference.$input) {
+			nameGroup.userReference.$input.attr('aria-describedby', that.getAlternateNameElementId(nameGroup));
+			nameGroup.userReference.$input.on("focus", userReferenceEventData, toggleEnteringAlternateNameText);
+			nameGroup.userReference.$input.on("change", userReferenceEventData, toggleAlternateNameText);
+			nameGroup.userReference.$clear.on("click", userReferenceEventData, toggleAlternateNameText);
+
+			_.each(nameGroup.nameParts, function(namePart) {
+				var namePartEventData = {
+					field: namePart,
+					nameGroup: nameGroup
+				};
+				namePart.$input.attr('aria-describedby', that.getAlternateNameElementId(nameGroup));
+				namePart.$input.on("focus", namePartEventData, toggleEnteringAlternateNameText);
+				namePart.$input.on("blur", namePartEventData, toggleAlternateNameText);
+			});
+		}
+	});
+};
+
+
+$(function() {
+	var alternateNames = new SurveyEditor.clazz.AlternateNames();
+	alternateNames.addAlternateNameEvents();
+	alternateNames.showAllEnteredAlternateNameText();
+});
+

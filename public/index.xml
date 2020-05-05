@@ -6,8 +6,106 @@
     <description>Recent content on Applied Population Ecology Lab at UNR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://naes.unr.edu/shoemaker/lab/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Predictive modeling of plague die-offs in prairie dog colonies</title>
+      <link>http://naes.unr.edu/shoemaker/lab/posts/PredictivePlagueDieOff_project/</link>
+      <pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://naes.unr.edu/shoemaker/lab/posts/PredictivePlagueDieOff_project/</guid>
+      <description>&lt;p&gt;In February 2015, experts on prairie dog and plague ecology convened and identified a need for a broad synthesis of existing data to evaluate the factors driving plague die-offs in black-tailed prairie dog (BTPD) colonies. Several published studies have already shown that temperature, precipitation and topography can affect the probability of a die-off event. However, a broader synthesis of datasets from across the BTPD range may enable more accurate prediction of when and where die-offs will occur. The APE lab is leading a large collaborative project to create predictive models of BTPD colony die-offs caused by the plague bacterium.  We have acquired colony history data from across the BTPD range and are working on using machine learning techniques to create a model of plague outbreaks that can help managers determine how best to target their anti-plague management activities (such as &amp;ldquo;dusting&amp;rdquo; for fleas and vaccine administration).  This model will also help us better understand the selection pressures that could lead to &lt;a href=&#34;http://naes.unr.edu/shoemaker/lab/posts/PlagueModeling_project/&#34;&gt;genetic resistance to plague&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/img/PdogBurrow.jpg&#34; alt=&#34;Prairie dog burrow&#34; /&gt;
+&lt;em&gt;A BTPD burrow that has been &amp;ldquo;dusted&amp;rdquo; with insecticide to reduce the probability of plague transmission through fleas.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Key collaborators:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://anadavidson.weebly.com/&#34;&gt;Ana Davidson, University of New Mexico and Humboldt State University&lt;/a&gt;
+&lt;a href=&#34;https://www.fort.usgs.gov/staff-details/512&#34;&gt;David Eads, Colorado State University&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Simulation modeling to support population restoration of &#39;lost&#39; Galapagos giant tortoise species</title>
+      <link>http://naes.unr.edu/shoemaker/lab/posts/GalapTort_project/</link>
+      <pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://naes.unr.edu/shoemaker/lab/posts/GalapTort_project/</guid>
+      <description>
+
+&lt;p&gt;In the 19th century, populations of giant tortoises in the Galapagos Islands were decimated by whalers and pirates, who kept and killed tortoises on their ships as a resilient source of fresh meat for long ocean voyages. Particularly hard-hit were &amp;ldquo;saddlebacked&amp;rdquo; species that inhabited the islands&amp;rsquo; arid lowlands closer to the coasts.  Of the five saddlebacked species, two have been declared extinct: &lt;em&gt;Chelonoidis elephantopus&lt;/em&gt; from Floreana Island and &lt;em&gt;C. abingdonii&lt;/em&gt; from Pinta Island (the latter only recently declared extinct in 2012 with the death of the Lonesome George).  However, &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S0960982211013765&#34;&gt;geneticists have recently discovered&lt;/a&gt; that, through the translocating behaviors of the very same sailors, the &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S000632071200434X&#34;&gt;genotypes of these extinct species still exist&lt;/a&gt; within individuals of mixed ancestry on Wolf Volcano on Isabela Island.  An expedition in 2015 recovered some of these mixed ancestry tortoises and brought them into captivity with the hope of starting a captive breeding program to restore tortoise populations on Floreana and Pinta Islands that represent the original genotype of the native species.&lt;/p&gt;
+
+&lt;h2 id=&#34;simulation-modeling-to-support-decision-making&#34;&gt;Simulation modeling to support decision-making&lt;/h2&gt;
+
+&lt;p&gt;Building on previous work from our group on the population dynamics of reintroduced populations of saddlebacked giant tortoises (&lt;a href=&#34;http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0110742&#34;&gt;Gibbs, Hunter, Shoemaker et al. 2014&lt;/a&gt;) and the ecosystem effects of tortoise populations (&lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1111/rec.12055/full&#34;&gt;Hunter and Gibbs 2014&lt;/a&gt;), we are creating a simulation model to find a breeding program strategy that simultaneously maximizes the percentage of the native genotype in the restored population, the population growth rate, and the beneficial ecological effects of tortoises, all while minimizing costs.  We are using the individual-based modeling software NetLogo to create a model that incorporates genetic information from program STRUCTURE and population parameters estimated using the Bayesian estimation software WinBUGS.  Ultimately, we hope these efforts will assist the &lt;a href=&#34;http://www.galapagos.gob.ec/&#34;&gt;Galapagos National Park&lt;/a&gt; and the &lt;a href=&#34;http://www.galapagos.org/conservation/conservation/project-areas/ecosystem-restoration/tortoise-restoration/&#34;&gt;Galapagos Conservancy&lt;/a&gt; in implementing effective strategies for restoring tortoise populations to Floreana and Pinta Islands.&lt;/p&gt;
+
+&lt;p&gt;Project lead: &lt;a href=&#34;http://elizabethhunter.weebly.com/&#34;&gt;Elizabeth Hunter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Understanding the potential for widespread plague resistance in prairie dogs</title>
+      <link>http://naes.unr.edu/shoemaker/lab/posts/PlagueModeling_project/</link>
+      <pubDate>Tue, 17 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://naes.unr.edu/shoemaker/lab/posts/PlagueModeling_project/</guid>
+      <description>
+
+&lt;p&gt;Prairie dogs are keystone species of North America’s central grasslands, and have experienced dramatic population reductions over the past century due to sylvatic plague, a highly virulent disease introduced to North America ca. 1900. The APE lab is involved in building a novel host-resistance modeling framework to investigate the genetic, demographic and environmental conditions that promote or impede resistance to plague and other similar virulent pathogens in complex and dynamic ecosystems. The prairie dog-plague system provides an excellent model to understand the conditions under which evolutionary rescue occurs in complex and dynamic ecological systems, and will help illuminate a novel and potential large-scale conservation approach to address 1) the biggest threat facing the prairie dog ecosystem that spans from Canada to Mexico - plague and 2) species around the world threatened with novel diseases and climate change.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-novel-modeling-framework-for-understanding-host-resistance-in-complex-real-world-landscapes&#34;&gt;A novel modeling framework for understanding host resistance in complex real-world landscapes&lt;/h2&gt;
+
+&lt;p&gt;We will use a flexible lattice population structure in which each node contains a stage-structured host population, allowing integration of spatial raster data of environmental variables and enabling multiple modes of dispersal and disease transmission. Natural selection will be modeled as vital rate reductions contingent upon population-level genetic makeup. Selection pressures will emerge from a statistical epidemiological model of disease incidence and spread. Resistance-conferring, diploid gene loci will be modeled with arbitrary numbers of genes, allelic variants, dominance of resistance, gene interactions (epistasis; we will not model chromosomal linkage) and alternative modes of resistance (i.e., alternative sets of genes/alleles that confer resistance). Coevolution will be modeled as a change in virulence over time. This modeling framework will be written in R/C++.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/img/Plague Model Schematic1.png&#34; alt=&#34;Schematic of plague model&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;some-example-videos&#34;&gt;Some example videos&amp;hellip;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Unstructured landscape&lt;/strong&gt;:&lt;br /&gt;
+- &lt;a href=&#34;https://youtu.be/45_VITXJgJs&#34;&gt;https://youtu.be/45_VITXJgJs&lt;/a&gt;&lt;br /&gt;
+- &lt;a href=&#34;https://youtu.be/8PhD-aDqTj4&#34;&gt;https://youtu.be/8PhD-aDqTj4&lt;/a&gt;&lt;br /&gt;
+- &lt;a href=&#34;https://youtu.be/NaCT5NDUwTo&#34;&gt;https://youtu.be/NaCT5NDUwTo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Structured landscape&lt;/strong&gt;:&lt;br /&gt;
+- &lt;a href=&#34;https://youtu.be/fWb79btL8G0&#34;&gt;https://youtu.be/fWb79btL8G0&lt;/a&gt;&lt;br /&gt;
+- &lt;a href=&#34;https://youtu.be/MFeZLlB0xV8&#34;&gt;https://youtu.be/MFeZLlB0xV8&lt;/a&gt;&lt;br /&gt;
+- &lt;a href=&#34;https://youtu.be/TF9fVWDkfFA&#34;&gt;https://youtu.be/TF9fVWDkfFA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Modeling lead: &lt;a href=&#34;http://naes.unr.edu/shoemaker/&#34;&gt;Kevin Shoemaker&lt;/a&gt;
+Overall project lead: &lt;a href=&#34;http://anadavidson.weebly.com/&#34;&gt;Ana Davidson, UNM&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Key collaborators:
+&lt;a href=&#34;http://labs.cas.usf.edu/sackett/Sackett_Lab/People.html&#34;&gt;Loren Cassin Sackett, USF&lt;/a&gt;
+&lt;a href=&#34;http://www.mggen.nau.edu/&#34;&gt;Joseph Busch, NAU&lt;/a&gt;
+&lt;a href=&#34;https://www.nwhc.usgs.gov/staff/katie_richgels.jsp&#34;&gt;Katherine Richgels, USGS&lt;/a&gt;
+&lt;a href=&#34;https://www.nwhc.usgs.gov/staff/tonie_rocke.jsp&#34;&gt;Tonie Rocke, USGS&lt;/a&gt;
+&lt;a href=&#34;http://elizabethhunter.weebly.com/&#34;&gt;Elizabeth Hunter, UNR APE lab&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Understanding the conservation status and habitat needs of the pygmy rabbit</title>
+      <link>http://naes.unr.edu/shoemaker/lab/posts/PygmyRabbit_project/</link>
+      <pubDate>Tue, 17 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://naes.unr.edu/shoemaker/lab/posts/PygmyRabbit_project/</guid>
+      <description>&lt;p&gt;To stay up to date on the pygmy rabbit project, led by APE lab PhD student Miranda Crowell, check out her &lt;a href=&#34;http://mirandamaurine.weebly.com/pygmy-rabbit-project.html&#34;&gt;website&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;UNR collaborators:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://naes.unr.edu/matocq/&#34;&gt;Marjorie Matocq&lt;/a&gt;
+&lt;a href=&#34;https://naes.unr.edu/weisberg/&#34;&gt;Peter Weisberg and Tom Dilts&lt;/a&gt;
+&lt;a href=&#34;http://www.ag.unr.edu/sedinger/&#34;&gt;Jim Sedinger&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Other collaborators:
+Sheldon and Hart National Wildlife Refuges
+Nevada Department of Wildlife
+Great Basin Landscape Conservation Cooperative
+Greater Hart-Sheldon Fund&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Dr. Kevin Shoemaker</title>
@@ -39,7 +137,9 @@ Fleischmann Agriculture room 220E (lab: room 235)&lt;/p&gt;
       <pubDate>Sat, 22 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>http://naes.unr.edu/shoemaker/lab/posts/Epost20161003/</guid>
-      <description>&lt;p&gt;I am a postdoctoral researcher in the A.P.E. lab working on several population modeling projects including: predicting plague outbreaks in black-tailed prairie dogs, using abundance data to predict the effects of competition on songbird responses to climate change, and simulation modeling to inform restoration of giant tortoise populations in the Galapagos Islands.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/img/EAHwithrabbit2.jpg&#34; alt=&#34;Elizabeth Hunter&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I am a postdoctoral researcher in the A.P.E. lab working on several population modeling projects including: predicting plague outbreaks in black-tailed prairie dogs, using abundance data to predict the effects of competition on songbird responses to climate change, and simulation modeling to inform restoration of giant tortoise populations in the Galapagos Islands.&lt;/p&gt;
 
 &lt;p&gt;Visit my personal webpage &lt;a href=&#34;http://elizabethhunter.weebly.com/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -69,6 +169,29 @@ Fleischmann Agriculture room 235B&lt;/p&gt;
     </item>
     
     <item>
+      <title>Margarete Walden</title>
+      <link>http://naes.unr.edu/shoemaker/lab/posts/Walden/</link>
+      <pubDate>Sat, 15 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://naes.unr.edu/shoemaker/lab/posts/Walden/</guid>
+      <description>
+
+&lt;p&gt;Margarete is a Ph.D. student who joined the APE lab and the EECB program in Fall 2016. Her research interests include population ecology, herpetology, conservation biology, terrestrial vertebrate physiology, and species&amp;rsquo; responses to climate change. She is completing her M.S. with &lt;a href=&#34;http://karraker.weebly.com/&#34;&gt;Dr. Nancy Karraker&lt;/a&gt; on the timing of hibernation in Eastern Box Turtles.&lt;/p&gt;
+
+&lt;h3 id=&#34;contact&#34;&gt;Contact&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Margarete Walden&lt;br /&gt;
+Ph.D. Student, Natural Resources &amp;amp; Environmental Science&lt;br /&gt;
+University of Nevada, Reno / mail stop 186&lt;br /&gt;
+1664 N Virginia St, Reno NV 89557
+Fleischmann Agriculture Room 235D
+mwalden_at_nevada_dot_unr_dot_edu&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Understanding the broader ecological impacts of PJ removal</title>
       <link>http://naes.unr.edu/shoemaker/lab/posts/PJ_project/</link>
       <pubDate>Wed, 12 Oct 2016 00:00:00 +0000</pubDate>
@@ -84,6 +207,22 @@ Fleischmann Agriculture room 235B&lt;/p&gt;
 At each project area, three transects will be established: one control transect (no tree removal at any point during the four-year study), one pre-treatment transect (tree removal scheduled for year 2 or 3 of the study), and one post-treatment transect (tree removal conducted 1-5 years prior to the initiation of research activities). At regular intervals along each transect, we will monitor the diversity and density of bats, reptiles and insects using an array of active trapping and passive survey methods. Data analysis will focus on evaluating the community-level effects of PJ removal and modeling bat, reptile and insect diversity and abundance as a function of environmental drivers such as vegetation structure, distance from water source, and climate.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/img/PJ1.jpg&#34; alt=&#34;Pinyon and Juniper woodland&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Project lead: &lt;a href=&#34;http://naes.unr.edu/shoemaker/&#34;&gt;Kevin Shoemaker&lt;/a&gt;
+Graduate student lead: &lt;a href=&#34;https://www.linkedin.com/in/danielle-miles-79a08489&#34;&gt;Danielle Miles&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Key UNR collaborators:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sites.google.com/site/greatbasinbuglab/&#34;&gt;Matt Forister&lt;/a&gt;
+&lt;a href=&#34;http://wolfweb.unr.edu/~ophis/Feldman_Lab/Welcome.html&#34;&gt;Chris Feldman&lt;/a&gt;
+&lt;a href=&#34;https://naes.unr.edu/weisberg/&#34;&gt;Peter Weisberg and Tom Dilts&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Other collaborators&lt;/p&gt;
+
+&lt;p&gt;Bryan Hamilton, NPS
+Jane VanGunst, NDOW
+Gail Collins, USFWS
+Jason Williams, NDOW&lt;/p&gt;
 </description>
     </item>
     
@@ -97,7 +236,7 @@ At each project area, three transects will be established: one control transect 
 
 &lt;h2 id=&#34;danielle-c-miles&#34;&gt;Danielle C Miles&lt;/h2&gt;
 
-&lt;p&gt;I am a PhD student in my first year here at UNR in the APE lab. I will be working on measuring the impacts of pinyon and juniper tree removal in sagebrush ecosystems on bat, reptile, and insect populations, with a possible addition to monitoring sagebrush dependent bird species. Besides this ecological model, I am interested in exploring anthropogenic effects on the environment such as climate change and deforestation with specific emphasis on the implications for amphibians.&lt;/p&gt;
+&lt;p&gt;I am a PhD student in my first year here at UNR in the APE lab. I will be working on measuring the broad impacts of pinyon and juniper tree removal in sagebrush ecosystems on bat, bird, reptile, small mammal and insect populations. Besides this ecological study, I am interested in exploring anthropogenic effects on the environment such as climate change and deforestation with specific emphasis on the implications for amphibians.&lt;/p&gt;
 
 &lt;p&gt;My previous lab: &lt;a href=&#34;https://msu.edu/~plz/people.html&#34;&gt;https://msu.edu/~plz/people.html&lt;/a&gt;
 My linkedin: &lt;a href=&#34;https://www.linkedin.com/in/danielle-miles-79a08489&#34;&gt;https://www.linkedin.com/in/danielle-miles-79a08489&lt;/a&gt;
@@ -106,7 +245,7 @@ My experience in Madagascar: &lt;a href=&#34;http://www.cnn.com/videos/world/201
     </item>
     
     <item>
-      <title>About the Applied Population Ecology Lab</title>
+      <title>About the Applied Population Ecology (A.P.E.) Lab</title>
       <link>http://naes.unr.edu/shoemaker/lab/about/</link>
       <pubDate>Thu, 29 Sep 2016 00:00:00 +0000</pubDate>
       
@@ -118,19 +257,30 @@ My experience in Madagascar: &lt;a href=&#34;http://www.cnn.com/videos/world/201
 &lt;p&gt;Our expertise is in population biology, simulation modeling and statistics, and our passion is wildlife conservation. We combine our expertise and passion in creative ways. For example, we have&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Used Bayesian statistics and simulation modeling to develop conservation priorities for the bog turtle (&lt;em&gt;Glyptemys muhlenbergii&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;Used Bayesian statistics and simulation modeling to assess the conservation status of the bog turtle (&lt;em&gt;Glyptemys muhlenbergii&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;Modeled the impact of sylvatic plague on prairie dog and black-footed ferret populations.&lt;/li&gt;
+&lt;li&gt;Developed a new statistical approach for assessing the threatening processes underlying wildlife population declines.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Assessed the success of a long-term effort to reintroduce tortoises to Espanola island in Galapagos.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;who-we-are&#34;&gt;Who we are&lt;/h2&gt;
 
-&lt;p&gt;The A.P.E. lab currently includes Kevin Shoemaker (asst. prof.), Elizabeth Hunter (postdoc), and doctoral students Danielle Miles, Margarete Walden and Miranda Crowell.&lt;/p&gt;
+&lt;p&gt;The A.P.E. lab currently includes &lt;a href=&#34;http://naes.unr.edu/shoemaker/&#34;&gt;Kevin Shoemaker&lt;/a&gt; (asst. prof.), &lt;a href=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/posts/Epost20161003/index.html&#34;&gt;Elizabeth Hunter&lt;/a&gt; (postdoc), doctoral students &lt;a href=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/posts/dcmiles/index.html&#34;&gt;Danielle Miles&lt;/a&gt;, &lt;a href=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/posts/Walden/index.html&#34;&gt;Margarete Walden&lt;/a&gt; and &lt;a href=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/posts/Crowell/index.html&#34;&gt;Miranda Crowell&lt;/a&gt;, and master&amp;rsquo;s student Nathan Cook.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;photo&#34; alt=&#34;insert photo of lab group here!&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/img/ApeLabPeople1.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;em&gt;(clockwise from top left: Nathan Cook, Miranda Crowell, Margarete Walden, Danielle Miles, Kevin Shoemaker, and Elizabeth Hunter)&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;join-us&#34;&gt;Join us!&lt;/h2&gt;
+
+&lt;p&gt;If you are interested in joining the A.P.E. lab as a graduate student, here are a few things to keep in mind:&lt;br /&gt;
+* All graduate students must have funding, either through a teaching assistantship (TA) or an research assistantship (RA, usually through external grants). We don&amp;rsquo;t have many TAships in the NRES department, and it costs about $30k/year to support a graduate student at UNR as an RA. RAships are available periodically- contact Dr. Shoemaker if you are interested.&lt;br /&gt;
+* In general, you must have an M.S. degree to join the lab as a PhD student.&lt;br /&gt;
+* To be admitted to the program, you must apply! To apply you must take the general Graduate Record Exam or GRE (the “general test” is sufficient for applying to our department). Generally speaking, most students apply in the spring (Feb.-Mar.) and start in August. But there are good reasons to start in January, especially for MS students (two field seasons sandwiched between your semesters as opposed to one).
+* &lt;a href=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/pdf/Witz_grad_advice.pdf&#34;&gt;Some practical advice for graduate students!&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;contact-us&#34;&gt;Contact us&lt;/h2&gt;
 
-&lt;p&gt;Please email us if you have any questions!&lt;/p&gt;
+&lt;p&gt;Please email &lt;a href=&#34;http://naes.unr.edu/shoemaker/&#34;&gt;Dr. Shoemaker&lt;/a&gt; if you have any questions!&lt;/p&gt;
 </description>
     </item>
     
@@ -160,7 +310,7 @@ My experience in Madagascar: &lt;a href=&#34;http://www.cnn.com/videos/world/201
 
 &lt;h2 id=&#34;hello-world&#34;&gt;Hello world!!&lt;/h2&gt;
 
-&lt;p&gt;Hello world, we are the &lt;em&gt;APE lab&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;We are the &lt;em&gt;APE lab&lt;/em&gt;.&lt;/p&gt;
 </description>
     </item>
     
