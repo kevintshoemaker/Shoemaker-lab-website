@@ -1,277 +1,132 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Applied Population Ecology Lab at UNR</title>
-    <link>http://naes.unr.edu/shoemaker/lab/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on Applied Population Ecology Lab at UNR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://naes.unr.edu/shoemaker/lab/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Predictive modeling of plague die-offs in prairie dog colonies</title>
-      <link>http://naes.unr.edu/shoemaker/lab/posts/PredictivePlagueDieOff_project/</link>
+      <link>/posts/predictiveplaguedieoff_project/</link>
       <pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/lab/posts/PredictivePlagueDieOff_project/</guid>
-      <description>&lt;p&gt;In February 2015, experts on prairie dog and plague ecology convened and identified a need for a broad synthesis of existing data to evaluate the factors driving plague die-offs in black-tailed prairie dog (BTPD) colonies. Several published studies have already shown that temperature, precipitation and topography can affect the probability of a die-off event. However, a broader synthesis of datasets from across the BTPD range may enable more accurate prediction of when and where die-offs will occur. The APE lab is leading a large collaborative project to create predictive models of BTPD colony die-offs caused by the plague bacterium.  We have acquired colony history data from across the BTPD range and are working on using machine learning techniques to create a model of plague outbreaks that can help managers determine how best to target their anti-plague management activities (such as &amp;ldquo;dusting&amp;rdquo; for fleas and vaccine administration).  This model will also help us better understand the selection pressures that could lead to &lt;a href=&#34;http://naes.unr.edu/shoemaker/lab/posts/PlagueModeling_project/&#34;&gt;genetic resistance to plague&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/img/PdogBurrow.jpg&#34; alt=&#34;Prairie dog burrow&#34; /&gt;
-&lt;em&gt;A BTPD burrow that has been &amp;ldquo;dusted&amp;rdquo; with insecticide to reduce the probability of plague transmission through fleas.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Key collaborators:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://anadavidson.weebly.com/&#34;&gt;Ana Davidson, University of New Mexico and Humboldt State University&lt;/a&gt;
-&lt;a href=&#34;https://www.fort.usgs.gov/staff-details/512&#34;&gt;David Eads, Colorado State University&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>/posts/predictiveplaguedieoff_project/</guid>
+      <description>In February 2015, experts on prairie dog and plague ecology convened and identified a need for a broad synthesis of existing data to evaluate the factors driving plague die-offs in black-tailed prairie dog (BTPD) colonies. Several published studies have already shown that temperature, precipitation and topography can affect the probability of a die-off event. However, a broader synthesis of datasets from across the BTPD range may enable more accurate prediction of when and where die-offs will occur.</description>
     </item>
     
     <item>
       <title>Simulation modeling to support population restoration of &#39;lost&#39; Galapagos giant tortoise species</title>
-      <link>http://naes.unr.edu/shoemaker/lab/posts/GalapTort_project/</link>
+      <link>/posts/galaptort_project/</link>
       <pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/lab/posts/GalapTort_project/</guid>
-      <description>
-
-&lt;p&gt;In the 19th century, populations of giant tortoises in the Galapagos Islands were decimated by whalers and pirates, who kept and killed tortoises on their ships as a resilient source of fresh meat for long ocean voyages. Particularly hard-hit were &amp;ldquo;saddlebacked&amp;rdquo; species that inhabited the islands&amp;rsquo; arid lowlands closer to the coasts.  Of the five saddlebacked species, two have been declared extinct: &lt;em&gt;Chelonoidis elephantopus&lt;/em&gt; from Floreana Island and &lt;em&gt;C. abingdonii&lt;/em&gt; from Pinta Island (the latter only recently declared extinct in 2012 with the death of the Lonesome George).  However, &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S0960982211013765&#34;&gt;geneticists have recently discovered&lt;/a&gt; that, through the translocating behaviors of the very same sailors, the &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S000632071200434X&#34;&gt;genotypes of these extinct species still exist&lt;/a&gt; within individuals of mixed ancestry on Wolf Volcano on Isabela Island.  An expedition in 2015 recovered some of these mixed ancestry tortoises and brought them into captivity with the hope of starting a captive breeding program to restore tortoise populations on Floreana and Pinta Islands that represent the original genotype of the native species.&lt;/p&gt;
-
-&lt;h2 id=&#34;simulation-modeling-to-support-decision-making&#34;&gt;Simulation modeling to support decision-making&lt;/h2&gt;
-
-&lt;p&gt;Building on previous work from our group on the population dynamics of reintroduced populations of saddlebacked giant tortoises (&lt;a href=&#34;http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0110742&#34;&gt;Gibbs, Hunter, Shoemaker et al. 2014&lt;/a&gt;) and the ecosystem effects of tortoise populations (&lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1111/rec.12055/full&#34;&gt;Hunter and Gibbs 2014&lt;/a&gt;), we are creating a simulation model to find a breeding program strategy that simultaneously maximizes the percentage of the native genotype in the restored population, the population growth rate, and the beneficial ecological effects of tortoises, all while minimizing costs.  We are using the individual-based modeling software NetLogo to create a model that incorporates genetic information from program STRUCTURE and population parameters estimated using the Bayesian estimation software WinBUGS.  Ultimately, we hope these efforts will assist the &lt;a href=&#34;http://www.galapagos.gob.ec/&#34;&gt;Galapagos National Park&lt;/a&gt; and the &lt;a href=&#34;http://www.galapagos.org/conservation/conservation/project-areas/ecosystem-restoration/tortoise-restoration/&#34;&gt;Galapagos Conservancy&lt;/a&gt; in implementing effective strategies for restoring tortoise populations to Floreana and Pinta Islands.&lt;/p&gt;
-
-&lt;p&gt;Project lead: &lt;a href=&#34;http://elizabethhunter.weebly.com/&#34;&gt;Elizabeth Hunter&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Understanding the conservation status and habitat needs of the pygmy rabbit</title>
-      <link>http://naes.unr.edu/shoemaker/lab/posts/PygmyRabbit_project/</link>
-      <pubDate>Tue, 17 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://naes.unr.edu/shoemaker/lab/posts/PygmyRabbit_project/</guid>
-      <description>&lt;p&gt;To stay up to date on the pygmy rabbit project, led by APE lab PhD student Miranda Crowell, check out her &lt;a href=&#34;http://mirandamaurine.weebly.com/pygmy-rabbit-project.html&#34;&gt;website&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;UNR collaborators:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://naes.unr.edu/matocq/&#34;&gt;Marjorie Matocq&lt;/a&gt;
-&lt;a href=&#34;https://naes.unr.edu/weisberg/&#34;&gt;Peter Weisberg and Tom Dilts&lt;/a&gt;
-&lt;a href=&#34;http://www.ag.unr.edu/sedinger/&#34;&gt;Jim Sedinger&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Other collaborators:
-Sheldon and Hart National Wildlife Refuges
-Nevada Department of Wildlife
-Great Basin Landscape Conservation Cooperative
-Greater Hart-Sheldon Fund&lt;/p&gt;
-</description>
+      <guid>/posts/galaptort_project/</guid>
+      <description>In the 19th century, populations of giant tortoises in the Galapagos Islands were decimated by whalers and pirates, who kept and killed tortoises on their ships as a resilient source of fresh meat for long ocean voyages. Particularly hard-hit were &amp;ldquo;saddlebacked&amp;rdquo; species that inhabited the islands&amp;rsquo; arid lowlands closer to the coasts. Of the five saddlebacked species, two have been declared extinct: Chelonoidis elephantopus from Floreana Island and C. abingdonii from Pinta Island (the latter only recently declared extinct in 2012 with the death of the Lonesome George).</description>
     </item>
     
     <item>
       <title>Understanding the potential for widespread plague resistance in prairie dogs</title>
-      <link>http://naes.unr.edu/shoemaker/lab/posts/PlagueModeling_project/</link>
+      <link>/posts/plaguemodeling_project/</link>
       <pubDate>Tue, 17 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/lab/posts/PlagueModeling_project/</guid>
-      <description>
-
-&lt;p&gt;Prairie dogs are keystone species of North America’s central grasslands, and have experienced dramatic population reductions over the past century due to sylvatic plague, a highly virulent disease introduced to North America ca. 1900. The APE lab is involved in building a novel host-resistance modeling framework to investigate the genetic, demographic and environmental conditions that promote or impede resistance to plague and other similar virulent pathogens in complex and dynamic ecosystems. The prairie dog-plague system provides an excellent model to understand the conditions under which evolutionary rescue occurs in complex and dynamic ecological systems, and will help illuminate a novel and potential large-scale conservation approach to address 1) the biggest threat facing the prairie dog ecosystem that spans from Canada to Mexico - plague and 2) species around the world threatened with novel diseases and climate change.&lt;/p&gt;
-
-&lt;h2 id=&#34;a-novel-modeling-framework-for-understanding-host-resistance-in-complex-real-world-landscapes&#34;&gt;A novel modeling framework for understanding host resistance in complex real-world landscapes&lt;/h2&gt;
-
-&lt;p&gt;We will use a flexible lattice population structure in which each node contains a stage-structured host population, allowing integration of spatial raster data of environmental variables and enabling multiple modes of dispersal and disease transmission. Natural selection will be modeled as vital rate reductions contingent upon population-level genetic makeup. Selection pressures will emerge from a statistical epidemiological model of disease incidence and spread. Resistance-conferring, diploid gene loci will be modeled with arbitrary numbers of genes, allelic variants, dominance of resistance, gene interactions (epistasis; we will not model chromosomal linkage) and alternative modes of resistance (i.e., alternative sets of genes/alleles that confer resistance). Coevolution will be modeled as a change in virulence over time. This modeling framework will be written in R/C++.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/img/Plague Model Schematic1.png&#34; alt=&#34;Schematic of plague model&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;some-example-videos&#34;&gt;Some example videos&amp;hellip;&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Unstructured landscape&lt;/strong&gt;:&lt;br /&gt;
-- &lt;a href=&#34;https://youtu.be/45_VITXJgJs&#34;&gt;https://youtu.be/45_VITXJgJs&lt;/a&gt;&lt;br /&gt;
-- &lt;a href=&#34;https://youtu.be/8PhD-aDqTj4&#34;&gt;https://youtu.be/8PhD-aDqTj4&lt;/a&gt;&lt;br /&gt;
-- &lt;a href=&#34;https://youtu.be/NaCT5NDUwTo&#34;&gt;https://youtu.be/NaCT5NDUwTo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Structured landscape&lt;/strong&gt;:&lt;br /&gt;
-- &lt;a href=&#34;https://youtu.be/fWb79btL8G0&#34;&gt;https://youtu.be/fWb79btL8G0&lt;/a&gt;&lt;br /&gt;
-- &lt;a href=&#34;https://youtu.be/MFeZLlB0xV8&#34;&gt;https://youtu.be/MFeZLlB0xV8&lt;/a&gt;&lt;br /&gt;
-- &lt;a href=&#34;https://youtu.be/TF9fVWDkfFA&#34;&gt;https://youtu.be/TF9fVWDkfFA&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Modeling lead: &lt;a href=&#34;http://naes.unr.edu/shoemaker/&#34;&gt;Kevin Shoemaker&lt;/a&gt;
-Overall project lead: &lt;a href=&#34;http://anadavidson.weebly.com/&#34;&gt;Ana Davidson, UNM&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Key collaborators:
-&lt;a href=&#34;http://labs.cas.usf.edu/sackett/Sackett_Lab/People.html&#34;&gt;Loren Cassin Sackett, USF&lt;/a&gt;
-&lt;a href=&#34;http://www.mggen.nau.edu/&#34;&gt;Joseph Busch, NAU&lt;/a&gt;
-&lt;a href=&#34;https://www.nwhc.usgs.gov/staff/katie_richgels.jsp&#34;&gt;Katherine Richgels, USGS&lt;/a&gt;
-&lt;a href=&#34;https://www.nwhc.usgs.gov/staff/tonie_rocke.jsp&#34;&gt;Tonie Rocke, USGS&lt;/a&gt;
-&lt;a href=&#34;http://elizabethhunter.weebly.com/&#34;&gt;Elizabeth Hunter, UNR APE lab&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>/posts/plaguemodeling_project/</guid>
+      <description>Prairie dogs are keystone species of North America’s central grasslands, and have experienced dramatic population reductions over the past century due to sylvatic plague, a highly virulent disease introduced to North America ca. 1900. The APE lab is involved in building a novel host-resistance modeling framework to investigate the genetic, demographic and environmental conditions that promote or impede resistance to plague and other similar virulent pathogens in complex and dynamic ecosystems.</description>
+    </item>
+    
+    <item>
+      <title>Understanding the conservation status and habitat needs of the pygmy rabbit</title>
+      <link>/posts/pygmyrabbit_project/</link>
+      <pubDate>Tue, 17 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/pygmyrabbit_project/</guid>
+      <description>To stay up to date on the pygmy rabbit project, led by APE lab PhD student Miranda Crowell, check out her website
+UNR collaborators:
+Marjorie Matocq Peter Weisberg and Tom Dilts Jim Sedinger
+Other collaborators: Sheldon and Hart National Wildlife Refuges Nevada Department of Wildlife Great Basin Landscape Conservation Cooperative Greater Hart-Sheldon Fund</description>
     </item>
     
     <item>
       <title>Dr. Kevin Shoemaker</title>
-      <link>http://naes.unr.edu/shoemaker/lab/posts/shoemaker/</link>
+      <link>/posts/shoemaker/</link>
       <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/lab/posts/shoemaker/</guid>
-      <description>
-
-&lt;p&gt;Dr. Shoemaker is the director of the &lt;a href=&#34;http://naes.unr.edu/shoemaker/lab/index.html&#34;&gt;Applied Population Ecology (A.P.E) lab&lt;/a&gt; at the department of Natural Resources &amp;amp; Environmental Science at the University of Nevada, Reno. Broadly, his research couples ecological data (e.g., census records, mark-recapture data, remote sensing data) with simulation models, statistics and machine learning to support wildlife conservation and management.&lt;br /&gt;
- &lt;a href=&#34;http://naes.unr.edu/shoemaker/&#34;&gt;Visit Shoemaker&amp;rsquo;s UNR site&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;contact&#34;&gt;Contact&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;http://naes.unr.edu/shoemaker/&#34;&gt;Kevin T Shoemaker&lt;/a&gt;&lt;br /&gt;
-Assistant Professor, Natural Resources &amp;amp; Environmental Science&lt;br /&gt;
-University of Nevada, Reno / mail stop 186&lt;br /&gt;
-1664 N Virginia St, Reno NV 89557&lt;br /&gt;
-kshoemaker_at_cabnr.unr.edu; (775) 682-7449&lt;br /&gt;
-Fleischmann Agriculture room 220E (lab: room 235)&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
+      <guid>/posts/shoemaker/</guid>
+      <description>Dr. Shoemaker is the director of the Applied Population Ecology (A.P.E) lab at the department of Natural Resources &amp;amp; Environmental Science at the University of Nevada, Reno. Broadly, his research couples ecological data (e.g., census records, mark-recapture data, remote sensing data) with simulation models, statistics and machine learning to support wildlife conservation and management.
+Visit Shoemaker&amp;rsquo;s UNR site
+Contact  Kevin T Shoemaker
+Assistant Professor, Natural Resources &amp;amp; Environmental Science</description>
     </item>
     
     <item>
       <title>Dr. Elizabeth Hunter</title>
-      <link>http://naes.unr.edu/shoemaker/lab/posts/Epost20161003/</link>
+      <link>/posts/epost20161003/</link>
       <pubDate>Sat, 22 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/lab/posts/Epost20161003/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/img/EAHwithrabbit2.jpg&#34; alt=&#34;Elizabeth Hunter&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I am a postdoctoral researcher in the A.P.E. lab working on several population modeling projects including: predicting plague outbreaks in black-tailed prairie dogs, using abundance data to predict the effects of competition on songbird responses to climate change, and simulation modeling to inform restoration of giant tortoise populations in the Galapagos Islands.&lt;/p&gt;
-
-&lt;p&gt;Visit my personal webpage &lt;a href=&#34;http://elizabethhunter.weebly.com/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>/posts/epost20161003/</guid>
+      <description>I am a postdoctoral researcher in the A.P.E. lab working on several population modeling projects including: predicting plague outbreaks in black-tailed prairie dogs, using abundance data to predict the effects of competition on songbird responses to climate change, and simulation modeling to inform restoration of giant tortoise populations in the Galapagos Islands.
+Visit my personal webpage here</description>
     </item>
     
     <item>
       <title>Miranda Crowell</title>
-      <link>http://naes.unr.edu/shoemaker/lab/posts/Crowell/</link>
+      <link>/posts/crowell/</link>
       <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/lab/posts/Crowell/</guid>
-      <description>
-
-&lt;p&gt;Miranda is a new PhD student who joined the Shoemaker and Matocq labs in April 2016. She is coming to University of Nevada, Reno from Washington State University in Pullman, WA where she completed her M.S. with Dr. Lisa Shipley investigating pygmy rabbits&amp;rsquo; foraging ecology. Here, at UNR, Miranda will be researching pygmy rabbit distribution across Nevada and southeastern Oregon, focusing on demography, genetic connectivity, and key landscape characteristics that pygmy rabbits require. To learn more about Miranda, the ongoing pygmy rabbit research, and to see updates from the field, visit her &lt;a href=&#34;http://mirandamaurine.weebly.com&#34;&gt;website&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;contact&#34;&gt;Contact&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;http://mirandamaurine.weebly.com&#34;&gt;Miranda Maurine Crowell&lt;/a&gt;&lt;br /&gt;
-PhD Student, Natural Resources &amp;amp; Environmental Science&lt;br /&gt;
-University of Nevada, Reno / mail stop 186&lt;br /&gt;
-1664 N Virginia St, Reno NV 89557&lt;br /&gt;
-mcrowell_at_unr.edu; (425) 223-9932&lt;br /&gt;
-Fleischmann Agriculture room 235B&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
+      <guid>/posts/crowell/</guid>
+      <description>Miranda is a new PhD student who joined the Shoemaker and Matocq labs in April 2016. She is coming to University of Nevada, Reno from Washington State University in Pullman, WA where she completed her M.S. with Dr. Lisa Shipley investigating pygmy rabbits&amp;rsquo; foraging ecology. Here, at UNR, Miranda will be researching pygmy rabbit distribution across Nevada and southeastern Oregon, focusing on demography, genetic connectivity, and key landscape characteristics that pygmy rabbits require.</description>
     </item>
     
     <item>
       <title>Margarete Walden</title>
-      <link>http://naes.unr.edu/shoemaker/lab/posts/Walden/</link>
+      <link>/posts/walden/</link>
       <pubDate>Sat, 15 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/lab/posts/Walden/</guid>
-      <description>
-
-&lt;p&gt;Margarete is a Ph.D. student who joined the APE lab and the EECB program in Fall 2016. Her research interests include population ecology, herpetology, conservation biology, terrestrial vertebrate physiology, and species&amp;rsquo; responses to climate change. She is completing her M.S. with &lt;a href=&#34;http://karraker.weebly.com/&#34;&gt;Dr. Nancy Karraker&lt;/a&gt; on the timing of hibernation in Eastern Box Turtles.&lt;/p&gt;
-
-&lt;h3 id=&#34;contact&#34;&gt;Contact&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Margarete Walden&lt;br /&gt;
-Ph.D. Student, Natural Resources &amp;amp; Environmental Science&lt;br /&gt;
-University of Nevada, Reno / mail stop 186&lt;br /&gt;
-1664 N Virginia St, Reno NV 89557
-Fleischmann Agriculture Room 235D
-mwalden_at_nevada_dot_unr_dot_edu&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
+      <guid>/posts/walden/</guid>
+      <description>Margarete is a Ph.D. student who joined the APE lab and the EECB program in Fall 2016. Her research interests include population ecology, herpetology, conservation biology, terrestrial vertebrate physiology, and species&amp;rsquo; responses to climate change. She is completing her M.S. with Dr. Nancy Karraker on the timing of hibernation in Eastern Box Turtles.
+Contact  Margarete Walden
+Ph.D. Student, Natural Resources &amp;amp; Environmental Science
+University of Nevada, Reno / mail stop 186</description>
     </item>
     
     <item>
       <title>Understanding the broader ecological impacts of PJ removal</title>
-      <link>http://naes.unr.edu/shoemaker/lab/posts/PJ_project/</link>
+      <link>/posts/pj_project/</link>
       <pubDate>Wed, 12 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/lab/posts/PJ_project/</guid>
-      <description>
-
-&lt;h2 id=&#34;investigating-the-broad-ecological-impacts-of-pinyon-and-juniper-removal-in-nevada&#34;&gt;Investigating the broad ecological impacts of Pinyon and Juniper removal in Nevada&lt;/h2&gt;
-
-&lt;p&gt;Thousands of acres of pinyon and juniper woodlands (PJ) will be removed over the next four years to support targeted wildlife populations, notably Greater sage-grouse. We are investigating the effects of PJ removal on insect communities and the bats and reptile species that rely upon them using a rigorous experimental design. Insects can serve as useful indicators of natural disturbances, provide critical pollination services, and represent a major wildlife food resource for many species, including an impressive diversity of bats and reptiles. Little is known about habitat use and disturbance tolerance for bats and reptiles in the Great Basin. For example, some bat species may benefit from tree removal (e.g., cleared areas may improve foraging or success), while other species may be negatively impacted by tree removal (e.g, loss of roosting sites). We are establishing a set of fixed transects, each spanning a gradient from sagebrush steppe to PJ woodland and monitored 3 to 4 times annually. Transects will be established in four project areas distributed widely across the Great Basin- including the Sheldon-Hart refuges and the Ely region (near Great Basin National Park).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/img/GBLCCschematic.png&#34; alt=&#34;Schematic of study design&#34; /&gt;
-At each project area, three transects will be established: one control transect (no tree removal at any point during the four-year study), one pre-treatment transect (tree removal scheduled for year 2 or 3 of the study), and one post-treatment transect (tree removal conducted 1-5 years prior to the initiation of research activities). At regular intervals along each transect, we will monitor the diversity and density of bats, reptiles and insects using an array of active trapping and passive survey methods. Data analysis will focus on evaluating the community-level effects of PJ removal and modeling bat, reptile and insect diversity and abundance as a function of environmental drivers such as vegetation structure, distance from water source, and climate.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/img/PJ1.jpg&#34; alt=&#34;Pinyon and Juniper woodland&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Project lead: &lt;a href=&#34;http://naes.unr.edu/shoemaker/&#34;&gt;Kevin Shoemaker&lt;/a&gt;
-Graduate student lead: &lt;a href=&#34;https://www.linkedin.com/in/danielle-miles-79a08489&#34;&gt;Danielle Miles&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Key UNR collaborators:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://sites.google.com/site/greatbasinbuglab/&#34;&gt;Matt Forister&lt;/a&gt;
-&lt;a href=&#34;http://wolfweb.unr.edu/~ophis/Feldman_Lab/Welcome.html&#34;&gt;Chris Feldman&lt;/a&gt;
-&lt;a href=&#34;https://naes.unr.edu/weisberg/&#34;&gt;Peter Weisberg and Tom Dilts&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Other collaborators&lt;/p&gt;
-
-&lt;p&gt;Bryan Hamilton, NPS
-Jane VanGunst, NDOW
-Gail Collins, USFWS
-Jason Williams, NDOW&lt;/p&gt;
-</description>
+      <guid>/posts/pj_project/</guid>
+      <description>Investigating the broad ecological impacts of Pinyon and Juniper removal in Nevada Thousands of acres of pinyon and juniper woodlands (PJ) will be removed over the next four years to support targeted wildlife populations, notably Greater sage-grouse. We are investigating the effects of PJ removal on insect communities and the bats and reptile species that rely upon them using a rigorous experimental design. Insects can serve as useful indicators of natural disturbances, provide critical pollination services, and represent a major wildlife food resource for many species, including an impressive diversity of bats and reptiles.</description>
     </item>
     
     <item>
       <title>Danielle C Miles</title>
-      <link>http://naes.unr.edu/shoemaker/lab/posts/dcmiles/</link>
+      <link>/posts/dcmiles/</link>
       <pubDate>Tue, 04 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/lab/posts/dcmiles/</guid>
-      <description>
-
-&lt;h2 id=&#34;danielle-c-miles&#34;&gt;Danielle C Miles&lt;/h2&gt;
-
-&lt;p&gt;I am a PhD student in my first year here at UNR in the APE lab. I will be working on measuring the broad impacts of pinyon and juniper tree removal in sagebrush ecosystems on bat, bird, reptile, small mammal and insect populations. Besides this ecological study, I am interested in exploring anthropogenic effects on the environment such as climate change and deforestation with specific emphasis on the implications for amphibians.&lt;/p&gt;
-
-&lt;p&gt;My previous lab: &lt;a href=&#34;https://msu.edu/~plz/people.html&#34;&gt;https://msu.edu/~plz/people.html&lt;/a&gt;
-My linkedin: &lt;a href=&#34;https://www.linkedin.com/in/danielle-miles-79a08489&#34;&gt;https://www.linkedin.com/in/danielle-miles-79a08489&lt;/a&gt;
-My experience in Madagascar: &lt;a href=&#34;http://www.cnn.com/videos/world/2016/02/05/african-voices-the-disruptors-spc-b.cnn&#34;&gt;http://www.cnn.com/videos/world/2016/02/05/african-voices-the-disruptors-spc-b.cnn&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>/posts/dcmiles/</guid>
+      <description>Danielle C Miles I am a PhD student in my first year here at UNR in the APE lab. I will be working on measuring the broad impacts of pinyon and juniper tree removal in sagebrush ecosystems on bat, bird, reptile, small mammal and insect populations. Besides this ecological study, I am interested in exploring anthropogenic effects on the environment such as climate change and deforestation with specific emphasis on the implications for amphibians.</description>
     </item>
     
     <item>
       <title>Modeling population growth of COTS in Australia&#39;s Great Barrier Reef</title>
-      <link>http://naes.unr.edu/shoemaker/lab/posts/COTSproject/</link>
+      <link>/posts/cotsproject/</link>
       <pubDate>Thu, 29 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/lab/posts/COTSproject/</guid>
-      <description>
-
-&lt;h2 id=&#34;crown-of-thorns-starfish-project&#34;&gt;Crown-of-Thorns Starfish project&lt;/h2&gt;
-
-&lt;p&gt;Crown-of-Thorns Starfish (C.O.T.S.; &lt;em&gt;Acanthaster planci&lt;/em&gt;) is a native predator of coral. On occasion, C.O.T.S. populations &amp;ldquo;explode&amp;rdquo;, and these outbreaks represent one of the major recognized threats to the Great Barrier Reef in Australia (accounting for 42% of coral loss over the past 30 years). The A.P.E. lab is collaborating with researchers at Australian Institute of Marine Science in Queensland (Sam Matthews and Camille Mellin), James Cook University (Morgan Pratchett) and University of Adelaide (Damien Fordham) to better understand the drivers of C.O.T.S. population explosions and potentially develop strategies for how to reduce this threat to the Great Barrier Reef.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://naes.unr.edu/shoemaker/lab/shoemaker/lab/img/GreatBarrierReefMap.gif&#34; alt=&#34;Map of the Great Barrier Reef&#34; /&gt;&lt;/p&gt;
-</description>
+      <guid>/posts/cotsproject/</guid>
+      <description>Crown-of-Thorns Starfish project Crown-of-Thorns Starfish (C.O.T.S.; Acanthaster planci) is a native predator of coral. On occasion, C.O.T.S. populations &amp;ldquo;explode&amp;rdquo;, and these outbreaks represent one of the major recognized threats to the Great Barrier Reef in Australia (accounting for 42% of coral loss over the past 30 years). The A.P.E. lab is collaborating with researchers at Australian Institute of Marine Science in Queensland (Sam Matthews and Camille Mellin), James Cook University (Morgan Pratchett) and University of Adelaide (Damien Fordham) to better understand the drivers of C.</description>
     </item>
     
     <item>
       <title>A.P.E. Lab at UNR</title>
-      <link>http://naes.unr.edu/shoemaker/lab/posts/test-post-withimage/</link>
+      <link>/posts/test-post-withimage/</link>
       <pubDate>Tue, 27 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/lab/posts/test-post-withimage/</guid>
-      <description>
-
-&lt;h2 id=&#34;hello-world&#34;&gt;Hello world!!&lt;/h2&gt;
-
-&lt;p&gt;We are the &lt;em&gt;APE lab&lt;/em&gt;.&lt;/p&gt;
-</description>
+      <guid>/posts/test-post-withimage/</guid>
+      <description>Hello world!! We are the APE lab.</description>
     </item>
     
   </channel>

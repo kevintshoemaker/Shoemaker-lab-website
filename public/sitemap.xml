@@ -1,74 +1,149 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://naes.unr.edu/shoemaker/lab/</loc>
+    <loc>/categories/</loc>
     <lastmod>2017-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://naes.unr.edu/shoemaker/lab/posts/PredictivePlagueDieOff_project/</loc>
+    <loc>/categories/central-grasslands-ecosystem/</loc>
     <lastmod>2017-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://naes.unr.edu/shoemaker/lab/posts/GalapTort_project/</loc>
+    <loc>/categories/galapagos/</loc>
     <lastmod>2017-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://naes.unr.edu/shoemaker/lab/posts/PlagueModeling_project/</loc>
+    <loc>/categories/population-modeling/</loc>
+    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/posts/</loc>
+    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/prairie-dogs/</loc>
+    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/predictiveplaguedieoff_project/</loc>
+    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/projects/</loc>
+    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/galaptort_project/</loc>
+    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/tortoises/</loc>
+    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/wildlife-management/</loc>
+    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/great-basin-ecosystem/</loc>
     <lastmod>2017-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://naes.unr.edu/shoemaker/lab/posts/PygmyRabbit_project/</loc>
+    <loc>/posts/plaguemodeling_project/</loc>
     <lastmod>2017-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://naes.unr.edu/shoemaker/lab/posts/shoemaker/</loc>
+    <loc>/posts/pygmyrabbit_project/</loc>
+    <lastmod>2017-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/a.p.e.-lab/</loc>
     <lastmod>2016-10-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://naes.unr.edu/shoemaker/lab/posts/Epost20161003/</loc>
+    <loc>/posts/shoemaker/</loc>
+    <lastmod>2016-10-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/people/</loc>
+    <lastmod>2016-10-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/epost20161003/</loc>
     <lastmod>2016-10-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://naes.unr.edu/shoemaker/lab/posts/Crowell/</loc>
+    <loc>/posts/crowell/</loc>
     <lastmod>2016-10-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://naes.unr.edu/shoemaker/lab/posts/Walden/</loc>
+    <loc>/posts/walden/</loc>
     <lastmod>2016-10-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://naes.unr.edu/shoemaker/lab/posts/PJ_project/</loc>
+    <loc>/posts/pj_project/</loc>
     <lastmod>2016-10-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://naes.unr.edu/shoemaker/lab/posts/dcmiles/</loc>
+    <loc>/posts/dcmiles/</loc>
     <lastmod>2016-10-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://naes.unr.edu/shoemaker/lab/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2016-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://naes.unr.edu/shoemaker/lab/posts/COTSproject/</loc>
+    <loc>/</loc>
     <lastmod>2016-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://naes.unr.edu/shoemaker/lab/posts/test-post-withimage/</loc>
+    <loc>/posts/cotsproject/</loc>
+    <lastmod>2016-09-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/test-post-withimage/</loc>
     <lastmod>2016-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/wildlife-conservation/</loc>
+    <lastmod>2016-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>

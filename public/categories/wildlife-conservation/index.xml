@@ -1,26 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wildlife Conservation on Applied Population Ecology Lab at UNR</title>
-    <link>http://naes.unr.edu/shoemaker/lab/categories/wildlife-conservation/</link>
+    <link>/categories/wildlife-conservation/</link>
     <description>Recent content in Wildlife Conservation on Applied Population Ecology Lab at UNR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 27 Sep 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://naes.unr.edu/shoemaker/lab/categories/wildlife-conservation/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/categories/wildlife-conservation/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>A.P.E. Lab at UNR</title>
-      <link>http://naes.unr.edu/shoemaker/lab/posts/test-post-withimage/</link>
+      <link>/posts/test-post-withimage/</link>
       <pubDate>Tue, 27 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://naes.unr.edu/shoemaker/lab/posts/test-post-withimage/</guid>
-      <description>
-
-&lt;h2 id=&#34;hello-world&#34;&gt;Hello world!!&lt;/h2&gt;
-
-&lt;p&gt;We are the &lt;em&gt;APE lab&lt;/em&gt;.&lt;/p&gt;
-</description>
+      <guid>/posts/test-post-withimage/</guid>
+      <description>Hello world!! We are the APE lab.</description>
     </item>
     
   </channel>
