@@ -68,7 +68,7 @@ about     = "The current members of the A.P.E. lab are Kevin Shoemaker, Elizabet
 # You can use identifier to prepend a font awesome icon to your text
 [[menu.main]]
     name = "Posts"
-    url = "/categories/Posts/"    # correct syntax!!!
+    url = "/Posts/"    # correct syntax!!!
     identifier = "fa fa-newspaper-o"
     weight = 1
 
