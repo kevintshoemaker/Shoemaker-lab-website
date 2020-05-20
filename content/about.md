@@ -15,7 +15,7 @@ Our expertise is in population biology, simulation modeling and statistics, and 
 - Assessed the success of a long-term effort to reintroduce tortoises to Espanola island in Galapagos.
 
 ## Who we are
-The A.P.E. lab currently includes [Kevin Shoemaker](http://naes.unr.edu/shoemaker/) (asst. prof.) and doctoral students [Danielle Miles](/posts/dcmiles/index.html), [Margarete Walden](/posts/Walden/index.html) and [Miranda Crowell](/posts/Crowell/index.html). Former A.P.E. lab members include Dr. [Elizabeth Hunter](/posts/Epost20161003/index.html) (former postdoc; now Assistant Professor at Georgia Southern University), and Nathan Cook (completed M.S. in 2018; now Biologist with the State of Washington).    
+The A.P.E. lab currently includes [Dr. Kevin Shoemaker](http://naes.unr.edu/shoemaker/) (Assistant Professor, NRES Department, UNR) and doctoral students [Danielle Miles](/posts/dcmiles/index.html), [Margarete Walden](/posts/Walden/index.html) and [Miranda Crowell](/posts/Crowell/index.html). Former A.P.E. lab members include Dr. [Elizabeth Hunter](/posts/Epost20161003/index.html) (former postdoc; now Assistant Professor at Georgia Southern University), and Nathan Cook (completed M.S. in 2018; now Biologist with the State of Washington).    
 
 ![](/img/ApeLabPeople1.jpg)
 *(clockwise from top left: Nathan Cook, Miranda Crowell, Margarete Walden, Danielle Miles, Kevin Shoemaker, and Elizabeth Hunter)*

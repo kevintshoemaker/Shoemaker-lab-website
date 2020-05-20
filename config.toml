@@ -66,22 +66,23 @@ about     = "The current members of the A.P.E. lab are Kevin Shoemaker, Elizabet
 
 # Set up your menu items in the navigation bar
 # You can use identifier to prepend a font awesome icon to your text
-[[menu.main]]
-    name = "Posts"
-    url = "/Posts/"    # correct syntax!!!
-    identifier = "fa fa-newspaper-o"
-    weight = 1
-
-[[menu.main]]
-    name = "Categories"
-    url = "/categories/"
-    identifier = "fa fa-suitcase"
-    weight = 2
 
 [[menu.main]]
     name = "About"
     url = "/about/"
     identifier = "fa fa-camera"
+    weight = 1
+
+[[menu.main]]
+    name = "Posts"
+    url = "/posts/"    # correct syntax!!!
+    identifier = "fa fa-newspaper-o"
+    weight = 2
+
+[[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    identifier = "fa fa-suitcase"
     weight = 3
 
 [[menu.main]]
