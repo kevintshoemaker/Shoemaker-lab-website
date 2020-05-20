@@ -3,13 +3,88 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/about/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/a.p.e.-lab/</loc>
-    <lastmod>2018-10-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2018-10-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/shoemaker/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/people/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/galapagos/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/population-modeling/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/posts/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/projects/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/galaptort_project/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/tortoises/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/wildlife-management/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/crowell/</loc>
+    <lastmod>2019-10-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/dcmiles/</loc>
+    <lastmod>2019-10-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/cotsproject/</loc>
+    <lastmod>2019-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,32 +93,12 @@
   </url>
   
   <url>
-    <loc>/categories/people/</loc>
-    <lastmod>2018-10-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2018-10-22T00:00:00+00:00</lastmod>
+    <loc>/posts/walden/</loc>
+    <lastmod>2018-10-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/central-grasslands-ecosystem/</loc>
-    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/galapagos/</loc>
-    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/population-modeling/</loc>
-    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/posts/</loc>
     <lastmod>2017-01-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -54,26 +109,6 @@
   
   <url>
     <loc>/posts/predictiveplaguedieoff_project/</loc>
-    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/projects/</loc>
-    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/galaptort_project/</loc>
-    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/tortoises/</loc>
-    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/wildlife-management/</loc>
     <lastmod>2017-01-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -93,52 +128,8 @@
   </url>
   
   <url>
-    <loc>/posts/crowell/</loc>
-    <lastmod>2016-10-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/walden/</loc>
-    <lastmod>2016-10-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/posts/pj_project/</loc>
     <lastmod>2016-10-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/dcmiles/</loc>
-    <lastmod>2016-10-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-    <lastmod>2016-09-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2016-09-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/cotsproject/</loc>
-    <lastmod>2016-09-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/test-post-withimage/</loc>
-    <lastmod>2016-09-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/wildlife-conservation/</loc>
-    <lastmod>2016-09-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/shoemaker/</loc>
   </url>
   
   <url>

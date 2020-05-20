@@ -6,10 +6,28 @@
     <description>Recent content in Population modeling on Applied Population Ecology Lab at UNR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/population-modeling/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Simulation modeling to support population restoration of &#39;lost&#39; Galapagos giant tortoise species</title>
+      <link>/posts/galaptort_project/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/galaptort_project/</guid>
+      <description>In the 19th century, populations of giant tortoises in the Galapagos Islands were decimated by whalers and pirates, who kept and killed tortoises on their ships as a resilient source of fresh meat for long ocean voyages. Particularly hard-hit were &amp;ldquo;saddlebacked&amp;rdquo; species that inhabited the islands&amp;rsquo; arid lowlands closer to the coasts. Of the five saddlebacked species, two have been declared extinct: Chelonoidis elephantopus from Floreana Island and C. abingdonii from Pinta Island (the latter only recently declared extinct in 2012 with the death of the Lonesome George).</description>
+    </item>
+    
+    <item>
+      <title>Modeling population growth of COTS in Australia&#39;s Great Barrier Reef</title>
+      <link>/posts/cotsproject/</link>
+      <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/cotsproject/</guid>
+      <description>Crown-of-Thorns Starfish project Crown-of-Thorns Starfish (C.O.T.S.; Acanthaster planci) is a native predator of coral. On occasion, C.O.T.S. populations &amp;ldquo;explode&amp;rdquo;, and these outbreaks represent one of the major recognized threats to the Great Barrier Reef in Australia (accounting for 42% of coral loss over the past 30 years). The A.P.E. lab is collaborating with researchers at Australian Institute of Marine Science in Queensland (Sam Matthews and Camille Mellin), James Cook University (Morgan Pratchett) and University of Adelaide (Damien Fordham) to better understand the drivers of C.</description>
+    </item>
     
     <item>
       <title>Predictive modeling of plague die-offs in prairie dog colonies</title>
@@ -18,15 +36,6 @@
       
       <guid>/posts/predictiveplaguedieoff_project/</guid>
       <description>In February 2015, experts on prairie dog and plague ecology convened and identified a need for a broad synthesis of existing data to evaluate the factors driving plague die-offs in black-tailed prairie dog (BTPD) colonies. Several published studies have already shown that temperature, precipitation and topography can affect the probability of a die-off event. However, a broader synthesis of datasets from across the BTPD range may enable more accurate prediction of when and where die-offs will occur.</description>
-    </item>
-    
-    <item>
-      <title>Simulation modeling to support population restoration of &#39;lost&#39; Galapagos giant tortoise species</title>
-      <link>/posts/galaptort_project/</link>
-      <pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/galaptort_project/</guid>
-      <description>In the 19th century, populations of giant tortoises in the Galapagos Islands were decimated by whalers and pirates, who kept and killed tortoises on their ships as a resilient source of fresh meat for long ocean voyages. Particularly hard-hit were &amp;ldquo;saddlebacked&amp;rdquo; species that inhabited the islands&amp;rsquo; arid lowlands closer to the coasts. Of the five saddlebacked species, two have been declared extinct: Chelonoidis elephantopus from Floreana Island and C. abingdonii from Pinta Island (the latter only recently declared extinct in 2012 with the death of the Lonesome George).</description>
     </item>
     
     <item>
@@ -57,15 +66,6 @@ Other collaborators: Sheldon and Hart National Wildlife Refuges Nevada Departmen
       
       <guid>/posts/pj_project/</guid>
       <description>Investigating the broad ecological impacts of Pinyon and Juniper removal in Nevada Thousands of acres of pinyon and juniper woodlands (PJ) will be removed over the next four years to support targeted wildlife populations, notably Greater sage-grouse. We are investigating the effects of PJ removal on insect communities and the bats and reptile species that rely upon them using a rigorous experimental design. Insects can serve as useful indicators of natural disturbances, provide critical pollination services, and represent a major wildlife food resource for many species, including an impressive diversity of bats and reptiles.</description>
-    </item>
-    
-    <item>
-      <title>Modeling population growth of COTS in Australia&#39;s Great Barrier Reef</title>
-      <link>/posts/cotsproject/</link>
-      <pubDate>Thu, 29 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/cotsproject/</guid>
-      <description>Crown-of-Thorns Starfish project Crown-of-Thorns Starfish (C.O.T.S.; Acanthaster planci) is a native predator of coral. On occasion, C.O.T.S. populations &amp;ldquo;explode&amp;rdquo;, and these outbreaks represent one of the major recognized threats to the Great Barrier Reef in Australia (accounting for 42% of coral loss over the past 30 years). The A.P.E. lab is collaborating with researchers at Australian Institute of Marine Science in Queensland (Sam Matthews and Camille Mellin), James Cook University (Morgan Pratchett) and University of Adelaide (Damien Fordham) to better understand the drivers of C.</description>
     </item>
     
   </channel>

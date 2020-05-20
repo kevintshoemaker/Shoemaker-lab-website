@@ -6,10 +6,40 @@
     <description>Recent content in A.P.E. Lab on Applied Population Ecology Lab at UNR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/a.p.e.-lab/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dr. Kevin Shoemaker</title>
+      <link>/posts/shoemaker/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/shoemaker/</guid>
+      <description>Dr. Shoemaker is the director of the Applied Population Ecology (A.P.E) lab at the department of Natural Resources &amp;amp; Environmental Science at the University of Nevada, Reno. Broadly, his research couples ecological data (e.g., census records, mark-recapture data, remote sensing data) with simulation models, statistics and machine learning to support wildlife conservation and management.
+Visit his UNR site
+Contact  Kevin T Shoemaker
+Assistant Professor, Natural Resources &amp;amp; Environmental Science</description>
+    </item>
+    
+    <item>
+      <title>Miranda Crowell</title>
+      <link>/posts/crowell/</link>
+      <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/crowell/</guid>
+      <description>Miranda is a PhD student who joined the Shoemaker and Matocq labs in April 2016. She came to University of Nevada, Reno from Washington State University in Pullman, WA where she completed her M.S. with Dr. Lisa Shipley investigating pygmy rabbits&amp;rsquo; foraging ecology. Here, at UNR, Miranda is researching pygmy rabbit distribution across Nevada and southeastern Oregon, focusing on demography, genetic connectivity, and key landscape characteristics that pygmy rabbits require. To learn more about Miranda, the ongoing pygmy rabbit research, and to see updates from the field, visit her website.</description>
+    </item>
+    
+    <item>
+      <title>Danielle C Miles</title>
+      <link>/posts/dcmiles/</link>
+      <pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/dcmiles/</guid>
+      <description>Danielle C Miles Danielle is a PhD student in her fourth year as part of the A.P.E. lab. I am working on measuring the broad impacts of pinyon and juniper tree removal in sagebrush ecosystems on bat, bird, reptile, small mammal and insect populations. Besides this ecological study, I am interested in exploring anthropogenic effects on the environment such as climate change and deforestation with specific emphasis on the implications for amphibians.</description>
+    </item>
     
     <item>
       <title>Dr. Elizabeth Hunter</title>
@@ -17,59 +47,17 @@
       <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/epost20161003/</guid>
-      <description>I was a postdoctoral researcher in the A.P.E. lab from 2016-2018 where I worked on several population modeling projects including: predicting plague outbreaks in black-tailed prairie dogs, using abundance data to predict the effects of competition on songbird responses to climate change, and simulation modeling to inform restoration of giant tortoise populations in the Galapagos Islands.
+      <description>I was a postdoctoral researcher in the A.P.E. lab from 2016-2018 where I worked on several population modeling projects including: predicting plague outbreaks in black-tailed prairie dogs, using abundance data to predict the effects of competition on songbird responses to climate change, and simulation modeling to inform restoration of giant tortoise populations in the Galapagos Islands. I am now an Assistant Professor of Landscape Ecology at Georgia Southern University.
 Visit my personal webpage here</description>
-    </item>
-    
-    <item>
-      <title>Miranda Crowell</title>
-      <link>/posts/crowell/</link>
-      <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/crowell/</guid>
-      <description>Miranda is a PhD student who joined the Shoemaker and Matocq labs in April 2016. She is coming to University of Nevada, Reno from Washington State University in Pullman, WA where she completed her M.S. with Dr. Lisa Shipley investigating pygmy rabbits&amp;rsquo; foraging ecology. Here, at UNR, Miranda will be researching pygmy rabbit distribution across Nevada and southeastern Oregon, focusing on demography, genetic connectivity, and key landscape characteristics that pygmy rabbits require.</description>
     </item>
     
     <item>
       <title>Margarete Walden</title>
       <link>/posts/walden/</link>
-      <pubDate>Sat, 15 Oct 2016 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/walden/</guid>
-      <description>Margarete is a Ph.D. student who joined the APE lab and the EECB program in Fall 2016. Her research interests include population ecology, herpetology, conservation biology, terrestrial vertebrate physiology, and species&amp;rsquo; responses to climate change. She is completing her M.S. with Dr. Nancy Karraker on the timing of hibernation in Eastern Box Turtles.
-Contact  Margarete Walden
-Ph.D. Student, Natural Resources &amp;amp; Environmental Science
-University of Nevada, Reno / mail stop 186</description>
-    </item>
-    
-    <item>
-      <title>Danielle C Miles</title>
-      <link>/posts/dcmiles/</link>
-      <pubDate>Tue, 04 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/dcmiles/</guid>
-      <description>Danielle C Miles I am a PhD student in my first year here at UNR in the APE lab. I will be working on measuring the broad impacts of pinyon and juniper tree removal in sagebrush ecosystems on bat, bird, reptile, small mammal and insect populations. Besides this ecological study, I am interested in exploring anthropogenic effects on the environment such as climate change and deforestation with specific emphasis on the implications for amphibians.</description>
-    </item>
-    
-    <item>
-      <title>A.P.E. Lab at UNR</title>
-      <link>/posts/test-post-withimage/</link>
-      <pubDate>Tue, 27 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/test-post-withimage/</guid>
-      <description>Hello world!! We are the APE lab.</description>
-    </item>
-    
-    <item>
-      <title>Dr. Kevin Shoemaker</title>
-      <link>/posts/shoemaker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/shoemaker/</guid>
-      <description>Dr. Shoemaker is the director of the Applied Population Ecology (A.P.E) lab at the department of Natural Resources &amp;amp; Environmental Science at the University of Nevada, Reno. Broadly, his research couples ecological data (e.g., census records, mark-recapture data, remote sensing data) with simulation models, statistics and machine learning to support wildlife conservation and management.
-Visit Shoemaker&amp;rsquo;s UNR site
-Contact  Kevin T Shoemaker
-Assistant Professor, Natural Resources &amp;amp; Environmental Science</description>
+      <description>Margarete is a Ph.D. student who joined the APE lab and the EECB program in Fall 2016. Her research interests include population ecology, herpetology, conservation biology, terrestrial vertebrate physiology, and species&amp;rsquo; responses to climate change. She completed her M.S. with Dr. Nancy Karraker on the timing of hibernation in Eastern Box Turtles. Margarete&amp;rsquo;s research in the A.P.E. lab centers around understanding the environmental and climatic niche breadth of the Mojave Desert Tortoise (Gopherus agassizii).</description>
     </item>
     
   </channel>

@@ -1,7 +1,7 @@
 +++
 author = "Elizabeth Hunter"
 categories = ["Population modeling", "Galapagos", "Tortoises", "Wildlife Management", "Projects", "Posts"]
-date = "2017-01-23"
+date = "2020-01-23"
 description = "Galapagos giant tortoise restoration"
 featured = "Wolf_tortoise2.jpg"
 featuredalt = ""
@@ -14,6 +14,8 @@ In the 19th century, populations of giant tortoises in the Galapagos Islands wer
 
 ## Simulation modeling to support decision-making
 
-Building on previous work from our group on the population dynamics of reintroduced populations of saddlebacked giant tortoises ([Gibbs, Hunter, Shoemaker et al. 2014](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0110742)) and the ecosystem effects of tortoise populations ([Hunter and Gibbs 2014](http://onlinelibrary.wiley.com/doi/10.1111/rec.12055/full)), we are creating a simulation model to find a breeding program strategy that simultaneously maximizes the percentage of the native genotype in the restored population, the population growth rate, and the beneficial ecological effects of tortoises, all while minimizing costs.  We are using the individual-based modeling software NetLogo to create a model that incorporates genetic information from program STRUCTURE and population parameters estimated using the Bayesian estimation software WinBUGS.  Ultimately, we hope these efforts will assist the [Galapagos National Park](http://www.galapagos.gob.ec/) and the [Galapagos Conservancy](http://www.galapagos.org/conservation/conservation/project-areas/ecosystem-restoration/tortoise-restoration/) in implementing effective strategies for restoring tortoise populations to Floreana and Pinta Islands.
+Building on previous work from our group on the population dynamics of reintroduced populations of saddlebacked giant tortoises ([Gibbs, Hunter, Shoemaker et al. 2014](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0110742)) and the ecosystem effects of tortoise populations ([Hunter and Gibbs 2014](http://onlinelibrary.wiley.com/doi/10.1111/rec.12055/full)), we built a simulation model to find a breeding program strategy that simultaneously maximizes the percentage of the native genotype in the restored population, the population growth rate, and the beneficial ecological effects of tortoises, all while minimizing costs.  We used the individual-based modeling software NetLogo to create a model that incorporates genetic information from program STRUCTURE and population parameters estimated using the Bayesian estimation software WinBUGS.  Ultimately, these efforts are intended to assist the [Galapagos National Park](http://www.galapagos.gob.ec/) and the [Galapagos Conservancy](http://www.galapagos.org/conservation/conservation/project-areas/ecosystem-restoration/tortoise-restoration/) in implementing effective strategies for restoring tortoise populations to Floreana and Pinta Islands.
+
+Our paper on this work (Seeking compromise across competing goals in conservation translocations: The case of the ‘extinct’ Floreana Island Galapagos giant tortoise) was recently published in Journal of Applied Ecology: https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2664.13516?casa_token=8Y42_upR4jIAAAAA%3ALVSkAK-GL4Ge4Xdi0ByYVyoziEjSiF-FFOhV5kMdkJgG2GYAuPk31bxXsP5zj9EvSDyft6T68XsKdUk
 
 Project lead: [Elizabeth Hunter](http://elizabethhunter.weebly.com/)
