@@ -69,7 +69,7 @@ about     = "The current members of the A.P.E. lab are Kevin Shoemaker, Margaret
 
 [[menu.main]]
   name = "Home"
-  url = ""
+  url = "/"
   identifier = "fa fa-home"
   weight = 1
 
