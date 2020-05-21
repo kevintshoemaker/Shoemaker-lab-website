@@ -1,4 +1,4 @@
-baseurl = "/about"
+baseurl = ""
 languageCode = "en-us"
 title = "Applied Population Ecology Lab at UNR"
 theme = "hugo-future-imperfect"
