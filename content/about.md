@@ -1,9 +1,10 @@
 +++
 title = "About the Applied Population Ecology (A.P.E.) Lab"
-date = "2020-05-20"
+date = "2025-05-20"
 featured = "PJ2.JPG"
 featuredpath = "/img"
 featuredalt = ""
+type = "post"
 +++
 
 ## Our mission

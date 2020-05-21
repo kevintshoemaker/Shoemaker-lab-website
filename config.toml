@@ -1,4 +1,4 @@
-baseurl = ""
+baseurl = "/about"
 languageCode = "en-us"
 title = "Applied Population Ecology Lab at UNR"
 theme = "hugo-future-imperfect"
@@ -24,7 +24,7 @@ googleAnalytics = "UA-84942309-1"
     # The set of favicons used are based on the write-up from this link:
     # https://github.com/audreyr/favicon-cheat-sheet
     # Please see the favicon partial template for more information
-    loadFavicon          = false
+    loadFavicon          = true
     faviconVersion       = ""
 
     # Load custom CSS or JavaScript files. This replaces the deprecated params
@@ -45,7 +45,7 @@ header    = "Applied Population Ecology Lab at UNR"
 
 paragraph = "The Applied Population Ecology lab at UNR focuses on supporting the conservation and management of wildlife populations in the Great Basin and beyond using state-of-the-art analytical and simulation tools"
 
-about     = "The current members of the A.P.E. lab are Kevin Shoemaker, Elizabeth Hunter, Margarete Walden, Miranda Crowell, and Danielle Miles. "
+about     = "The current members of the A.P.E. lab are Kevin Shoemaker, Margarete Walden, Miranda Crowell, and Danielle Miles."
 
 
 # This will also appear on the sidebar.
@@ -68,34 +68,40 @@ about     = "The current members of the A.P.E. lab are Kevin Shoemaker, Elizabet
 # You can use identifier to prepend a font awesome icon to your text
 
 [[menu.main]]
+  name = "Home"
+  url = "/about/"
+  identifier = "fa fa-home"
+  weight = 1
+
+[[menu.main]]
     name = "About"
     url = "/about/"
     identifier = "fa fa-camera"
-    weight = 1
+    weight = 2
 
 [[menu.main]]
     name = "Posts"
     url = "/posts/"    # correct syntax!!!
     identifier = "fa fa-newspaper-o"
-    weight = 2
+    weight = 3
 
 [[menu.main]]
     name = "Categories"
     url = "/categories/"
     identifier = "fa fa-suitcase"
-    weight = 3
+    weight = 4
 
 [[menu.main]]
     name = "People"
     url = "/categories/people/"
     identifier = "fa fa-users"
-    weight = 4
+    weight = 5
 
 [[menu.main]]
     name = "Projects"
     url = "/categories/projects/"
     identifier = "fa fa-folder"
-    weight = 5
+    weight = 6
 
 # Insert your username and the icon will apear on the page as long as
 # socialAppearAtTop or socialAppearAtBottom is set to true in the params area
@@ -111,7 +117,7 @@ about     = "The current members of the A.P.E. lab are Kevin Shoemaker, Elizabet
     behance         = ""
     flickr          = ""
     instagram       = ""
-    youtube         = "UCTogBbjLnTqnZJl5w_PgmVw"
+    youtube         = ""
     vimeo           = ""
     vine            = ""
     medium          = ""
