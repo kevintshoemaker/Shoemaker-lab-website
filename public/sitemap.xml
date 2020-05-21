@@ -123,8 +123,18 @@
   </url>
   
   <url>
+    <loc>/posts/crowell/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/pygmyrabbit_project/</loc>
     <lastmod>2020-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/walden/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -165,14 +175,6 @@
   <url>
     <loc>/posts/pj_project/</loc>
     <lastmod>2016-10-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/walden/</loc>
-  </url>
-  
-  <url>
-    <loc>/posts/crowell/</loc>
   </url>
   
   <url>

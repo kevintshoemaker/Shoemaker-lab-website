@@ -1,7 +1,7 @@
 +++
 author = "Miranda Crowell"
 categories = ["People", "A.P.E. Lab"]
-date = "2020-1-19"
+date = "2020-01-19"
 description = "PhD Candidate at University of Nevada, Reno"
 featured = "pygmy_burrow2.jpg"
 featuredalt = ""

@@ -1,7 +1,7 @@
 +++
 author = "Margarete Walden"
 categories = ["People", "A.P.E. Lab"]
-date = "2020-1-15"
+date = "2020-01-10"
 description = "PhD Candidate at University of Nevada, Reno"
 featured = "hyla_chrysoscelis2.jpg"
 featuredalt = ""
