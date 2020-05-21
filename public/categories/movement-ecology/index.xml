@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Movement ecology on Applied Population Ecology Lab at UNR</title>
+    <link>/categories/movement-ecology/</link>
+    <description>Recent content in Movement ecology on Applied Population Ecology Lab at UNR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/movement-ecology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using light-level geolocators to model waterfowl movements and breeding propensity</title>
+      <link>/posts/geolocator_project/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/geolocator_project/</guid>
+      <description>This project, supported by the Nevada Department of Wildlife and Nevada Waterfowl Association, uses light-level geolocators to understand the annual migratory pathways of waterfowl in the Pacific flyway, and to assess the timing and location of individual breeding activities.
+This work is part of a larger effort to monitor wood duck population dynamics and movements in and around Fallon, NV (Fallon Wood Duck Project).
+Delta Waterfowl:
+ Dr. Chris Nicolai  Publications Cook, N.</description>
+    </item>
+    
+  </channel>
+</rss>

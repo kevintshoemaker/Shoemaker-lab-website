@@ -34,7 +34,28 @@ Assistant Professor, Natural Resources &amp;amp; Environmental Science</descript
     </item>
     
     <item>
-      <title>Simulation modeling to support population restoration of &#39;lost&#39; Galapagos giant tortoise species</title>
+      <title>Modeling critical habitat breadth for Gopherus tortoises</title>
+      <link>/posts/gopherus_project/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/gopherus_project/</guid>
+      <description>The A.P.E. lab is leading a large, multi-institution collaboration investigating the climate resilience of populations of gopher tortoise (Gopherus polyphemus) and Mojave desert tortoise (Gopherus agassizii). In this project, funded by the Department of Defense (SERDP program), we are building models of tortoise vital rates (age-structured survival, fecundity) as functions of environmental and climatic covariates and simultaneously assessing for evidence of local behavioral and physiological adaptations. We are then using these models to quantify the range of environmental change that populations can withstand in situ without the need for natural selection or long-distance movement to more suitable habitats.</description>
+    </item>
+    
+    <item>
+      <title>Using light-level geolocators to model waterfowl movements and breeding propensity</title>
+      <link>/posts/geolocator_project/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/geolocator_project/</guid>
+      <description>This project, supported by the Nevada Department of Wildlife and Nevada Waterfowl Association, uses light-level geolocators to understand the annual migratory pathways of waterfowl in the Pacific flyway, and to assess the timing and location of individual breeding activities.
+This work is part of a larger effort to monitor wood duck population dynamics and movements in and around Fallon, NV (Fallon Wood Duck Project).
+Delta Waterfowl:
+ Dr. Chris Nicolai  Publications Cook, N.</description>
+    </item>
+    
+    <item>
+      <title>Simulation modeling to support restoration of extinct Galapagos giant tortoise populations</title>
       <link>/posts/galaptort_project/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
@@ -43,12 +64,16 @@ Assistant Professor, Natural Resources &amp;amp; Environmental Science</descript
     </item>
     
     <item>
-      <title>Miranda Crowell</title>
-      <link>/posts/crowell/</link>
-      <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
+      <title>Understanding the conservation status and habitat needs of the pygmy rabbit</title>
+      <link>/posts/pygmyrabbit_project/</link>
+      <pubDate>Fri, 17 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/crowell/</guid>
-      <description>Miranda is a PhD student who joined the Shoemaker and Matocq labs in April 2016. She came to University of Nevada, Reno from Washington State University in Pullman, WA where she completed her M.S. with Dr. Lisa Shipley investigating pygmy rabbits&amp;rsquo; foraging ecology. Here, at UNR, Miranda is researching pygmy rabbit distribution across Nevada and southeastern Oregon, focusing on demography, genetic connectivity, and key landscape characteristics that pygmy rabbits require. To learn more about Miranda, the ongoing pygmy rabbit research, and to see updates from the field, visit her website.</description>
+      <guid>/posts/pygmyrabbit_project/</guid>
+      <description>The A.P.E. lab is part of a larger team at UNR investigating the population genetics and demography of the pygmy rabbit (Brachylagus idahoensis) in the Great Basin.
+To stay up to date on the pygmy rabbit project, led by APE lab PhD student Miranda Crowell, check out her website
+UNR collaborators:
+ Marjorie Matocq Peter Weisberg and Tom Dilts Jim Sedinger  Other collaborators:
+ Sheldon and Hart National Wildlife Refuges, Nevada Department of Wildlife, Great Basin Landscape Conservation Cooperative, Greater Hart-Sheldon Fund  Publications: Crowell, M.</description>
     </item>
     
     <item>
@@ -80,21 +105,12 @@ Visit my personal webpage here</description>
     </item>
     
     <item>
-      <title>Margarete Walden</title>
-      <link>/posts/walden/</link>
-      <pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/walden/</guid>
-      <description>Margarete is a Ph.D. student who joined the APE lab and the EECB program in Fall 2016. Her research interests include population ecology, herpetology, conservation biology, terrestrial vertebrate physiology, and species&amp;rsquo; responses to climate change. She completed her M.S. with Dr. Nancy Karraker on the timing of hibernation in Eastern Box Turtles. Margarete&amp;rsquo;s research in the A.P.E. lab centers around understanding the environmental and climatic niche breadth of the Mojave Desert Tortoise (Gopherus agassizii).</description>
-    </item>
-    
-    <item>
       <title>Predictive modeling of plague die-offs in prairie dog colonies</title>
       <link>/posts/predictiveplaguedieoff_project/</link>
-      <pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/predictiveplaguedieoff_project/</guid>
-      <description>In February 2015, experts on prairie dog and plague ecology convened and identified a need for a broad synthesis of existing data to evaluate the factors driving plague die-offs in black-tailed prairie dog (BTPD) colonies. Several published studies have already shown that temperature, precipitation and topography can affect the probability of a die-off event. However, a broader synthesis of datasets from across the BTPD range may enable more accurate prediction of when and where die-offs will occur.</description>
+      <description>Several published studies have already shown that temperature, precipitation and topography can affect the probability of a die-off event. However, a broader synthesis of datasets from across the BTPD range may enable more accurate prediction of when and where die-offs will occur. The APE lab is leading a large collaborative project to create predictive models of BTPD colony die-offs caused by the plague bacterium. We have acquired colony history data from across the BTPD range and are working on using machine learning techniques to create a model of plague outbreaks that can help managers determine how best to target their anti-plague management activities (such as &amp;ldquo;dusting&amp;rdquo; for fleas and vaccine administration).</description>
     </item>
     
     <item>
@@ -107,24 +123,30 @@ Visit my personal webpage here</description>
     </item>
     
     <item>
-      <title>Understanding the conservation status and habitat needs of the pygmy rabbit</title>
-      <link>/posts/pygmyrabbit_project/</link>
-      <pubDate>Tue, 17 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/pygmyrabbit_project/</guid>
-      <description>To stay up to date on the pygmy rabbit project, led by APE lab PhD student Miranda Crowell, check out her website
-UNR collaborators:
-Marjorie Matocq Peter Weisberg and Tom Dilts Jim Sedinger
-Other collaborators: Sheldon and Hart National Wildlife Refuges Nevada Department of Wildlife Great Basin Landscape Conservation Cooperative Greater Hart-Sheldon Fund</description>
-    </item>
-    
-    <item>
       <title>Understanding the broader ecological impacts of PJ removal</title>
       <link>/posts/pj_project/</link>
       <pubDate>Wed, 12 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>/posts/pj_project/</guid>
       <description>Investigating the broad ecological impacts of Pinyon and Juniper removal in Nevada Thousands of acres of pinyon and juniper woodlands (PJ) will be removed over the next four years to support targeted wildlife populations, notably Greater sage-grouse. We are investigating the effects of PJ removal on insect communities and the bats and reptile species that rely upon them using a rigorous experimental design. Insects can serve as useful indicators of natural disturbances, provide critical pollination services, and represent a major wildlife food resource for many species, including an impressive diversity of bats and reptiles.</description>
+    </item>
+    
+    <item>
+      <title>Margarete Walden</title>
+      <link>/posts/walden/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/walden/</guid>
+      <description>Margarete is a Ph.D. student who joined the APE lab and the EECB program in Fall 2016. Her research interests include population ecology, herpetology, conservation biology, terrestrial vertebrate physiology, and species&amp;rsquo; responses to climate change. She completed her M.S. with Dr. Nancy Karraker on the timing of hibernation in Eastern Box Turtles. Margarete&amp;rsquo;s research in the A.P.E. lab centers around understanding the environmental and climatic niche breadth of the Mojave Desert Tortoise (Gopherus agassizii).</description>
+    </item>
+    
+    <item>
+      <title>Miranda Crowell</title>
+      <link>/posts/crowell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/crowell/</guid>
+      <description>Miranda is a PhD student who joined the Shoemaker and Matocq labs in April 2016. She came to University of Nevada, Reno from Washington State University in Pullman, WA where she completed her M.S. with Dr. Lisa Shipley investigating pygmy rabbits&amp;rsquo; foraging ecology. Here, at UNR, Miranda is researching pygmy rabbit distribution across Nevada and southeastern Oregon, focusing on demography, genetic connectivity, and key landscape characteristics that pygmy rabbits require. To learn more about Miranda, the ongoing pygmy rabbit research, and to see updates from the field, visit her website.</description>
     </item>
     
   </channel>

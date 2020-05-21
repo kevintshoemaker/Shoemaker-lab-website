@@ -6,7 +6,7 @@
     <description>Recent content in Central grasslands ecosystem on Applied Population Ecology Lab at UNR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/central-grasslands-ecosystem/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,10 @@
     <item>
       <title>Predictive modeling of plague die-offs in prairie dog colonies</title>
       <link>/posts/predictiveplaguedieoff_project/</link>
-      <pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/predictiveplaguedieoff_project/</guid>
-      <description>In February 2015, experts on prairie dog and plague ecology convened and identified a need for a broad synthesis of existing data to evaluate the factors driving plague die-offs in black-tailed prairie dog (BTPD) colonies. Several published studies have already shown that temperature, precipitation and topography can affect the probability of a die-off event. However, a broader synthesis of datasets from across the BTPD range may enable more accurate prediction of when and where die-offs will occur.</description>
+      <description>Several published studies have already shown that temperature, precipitation and topography can affect the probability of a die-off event. However, a broader synthesis of datasets from across the BTPD range may enable more accurate prediction of when and where die-offs will occur. The APE lab is leading a large collaborative project to create predictive models of BTPD colony die-offs caused by the plague bacterium. We have acquired colony history data from across the BTPD range and are working on using machine learning techniques to create a model of plague outbreaks that can help managers determine how best to target their anti-plague management activities (such as &amp;ldquo;dusting&amp;rdquo; for fleas and vaccine administration).</description>
     </item>
     
     <item>

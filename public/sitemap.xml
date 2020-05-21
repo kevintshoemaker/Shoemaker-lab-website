@@ -18,22 +18,12 @@
   </url>
   
   <url>
-    <loc>/categories/population-modeling/</loc>
-    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/posts/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/projects/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -53,8 +43,43 @@
   </url>
   
   <url>
+    <loc>/categories/climate-change/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/mojave-desert-ecosystem/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/gopherus_project/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/population-modeling/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/projects/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/about/</loc>
     <lastmod>2020-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/movement-ecology/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/geolocator_project/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -78,8 +103,13 @@
   </url>
   
   <url>
-    <loc>/posts/crowell/</loc>
-    <lastmod>2019-10-19T00:00:00+00:00</lastmod>
+    <loc>/categories/great-basin-ecosystem/</loc>
+    <lastmod>2020-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/pygmyrabbit_project/</loc>
+    <lastmod>2020-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -98,28 +128,18 @@
   </url>
   
   <url>
-    <loc>/posts/walden/</loc>
-    <lastmod>2018-10-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/central-grasslands-ecosystem/</loc>
-    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/prairie-dogs/</loc>
-    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/predictiveplaguedieoff_project/</loc>
-    <lastmod>2017-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/great-basin-ecosystem/</loc>
-    <lastmod>2017-01-17T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -128,13 +148,16 @@
   </url>
   
   <url>
-    <loc>/posts/pygmyrabbit_project/</loc>
-    <lastmod>2017-01-17T00:00:00+00:00</lastmod>
+    <loc>/posts/pj_project/</loc>
+    <lastmod>2016-10-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/pj_project/</loc>
-    <lastmod>2016-10-12T00:00:00+00:00</lastmod>
+    <loc>/posts/walden/</loc>
+  </url>
+  
+  <url>
+    <loc>/posts/crowell/</loc>
   </url>
   
   <url>

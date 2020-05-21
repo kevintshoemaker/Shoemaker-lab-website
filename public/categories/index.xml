@@ -12,29 +12,11 @@
     
     
     <item>
-      <title>Population modeling</title>
-      <link>/categories/population-modeling/</link>
-      <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/population-modeling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Posts</title>
       <link>/categories/posts/</link>
       <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/categories/posts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>/categories/projects/</link>
-      <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/projects/</guid>
       <description></description>
     </item>
     
@@ -53,6 +35,51 @@
       <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/categories/people/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Climate change</title>
+      <link>/categories/climate-change/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/climate-change/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mojave desert ecosystem</title>
+      <link>/categories/mojave-desert-ecosystem/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/mojave-desert-ecosystem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Population modeling</title>
+      <link>/categories/population-modeling/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/population-modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>/categories/projects/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Movement ecology</title>
+      <link>/categories/movement-ecology/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/movement-ecology/</guid>
       <description></description>
     </item>
     
@@ -84,9 +111,18 @@
     </item>
     
     <item>
+      <title>Great Basin ecosystem</title>
+      <link>/categories/great-basin-ecosystem/</link>
+      <pubDate>Fri, 17 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/great-basin-ecosystem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Central grasslands ecosystem</title>
       <link>/categories/central-grasslands-ecosystem/</link>
-      <pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/central-grasslands-ecosystem/</guid>
       <description></description>
@@ -95,18 +131,9 @@
     <item>
       <title>prairie dogs</title>
       <link>/categories/prairie-dogs/</link>
-      <pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/prairie-dogs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Great Basin ecosystem</title>
-      <link>/categories/great-basin-ecosystem/</link>
-      <pubDate>Tue, 17 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/great-basin-ecosystem/</guid>
       <description></description>
     </item>
     
