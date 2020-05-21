@@ -1,8 +1,8 @@
 +++
 author = "Margarete Walden"
 categories = ["People", "A.P.E. Lab"]
-date = "2018-10-15"
-description = "PhD Student at University of Nevada, Reno"
+date = "2020-1-15"
+description = "PhD Candidate at University of Nevada, Reno"
 featured = "hyla_chrysoscelis2.jpg"
 featuredalt = ""
 featuredpath = "/img"  # can say "date", so images can be organized by date. Good for blog posts?
@@ -22,3 +22,7 @@ Margarete is a Ph.D. student who joined the APE lab and the EECB program in Fall
 > 1664 N Virginia St, Reno NV 89557
 > Fleischmann Agriculture Room 235D
 > mwalden_at_nevada_dot_unr_dot_edu  
+
+### Publications
+
+Walden, M.A., Hunter, E.A., Devan-Song, A., Shoemaker, K.T., In prep. Techniques and challenges in measuring fat reserves in desert tortoises. Journal of Zoo and Wildlife Medicine.

@@ -6,15 +6,25 @@
     <description>Recent content in Posts on Applied Population Ecology Lab at UNR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>About the Applied Population Ecology (A.P.E.) Lab</title>
+      <link>/posts/about/</link>
+      <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/about/</guid>
+      <description>Our mission Our expertise is in population biology, simulation modeling and statistics, and our passion is wildlife conservation. We combine our expertise and passion in creative ways. For example, we have
+ Used Bayesian statistics and simulation modeling to assess the conservation status of the bog turtle (Glyptemys muhlenbergii) Modeled the impact of sylvatic plague on prairie dog and black-footed ferret populations. Developed a new statistical approach for assessing the threatening processes underlying wildlife population declines.</description>
+    </item>
+    
+    <item>
       <title>Dr. Kevin Shoemaker</title>
       <link>/posts/shoemaker/</link>
-      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/shoemaker/</guid>
       <description>Dr. Shoemaker is the director of the Applied Population Ecology (A.P.E) lab at the department of Natural Resources &amp;amp; Environmental Science at the University of Nevada, Reno. Broadly, his research couples ecological data (e.g., census records, mark-recapture data, remote sensing data) with simulation models, statistics and machine learning to support wildlife conservation and management.

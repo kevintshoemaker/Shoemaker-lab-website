@@ -3,33 +3,53 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/a.p.e.-lab/</loc>
-    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+    <loc>/posts/about/</loc>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/shoemaker/</loc>
-    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+    <loc>/categories/population-modeling/</loc>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/people/</loc>
-    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+    <loc>/categories/posts/</loc>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/projects/</loc>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/a.p.e.-lab/</loc>
+    <lastmod>2020-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/shoemaker/</loc>
+    <lastmod>2020-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/people/</loc>
+    <lastmod>2020-05-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -39,21 +59,6 @@
   
   <url>
     <loc>/categories/galapagos/</loc>
-    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/population-modeling/</loc>
-    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/posts/</loc>
-    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/projects/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url>
   

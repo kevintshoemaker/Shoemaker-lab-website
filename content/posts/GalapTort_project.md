@@ -2,11 +2,11 @@
 author = "Elizabeth Hunter"
 categories = ["Population modeling", "Galapagos", "Tortoises", "Wildlife Management", "Projects", "Posts"]
 date = "2020-01-23"
-description = "Galapagos giant tortoise restoration"
+description = ""
 featured = "Wolf_tortoise2.jpg"
 featuredalt = ""
 featuredpath = "/img"
-title = "Simulation modeling to support population restoration of 'lost' Galapagos giant tortoise species"
+title = "Simulation modeling to support restoration of extinct Galapagos giant tortoise populations"
 type = "post"
 +++
 

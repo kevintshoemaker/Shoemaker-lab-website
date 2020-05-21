@@ -1,7 +1,7 @@
 +++
 author = "Kevin Shoemaker"
 categories = ["People", "A.P.E. Lab"]
-date = "2020-05-04"
+date = "2020-05-10"
 description = "Assistant professor at UNR"
 featured = "KTSwithtortoise_effects.jpg"
 featuredalt = ""

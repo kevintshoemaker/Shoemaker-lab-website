@@ -2,7 +2,7 @@
 author = "Kevin Shoemaker and Danielle Miles"
 categories = ["Population modeling", "Great Basin ecosystem", "Wildlife Management", "Projects", "Posts"]
 date = "2016-10-12"
-description = "Effects of PJ removal on non-target species"
+description = "Assessing small and large-scale effects on insects, small mammals, herps, birds, and bats"
 featured = "sagebrush1.jpg"
 featuredalt = ""
 featuredpath = "/img"

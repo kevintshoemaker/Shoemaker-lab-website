@@ -1,8 +1,8 @@
 +++
 author = "Miranda Crowell"
 categories = ["People", "A.P.E. Lab"]
-date = "2019-10-19"
-description = "PhD Student at University of Nevada, Reno"
+date = "2020-1-19"
+description = "PhD Candidate at University of Nevada, Reno"
 featured = "pygmy_burrow2.jpg"
 featuredalt = ""
 featuredpath = "/img"  # can say "date", so images can be organized by date. Good for blog posts?

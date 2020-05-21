@@ -11,7 +11,7 @@ googleAnalytics = "UA-84942309-1"
     # Sets the meta tag description, usually reserved for the main page
     description          = "Applied Population Ecology Lab at UNR: practical applications of population ecology for wildlife management and conservation"
     # This will appear on the top left of the navigation bar
-    navbarTitle          = "A.P.E. Lab at UNR"
+    navbarTitle          = "Shoemaker Lab"
     # Social media buttons that appear on the sidebar
     socialAppearAtTop    = true
     socialAppearAtBottom = true
@@ -69,7 +69,7 @@ about     = "The current members of the A.P.E. lab are Kevin Shoemaker, Margaret
 
 [[menu.main]]
   name = "Home"
-  url = "/about/"
+  url = ""
   identifier = "fa fa-home"
   weight = 1
 

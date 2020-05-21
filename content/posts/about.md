@@ -1,7 +1,7 @@
 +++
 author = "Applied Population Ecology Lab"
-categories = ["Population modeling", "Projects", "Posts"]
-date = "2025-09-29"
+categories = ["Posts"]
+date = "2020-05-21"
 description = "About the A.P.E. lab"
 featured = "PJ2.JPG"
 featuredalt = ""

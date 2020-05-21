@@ -2,7 +2,7 @@
 author = "Kevin Shoemaker"
 categories = ["Population modeling", "Central grasslands ecosystem", "Wildlife Management", "Projects", "Posts"]
 date = "2017-01-17"
-description = "Modeling evolution of plague resistance in prairie dogs"
+description = "Modeling host evolution in a dynamic metapopulation"
 featured = "pdog2.jpg"
 featuredalt = ""
 featuredpath = "/img"
@@ -31,12 +31,12 @@ We will use a flexible lattice population structure in which each node contains 
 - https://youtu.be/MFeZLlB0xV8    
 - https://youtu.be/TF9fVWDkfFA    
 
+Project lead: [Ana Davidson, CSU](http://anadavidson.weebly.com/)
 Modeling lead: [Kevin Shoemaker](http://naes.unr.edu/shoemaker/)
-Overall project lead: [Ana Davidson, UNM](http://anadavidson.weebly.com/)
 
 Key collaborators:
 [Loren Cassin Sackett, USF](http://labs.cas.usf.edu/sackett/Sackett_Lab/People.html)
 [Joseph Busch, NAU](http://www.mggen.nau.edu/)
 [Katherine Richgels, USGS](https://www.nwhc.usgs.gov/staff/katie_richgels.jsp)
 [Tonie Rocke, USGS](https://www.nwhc.usgs.gov/staff/tonie_rocke.jsp)
-[Elizabeth Hunter, UNR APE lab](http://elizabethhunter.weebly.com/)
+[Elizabeth Hunter, GSU](http://elizabethhunter.weebly.com/)

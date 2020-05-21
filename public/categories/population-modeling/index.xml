@@ -6,10 +6,20 @@
     <description>Recent content in Population modeling on Applied Population Ecology Lab at UNR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/population-modeling/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About the Applied Population Ecology (A.P.E.) Lab</title>
+      <link>/posts/about/</link>
+      <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/about/</guid>
+      <description>Our mission Our expertise is in population biology, simulation modeling and statistics, and our passion is wildlife conservation. We combine our expertise and passion in creative ways. For example, we have
+ Used Bayesian statistics and simulation modeling to assess the conservation status of the bog turtle (Glyptemys muhlenbergii) Modeled the impact of sylvatic plague on prairie dog and black-footed ferret populations. Developed a new statistical approach for assessing the threatening processes underlying wildlife population declines.</description>
+    </item>
     
     <item>
       <title>Simulation modeling to support population restoration of &#39;lost&#39; Galapagos giant tortoise species</title>
