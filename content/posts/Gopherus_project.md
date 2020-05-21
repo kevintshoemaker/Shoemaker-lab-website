@@ -26,23 +26,18 @@ And below is a big-picture schematic of our project:
 * [Ken Nussear](https://www.unr.edu/geography/faculty/kenneth-nussear)    
 * [Marjorie Matocq](https://naes.unr.edu/matocq/)
 
-**USGS:**  
+**USGS:**    
 * [Todd Esque](https://www.usgs.gov/staff-profiles/todd-esque)
 
-**Stony Brook University:**
+**Stony Brook University:**  
 * Resit Akcakaya
 
 
 ### Publications
 
-Loope, K., Walden, M.A., Shoemaker, K.T., Hunter, E.A. In prep. Sex determination of hatchling Gopherus tortoises. Journal of Herpetology.
-
-Mitchell, C., Friend, D., Hunter, E.A., Nussear, K.E., Phillips, L., Shoemaker, K.T. In prep. Effects of climate on desert tortoise fecundity. Biological Conservation.
-
-Walden, M.A., Hunter, E.A., Devan-Song, A., Shoemaker, K.T., In prep. Techniques and challenges in measuring fat reserves in desert tortoises. Journal of Zoo and Wildlife Medicine.
-
-Hunter, E.A, Walden, M.A., Shoemaker, K.T. In prep. Sensitivity of gopher tortoise population vital rates to climatic gradients. Biological Conservation.
-
-Shoemaker, K.T., Hunter, E.A., Walden, M.A., Nussear, K.E., Esque, T.C. In prep. Spatio-temporal drivers of Mojave Desert Tortoise demography and movements. Ecography.
-
-Hunter, E.A., and Rostal, D.C. In review. Effects of fire management on gopher tortoise population dynamics depend on habitat context. Journal of Wildlife Management.  
+* Loope, K., Walden, M.A., Shoemaker, K.T., Hunter, E.A. In prep. Sex determination of hatchling Gopherus tortoises. Journal of Herpetology.
+* Mitchell, C., Friend, D., Hunter, E.A., Nussear, K.E., Phillips, L., Shoemaker, K.T. In prep. Effects of climate on desert tortoise fecundity. Biological Conservation.
+* Walden, M.A., Hunter, E.A., Devan-Song, A., Shoemaker, K.T., In prep. Techniques and challenges in measuring fat reserves in desert tortoises. Journal of Zoo and Wildlife Medicine.
+* Hunter, E.A, Walden, M.A., Shoemaker, K.T. In prep. Sensitivity of gopher tortoise population vital rates to climatic gradients. Biological Conservation.
+* Shoemaker, K.T., Hunter, E.A., Walden, M.A., Nussear, K.E., Esque, T.C. In prep. Spatio-temporal drivers of Mojave Desert Tortoise demography and movements. Ecography.
+* Hunter, E.A., and Rostal, D.C. In review. Effects of fire management on gopher tortoise population dynamics depend on habitat context. Journal of Wildlife Management.  

@@ -15,7 +15,7 @@ Dr. Shoemaker's PhD dissertation focused on the conservation of bog turtles (*Gl
 
 More recently, Dr. Shoemaker helped to mentor Suzanne Macey (PhD student, Fordham University), who continued to collect data from the same wetland complexes, performed nesting surveys, and analyzed the genetics data to assess parentage and patterns of nest site fidelity.  
 
-**American Museum of Natural History**    
+**American Museum of Natural History**     
 * [Dr. Suzanne Macey](https://www.amnh.org/research/staff-directory/suzanne-macey)    
 
 ### Publications

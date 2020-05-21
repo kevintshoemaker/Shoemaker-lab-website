@@ -15,13 +15,12 @@ This project, supported by the Nevada Department of Wildlife and Nevada Waterfow
 
 This work is part of a larger effort to monitor wood duck population dynamics and movements in and around Fallon, NV (Fallon Wood Duck Project, PI Chris Nicolai).
 
-**Delta Waterfowl:**    
+**Delta Waterfowl:**  
 * [Dr. Chris Nicolai](https://deltawaterfowl.org/staff/)    
 
 
 
 ### Publications
 
-Cook, N.A., Nicolai, C.A., Shoemaker, K.T. In prep. Monitoring waterfowl breeding activities with geolocators: a case study with Wood Ducks (Aix sponsa) in northern Nevada. Journal of Animal Ecology.
-
-Cook, N.A., Nicolai, C.A., Shoemaker, K.T. Submitted. Movements and staging locations of Canvasback (Aythya valisineria) in the Pacific Flyway. Journal of Fish and Wildlife Management.
+* Cook, N.A., Nicolai, C.A., Shoemaker, K.T. In prep. Monitoring waterfowl breeding activities with geolocators: a case study with Wood Ducks (Aix sponsa) in northern Nevada. Journal of Animal Ecology.
+* Cook, N.A., Nicolai, C.A., Shoemaker, K.T. Submitted. Movements and staging locations of Canvasback (Aythya valisineria) in the Pacific Flyway. Journal of Fish and Wildlife Management.
