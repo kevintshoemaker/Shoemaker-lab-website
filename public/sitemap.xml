@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/posts/about/</loc>
+    <loc>/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>/posts/bifurcation_paper/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -23,7 +23,7 @@
   </url>
   
   <url>
-    <loc>/posts/bifurcation_paper/</loc>
+    <loc>/categories/herpetology/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,8 +48,8 @@
   </url>
   
   <url>
-    <loc>/categories/wildlife-management/</loc>
-    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
+    <loc>/posts/about/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -73,12 +73,12 @@
   </url>
   
   <url>
-    <loc>/categories/mojave-desert-ecosystem/</loc>
+    <loc>/posts/gopherus_project/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/gopherus_project/</loc>
+    <loc>/categories/mojave-desert-ecosystem/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -98,6 +98,11 @@
   </url>
   
   <url>
+    <loc>/posts/bog_turtles/</loc>
+    <lastmod>2020-02-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/galapagos/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url>
@@ -109,6 +114,11 @@
   
   <url>
     <loc>/categories/tortoises/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/wildlife-management/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url>
   

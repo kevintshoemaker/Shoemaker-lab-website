@@ -6,17 +6,18 @@ description = ""
 featured = "canv1.jpg"
 featuredalt = ""
 featuredpath = "/img"
-linktitle = "Pdog"
+linktitle = "wodu"
 title = "Using light-level geolocators to model waterfowl movements and breeding propensity"
 type = "post"
 +++
 
 This project, supported by the Nevada Department of Wildlife and Nevada Waterfowl Association, uses light-level geolocators to understand the annual migratory pathways of waterfowl in the Pacific flyway, and to assess the timing and location of individual breeding activities.   
 
-This work is part of a larger effort to monitor wood duck population dynamics and movements in and around Fallon, NV (Fallon Wood Duck Project).
+This work is part of a larger effort to monitor wood duck population dynamics and movements in and around Fallon, NV (Fallon Wood Duck Project, PI Chris Nicolai).
 
 **Delta Waterfowl:**    
 * [Dr. Chris Nicolai](https://deltawaterfowl.org/staff/)    
+
 
 
 ### Publications

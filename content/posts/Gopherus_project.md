@@ -6,7 +6,7 @@ description = "A multi-year, multi-institution collaboration"
 featured = "gophertort1.jpg"
 featuredalt = ""
 featuredpath = "/img"
-linktitle = "Pdog"
+linktitle = "gopherus"
 title = "Modeling critical habitat breadth for Gopherus tortoises"
 type = "post"
 +++

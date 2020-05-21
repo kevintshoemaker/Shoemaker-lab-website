@@ -12,25 +12,25 @@
     
     
     <item>
-      <title>About the Applied Population Ecology (A.P.E.) Lab</title>
-      <link>/posts/about/</link>
-      <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/about/</guid>
-      <description>Our mission Our expertise is in population biology, simulation modeling and statistics, and our passion is wildlife conservation. We combine our expertise and passion in creative ways. For example, we have
- Used Bayesian statistics and simulation modeling to assess the conservation status of the bog turtle (Glyptemys muhlenbergii) Modeled the impact of sylvatic plague on prairie dog and black-footed ferret populations. Developed a new statistical approach for assessing the threatening processes underlying wildlife population declines.</description>
-    </item>
-    
-    <item>
       <title>Tail bifurcation in Plestiodon skiltonianus</title>
       <link>/posts/bifurcation_paper/</link>
       <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/bifurcation_paper/</guid>
       <description>As part of our field research, members of the A.P.E. lab occasionally stumble on a novel observation worthy of a published &amp;lsquo;natural history note&amp;rsquo;. Here, we note the observation of tail bifurcation in the western skink, Plestiodon skiltonianus:
-Excitingly, this is the first publication for UNR undergraduate Chasey Danser (pictured below doing field research)- congratulations Chasey!!
+This is the first publication for UNR undergraduate Chasey Danser (pictured below doing field research)- congratulations Chasey!!
 (Photo credit: Danielle C. Miles)
 [Miles, D.C., Danser, C., and K.T. Shoemaker. 2020. Tail bifurcation in Plestiodon skiltonianus.</description>
+    </item>
+    
+    <item>
+      <title>About the Applied Population Ecology (A.P.E.) Lab</title>
+      <link>/posts/about/</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/about/</guid>
+      <description>Our mission Our expertise is in population biology, simulation modeling and statistics, and our passion is wildlife conservation. We combine our expertise and passion in creative ways. For example, we have
+ Used Bayesian statistics and simulation modeling to assess the conservation status of the bog turtle (Glyptemys muhlenbergii) Modeled the impact of sylvatic plague on prairie dog and black-footed ferret populations. Developed a new statistical approach for assessing the threatening processes underlying wildlife population declines.</description>
     </item>
     
     <item>
@@ -61,9 +61,18 @@ Assistant Professor, Natural Resources &amp;amp; Environmental Science</descript
       
       <guid>/posts/geolocator_project/</guid>
       <description>This project, supported by the Nevada Department of Wildlife and Nevada Waterfowl Association, uses light-level geolocators to understand the annual migratory pathways of waterfowl in the Pacific flyway, and to assess the timing and location of individual breeding activities.
-This work is part of a larger effort to monitor wood duck population dynamics and movements in and around Fallon, NV (Fallon Wood Duck Project).
+This work is part of a larger effort to monitor wood duck population dynamics and movements in and around Fallon, NV (Fallon Wood Duck Project, PI Chris Nicolai).
 Delta Waterfowl:
- Dr. Chris Nicolai  Publications Cook, N.</description>
+ Dr.</description>
+    </item>
+    
+    <item>
+      <title>Conservation of bog turtle metapopulations in the eastern USA</title>
+      <link>/posts/bog_turtles/</link>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/bog_turtles/</guid>
+      <description>Dr. Shoemaker&amp;rsquo;s PhD dissertation focused on the conservation of bog turtles (Glyptemys muhlenbergii) in New York and Massachusetts. Building upon an existing capture-recapture dataset, he estimated population vital rates and abundance of these turtles in small wetlands in eastern New York (Dutchess County) and assessed for evidence of dispersal within a complex of multiple neighboring wetlands. His work also used microsatellite genotypes to further assess gene flow within these wetland complexes.</description>
     </item>
     
     <item>

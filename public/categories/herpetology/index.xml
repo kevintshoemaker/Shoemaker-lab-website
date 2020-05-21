@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Herpetology on Applied Population Ecology Lab at UNR</title>
+    <link>/categories/herpetology/</link>
+    <description>Recent content in Herpetology on Applied Population Ecology Lab at UNR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/herpetology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tail bifurcation in Plestiodon skiltonianus</title>
+      <link>/posts/bifurcation_paper/</link>
+      <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/bifurcation_paper/</guid>
+      <description>As part of our field research, members of the A.P.E. lab occasionally stumble on a novel observation worthy of a published &amp;lsquo;natural history note&amp;rsquo;. Here, we note the observation of tail bifurcation in the western skink, Plestiodon skiltonianus:
+This is the first publication for UNR undergraduate Chasey Danser (pictured below doing field research)- congratulations Chasey!!
+(Photo credit: Danielle C. Miles)
+[Miles, D.C., Danser, C., and K.T. Shoemaker. 2020. Tail bifurcation in Plestiodon skiltonianus.</description>
+    </item>
+    
+    <item>
+      <title>Conservation of bog turtle metapopulations in the eastern USA</title>
+      <link>/posts/bog_turtles/</link>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/bog_turtles/</guid>
+      <description>Dr. Shoemaker&amp;rsquo;s PhD dissertation focused on the conservation of bog turtles (Glyptemys muhlenbergii) in New York and Massachusetts. Building upon an existing capture-recapture dataset, he estimated population vital rates and abundance of these turtles in small wetlands in eastern New York (Dutchess County) and assessed for evidence of dispersal within a complex of multiple neighboring wetlands. His work also used microsatellite genotypes to further assess gene flow within these wetland complexes.</description>
+    </item>
+    
+  </channel>
+</rss>

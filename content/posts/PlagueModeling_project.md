@@ -6,7 +6,7 @@ description = "Modeling host evolution in a dynamic metapopulation"
 featured = "pdog2.jpg"
 featuredalt = ""
 featuredpath = "/img"
-linktitle = "Pdog"
+linktitle = "plague"
 title = "Understanding the potential for widespread plague resistance in prairie dogs"
 type = "post"
 +++

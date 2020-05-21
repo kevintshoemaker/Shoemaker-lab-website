@@ -6,7 +6,7 @@ description = "Rangewide demography, genetics and habitat mapping"
 featured = "BIDA2.jpg"
 featuredalt = ""
 featuredpath = "/img"
-linktitle = "Pdog"
+linktitle = "bida"
 title = "Understanding the conservation status and habitat needs of the pygmy rabbit"
 type = "post"
 +++
