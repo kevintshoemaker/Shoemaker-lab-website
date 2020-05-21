@@ -1,9 +1,13 @@
 +++
-title = "About the Applied Population Ecology (A.P.E.) Lab"
-date = "2025-05-20"
+author = "Applied Population Ecology Lab"
+categories = ["Population modeling", "Projects", "Posts"]
+date = "2025-09-29"
+description = "About the A.P.E. lab"
 featured = "PJ2.JPG"
-featuredpath = "/img"
 featuredalt = ""
+featuredpath = "/img"
+linktitle = "APElab"
+title = "About the Applied Population Ecology (A.P.E.) Lab"
 type = "post"
 +++
 
