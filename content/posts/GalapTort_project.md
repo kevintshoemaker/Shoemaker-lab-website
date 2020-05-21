@@ -18,10 +18,10 @@ Building on previous work from our group on the population dynamics of reintrodu
 
 Our paper on this work (Seeking compromise across competing goals in conservation translocations: The case of the ‘extinct’ Floreana Island Galapagos giant tortoise) was recently published in Journal of Applied Ecology: https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2664.13516?casa_token=8Y42_upR4jIAAAAA%3ALVSkAK-GL4Ge4Xdi0ByYVyoziEjSiF-FFOhV5kMdkJgG2GYAuPk31bxXsP5zj9EvSDyft6T68XsKdUk
 
-Project lead: [Elizabeth Hunter](http://elizabethhunter.weebly.com/)
+* Project lead: [Elizabeth Hunter](http://elizabethhunter.weebly.com/)
 
 ### Publications
 
-[Hunter, E.A., Gibbs, J.P., Cayot, L.J, Tapia, W., Quinzin, M.C., Miller, J.C., Caccone, A., and Shoemaker, K.T. 2019. Seeking compromise across competing goals in conservation translocations: The case of the “extinct” Floreana Island Galapagos giant tortoise. Journal of Applied Ecology.](/pdf/Hunter et al 2019 seeking compromise among competing goals -- floreana island galapagos tortoise.pdf)
+* [Hunter, E.A., Gibbs, J.P., Cayot, L.J, Tapia, W., Quinzin, M.C., Miller, J.C., Caccone, A., and Shoemaker, K.T. 2019. Seeking compromise across competing goals in conservation translocations: The case of the “extinct” Floreana Island Galapagos giant tortoise. Journal of Applied Ecology.](/pdf/Hunter et al 2019 seeking compromise among competing goals -- floreana island galapagos tortoise.pdf)
 
-[Gibbs, J.P, Shoemaker, K.T., Hunter, E.A., Cayot, L., & Tapia, W. 2014. Giant Tortoise Reintroduction to Española Island, Galapagos: Demographic Outcomes and Ecosystem Implications. PLoS ONE.](/pdf/Gibbs et al 2014 Demography of Espanola Giant Tortoise.pdf)
+* [Gibbs, J.P, Shoemaker, K.T., Hunter, E.A., Cayot, L., & Tapia, W. 2014. Giant Tortoise Reintroduction to Española Island, Galapagos: Demographic Outcomes and Ecosystem Implications. PLoS ONE.](/pdf/Gibbs et al 2014 Demography of Espanola Giant Tortoise.pdf)

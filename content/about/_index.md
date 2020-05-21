@@ -26,5 +26,5 @@ If you are interested in joining the A.P.E. lab as a graduate student, here are 
 * To be admitted to the program, you must apply! To apply you must take the general Graduate Record Exam or GRE (the “general test” is sufficient for applying to our department). Generally speaking, most students apply in the spring (Feb.-Mar.) and start in August. But there are good reasons to start in January, especially for MS students (two field seasons sandwiched between your semesters as opposed to one).
 * [Some practical advice for graduate students!](/pdf/Witz_grad_advice.pdf)
 
-## Contact us
+## Contact us  
 Please email [Dr. Shoemaker](kevinshoemaker@unr.edu) if you have any questions!

@@ -20,21 +20,21 @@ At each of our four project areas, we established one control transect (no tree 
 
 ![Pinyon and Juniper woodland](/img/PJ1.jpg)
 
-Project lead: [Kevin Shoemaker](http://naes.unr.edu/shoemaker/)
-Graduate student lead: [Danielle Miles](https://www.linkedin.com/in/danielle-miles-79a08489)
+* Project lead: [Kevin Shoemaker](http://naes.unr.edu/shoemaker/)
+* Graduate student lead: [Danielle Miles](https://www.linkedin.com/in/danielle-miles-79a08489)
 
-Key UNR collaborators:
+**Key UNR collaborators:**
 
-[Matt Forister](https://sites.google.com/site/greatbasinbuglab/)
-[Chris Feldman](http://wolfweb.unr.edu/~ophis/Feldman_Lab/Welcome.html)
-[Peter Weisberg and Tom Dilts](https://naes.unr.edu/weisberg/)
+* [Matt Forister](https://sites.google.com/site/greatbasinbuglab/)
+* [Chris Feldman](http://wolfweb.unr.edu/~ophis/Feldman_Lab/Welcome.html)
+* [Peter Weisberg and Tom Dilts](https://naes.unr.edu/weisberg/)
 
-Other collaborators
+**Other collaborators**
 
-Bryan Hamilton, NPS
-Jane VanGunst, NDOW
-Gail Collins, USFWS
-Jason Williams, NDOW
+* Bryan Hamilton, NPS
+* Jane VanGunst, NDOW
+* Gail Collins, USFWS
+* Jason Williams, NDOW
 
 ### Publications
 

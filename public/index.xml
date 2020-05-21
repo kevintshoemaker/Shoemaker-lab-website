@@ -20,7 +20,7 @@
       <description>As part of our field research, members of the A.P.E. lab occasionally stumble on a novel observation worthy of a published &amp;lsquo;natural history note&amp;rsquo;. Here, we note the observation of tail bifurcation in the western skink, Plestiodon skiltonianus:
 This is the first publication for UNR undergraduate Chasey Danser (pictured below doing field research)- congratulations Chasey!!
 (Photo credit: Danielle C. Miles)
-[Miles, D.C., Danser, C., and K.T. Shoemaker. 2020. Tail bifurcation in Plestiodon skiltonianus.</description>
+ [Miles, D.C., Danser, C., and K.T. Shoemaker. 2020. Tail bifurcation in Plestiodon skiltonianus.</description>
     </item>
     
     <item>
@@ -116,28 +116,27 @@ UNR collaborators:
     </item>
     
     <item>
-      <title>Dr. Elizabeth Hunter</title>
-      <link>/posts/epost20161003/</link>
-      <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/epost20161003/</guid>
-      <description>I was a postdoctoral researcher in the A.P.E. lab from 2016-2018 where I worked on several population modeling projects including: predicting plague outbreaks in black-tailed prairie dogs, using abundance data to predict the effects of competition on songbird responses to climate change, and simulation modeling to inform restoration of giant tortoise populations in the Galapagos Islands. I am now an Assistant Professor of Landscape Ecology at Georgia Southern University.
-Visit my personal webpage here</description>
-    </item>
-    
-    <item>
       <title>Predictive modeling of plague die-offs in prairie dog colonies</title>
       <link>/posts/predictiveplaguedieoff_project/</link>
-      <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/predictiveplaguedieoff_project/</guid>
       <description>Several published studies have already shown that temperature, precipitation and topography can affect the probability of a die-off event. However, a broader synthesis of datasets from across the BTPD range may enable more accurate prediction of when and where die-offs will occur. The APE lab is leading a large collaborative project to create predictive models of BTPD colony die-offs caused by the plague bacterium. We have acquired colony history data from across the BTPD range and are working on using machine learning techniques to create a model of plague outbreaks that can help managers determine how best to target their anti-plague management activities (such as &amp;ldquo;dusting&amp;rdquo; for fleas and vaccine administration).</description>
     </item>
     
     <item>
+      <title>Dr. Elizabeth Hunter</title>
+      <link>/posts/epost20161003/</link>
+      <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/epost20161003/</guid>
+      <description>Dr. Elizabeth Hunter was a postdoctoral researcher in the A.P.E. lab from 2016-2018 where she worked on several population modeling projects including: predicting plague outbreaks in black-tailed prairie dogs, using abundance data to predict the effects of competition on songbird responses to climate change, and simulation modeling to inform restoration of giant tortoise populations in the Galapagos Islands. She is now an Assistant Professor of Landscape Ecology at Georgia Southern University.</description>
+    </item>
+    
+    <item>
       <title>Understanding the potential for widespread plague resistance in prairie dogs</title>
       <link>/posts/plaguemodeling_project/</link>
-      <pubDate>Tue, 17 Jan 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/plaguemodeling_project/</guid>
       <description>Prairie dogs are keystone species of North America’s central grasslands, and have experienced dramatic population reductions over the past century due to sylvatic plague, a highly virulent disease introduced to North America ca. 1900. The APE lab is involved in building a novel host-resistance modeling framework to investigate the genetic, demographic and environmental conditions that promote or impede resistance to plague and other similar virulent pathogens in complex and dynamic ecosystems.</description>

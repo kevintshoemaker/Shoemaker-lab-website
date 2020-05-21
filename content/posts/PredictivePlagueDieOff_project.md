@@ -1,7 +1,7 @@
 +++
 author = "Elizabeth Hunter"
 categories = ["Population modeling", "Central grasslands ecosystem", "prairie dogs", "Wildlife Management", "Projects", "Posts"]
-date = "2018-01-23"
+date = "2018-10-23"
 featured = "pdog2.jpg"
 featuredalt = ""
 featuredpath = "/img"

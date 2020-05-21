@@ -1,7 +1,7 @@
 +++
 author = "Kevin Shoemaker"
 categories = ["Population modeling", "Central grasslands ecosystem", "Wildlife Management", "Projects", "Posts"]
-date = "2017-01-17"
+date = "2018-01-17"
 description = "Modeling host evolution in a dynamic metapopulation"
 featured = "pdog2.jpg"
 featuredalt = ""

@@ -20,4 +20,4 @@ This is the first publication for UNR undergraduate Chasey Danser (pictured belo
 (Photo credit: Danielle C. Miles)
 
 
-[Miles, D.C., Danser, C., and K.T. Shoemaker. 2020. Tail bifurcation in Plestiodon skiltonianus. Herpetology Notes. https://www.biotaxa.org/hn/article/viewFile/57502/60850](/pdf/Miles et al 2020 tail bifurcation in Plestodon skiltonianus.pdf)
+* [Miles, D.C., Danser, C., and K.T. Shoemaker. 2020. Tail bifurcation in Plestiodon skiltonianus. Herpetology Notes. https://www.biotaxa.org/hn/article/viewFile/57502/60850](/pdf/Miles et al 2020 tail bifurcation in Plestodon skiltonianus.pdf)

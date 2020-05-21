@@ -18,7 +18,7 @@ Miranda is a PhD student who joined the Shoemaker and Matocq labs in April 2016.
 
 The first chapter from Miranda's dissertation is currently in review at *Journal of Mammalogy*:
 
-Crowell, M.M., Matocq, M.D., Shoemaker, K.T. Submitted. Ideal trapping conditions for increased trap success of pygmy rabbits (Brachylagus idahoensis) across the Great Basin. *Journal of Mammalogy.*
+* Crowell, M.M., Matocq, M.D., Shoemaker, K.T. Submitted. Ideal trapping conditions for increased trap success of pygmy rabbits (*Brachylagus idahoensis*) across the Great Basin. *Journal of Mammalogy.*
 
 ### Contact
 
