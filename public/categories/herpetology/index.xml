@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Herpetology on Applied Population Ecology Lab at UNR</title>
@@ -7,9 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/herpetology/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/categories/herpetology/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Tail bifurcation in Plestiodon skiltonianus</title>
@@ -17,10 +15,18 @@
       <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/bifurcation_paper/</guid>
-      <description>As part of our field research, members of the A.P.E. lab occasionally stumble on a novel observation worthy of a published &amp;lsquo;natural history note&amp;rsquo;. Here, we note the observation of tail bifurcation in the western skink, Plestiodon skiltonianus:
-This is the first publication for UNR undergraduate Chasey Danser (pictured below doing field research)- congratulations Chasey!!
-(Photo credit: Danielle C. Miles)
- [Miles, D.C., Danser, C., and K.T. Shoemaker. 2020. Tail bifurcation in Plestiodon skiltonianus.</description>
+      <description>&lt;p&gt;As part of our field research, members of the A.P.E. lab occasionally stumble on a novel observation worthy of a published &amp;lsquo;natural history note&amp;rsquo;. Here, we note the observation of tail bifurcation in the western skink, &lt;em&gt;Plestiodon skiltonianus&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;This is the first publication for UNR undergraduate Chasey Danser (pictured below doing field research)- congratulations Chasey!!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/chasey1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Photo credit: Danielle C. Miles)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/pdf/Miles et al 2020 tail bifurcation in Plestodon skiltonianus.pdf&#34;&gt;Miles, D.C., Danser, C., and K.T. Shoemaker. 2020. Tail bifurcation in Plestiodon skiltonianus. Herpetology Notes. https://www.biotaxa.org/hn/article/viewFile/57502/60850&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -29,7 +35,24 @@ This is the first publication for UNR undergraduate Chasey Danser (pictured belo
       <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/bog_turtles/</guid>
-      <description>Dr. Shoemaker&amp;rsquo;s PhD dissertation focused on the conservation of bog turtles (Glyptemys muhlenbergii) in New York and Massachusetts. Building upon an existing capture-recapture dataset, he estimated population vital rates and abundance of these turtles in small wetlands in eastern New York (Dutchess County) and assessed for evidence of dispersal within a complex of multiple neighboring wetlands. His work also used microsatellite genotypes to further assess gene flow within these wetland complexes.</description>
+      <description>
+
+&lt;p&gt;Dr. Shoemaker&amp;rsquo;s PhD dissertation focused on the conservation of bog turtles (&lt;em&gt;Glyptemys muhlenbergii&lt;/em&gt;) in New York and Massachusetts. Building upon an existing capture-recapture dataset, he estimated population vital rates and abundance of these turtles in small wetlands in eastern New York (Dutchess County) and assessed for evidence of dispersal within a complex of multiple neighboring wetlands. His work also used microsatellite genotypes to further assess gene flow within these wetland complexes.&lt;/p&gt;
+
+&lt;p&gt;More recently, Dr. Shoemaker helped to mentor Suzanne Macey (PhD student, Fordham University), who continued to collect data from the same wetland complexes, performed nesting surveys, and analyzed the genetics data to assess parentage and patterns of nest site fidelity.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;American Museum of Natural History&lt;/strong&gt;&lt;br /&gt;
+* &lt;a href=&#34;https://www.amnh.org/research/staff-directory/suzanne-macey&#34;&gt;Dr. Suzanne Macey&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;publications&#34;&gt;Publications&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Macey, S.K., Vaidya, P.B., Chiu, C., Clark, J.A., and Shoemaker, K.T. Resubmitted, 2020. Evidence for Nest-Site Fidelity but not Natal Homing in Bog Turtles (&lt;em&gt;Glyptemys muhlenbergii&lt;/em&gt;). Journal of Herpetology.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/pdf/Shoemaker et al 2014 disambiguating the MVP concept.pdf&#34;&gt;Shoemaker, K.T., Breisch, A.R., Jaycox, J.W., &amp;amp; Gibbs, J.P. 2014. Disambiguating the Minimum Viable Population Concept: Response to Reed and McCoy. Conservation Biology 28:871-873.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/pdf/Shoemaker et al. 2013 Reexamining the minimum viable population concept for long lived species.pdf&#34;&gt;Shoemaker, K.T., A.R. Breisch, J. Jaycox, and J.P. Gibbs. 2013. Re-examining the minimum viable population concept for long-lived species. Conservation Biology 27:542-551.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Shoemaker and Gibbs 2013 Genetic connectivity among populations of the threatened bog turtle.pdf&#34;&gt;Shoemaker, K.T., and J.P. Gibbs. 2013. Genetic Connectivity Among Populations of the Threatened Bog Turtle (Glyptemys muhlenbergii) and the Need for a Regional Approach to Turtle Conservation. Copeia 2013:324-331.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>

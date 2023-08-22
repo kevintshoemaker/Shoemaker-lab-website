@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Galapagos on Applied Population Ecology Lab at UNR</title>
@@ -7,17 +7,36 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/galapagos/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/categories/galapagos/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Simulation modeling to support restoration of extinct Galapagos giant tortoise populations</title>
-      <link>/posts/galaptort_project/</link>
+      <link>/posts/GalapTort_project/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/galaptort_project/</guid>
-      <description>In the 19th century, populations of giant tortoises in the Galapagos Islands were decimated by whalers and pirates, who kept and killed tortoises on their ships as a resilient source of fresh meat for long ocean voyages. Particularly hard-hit were &amp;ldquo;saddlebacked&amp;rdquo; species that inhabited the islands&amp;rsquo; arid lowlands closer to the coasts. Of the five saddlebacked species, two have been declared extinct: Chelonoidis elephantopus from Floreana Island and C. abingdonii from Pinta Island (the latter only recently declared extinct in 2012 with the death of the Lonesome George).</description>
+      <guid>/posts/GalapTort_project/</guid>
+      <description>
+
+&lt;p&gt;In the 19th century, populations of giant tortoises in the Galapagos Islands were decimated by whalers and pirates, who kept and killed tortoises on their ships as a resilient source of fresh meat for long ocean voyages. Particularly hard-hit were &amp;ldquo;saddlebacked&amp;rdquo; species that inhabited the islands&amp;rsquo; arid lowlands closer to the coasts.  Of the five saddlebacked species, two have been declared extinct: &lt;em&gt;Chelonoidis elephantopus&lt;/em&gt; from Floreana Island and &lt;em&gt;C. abingdonii&lt;/em&gt; from Pinta Island (the latter only recently declared extinct in 2012 with the death of the Lonesome George).  However, &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S0960982211013765&#34;&gt;geneticists have recently discovered&lt;/a&gt; that, through the translocating behaviors of the very same sailors, the &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S000632071200434X&#34;&gt;genotypes of these extinct species still exist&lt;/a&gt; within individuals of mixed ancestry on Wolf Volcano on Isabela Island.  An expedition in 2015 recovered some of these mixed ancestry tortoises and brought them into captivity with the hope of starting a captive breeding program to restore tortoise populations on Floreana and Pinta Islands that represent the original genotype of the native species.&lt;/p&gt;
+
+&lt;h2 id=&#34;simulation-modeling-to-support-decision-making&#34;&gt;Simulation modeling to support decision-making&lt;/h2&gt;
+
+&lt;p&gt;Building on previous work from our group on the population dynamics of reintroduced populations of saddlebacked giant tortoises (&lt;a href=&#34;/pdf/Gibbs et al 2014 Demography of Espanola Giant Tortoise.pdf&#34;&gt;Gibbs, Hunter, Shoemaker et al. 2014&lt;/a&gt;) and the ecosystem effects of tortoise populations (&lt;a href=&#34;/pdf/Hunter and Gibbs 2014.pdf&#34;&gt;Hunter and Gibbs 2014&lt;/a&gt;), we built a simulation model to find a breeding program strategy that simultaneously maximizes the percentage of the native genotype in the restored population, the population growth rate, and the beneficial ecological effects of tortoises, all while minimizing costs.  We used the individual-based modeling software NetLogo to create a model that incorporates genetic information from program STRUCTURE and population parameters estimated using the Bayesian estimation software WinBUGS.  Ultimately, these efforts are intended to assist the &lt;a href=&#34;http://www.galapagos.gob.ec/&#34;&gt;Galapagos National Park&lt;/a&gt; and the &lt;a href=&#34;http://www.galapagos.org/conservation/conservation/project-areas/ecosystem-restoration/tortoise-restoration/&#34;&gt;Galapagos Conservancy&lt;/a&gt; in implementing effective strategies for restoring tortoise populations to Floreana and Pinta Islands.&lt;/p&gt;
+
+&lt;p&gt;Our paper on this work (Seeking compromise across competing goals in conservation translocations: The case of the ‘extinct’ Floreana Island Galapagos giant tortoise) was recently published in Journal of Applied Ecology: &lt;a href=&#34;https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2664.13516?casa_token=8Y42_upR4jIAAAAA%3ALVSkAK-GL4Ge4Xdi0ByYVyoziEjSiF-FFOhV5kMdkJgG2GYAuPk31bxXsP5zj9EvSDyft6T68XsKdUk&#34;&gt;https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2664.13516?casa_token=8Y42_upR4jIAAAAA%3ALVSkAK-GL4Ge4Xdi0ByYVyoziEjSiF-FFOhV5kMdkJgG2GYAuPk31bxXsP5zj9EvSDyft6T68XsKdUk&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Project lead: &lt;a href=&#34;http://elizabethhunter.weebly.com/&#34;&gt;Elizabeth Hunter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;publications&#34;&gt;Publications&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;/pdf/Hunter et al 2019 seeking compromise among competing goals -- floreana island galapagos tortoise.pdf&#34;&gt;Hunter, E.A., Gibbs, J.P., Cayot, L.J, Tapia, W., Quinzin, M.C., Miller, J.C., Caccone, A., and Shoemaker, K.T. 2019. Seeking compromise across competing goals in conservation translocations: The case of the “extinct” Floreana Island Galapagos giant tortoise. Journal of Applied Ecology.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;/pdf/Gibbs et al 2014 Demography of Espanola Giant Tortoise.pdf&#34;&gt;Gibbs, J.P, Shoemaker, K.T., Hunter, E.A., Cayot, L., &amp;amp; Tapia, W. 2014. Giant Tortoise Reintroduction to Española Island, Galapagos: Demographic Outcomes and Ecosystem Implications. PLoS ONE.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>

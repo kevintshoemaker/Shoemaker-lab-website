@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Great Basin ecosystem on Applied Population Ecology Lab at UNR</title>
@@ -7,9 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/great-basin-ecosystem/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/categories/great-basin-ecosystem/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Tail bifurcation in Plestiodon skiltonianus</title>
@@ -17,32 +15,104 @@
       <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/bifurcation_paper/</guid>
-      <description>As part of our field research, members of the A.P.E. lab occasionally stumble on a novel observation worthy of a published &amp;lsquo;natural history note&amp;rsquo;. Here, we note the observation of tail bifurcation in the western skink, Plestiodon skiltonianus:
-This is the first publication for UNR undergraduate Chasey Danser (pictured below doing field research)- congratulations Chasey!!
-(Photo credit: Danielle C. Miles)
- [Miles, D.C., Danser, C., and K.T. Shoemaker. 2020. Tail bifurcation in Plestiodon skiltonianus.</description>
+      <description>&lt;p&gt;As part of our field research, members of the A.P.E. lab occasionally stumble on a novel observation worthy of a published &amp;lsquo;natural history note&amp;rsquo;. Here, we note the observation of tail bifurcation in the western skink, &lt;em&gt;Plestiodon skiltonianus&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;This is the first publication for UNR undergraduate Chasey Danser (pictured below doing field research)- congratulations Chasey!!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/chasey1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Photo credit: Danielle C. Miles)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/pdf/Miles et al 2020 tail bifurcation in Plestodon skiltonianus.pdf&#34;&gt;Miles, D.C., Danser, C., and K.T. Shoemaker. 2020. Tail bifurcation in Plestiodon skiltonianus. Herpetology Notes. https://www.biotaxa.org/hn/article/viewFile/57502/60850&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
       <title>Understanding the conservation status and habitat needs of the pygmy rabbit</title>
-      <link>/posts/pygmyrabbit_project/</link>
+      <link>/posts/PygmyRabbit_project/</link>
       <pubDate>Fri, 17 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/pygmyrabbit_project/</guid>
-      <description>The A.P.E. lab is part of a larger team at UNR investigating the population genetics and demography of the pygmy rabbit (Brachylagus idahoensis) in the Great Basin.
-To stay up to date on the pygmy rabbit project, led by APE lab PhD student Miranda Crowell, check out her website
-UNR collaborators:
- Marjorie Matocq Peter Weisberg and Tom Dilts Jim Sedinger  Other collaborators:
- Sheldon and Hart National Wildlife Refuges, Nevada Department of Wildlife, Great Basin Landscape Conservation Cooperative, Greater Hart-Sheldon Fund  Publications: Crowell, M.</description>
+      <guid>/posts/PygmyRabbit_project/</guid>
+      <description>
+
+&lt;p&gt;The A.P.E. lab is part of a larger team at UNR investigating the population genetics and demography of the pygmy rabbit (&lt;em&gt;Brachylagus idahoensis&lt;/em&gt;) in the Great Basin.&lt;/p&gt;
+
+&lt;p&gt;To stay up to date on the pygmy rabbit project, led by APE lab PhD student Miranda Crowell, check out her &lt;a href=&#34;http://mirandamaurine.weebly.com/pygmy-rabbit-project.html&#34;&gt;website&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UNR collaborators:&lt;/strong&gt;
+* &lt;a href=&#34;https://naes.unr.edu/matocq/&#34;&gt;Marjorie Matocq&lt;/a&gt;
+* &lt;a href=&#34;https://naes.unr.edu/weisberg/&#34;&gt;Peter Weisberg and Tom Dilts&lt;/a&gt;
+* &lt;a href=&#34;http://www.ag.unr.edu/sedinger/&#34;&gt;Jim Sedinger&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Other collaborators:&lt;/strong&gt;&lt;br /&gt;
+* Sheldon and Hart National Wildlife Refuges, Nevada Department of Wildlife, Great Basin Landscape Conservation Cooperative,
+Greater Hart-Sheldon Fund&lt;/p&gt;
+
+&lt;h3 id=&#34;publications&#34;&gt;Publications:&lt;/h3&gt;
+
+&lt;p&gt;Crowell, M.M., Matocq, M.D., Dilts, T., Shoemaker, K.T. In prep. Turnover in pygmy rabbit (Brachylagus idahoensis) site and burrow activity in the Great Basin. Conservation Biology.&lt;/p&gt;
+
+&lt;p&gt;Crowell, M.M., Matocq, M.D., Shoemaker, K.T. In prep. Spatial and temporal density estimates of pygmy rabbits (Brachylagus idahoensis) across the Great Basin. Journal of Animal Ecology.&lt;/p&gt;
+
+&lt;p&gt;Crowell, M.M., Matocq, M.D., Shoemaker, K.T. In review. Ideal trapping conditions for increased trap success of pygmy rabbits (&lt;em&gt;Brachylagus idahoensis&lt;/em&gt;) across the Great Basin. Journal of Mammalogy.&lt;/p&gt;
+
+&lt;p&gt;Larrucea, E. S., Robinson, M. L., Rippert, J. S., &amp;amp; Matocq, M. D. (2018). Genetically distinct populations of the pygmy rabbit (Brachylagus idahoensis) in the Mono Basin of California. Journal of Mammalogy, 99(2), 408-415.&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Understanding the broader ecological impacts of PJ removal</title>
-      <link>/posts/pj_project/</link>
+      <link>/posts/PJ_project/</link>
       <pubDate>Wed, 12 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>/posts/pj_project/</guid>
-      <description>Investigating the broad ecological impacts of Pinyon and Juniper removal in Nevada Thousands of acres of pinyon and juniper woodlands (PJ) will be removed over the next four years to support targeted wildlife populations, notably Greater sage-grouse. We are investigating the effects of PJ removal on insect communities and the bats and reptile species that rely upon them using a rigorous experimental design. Insects can serve as useful indicators of natural disturbances, provide critical pollination services, and represent a major wildlife food resource for many species, including an impressive diversity of bats and reptiles.</description>
+      <guid>/posts/PJ_project/</guid>
+      <description>
+
+&lt;h2 id=&#34;investigating-the-broad-ecological-impacts-of-pinyon-and-juniper-removal-in-nevada&#34;&gt;Investigating the broad ecological impacts of Pinyon and Juniper removal in Nevada&lt;/h2&gt;
+
+&lt;p&gt;Thousands of acres of pinyon and juniper woodlands (PJ) will be removed over the next four years to support targeted wildlife populations, notably Greater sage-grouse. We are investigating the effects of PJ removal on insect communities and the bats and reptile species that rely upon them using a rigorous experimental design. Insects can serve as useful indicators of natural disturbances, provide critical pollination services, and represent a major wildlife food resource for many species, including an impressive diversity of bats and reptiles. Little is known about habitat use and disturbance tolerance for bats and reptiles in the Great Basin. For example, some bat species may benefit from tree removal (e.g., cleared areas may improve foraging or success), while other species may be negatively impacted by tree removal (e.g, loss of roosting sites). We are establishing a set of fixed transects, each spanning a gradient from sagebrush steppe to PJ woodland and monitored 3 to 4 times annually. Transects will be established in four project areas distributed widely across the Great Basin- including the Sheldon-Hart refuges and the Ely region (near Great Basin National Park).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/GBLCCschematic.png&#34; alt=&#34;Schematic of study design&#34; /&gt;
+At each of our four project areas, we established one control transect (no tree removal at any point during the four-year study), one pre-treatment transect (tree removal scheduled for year 2 or 3 of the study), and one post-treatment transect (tree removal conducted 1-5 years prior to the initiation of research activities). At regular intervals along each transect, we monitor the diversity and density of bats, reptiles and insects using an array of active trapping and passive survey methods. Data analysis is ongoing and focuses on evaluating the community-level effects of PJ removal and modeling bat, reptile and insect diversity and abundance as a function of environmental drivers such as vegetation structure, distance from water source, and climate.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/PJ1.jpg&#34; alt=&#34;Pinyon and Juniper woodland&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Project lead: &lt;a href=&#34;http://naes.unr.edu/shoemaker/&#34;&gt;Kevin Shoemaker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Graduate student lead: &lt;a href=&#34;https://www.linkedin.com/in/danielle-miles-79a08489&#34;&gt;Danielle Miles&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Key UNR collaborators:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sites.google.com/site/greatbasinbuglab/&#34;&gt;Matt Forister&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wolfweb.unr.edu/~ophis/Feldman_Lab/Welcome.html&#34;&gt;Chris Feldman&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://naes.unr.edu/weisberg/&#34;&gt;Peter Weisberg and Tom Dilts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Other collaborators&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bryan Hamilton, NPS&lt;/li&gt;
+&lt;li&gt;Jane VanGunst, NDOW&lt;/li&gt;
+&lt;li&gt;Gail Collins, USFWS&lt;/li&gt;
+&lt;li&gt;Jason Williams, NDOW&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;publications&#34;&gt;Publications&lt;/h3&gt;
+
+&lt;p&gt;We have published three natural history notes (one additional currently in prep) during her time in the A.P.E. lab so far, and will be submitting additional manuscripts from this work this summer (2020).&lt;/p&gt;
+
+&lt;p&gt;Miles, D.C., Burrus, K.R., Burrus, M., and K.T. Shoemaker. &lt;em&gt;In prep.&lt;/em&gt; Foot Drumming in Pinyon Mice, Peromyscus truei. Western North American Naturalist.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;/pdf/Miles et al in press dusky footed woodrat.pdf&#34;&gt;Miles, D.C., Burrus, K., and K.T. Shoemaker. Accepted. First Records of the Dusky-Footed Woodrat, Neotoma fuscipes, in Northern Nevada. Northwestern Naturalist.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;/pdf/Miles et al 2020 tail bifurcation in Plestodon skiltonianus.pdf&#34;&gt;Miles, D.C., Danser, C., and K.T. Shoemaker. 2020. Tail bifurcation in Plestiodon skiltonianus. Herpetology Notes. https://www.biotaxa.org/hn/article/viewFile/57502/60850&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;/pdf/Miles et al 2020 california kangaroo rat in nevada.pdf&#34;&gt;Miles, D.C.,  Burrus, K.R., and K.T. Shoemaker. 2020. First records of California Kangaroo Rats, Dipodomys californicus, in Nevada,&amp;rdquo; Northwestern Naturalist 101(1), 61-63&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

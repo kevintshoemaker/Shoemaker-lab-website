@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Climate change on Applied Population Ecology Lab at UNR</title>
@@ -7,17 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/climate-change/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/categories/climate-change/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Modeling critical habitat breadth for Gopherus tortoises</title>
-      <link>/posts/gopherus_project/</link>
+      <link>/posts/Gopherus_project/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/gopherus_project/</guid>
-      <description>The A.P.E. lab is leading a large, multi-institution collaboration investigating the climate resilience of populations of gopher tortoise (Gopherus polyphemus) and Mojave desert tortoise (Gopherus agassizii). In this project, funded by the Department of Defense (SERDP program), we are building models of tortoise vital rates (age-structured survival, fecundity) as functions of environmental and climatic covariates and simultaneously assessing for evidence of local behavioral and physiological adaptations. We are then using these models to quantify the range of environmental change that populations can withstand in situ without the need for natural selection or long-distance movement to more suitable habitats.</description>
+      <guid>/posts/Gopherus_project/</guid>
+      <description>
+
+&lt;p&gt;The A.P.E. lab is leading a large, multi-institution collaboration investigating the climate resilience of populations of gopher tortoise (&lt;em&gt;Gopherus polyphemus&lt;/em&gt;) and Mojave desert tortoise (&lt;em&gt;Gopherus agassizii&lt;/em&gt;). In this project, funded by the Department of Defense (SERDP program), we are building models of tortoise vital rates (age-structured survival, fecundity) as functions of environmental and climatic covariates and simultaneously assessing for evidence of local behavioral and physiological adaptations. We are then using these models to quantify the range of environmental change that populations can withstand in situ without the need for natural selection or long-distance movement to more suitable habitats.&lt;/p&gt;
+
+&lt;p&gt;Here is a visual schematic of our study design:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/studydesign.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And below is a big-picture schematic of our project:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/Serdp_gopherus1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UNR:&lt;/strong&gt;&lt;br /&gt;
+* &lt;a href=&#34;https://www.unr.edu/geography/faculty/kenneth-nussear&#34;&gt;Ken Nussear&lt;/a&gt;&lt;br /&gt;
+* &lt;a href=&#34;https://naes.unr.edu/matocq/&#34;&gt;Marjorie Matocq&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;USGS:&lt;/strong&gt;&lt;br /&gt;
+* &lt;a href=&#34;https://www.usgs.gov/staff-profiles/todd-esque&#34;&gt;Todd Esque&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Stony Brook University:&lt;/strong&gt;&lt;br /&gt;
+* Resit Akcakaya&lt;/p&gt;
+
+&lt;h3 id=&#34;publications&#34;&gt;Publications&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Loope, K., Walden, M.A., Shoemaker, K.T., Hunter, E.A. In prep. Sex determination of hatchling Gopherus tortoises. Journal of Herpetology.&lt;/li&gt;
+&lt;li&gt;Mitchell, C., Friend, D., Hunter, E.A., Nussear, K.E., Phillips, L., Shoemaker, K.T. In prep. Effects of climate on desert tortoise fecundity. Biological Conservation.&lt;/li&gt;
+&lt;li&gt;Walden, M.A., Hunter, E.A., Devan-Song, A., Shoemaker, K.T., In prep. Techniques and challenges in measuring fat reserves in desert tortoises. Journal of Zoo and Wildlife Medicine.&lt;/li&gt;
+&lt;li&gt;Hunter, E.A, Walden, M.A., Shoemaker, K.T. In prep. Sensitivity of gopher tortoise population vital rates to climatic gradients. Biological Conservation.&lt;/li&gt;
+&lt;li&gt;Shoemaker, K.T., Hunter, E.A., Walden, M.A., Nussear, K.E., Esque, T.C. In prep. Spatio-temporal drivers of Mojave Desert Tortoise demography and movements. Ecography.&lt;/li&gt;
+&lt;li&gt;Hunter, E.A., and Rostal, D.C. In review. Effects of fire management on gopher tortoise population dynamics depend on habitat context. Journal of Wildlife Management.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>

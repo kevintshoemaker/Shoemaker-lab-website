@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Movement ecology on Applied Population Ecology Lab at UNR</title>
@@ -7,20 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Mar 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/movement-ecology/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/categories/movement-ecology/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using light-level geolocators to model waterfowl movements and breeding propensity</title>
-      <link>/posts/geolocator_project/</link>
+      <link>/posts/Geolocator_project/</link>
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/geolocator_project/</guid>
-      <description>This project, supported by the Nevada Department of Wildlife and Nevada Waterfowl Association, uses light-level geolocators to understand the annual migratory pathways of waterfowl in the Pacific flyway, and to assess the timing and location of individual breeding activities.
-This work is part of a larger effort to monitor wood duck population dynamics and movements in and around Fallon, NV (Fallon Wood Duck Project, PI Chris Nicolai).
-Delta Waterfowl:
- Dr.</description>
+      <guid>/posts/Geolocator_project/</guid>
+      <description>
+
+&lt;p&gt;This project, supported by the Nevada Department of Wildlife and Nevada Waterfowl Association, uses light-level geolocators to understand the annual migratory pathways of waterfowl in the Pacific flyway, and to assess the timing and location of individual breeding activities.&lt;/p&gt;
+
+&lt;p&gt;This work is part of a larger effort to monitor wood duck population dynamics and movements in and around Fallon, NV (Fallon Wood Duck Project, PI Chris Nicolai).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Delta Waterfowl:&lt;/strong&gt;&lt;br /&gt;
+* &lt;a href=&#34;https://deltawaterfowl.org/staff/&#34;&gt;Dr. Chris Nicolai&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;publications&#34;&gt;Publications&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cook, N.A., Nicolai, C.A., Shoemaker, K.T. In prep. Monitoring waterfowl breeding activities with geolocators: a case study with Wood Ducks (Aix sponsa) in northern Nevada. Journal of Animal Ecology.&lt;/li&gt;
+&lt;li&gt;Cook, N.A., Nicolai, C.A., Shoemaker, K.T. Submitted. Movements and staging locations of Canvasback (Aythya valisineria) in the Pacific Flyway. Journal of Fish and Wildlife Management.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>People on Applied Population Ecology Lab at UNR</title>
@@ -7,9 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/people/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/categories/people/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Dr. Kevin Shoemaker</title>
@@ -17,28 +15,80 @@
       <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/shoemaker/</guid>
-      <description>Dr. Shoemaker is the director of the Applied Population Ecology (A.P.E) lab at the department of Natural Resources &amp;amp; Environmental Science at the University of Nevada, Reno. Broadly, his research couples ecological data (e.g., census records, mark-recapture data, remote sensing data) with simulation models, statistics and machine learning to support wildlife conservation and management.
-Visit his UNR site
-Contact  Kevin T Shoemaker
-Assistant Professor, Natural Resources &amp;amp; Environmental Science</description>
+      <description>
+
+&lt;p&gt;Dr. Shoemaker is the director of the &lt;a href=&#34;http://naes.unr.edu/shoemaker/lab/index.html&#34;&gt;Applied Population Ecology (A.P.E) lab&lt;/a&gt; at the department of Natural Resources &amp;amp; Environmental Science at the University of Nevada, Reno. Broadly, his research couples ecological data (e.g., census records, mark-recapture data, remote sensing data) with simulation models, statistics and machine learning to support wildlife conservation and management.&lt;br /&gt;
+ &lt;a href=&#34;http://naes.unr.edu/shoemaker/&#34;&gt;Visit his UNR site&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;contact&#34;&gt;Contact&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://naes.unr.edu/shoemaker/&#34;&gt;Kevin T Shoemaker&lt;/a&gt;&lt;br /&gt;
+Assistant Professor, Natural Resources &amp;amp; Environmental Science&lt;br /&gt;
+University of Nevada, Reno / mail stop 186&lt;br /&gt;
+1664 N Virginia St, Reno NV 89557&lt;br /&gt;
+kevinshoemaker_at_unr.edu; (775) 682-7449&lt;br /&gt;
+Fleischmann Agriculture room 220E (lab: room 235)&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
     <item>
       <title>Miranda Crowell</title>
-      <link>/posts/crowell/</link>
+      <link>/posts/Crowell/</link>
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/crowell/</guid>
-      <description>Miranda is a PhD student who joined the Shoemaker and Matocq labs in April 2016. She came to University of Nevada, Reno from Washington State University in Pullman, WA where she completed her M.S. with Dr. Lisa Shipley investigating pygmy rabbits&amp;rsquo; foraging ecology. Here, at UNR, Miranda is researching pygmy rabbit distribution across Nevada and southeastern Oregon, focusing on demography, genetic connectivity, and key landscape characteristics that pygmy rabbits require. To learn more about Miranda, the ongoing pygmy rabbit research, and to see updates from the field, visit her website.</description>
+      <guid>/posts/Crowell/</guid>
+      <description>
+
+&lt;p&gt;Miranda is a PhD student who joined the Shoemaker and Matocq labs in April 2016. She came to University of Nevada, Reno from Washington State University in Pullman, WA where she completed her M.S. with Dr. Lisa Shipley investigating pygmy rabbits&amp;rsquo; foraging ecology. Here, at UNR, Miranda is researching pygmy rabbit distribution across Nevada and southeastern Oregon, focusing on demography, genetic connectivity, and key landscape characteristics that pygmy rabbits require. To learn more about Miranda, the ongoing pygmy rabbit research, and to see updates from the field, visit her &lt;a href=&#34;http://mirandamaurine.weebly.com&#34;&gt;website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;publications&#34;&gt;Publications&lt;/h3&gt;
+
+&lt;p&gt;The first chapter from Miranda&amp;rsquo;s dissertation is currently in review at &lt;em&gt;Journal of Mammalogy&lt;/em&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Crowell, M.M., Matocq, M.D., Shoemaker, K.T. Submitted. Ideal trapping conditions for increased trap success of pygmy rabbits (&lt;em&gt;Brachylagus idahoensis&lt;/em&gt;) across the Great Basin. &lt;em&gt;Journal of Mammalogy.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;contact&#34;&gt;Contact&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://mirandamaurine.weebly.com&#34;&gt;Miranda Maurine Crowell&lt;/a&gt;&lt;br /&gt;
+PhD Student, Natural Resources &amp;amp; Environmental Science&lt;br /&gt;
+University of Nevada, Reno / mail stop 186&lt;br /&gt;
+1664 N Virginia St, Reno NV 89557&lt;br /&gt;
+mcrowell_at_unr.edu; (425) 223-9932&lt;br /&gt;
+Fleischmann Agriculture room 235B&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
     <item>
       <title>Margarete Walden</title>
-      <link>/posts/walden/</link>
+      <link>/posts/Walden/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/walden/</guid>
-      <description>Margarete is a Ph.D. student who joined the APE lab and the EECB program in Fall 2016. Her research interests include population ecology, herpetology, conservation biology, terrestrial vertebrate physiology, and species&amp;rsquo; responses to climate change. She completed her M.S. with Dr. Nancy Karraker on the timing of hibernation in Eastern Box Turtles. Margarete&amp;rsquo;s research in the A.P.E. lab centers around understanding the environmental and climatic niche breadth of the Mojave Desert Tortoise (Gopherus agassizii).</description>
+      <guid>/posts/Walden/</guid>
+      <description>
+
+&lt;p&gt;Margarete is a Ph.D. student who joined the APE lab and the EECB program in Fall 2016. Her research interests include population ecology, herpetology, conservation biology, terrestrial vertebrate physiology, and species&amp;rsquo; responses to climate change. She completed her M.S. with &lt;a href=&#34;http://karraker.weebly.com/&#34;&gt;Dr. Nancy Karraker&lt;/a&gt; on the timing of hibernation in Eastern Box Turtles. Margarete&amp;rsquo;s research in the A.P.E. lab centers around understanding the environmental and climatic niche breadth of the Mojave Desert Tortoise (&lt;em&gt;Gopherus agassizii&lt;/em&gt;). Margarete works closely with the Hunter lab at Georgia Southern University, which is performing similar research on the Gopher Tortoise (&lt;em&gt;Gopherus polyphemus&lt;/em&gt;). Margarete is anticipating to complete her dissertation in Spring 2022.&lt;/p&gt;
+
+&lt;h3 id=&#34;contact&#34;&gt;Contact&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Margarete Walden&lt;br /&gt;
+Ph.D. Student, Natural Resources &amp;amp; Environmental Science&lt;br /&gt;
+University of Nevada, Reno / mail stop 186&lt;br /&gt;
+1664 N Virginia St, Reno NV 89557
+Fleischmann Agriculture Room 235D
+mwalden_at_nevada_dot_unr_dot_edu&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;publications&#34;&gt;Publications&lt;/h3&gt;
+
+&lt;p&gt;Walden, M.A., Hunter, E.A., Devan-Song, A., Shoemaker, K.T., In prep. Techniques and challenges in measuring fat reserves in desert tortoises. Journal of Zoo and Wildlife Medicine.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -47,16 +97,46 @@ Assistant Professor, Natural Resources &amp;amp; Environmental Science</descript
       <pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/dcmiles/</guid>
-      <description>Danielle C Miles Danielle is a PhD student in her fourth year as part of the A.P.E. lab. I am working on measuring the broad impacts of pinyon and juniper tree removal in sagebrush ecosystems on bat, bird, reptile, small mammal and insect populations. Besides this ecological study, I am interested in exploring anthropogenic effects on the environment such as climate change and deforestation with specific emphasis on the implications for amphibians.</description>
+      <description>
+
+&lt;h2 id=&#34;danielle-c-miles&#34;&gt;Danielle C Miles&lt;/h2&gt;
+
+&lt;p&gt;Danielle is a PhD student in her fourth year as part of the A.P.E. lab. I am working on measuring the broad impacts of pinyon and juniper tree removal in sagebrush ecosystems on bat, bird, reptile, small mammal and insect populations. Besides this ecological study, I am interested in exploring anthropogenic effects on the environment such as climate change and deforestation with specific emphasis on the implications for amphibians.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;My previous lab: &lt;a href=&#34;https://msu.edu/~plz/people.html&#34;&gt;https://msu.edu/~plz/people.html&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;My linkedin: &lt;a href=&#34;https://www.linkedin.com/in/danielle-miles-79a08489&#34;&gt;https://www.linkedin.com/in/danielle-miles-79a08489&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;My experience in Madagascar: &lt;a href=&#34;http://www.cnn.com/videos/world/2016/02/05/african-voices-the-disruptors-spc-b.cnn&#34;&gt;http://www.cnn.com/videos/world/2016/02/05/african-voices-the-disruptors-spc-b.cnn&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;publications&#34;&gt;Publications&lt;/h3&gt;
+
+&lt;p&gt;Danielle has published three natural history notes (one additional currently in prep) during her time in the A.P.E. lab so far, and will be submitting the first chapter of her dissertation this summer.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Miles, D.C., Burrus, K.R., Burrus, M., and K.T. Shoemaker. &lt;em&gt;In prep.&lt;/em&gt; Foot Drumming in Pinyon Mice, Peromyscus truei. Western North American Naturalist.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;/pdf/Miles et al in press dusky footed woodrat.pdf&#34;&gt;Miles, D.C., Burrus, K., and K.T. Shoemaker. Accepted. First Records of the Dusky-Footed Woodrat, Neotoma fuscipes, in Northern Nevada. Northwestern Naturalist.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;/pdf/Miles et al 2020 tail bifurcation in Plestodon skiltonianus.pdf&#34;&gt;Miles, D.C., Danser, C., and K.T. Shoemaker. 2020. Tail bifurcation in Plestiodon skiltonianus. Herpetology Notes. https://www.biotaxa.org/hn/article/viewFile/57502/60850&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;/pdf/Miles et al 2020 california kangaroo rat in nevada.pdf&#34;&gt;Miles, D.C.,  Burrus, K.R., and K.T. Shoemaker. 2020. First records of California Kangaroo Rats, Dipodomys californicus, in Nevada,&amp;rdquo; Northwestern Naturalist 101(1), 61-63&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
       <title>Dr. Elizabeth Hunter</title>
-      <link>/posts/epost20161003/</link>
+      <link>/posts/Epost20161003/</link>
       <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/posts/epost20161003/</guid>
-      <description>Dr. Elizabeth Hunter was a postdoctoral researcher in the A.P.E. lab from 2016-2018 where she worked on several population modeling projects including: predicting plague outbreaks in black-tailed prairie dogs, using abundance data to predict the effects of competition on songbird responses to climate change, and simulation modeling to inform restoration of giant tortoise populations in the Galapagos Islands. She is now an Assistant Professor of Landscape Ecology at Georgia Southern University.</description>
+      <guid>/posts/Epost20161003/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/EAHwithrabbit2.jpg&#34; alt=&#34;Elizabeth Hunter&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dr. Elizabeth Hunter was a postdoctoral researcher in the A.P.E. lab from 2016-2018 where she worked on several population modeling projects including: predicting plague outbreaks in black-tailed prairie dogs, using abundance data to predict the effects of competition on songbird responses to climate change, and simulation modeling to inform restoration of giant tortoise populations in the Galapagos Islands. She is now an Assistant Professor of Landscape Ecology at Georgia Southern University.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://hunterlab.weebly.com/&#34;&gt;Click here to visit the Hunter lab webpage&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>
