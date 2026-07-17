@@ -1,6 +1,6 @@
 +++
 title = "About the Applied Population Ecology (A.P.E.) Lab"
-date = "2020-04-09"
+date = "2026-07-17"
 +++
 
 ![](/img/PJ2.JPG)
