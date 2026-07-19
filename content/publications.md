@@ -1,0 +1,131 @@
++++
+title = "Publications"
+description = "Publications by the Applied Population Ecology (A.P.E.) Lab"
+ShowToc = true
+TocOpen = false
++++
+
+## Accepted / In Press
+
+- Goldman, M.R., Shoemaker, K.T., Jacobson, E.K., Thomas, L., Morris, C.D., Waitland, S., Duck, C.D., Russell, D.J.F. Accepted. A Bayesian state-space model for estimating pup production in an asynchronous breeder: the grey seal (*Halichoerus grypus*). *Royal Society Open Science*.
+
+## 2026
+
+- Sergeyev, M., Barrile, G.M., Augustine, D.J., Porensky, L.M., Duchardt, C.J., Shoemaker, K.T., Hartway, C.R., Davidson, A.D. PDOG MAPR: a decision support tool to inform management of prairie dog ecosystems. *Rangeland Ecology and Management* 108:1-12. https://doi.org/10.1016/j.rama.2026.04.010 [[PDF]](/pdf/Sergeyev%20et%20al%202026%20PDOG%20MAPR.pdf)
+- Hromada, S.J., Folt, B., Shoemaker, K.T., Standen, M., Parsons, A., Allison, L.J., Dougherty, J., Drake, K.K., Esque, T.C., Walden, M.A., Freilich, J., Lovich, J.E., McLuckie, A.M., Mitchell, C.I., Vamstad, M.S., Vandergast, A.G., Hunter, E.A., Nussear, K.E., Dickson, B.G. 2026. An integrated model improves inferences about survival in the Mojave desert tortoise. *Endangered Species Research* 59:1-19. https://doi.org/10.3354/esr01468 [[PDF]](/pdf/Hromada%20et%20al%20Mojave%20Desert%20Tortoise%20survival.pdf)
+
+## 2025
+
+- Shoemaker, K.T., Reich, H.E., Williams, P.J., Osterhout, M.J., Vasquez, J.P., Beckmann, J.P., Lackey, C.W., Stewart, K.M. 2025. Late season frosts and changing snowpack may exacerbate human-bear conflicts. *Ecosphere*. https://doi.org/10.1002/ecs2.70379 [[PDF]](/pdf/Ecosphere%20-%202025%20-%20Shoemaker%20-%20Late%20season%20frosts%20and%20changing%20snowpack%20may%20exacerbate%20human%20bear%20conflicts.pdf) — [press coverage](https://www.unr.edu/nevada-today/news/2025/bear-climate-research)
+- Shoemaker, K.T., Loope, K.J. 2025. We need better ways to re-evaluate conservation policies when they're founded on flawed research. *Proceedings of the National Academy of Sciences*. https://www.pnas.org/doi/10.1073/pnas.2426166122 [[PDF]](/pdf/shoemaker-loope-we-need-better-ways-to-re-evaluate-conservation-policies-when-they-re-founded-on-flawed-research.pdf)
+- Borokini, I.T., France, M.D., Harmon, D., Shoemaker, K.T., Weisberg, P.J., Peacock, M.M. 2025. Seed biology and regeneration niche of the threatened cold desert perennial *Ivesia webberi* A. Gray. *Frontiers in Plant Science*. https://doi.org/10.3389/fpls.2025.1568951 [[PDF]](/pdf/Borokini%20et%20al%202025.pdf)
+- Nagelson, P.B., York, R.A., Shoemaker, K.T., Foster, D.E., Stephens, S.L., and Bisbing, S.M. 2025. Repeated fuel treatments fall short of fire-adapted regeneration objectives in a Sierra Nevada mixed conifer forest, USA. *Ecological Applications*. https://doi.org/10.1002/eap.3075
+
+## 2024
+
+- Loope, K.J., DeSha, J.N., Aresco, M.J., Shoemaker, K.T., Hunter, E.A. 2024. Common-garden experiment reveals outbreeding depression and region-of-origin effects on reproductive success in a frequently translocated tortoise. *Animal Conservation*. https://doi.org/10.1111/acv.12977 [[PDF]](/pdf/Loope%20et%20al.%202024.%20Animal%20Conservation.%20Common-garden%20experiment%20reveals%20outbreeding%20depression%20and%20region-of-origin%20effects.pdf)
+- Macey, S., Myers, A., Tesauro, J., Feil, A., Polanco, K., Clark, J.A., Shoemaker, K.T. 2024. Bog Turtle (*Glyptemys muhlenbergii*) nesting ecology and the efficacy of predator excluders in New York. *Northeastern Naturalist* 31(sp12), G117-G137. https://doi.org/10.1656/045.031.s1232
+- Matocq, M.D., Hunter, E.A., Murphy, P.J. and Shoemaker, K.T. 2024. Asymmetric mate preference and reproductive interference mediate climate-induced changes in mate availability in a small mammal hybrid zone. *Evolution* 78:1818-1830. https://doi.org/10.1093/evolut/qpae110 [[PDF]](/pdf/Matocq%20et%20al.%202024%20woodrat%20mate%20preference%20and%20reproduction.pdf)
+- Loope, K.J., Akçakaya, H.R., Shoemaker, K.T. 2024. Inflated predictions from a flawed model influenced the decision to deny federal protection for the gopher tortoise. *Global Ecology and Conservation*. https://doi.org/10.1016/j.gecco.2024.e03089 [[PDF]](/pdf/Loope%20et%20al%202024%20inflated%20predictions%20from%20a%20flawed%20model%20influenced%20the%20decision%20to%20deny%20federal%20protection%20to%20the%20Gopher%20Tortoise.pdf)
+- McElroy, C.L., Windmiller, B., Berkholtz, J., Wilder, E., Welch, J., Shoemaker, K.T., Kamm, M.D. 2024. Recovery of a Blanding's Turtle Population through Nest Protection and Headstarting. *Northeastern Naturalist*. https://doi.org/10.1656/045.031.s1203 [[PDF]](/pdf/McIlroy%20et%20al%202024%20Blandings%20turtle%20headstarting.pdf)
+- Long, M.E., Stewart, K.M., Shoemaker, K.T., Reich, H., Lackey, C.W., Beckmann, J.P. 2024. Selection of den sites and chronology of denning by black bears in the eastern Sierra Nevada and western Great Basin. *Ecology and Evolution*. https://doi.org/10.1002/ece3.11689 [[PDF]](/pdf/Long%20et%20al.%202024-%20Ecology%20and%20Evolution%20Selection%20of%20den%20sites%20and%20chronology%20of%20denning%20by%20black%20bears%20in%20the%20eastern%20Sierra.pdf)
+- Osterhout, M.J., Blum, M.E., Wakeling, B.F., Schroeder, C.A., Shoemaker, K.T., Brockman, J.C., and Stewart, K.M. 2024. Effects of Large-Scale Gold Mining on Habitat Use and Selection by American Pronghorn. *Science of the Total Environment*. https://doi.org/10.1016/j.scitotenv.2024.170750 [[PDF]](/pdf/Osterhout%20et%20al%202024%20STOTEN%20pronghorn%20and%20mines.pdf)
+
+## 2023
+
+- Walden, M.A., Loope, K.J., Hunter, E.A., Divers, S.J., Comolli, J.R., Esque, T.C., and Shoemaker, K.T. 2023. Testosterone identifies hatchling sex for Mojave desert tortoises (*Gopherus agassizii*). *Scientific Reports*. https://doi.org/10.1038/s41598-023-41677-2 [[PDF]](/pdf/Walden%20et%20al%202023%20hatchling%20sex%20determination%20desert%20tortoise_Sci_Reports.pdf)
+- Dyck, M., Shoemaker, K.T., Dennison, C., and Popescu, V. 2023. Simulated effects of roadkill and harvest on the viability of a recovering bobcat population. *Journal of Wildlife Management*. https://doi.org/10.1002/jwmg.22460 [[PDF]](/pdf/Dyck%20et%20al%202023%20JWM%20-%20Simulated%20effects%20of%20roadkill%20and%20harvest%20on%20the%20viability%20of%20a%20recovering%20bobcat%20population.pdf)
+- Gustin, M.S., Dunham-Cheatham, S.M., Choma, N., Shoemaker, K.T., and Allen, N. 2023. Determining sources of reactive mercury compounds in Reno, Nevada, USA. *Frontiers in Environmental Chemistry*. https://doi.org/10.3389/fenvc.2023.1202957 [[PDF]](/pdf/Gustin%20et%20al.%202023%20Reno%20Mercury.pdf)
+- Goldman, M.R., Shinderman, M., Jeffress, M.R., Rodhouse, T.J., and Shoemaker, K.T. 2023. Integrating multiple sign types to improve occupancy estimation for inconspicuous species. *Ecology and Evolution*. https://doi.org/10.1002/ece3.10019 [[PDF]](/pdf/Goldman%20et%20al.%202023%20Integrating%20multiple%20sign%20types%20to%20improve%20occupancy%20estimation%20for%20inconspicuous.pdf)
+- Dilts, T.E., Zeller, K.A., Cushman, S.A., Larrucea, E.S., Crowell, M.M., Byer, N.W., Shoemaker, K.T., Matocq, M.D. 2023. Pygmy rabbit habitat network reveals threats and opportunities for management and conservation. *Landscape Ecology*. https://doi.org/10.1007/s10980-023-01672-4 [[PDF]](/pdf/Dilts%20Zeller%20et%20al%202023%20pygmy%20rabbit%20habitat%20connectivity.pdf)
+- Crowell, M.M., LaHue, N., Heath, E., Shoemaker, K.T., and Matocq, M.D. 2023. Detection of Rabbit Hemorrhagic Disease Virus 2 in the Pygmy Rabbit (*Brachylagus idahoensis*) in Nevada, USA. *Journal of Wildlife Diseases*. https://doi.org/10.7589/JWD-D-22-00067 [[PDF]](/pdf/Crowell%20et%20al%202023%20RHDV%20in%20pygmy%20rabbit%20populations%20in%20Nevada.pdf)
+- Dilts, T.E., Blum, M., Shoemaker, K.T., Weisberg, P.J., Stewart, K. 2023. Improved topographic ruggedness indices more accurately model fine-scale ecological patterns. *Landscape Ecology*. https://doi.org/10.1007/s10980-023-01646-6 [[PDF]](/pdf/Dilts%20et%20al%202023%20Improved%20topographic%20ruggedness%20indices%20-%20Landscape%20Ecology.pdf)
+- Blum, M.E., Stewart, K.M., Shoemaker, K.T., Wakeling, B., Dilts, T.E., Bennett, J.R., Cox, M., Sullivan, B.W., Bleich, V. 2023. Changes in selection of resources with reproductive state in a montane ungulate. *Movement Ecology* 11:20. https://doi.org/10.1186/s40462-023-00378-1 [[PDF]](/pdf/Blum%20et%20al%202023%20bighorn%20sheet%20resource%20selection%20changes%20after%20parturition.pdf)
+- Barrile, G.M., Augustine, D.J., Porensky, L.M., Duchardt, C.J., Shoemaker, K.T., Hartway, C.R., Derner, J.D., Hunter, E.A., and Davidson, A.D. 2023. A big data-model integration approach for predicting epizootics and population recovery in a keystone species. *Ecological Applications*. https://doi.org/10.1002/eap.2827 [[PDF]](/pdf/Barrile%20et%20al%202023%20Ecological%20Applications%20-%20A%20big%20data%20model%20integration%20approach%20for%20predicting%20epizootics%20and%20population.pdf)
+- Blum, M.E., Stewart, K.M., Cox, M., Shoemaker, K.T., Bennett, J.R., Sullivan, B.W., Wakeling, B.F., and Bleich, V.C. 2023. Variation in diet of desert bighorn sheep around parturition: tradeoffs associated with parturition. *Frontiers in Ecology and Evolution* 10, 1293. https://doi.org/10.3389/fevo.2022.1071771
+
+## 2022
+
+- Loope, K.J., Rostal, D.C., Walden, M.A., Shoemaker, K.T., and Hunter, E.A. 2022. A comparison of non-surgical methods for sexing young gopher tortoises (*Gopherus polyphemus*). *PeerJ* 10:e13599. https://doi.org/10.7717/peerj.13599 [[PDF]](/pdf/Loope%20et%20al%202022%20sexing%20young%20gopher%20tortoises.pdf)
+- Walden, M.A., Jania, R., Kinney, M.E., Devan-Song, A., Drake, K.K., Esque, T.C., and Shoemaker, K.T. 2022. Computed tomography for measuring body fat reserves in the threatened Mojave Desert Tortoise (*Gopherus agassizii*). *Journal of Zoo and Wildlife Medicine* 54:412-423. https://doi.org/10.1638/2020-0168 [[PDF]](/pdf/Walden%20et%20al%202022%20Desert%20Tortoise%20CT%20fat%20storage.pdf)
+
+## 2021
+
+- Reynolds, D.S., Shoemaker, K.T., von Oettingen, S., Nager, S., Veilleaux, J.P. and Moosman, P. 2021. Integrating Multiple Survey Techniques to Document a Shifting Bat Community in the Wake of White-nose Syndrome. *Journal of Fish and Wildlife Management*. https://doi.org/10.3996/JFWM-20-043 [[PDF]](/pdf/Reynolds%20et%20al.%202021%20bat%20community%20dynamics.pdf)
+- Byer, N.W., Dilts, T.E., Larrucea, E.S., Crowell, M.M., Shoemaker, K.T., Weisberg, P.J., Matocq, M.D. 2021. Holocene-era landscape conditions affect genetic connectivity in a sagebrush obligate species, the pygmy rabbit (*Brachylagus idahoensis*). *Landscape Ecology*. https://doi.org/10.1007/s10980-021-01328-1 [[PDF]](/pdf/Byer2021_Article_Holocene-eraLandscapeCondition.pdf)
+- Byer, N.W., Holding, M.L., Crowell, M.M., Pierson, T.W., Dilts, T.E., Shoemaker, K.T., and Matocq, M.D. 2021. Adaptive divergence despite low effective population size in a peripherally isolated population of the pygmy rabbit, *Brachylagus idahoensis*. *Molecular Ecology*. https://doi.org/10.1111/mec.16040 [[PDF]](/pdf/Byeretal2021%20molecular%20ecology.pdf)
+- Fordham, D.A., Brown, S.C., Akçakaya, H.R., Brook, B.W., Haythorne, S., Manica, A., Shoemaker, K.T., Austin, J.J., Blonder, B., Rahbek, C., Nogues-Bravo, D. 2021. Process-explicit models reveal pathway to extinction for woolly mammoth using pattern-oriented validation. *Ecology Letters*. https://doi.org/10.1111/ele.13911 [[PDF]](/pdf/Fordham%20et%20al%202021%20mammoth%20extinction.pdf)
+- Cook, N.A., Nicolai, C.A., Shoemaker, K.T. 2021. Inferring movements and staging locations of Canvasback (*Aythya valisineria*) in the Pacific Flyway. *Journal of Fish and Wildlife Management*. https://doi.org/10.3996/JFWM-20-032 [[PDF]](/pdf/Cook%20et%20al%202021%20Canvasback%20movement%20and%20staging%20locations.pdf)
+- Mitchell, C.I., Shoemaker, K.T., Esque, T.C., Vandergast, A.G., Hromada, S.J., Dutcher, K.E., Heaton, J.S., and Nussear, K.E. 2021. Integrating telemetry data at several scales with spatial capture-recapture to improve density estimates for a rare and elusive reptile. *Ecosphere*. https://doi.org/10.1002/ecs2.3689 [[PDF]](/pdf/Mitchell%20et%20al%202021%20integrating%20telemetry%20into%20SCR%20models.pdf)
+- Hughey, L.F., Shoemaker, K.T., Stewart, K.M., McCauley, D.J., Cushman, J.H. 2021. Effects of human-altered landscapes on a reintroduced native ungulate: patterns of resource selection at the rangeland-wildland interface. *Biological Conservation* 257:109086. https://doi.org/10.1016/j.biocon.2021.109086 [[PDF]](/pdf/hughey%20et%20al%202021%20point%20reyes%20elk.pdf)
+- Mitchell, C.I., Friend, D.A., Phillips, L.T., Hunter, E.A., Lovich, J.E., Agha, M., Puffer, S.R., Cummings, K.L., Medica, P.A., Esque, T.C., Nussear, K.E., Shoemaker, K.T. 2021. "Unscrambling" the drivers of egg production in the Mojave desert tortoise: Climate and individual attributes predict reproductive output. *Endangered Species Research* 44:217-230. https://doi.org/10.3354/esr01103
+
+## 2020
+
+- Matthews, S., Mellin, C., Pratchett, M., Shoemaker, K.T. 2020. COTSMod: A spatially explicit metacommunity model for the management of Crown-of-thorns starfish and coral recovery. *Advances in Marine Biology* 87:259-290. Academic Press. https://doi.org/10.1016/bs.amb.2020.09.001
+- Macey, S.K., Vaidya, P.B., Chiu, C., Clark, J.A., and Shoemaker, K.T. 2020. Evidence for Nest-Site Fidelity but not Natal Homing in Bog Turtles (*Glyptemys muhlenbergii*). *Journal of Herpetology*. https://doi.org/10.1670/19-073
+- Crowell, M.M., Matocq, M.D., Shoemaker, K.T. 2020. Ideal trapping conditions for increased trap success of pygmy rabbits (*Brachylagus idahoensis*) across the Great Basin. *Journal of Mammalogy*. https://doi.org/10.1093/jmammal/gyaa114
+- Simmons, J.B., Campbell, T., Jerde, C.L., Chandra, S., Cowan, W., Hogan, Z., Saenz, J., Shoemaker, K.T. 2020. Population dynamics of threatened Lahontan cutthroat trout in Summit Lake. *Scientific Reports*. https://doi.org/10.1038/s41598-020-65992-0 [[PDF]](/pdf/Simmons%20et%20al%20Sci%20Reports%20PROOF%2041598_2020_65992_Author.pdf)
+- Heffelfinger, L.J., Stewart, K.M., Shoemaker, K.T., Darby, N.W., and Bleich, V.C. 2020. Balancing Current and Future Reproductive Investment: Variation in Resource Selection During Stages of Reproduction in a Long-Lived Herbivore. *Frontiers in Ecology and Evolution*. https://doi.org/10.3389/fevo.2020.00163 [[PDF]](/pdf/Heffelfinger%20et%20al%20Frontiers%20in%20Ecol%20and%20Evol%20accepted.PDF)
+- Hunter, E.A., Gibbs, J.P., Cayot, L.J, Tapia, W., Quinzin, M.C., Miller, J.C., Caccone, A., and Shoemaker, K.T. 2020. Seeking compromise across competing goals in conservation translocations: The case of the "extinct" Floreana Island Galapagos giant tortoise. *Journal of Applied Ecology*. https://doi.org/10.1111/1365-2664.13516 [[PDF]](/pdf/Hunter%20et%20al%202019%20seeking%20compromise%20among%20competing%20goals%20--%20floreana%20island%20galapagos%20tortoise.pdf)
+
+## 2019
+
+- Bleich, V.C., Blum, M.E., Holl, S.A., Shoemaker, K.T., Sustaita, D. 2019. Habitat selection by bighorn sheep in a mesic ecosystem: the San Rafael Mountains, California, USA. *California Fish and Game* 105:205-224. [[PDF]](/pdf/Bleich%20et%20al.%202019%20Bighorn%20Sheep%20Habitat%20Selection.pdf)
+- Wakeling, B.F., Van Dellen, A, Shoemaker, K.T., Gritts, M., Tull, J.C., and Stewart, K.M. 2019. The Nature of Diversity: diversity builds resiliency - in the wild and in the workplace - but it isn't easy. *The Wildlife Professional* 13(6):46-49. [[PDF]](/pdf/Wakeling%20et%20al%202019%20Wildlife_Professional_The_Nature_of_Diversity.pdf)
+- Keehn, J.E., Shoemaker, K.T., & Feldman, C.R. 2019. Population-level effects of wind farms on a desert lizard. *The Journal of Wildlife Management* 83:145-157. https://doi.org/10.1002/jwmg.21565 [[PDF]](/pdf/Keehn_et_al-2019-The_Journal_of_Wildlife_Management.pdf)
+- Hall, D.B., Shoemaker, K.T., and Greger, P.D. 2019. Western red-tailed skink (*Plestiodon gilberti rubricaudatus*) distribution and habitat use in southern Nevada, USA. *Herpetological Conservation and Biology* 14:455-469. [[PDF]](/pdf/Hall_et%20al_2019_Red-tailed%20skink%20in%20Southern%20Nevada.pdf)
+- Sullivan, B.W., Nifong, R.L., Nasto, M.K., Alvarez-Clare, S., Dencker, C., Soper, F.M., Shoemaker, K.T., Ishida, F.Y., Zaragoza-Castells, J., Davidson, E.A., Cleveland, C.C. 2019. Biogeochemical recuperation of lowland tropical forest during succession. *Ecology*. https://doi.org/10.1002/ecy.2641 [[PDF]](/pdf/Sullivan%20et%20al%202019%20Ecology.pdf)
+- Petersky, R., Calvin, W., Shoemaker, K.T., Weisberg, P. and Harpold, A. 2019. The sensitivity of snow ephemerality to warming climate across an arid to montane vegetation gradient. *Ecohydrology* 12:e2060. https://doi.org/10.1002/eco.2060 [[PDF]](/pdf/Petersky_et_al-2019-Ecohydrology.pdf)
+
+## 2018
+
+- Shoemaker, K.T., Heffelfinger, L.J., Jackson, N.J., Blum, M.E., Wasley, T., and Stewart, K.M. 2018. A machine-learning approach for extending classical wildlife resource selection analyses. *Ecology and Evolution* 8:3556-3569. https://doi.org/10.1002/ece3.3936 [[PDF]](/pdf/Shoemaker_et_al-2018-Ecology_and_Evolution.pdf)
+- Davidson, A.D., Hunter, E.A., Erz, J., Lightfoot, D.C., McCarthy, A.M., Mueller, J.K., and Shoemaker, K.T. 2018. Reintroducing a keystone burrowing rodent to restore an arid North American grassland: challenges and successes. *Restoration Ecology* 26:909-920. https://doi.org/10.1111/rec.12671 [[PDF]](/pdf/Davidson_et_al-2018-Restoration_Ecology.pdf)
+
+## 2017
+
+- Hunter, E.A., Murphy, P.J., Matocq, M.D., and Shoemaker, K.T. 2017. Differential effects of climate on survival rates drive hybrid zone dynamics and changes in species range limits. *Current Biology* 27:3898-3903. https://doi.org/10.1016/j.cub.2017.11.029 [[PDF]](/pdf/Hunter%20et%20al%202017%20Current%20Biology.pdf)
+- Davidson, A.D., Shoemaker, K.T., Weinstein, B., Costa, G., Brooks, T., Ceballos, G., Rondinini, C., Radeloff, V., and Graham, C. 2017. Geography of current and future global mammal extinction risk. *PLOS ONE* 12(11), e0186934. https://doi.org/10.1371/journal.pone.0186934 [[PDF]](/pdf/Davidson%20et%20al%202017%20Geography%20of%20risk%20for%20mammals.pdf)
+- Che-Castaldo, C., Jenouvrier, S., Youngflesh, C., Shoemaker, K.T., Humphries, G., Lynch, H.J. 2017. Pan-Antarctic analysis reveals the importance of stochastic forcing for Adélie penguins: How noisy is too noisy for adaptive management? *Nature Communications* 8(1), 832. [[PDF]](/pdf/Che-Castaldo%20et%20al%202017%20pan-arctic%20analysis%20of%20adelie%20penguin%20abundance.pdf)
+- Reynolds, D.S., Shoemaker, K.T., von Oettingen, S., Najjar, S. 2017. High Rates of Winter Activity and Arousals in Two New England Bat Species: Implications for a Reduced White-nose Syndrome Impact? *The Northeastern Naturalist* 24(sp7), B188-B208. https://doi.org/10.1656/045.024.s720 [[PDF]](/pdf/Reynolds%20et%20al%202017%20winter%20activity%20in%20two%20species%20of%20new%20england%20bat.pdf)
+- Hileman, E.T., King, R.B., Adamski, J.M., Anton, T.G., Bailey, R.L., Baker, S.J., Johnson, B.D., Johnson, G., Kiel, B.D., Kingsbury, B.A., Kowalski, M.J., Shoemaker, K.T., Lee, Y.M., Lentini, A.M., & Campa III, H. 2017. Climatic and geographic predictors of life history variation in Eastern Massasauga (*Sistrurus catenatus*): A range-wide synthesis. *PLoS ONE* 12(2), e0172011. https://doi.org/10.1371/journal.pone.0172011 [[PDF]](/pdf/Hileman%20et%20al%202017%20life%20history%20variation%20in%20massasauga%20rattlesnake.pdf)
+
+## 2016
+
+- Johnson, B.D., Gibbs, J.P., Bell, T.A., & Shoemaker, K.T. 2016. Manipulation of basking sites for endangered eastern massasauga rattlesnakes. *The Journal of Wildlife Management* 80:803-811. https://doi.org/10.1002/jwmg.21079 [[PDF]](/pdf/Johnson%20et%20al%202016-JWM-%20manipulation%20of%20basking%20sites%20for%20massasaugas.pdf)
+- Johnson, B.D., Gibbs, J.P., Shoemaker, K.T., & Cohen, J.B. 2016. Demography of a Small and Isolated Population of Eastern Massasauga Rattlesnakes (*Sistrurus catenatus*) Threatened by Vegetative Succession. *Journal of Herpetology* 50:534-540. https://doi.org/10.1670/121 [[PDF]](/pdf/Johnson%20et%20al.%202016%20Demography%20of%20a%20small%20population%20of%20massasaugas.pdf)
+- Ryu, H.Y., Shoemaker, K.T., Kneip, E., Pidgeon, A.M., Heglund, P.J., Bateman, B.L., ... & Akçakaya, H.R. 2016. Developing population models with data from marked individuals. *Biological Conservation* 197:190-199. https://doi.org/10.1016/j.biocon.2016.02.031 [[PDF]](/pdf/Ryu_et_al_2016_Developing_Population_Models_from_Marked_Individuals.pdf)
+
+## 2015
+
+- Stanton, J.C., Shoemaker, K.T., Pearson, R.G., & Akçakaya, H.R. 2015. Warning Times for Species Extinctions Due To Climate Change. *Global Change Biology* 21:1066-1077. https://doi.org/10.1111/gcb.12721 [[PDF]](/pdf/Stanton%20et%20al%202014%20Warning%20times%20for%20extinction%20under%20climate%20change_GCB.pdf)
+- Shoemaker, K.T. & Akçakaya, H.R. 2015. Inferring the nature of anthropogenic threats from long-term abundance records. *Conservation Biology* 29:238-249. https://doi.org/10.1111/cobi.12353 [[PDF]](/pdf/Shoemaker%20and%20Akcakaya%202014%20Inferring%20the%20nature%20of%20antrhopogenic%20threats%20from%20long-term%20abundance%20records.pdf)
+
+## 2014
+
+- Gibbs, J.P., Shoemaker, K.T., Hunter, E.A., Cayot, L., & Tapia, W. 2014. Giant Tortoise Reintroduction to Española Island, Galapagos: Demographic Outcomes and Ecosystem Implications. *PLoS ONE*. https://doi.org/10.1371/journal.pone.0110742 [[PDF]](/pdf/Gibbs%20et%20al%202014%20Demography%20of%20Espanola%20Giant%20Tortoise.pdf)
+- Penone, C., Davidson, A.D., Shoemaker, K.T., Graham, C., Di Marco, M., Rondinini, C., Hedges, B., & Costa, G.C. 2014. Imputation of missing data in life-history traits datasets: which approach performs the best? *Methods in Ecology and Evolution* 5:961-970. https://doi.org/10.1111/2041-210X.12232 [[PDF]](/pdf/Penone%20et%20al%202014%20Imputation%20of%20life%20history%20traits_MEE.pdf)
+- Fordham, D.A., Shoemaker, K.T., Schumaker, N.H., Akçakaya, H.R., Clisby, N., & Brook, B.W. 2014. How interactions between animal movement and landscape processes modify local range dynamics and extinction risk. *Biology Letters* 10:20140198. https://doi.org/10.1098/rsbl.2014.0198 [[PDF]](/pdf/Fordham%20et%20al.%202014%20dispersal%20range%20shift%20and%20extinction%20risk.pdf)
+- Davidson, A.D., Friggens, M.T., Shoemaker, K.T., Hayes, C.L., Erz, J., Duran, R. 2014. Population Dynamics of Reintroduced Gunnison's Prairie Dogs in the Southern Portion of their Range. *Journal of Wildlife Management* 78:429-439. https://doi.org/10.1002/jwmg.681 [[PDF]](/pdf/Davidson%20et%20al.%20-%20JWM%202014%20-%20Gunnison%20pdog%20pop%20dynamics_MERGED.pdf)
+- Shoemaker, K.T., Breisch, A.R., Jaycox, J.W., & Gibbs, J.P. 2014. Disambiguating the Minimum Viable Population Concept: Response to Reed and McCoy. *Conservation Biology* 28:871-873. [[PDF]](/pdf/Shoemaker%20et%20al%202014%20disambiguating%20the%20MVP%20concept.pdf)
+- Pearson, R.G., Stanton, J.C., Shoemaker, K.T., Aiello-Lammens, M.E., Ersts, P.J., Horning, N., Fordham, D.A., Raxworthy, C.J., Ryu, H.Y., McNees, J., & Akçakaya, H.R. 2014. Life history and spatial traits predict extinction risk due to climate change. *Nature Climate Change* 4:217-221. https://doi.org/10.1038/nclimate2113 [[PDF]](/pdf/Pearson%20et%20al%202014%20life%20history%20and%20spatial%20traits%20predict%20extinction%20risk%20due%20to%20climate%20change.pdf)
+- Shoemaker, K.T., Lacy, R.C., Verant, M.L., Brook, B.W., Livieri, T.M., Miller, P.S., Fordham, D.A., & Akçakaya, H.R. 2014. Effects of prey metapopulation structure on the viability of black-footed ferrets in plague-impacted landscapes: a metamodelling approach. *Journal of Applied Ecology* 51:735-745. https://doi.org/10.1111/1365-2664.12223 [[PDF]](/pdf/Shoemaker%20et%20al%202014%20Black-footed%20ferrets%20in%20plague-impacted%20landscapes.pdf)
+- Chan, H-K, Shoemaker, K.T. & Karraker, N.E. 2014. Demography of *Quasipaa* frogs in China reveals high vulnerability to widespread harvest pressure. *Biological Conservation* 170:3-9. https://doi.org/10.1016/j.biocon.2013.12.014 [[PDF]](/pdf/Chan%20et%20al%202014%20Quasipaa%20spinosa%20demography%20and%20conservation.pdf)
+
+## 2013
+
+- Shoemaker, K.T., Breisch, A.R., Jaycox, J., and Gibbs, J.P. 2013. Re-examining the minimum viable population concept for long-lived species. *Conservation Biology* 27:542-551. https://doi.org/10.1111/cobi.12028 [[PDF]](/pdf/Shoemaker%20et%20al.%202013%20Reexamining%20the%20minimum%20viable%20population%20concept%20for%20long%20lived%20species.pdf)
+- Shoemaker, K.T., and Gibbs, J.P. 2013. Genetic Connectivity Among Populations of the Threatened Bog Turtle (*Glyptemys muhlenbergii*) and the Need for a Regional Approach to Turtle Conservation. *Copeia* 2013:324-331. https://doi.org/10.1643/OT-12-022 [[PDF]](/pdf/Shoemaker%20and%20Gibbs%202013%20Genetic%20connectivity%20among%20populations%20of%20the%20threatened%20bog%20turtle.pdf)
+
+## 2010
+
+- Shoemaker, K.T., and Gibbs, J.P. 2010. Evaluating basking-habitat deficiency in the threatened eastern massasauga rattlesnake. *Journal of Wildlife Management* 74:504-513. https://doi.org/10.2193/2008-519 [[PDF]](/pdf/Shoemaker%20and%20Gibbs%202010%20JWM%20basking%20site%20limitation%20for%20massasauga%20rattlesnakes.pdf)
+
+## 2009
+
+- Schlaepfer, M.A., Helenbrook, W.D., Searing, K.B., and Shoemaker, K.T. 2009. Assisted colonization: evaluating contrasting management actions (and values) in the face of uncertainty. *Trends in Ecology and Evolution* 24:471-472. https://doi.org/10.1016/j.tree.2009.05.008 [[PDF]](/pdf/Schlaepfer%20et%20al%202009%20Assisted%20colonization-%20evaluating%20contrasting%20management%20actions.pdf)
+
+## Book Chapters
+
+- Shoemaker, K.T., Johnson, G. and Prior, K.A. 2009. Habitat manipulation as a viable conservation strategy. Pp. 221-243 in Mullin, S.J. and Seigel, R.J. (eds.) *Snakes: Applied Ecology and Conservation*. Cornell University Press. [[PDF]](/pdf/Shoemaker%20et%20al_2009_Habitat_Manipulation_final.pdf)

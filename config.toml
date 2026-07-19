@@ -28,14 +28,19 @@ url = "/projects/"
 weight = 3
 
 [[menu.main]]
+name = "Publications"
+url = "/publications/"
+weight = 4
+
+[[menu.main]]
 name = "Tags"
 url = "/tags/"
-weight = 4
+weight = 5
 
 [[menu.main]]
 name = "Archive"
 url = "/archive/"
-weight = 5
+weight = 6
 
 [params]
 description = "Applied Population Ecology Lab at UNR: practical applications of population ecology for wildlife management and conservation"
@@ -80,6 +85,10 @@ url = "people/"
 [[params.profileMode.buttons]]
 name = "Projects"
 url = "projects/"
+
+[[params.profileMode.buttons]]
+name = "Publications"
+url = "publications/"
 
 [[params.profileMode.buttons]]
 name = "Tags"
