@@ -1,173 +1,135 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Applied Population Ecology Lab at UNR</title>
+    <title>Posts on Shoemaker Lab</title>
     <link>/posts/</link>
-    <description>Recent content in Posts on Applied Population Ecology Lab at UNR</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Posts on Shoemaker Lab</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tail bifurcation in Plestiodon skiltonianus</title>
       <link>/posts/bifurcation_paper/</link>
       <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>/posts/bifurcation_paper/</guid>
-      <description>As part of our field research, members of the A.P.E. lab occasionally stumble on a novel observation worthy of a published &amp;lsquo;natural history note&amp;rsquo;. Here, we note the observation of tail bifurcation in the western skink, Plestiodon skiltonianus:
-This is the first publication for UNR undergraduate Chasey Danser (pictured below doing field research)- congratulations Chasey!!
-(Photo credit: Danielle C. Miles)
- [Miles, D.C., Danser, C., and K.T. Shoemaker. 2020. Tail bifurcation in Plestiodon skiltonianus.</description>
+      <description>A new natural history note from the A.P.E. lab!</description>
     </item>
-    
     <item>
       <title>About the Applied Population Ecology (A.P.E.) Lab</title>
       <link>/posts/about/</link>
       <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>/posts/about/</guid>
-      <description>Our mission Our expertise is in population biology, simulation modeling and statistics, and our passion is wildlife conservation. We combine our expertise and passion in creative ways. For example, we have
- Used Bayesian statistics and simulation modeling to assess the conservation status of the bog turtle (Glyptemys muhlenbergii) Modeled the impact of sylvatic plague on prairie dog and black-footed ferret populations. Developed a new statistical approach for assessing the threatening processes underlying wildlife population declines.</description>
+      <description>About the A.P.E. lab</description>
     </item>
-    
     <item>
       <title>Dr. Kevin Shoemaker</title>
       <link>/posts/shoemaker/</link>
       <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>/posts/shoemaker/</guid>
-      <description>Dr. Shoemaker is the director of the Applied Population Ecology (A.P.E) lab at the department of Natural Resources &amp;amp; Environmental Science at the University of Nevada, Reno. Broadly, his research couples ecological data (e.g., census records, mark-recapture data, remote sensing data) with simulation models, statistics and machine learning to support wildlife conservation and management.
-Visit his UNR site
-Contact  Kevin T Shoemaker
-Assistant Professor, Natural Resources &amp;amp; Environmental Science</description>
+      <description>Assistant professor at UNR</description>
     </item>
-    
     <item>
       <title>Modeling critical habitat breadth for Gopherus tortoises</title>
       <link>/posts/gopherus_project/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>/posts/gopherus_project/</guid>
-      <description>The A.P.E. lab is leading a large, multi-institution collaboration investigating the climate resilience of populations of gopher tortoise (Gopherus polyphemus) and Mojave desert tortoise (Gopherus agassizii). In this project, funded by the Department of Defense (SERDP program), we are building models of tortoise vital rates (age-structured survival, fecundity) as functions of environmental and climatic covariates and simultaneously assessing for evidence of local behavioral and physiological adaptations. We are then using these models to quantify the range of environmental change that populations can withstand in situ without the need for natural selection or long-distance movement to more suitable habitats.</description>
+      <description>A multi-year, multi-institution collaboration</description>
     </item>
-    
     <item>
       <title>Using light-level geolocators to model waterfowl movements and breeding propensity</title>
       <link>/posts/geolocator_project/</link>
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>/posts/geolocator_project/</guid>
-      <description>This project, supported by the Nevada Department of Wildlife and Nevada Waterfowl Association, uses light-level geolocators to understand the annual migratory pathways of waterfowl in the Pacific flyway, and to assess the timing and location of individual breeding activities.
-This work is part of a larger effort to monitor wood duck population dynamics and movements in and around Fallon, NV (Fallon Wood Duck Project, PI Chris Nicolai).
-Delta Waterfowl:
- Dr.</description>
+      <description>&lt;p&gt;This project, supported by the Nevada Department of Wildlife and Nevada Waterfowl Association, uses light-level geolocators to understand the annual migratory pathways of waterfowl in the Pacific flyway, and to assess the timing and location of individual breeding activities.&lt;/p&gt;
+&lt;p&gt;This work is part of a larger effort to monitor wood duck population dynamics and movements in and around Fallon, NV (Fallon Wood Duck Project, PI Chris Nicolai).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Delta Waterfowl:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://deltawaterfowl.org/staff/&#34; target=&#34;_blank&#34;&gt;Dr. Chris Nicolai&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;publications&#34;&gt;Publications&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Cook, N.A., Nicolai, C.A., Shoemaker, K.T. In prep. Monitoring waterfowl breeding activities with geolocators: a case study with Wood Ducks (Aix sponsa) in northern Nevada. Journal of Animal Ecology.&lt;/li&gt;
+&lt;li&gt;Cook, N.A., Nicolai, C.A., Shoemaker, K.T. Submitted. Movements and staging locations of Canvasback (Aythya valisineria) in the Pacific Flyway. Journal of Fish and Wildlife Management.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Conservation of bog turtle metapopulations in the eastern USA</title>
       <link>/posts/bog_turtles/</link>
       <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>/posts/bog_turtles/</guid>
-      <description>Dr. Shoemaker&amp;rsquo;s PhD dissertation focused on the conservation of bog turtles (Glyptemys muhlenbergii) in New York and Massachusetts. Building upon an existing capture-recapture dataset, he estimated population vital rates and abundance of these turtles in small wetlands in eastern New York (Dutchess County) and assessed for evidence of dispersal within a complex of multiple neighboring wetlands. His work also used microsatellite genotypes to further assess gene flow within these wetland complexes.</description>
+      <description>&lt;p&gt;Dr. Shoemaker&amp;rsquo;s PhD dissertation focused on the conservation of bog turtles (&lt;em&gt;Glyptemys muhlenbergii&lt;/em&gt;) in New York and Massachusetts. Building upon an existing capture-recapture dataset, he estimated population vital rates and abundance of these turtles in small wetlands in eastern New York (Dutchess County) and assessed for evidence of dispersal within a complex of multiple neighboring wetlands. His work also used microsatellite genotypes to further assess gene flow within these wetland complexes.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Simulation modeling to support restoration of extinct Galapagos giant tortoise populations</title>
       <link>/posts/galaptort_project/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
-      
       <guid>/posts/galaptort_project/</guid>
-      <description>In the 19th century, populations of giant tortoises in the Galapagos Islands were decimated by whalers and pirates, who kept and killed tortoises on their ships as a resilient source of fresh meat for long ocean voyages. Particularly hard-hit were &amp;ldquo;saddlebacked&amp;rdquo; species that inhabited the islands&amp;rsquo; arid lowlands closer to the coasts. Of the five saddlebacked species, two have been declared extinct: Chelonoidis elephantopus from Floreana Island and C. abingdonii from Pinta Island (the latter only recently declared extinct in 2012 with the death of the Lonesome George).</description>
+      <description>&lt;p&gt;In the 19th century, populations of giant tortoises in the Galapagos Islands were decimated by whalers and pirates, who kept and killed tortoises on their ships as a resilient source of fresh meat for long ocean voyages. Particularly hard-hit were &amp;ldquo;saddlebacked&amp;rdquo; species that inhabited the islands&amp;rsquo; arid lowlands closer to the coasts.  Of the five saddlebacked species, two have been declared extinct: &lt;em&gt;Chelonoidis elephantopus&lt;/em&gt; from Floreana Island and &lt;em&gt;C. abingdonii&lt;/em&gt; from Pinta Island (the latter only recently declared extinct in 2012 with the death of the Lonesome George).  However, &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S0960982211013765&#34; target=&#34;_blank&#34;&gt;geneticists have recently discovered&lt;/a&gt; that, through the translocating behaviors of the very same sailors, the &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S000632071200434X&#34; target=&#34;_blank&#34;&gt;genotypes of these extinct species still exist&lt;/a&gt; within individuals of mixed ancestry on Wolf Volcano on Isabela Island.  An expedition in 2015 recovered some of these mixed ancestry tortoises and brought them into captivity with the hope of starting a captive breeding program to restore tortoise populations on Floreana and Pinta Islands that represent the original genotype of the native species.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Miranda Crowell</title>
       <link>/posts/crowell/</link>
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
-      
       <guid>/posts/crowell/</guid>
-      <description>Miranda is a PhD student who joined the Shoemaker and Matocq labs in April 2016. She came to University of Nevada, Reno from Washington State University in Pullman, WA where she completed her M.S. with Dr. Lisa Shipley investigating pygmy rabbits&amp;rsquo; foraging ecology. Here, at UNR, Miranda is researching pygmy rabbit distribution across Nevada and southeastern Oregon, focusing on demography, genetic connectivity, and key landscape characteristics that pygmy rabbits require. To learn more about Miranda, the ongoing pygmy rabbit research, and to see updates from the field, visit her website.</description>
+      <description>PhD Candidate at University of Nevada, Reno</description>
     </item>
-    
     <item>
       <title>Understanding the conservation status and habitat needs of the pygmy rabbit</title>
       <link>/posts/pygmyrabbit_project/</link>
       <pubDate>Fri, 17 Jan 2020 00:00:00 +0000</pubDate>
-      
       <guid>/posts/pygmyrabbit_project/</guid>
-      <description>The A.P.E. lab is part of a larger team at UNR investigating the population genetics and demography of the pygmy rabbit (Brachylagus idahoensis) in the Great Basin.
-To stay up to date on the pygmy rabbit project, led by APE lab PhD student Miranda Crowell, check out her website
-UNR collaborators:
- Marjorie Matocq Peter Weisberg and Tom Dilts Jim Sedinger  Other collaborators:
- Sheldon and Hart National Wildlife Refuges, Nevada Department of Wildlife, Great Basin Landscape Conservation Cooperative, Greater Hart-Sheldon Fund  Publications: Crowell, M.</description>
+      <description>Rangewide demography, genetics and habitat mapping</description>
     </item>
-    
     <item>
       <title>Margarete Walden</title>
       <link>/posts/walden/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
-      
       <guid>/posts/walden/</guid>
-      <description>Margarete is a Ph.D. student who joined the APE lab and the EECB program in Fall 2016. Her research interests include population ecology, herpetology, conservation biology, terrestrial vertebrate physiology, and species&amp;rsquo; responses to climate change. She completed her M.S. with Dr. Nancy Karraker on the timing of hibernation in Eastern Box Turtles. Margarete&amp;rsquo;s research in the A.P.E. lab centers around understanding the environmental and climatic niche breadth of the Mojave Desert Tortoise (Gopherus agassizii).</description>
+      <description>PhD Candidate at University of Nevada, Reno</description>
     </item>
-    
     <item>
       <title>Danielle C Miles</title>
       <link>/posts/dcmiles/</link>
       <pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>/posts/dcmiles/</guid>
-      <description>Danielle C Miles Danielle is a PhD student in her fourth year as part of the A.P.E. lab. I am working on measuring the broad impacts of pinyon and juniper tree removal in sagebrush ecosystems on bat, bird, reptile, small mammal and insect populations. Besides this ecological study, I am interested in exploring anthropogenic effects on the environment such as climate change and deforestation with specific emphasis on the implications for amphibians.</description>
+      <description>Doctoral Candidate - Ecology, Evolution, and Conservation Biology</description>
     </item>
-    
     <item>
       <title>Modeling population growth of COTS in Australia&#39;s Great Barrier Reef</title>
       <link>/posts/cotsproject/</link>
       <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>/posts/cotsproject/</guid>
-      <description>Crown-of-Thorns Starfish project Crown-of-Thorns Starfish (C.O.T.S.; Acanthaster planci) is a native predator of coral. On occasion, C.O.T.S. populations &amp;ldquo;explode&amp;rdquo;, and these outbreaks represent one of the major recognized threats to the Great Barrier Reef in Australia (accounting for 42% of coral loss over the past 30 years). The A.P.E. lab is collaborating with researchers at Australian Institute of Marine Science in Queensland (Sam Matthews and Camille Mellin), James Cook University (Morgan Pratchett) and University of Adelaide (Damien Fordham) to better understand the drivers of C.</description>
+      <description>Crown of thorns starfish project</description>
     </item>
-    
     <item>
       <title>Predictive modeling of plague die-offs in prairie dog colonies</title>
       <link>/posts/predictiveplaguedieoff_project/</link>
       <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
-      
       <guid>/posts/predictiveplaguedieoff_project/</guid>
-      <description>Several published studies have already shown that temperature, precipitation and topography can affect the probability of a die-off event. However, a broader synthesis of datasets from across the BTPD range may enable more accurate prediction of when and where die-offs will occur. The APE lab is leading a large collaborative project to create predictive models of BTPD colony die-offs caused by the plague bacterium. We have acquired colony history data from across the BTPD range and are working on using machine learning techniques to create a model of plague outbreaks that can help managers determine how best to target their anti-plague management activities (such as &amp;ldquo;dusting&amp;rdquo; for fleas and vaccine administration).</description>
+      <description>&lt;p&gt;Several published studies have already shown that temperature, precipitation and topography can affect the probability of a die-off event. However, a broader synthesis of datasets from across the BTPD range may enable more accurate prediction of when and where die-offs will occur. The APE lab is leading a large collaborative project to create predictive models of BTPD colony die-offs caused by the plague bacterium.  We have acquired colony history data from across the BTPD range and are working on using machine learning techniques to create a model of plague outbreaks that can help managers determine how best to target their anti-plague management activities (such as &amp;ldquo;dusting&amp;rdquo; for fleas and vaccine administration).  This model will also help us better understand the selection pressures that could lead to &lt;a href=&#34;/posts/PlagueModeling_project/&#34;&gt;genetic resistance to plague&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Dr. Elizabeth Hunter</title>
       <link>/posts/epost20161003/</link>
       <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
-      
       <guid>/posts/epost20161003/</guid>
-      <description>Dr. Elizabeth Hunter was a postdoctoral researcher in the A.P.E. lab from 2016-2018 where she worked on several population modeling projects including: predicting plague outbreaks in black-tailed prairie dogs, using abundance data to predict the effects of competition on songbird responses to climate change, and simulation modeling to inform restoration of giant tortoise populations in the Galapagos Islands. She is now an Assistant Professor of Landscape Ecology at Georgia Southern University.</description>
+      <description>&lt;p&gt;&lt;img alt=&#34;Elizabeth Hunter&#34; loading=&#34;lazy&#34; src=&#34;/img/EAHwithrabbit2.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Dr. Elizabeth Hunter was a postdoctoral researcher in the A.P.E. lab from 2016-2018 where she worked on several population modeling projects including: predicting plague outbreaks in black-tailed prairie dogs, using abundance data to predict the effects of competition on songbird responses to climate change, and simulation modeling to inform restoration of giant tortoise populations in the Galapagos Islands. She is now an Assistant Professor of Landscape Ecology at Georgia Southern University.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Understanding the potential for widespread plague resistance in prairie dogs</title>
       <link>/posts/plaguemodeling_project/</link>
       <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
-      
       <guid>/posts/plaguemodeling_project/</guid>
-      <description>Prairie dogs are keystone species of North America’s central grasslands, and have experienced dramatic population reductions over the past century due to sylvatic plague, a highly virulent disease introduced to North America ca. 1900. The APE lab is involved in building a novel host-resistance modeling framework to investigate the genetic, demographic and environmental conditions that promote or impede resistance to plague and other similar virulent pathogens in complex and dynamic ecosystems.</description>
+      <description>Modeling host evolution in a dynamic metapopulation</description>
     </item>
-    
     <item>
       <title>Understanding the broader ecological impacts of PJ removal</title>
       <link>/posts/pj_project/</link>
       <pubDate>Wed, 12 Oct 2016 00:00:00 +0000</pubDate>
-      
       <guid>/posts/pj_project/</guid>
-      <description>Investigating the broad ecological impacts of Pinyon and Juniper removal in Nevada Thousands of acres of pinyon and juniper woodlands (PJ) will be removed over the next four years to support targeted wildlife populations, notably Greater sage-grouse. We are investigating the effects of PJ removal on insect communities and the bats and reptile species that rely upon them using a rigorous experimental design. Insects can serve as useful indicators of natural disturbances, provide critical pollination services, and represent a major wildlife food resource for many species, including an impressive diversity of bats and reptiles.</description>
+      <description>Assessing small and large-scale effects on insects, small mammals, herps, birds, and bats</description>
     </item>
-    
   </channel>
 </rss>
