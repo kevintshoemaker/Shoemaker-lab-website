@@ -33,13 +33,13 @@ url = "/publications/"
 weight = 4
 
 [[menu.main]]
-name = "Tags"
-url = "/tags/"
+name = "Teaching"
+url = "/teaching/"
 weight = 5
 
 [[menu.main]]
-name = "Archive"
-url = "/archive/"
+name = "CV"
+url = "/pdf/KTS_fullCV.pdf"
 weight = 6
 
 [params]
@@ -91,12 +91,12 @@ name = "Publications"
 url = "publications/"
 
 [[params.profileMode.buttons]]
-name = "Tags"
-url = "tags/"
+name = "Teaching"
+url = "teaching/"
 
 [[params.profileMode.buttons]]
-name = "Archive"
-url = "archive/"
+name = "CV"
+url = "pdf/KTS_fullCV.pdf"
 
 [[params.socialIcons]]
 name = "email"

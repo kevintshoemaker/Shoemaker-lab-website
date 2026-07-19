@@ -119,5 +119,7 @@
     <loc>//localhost:1313/archive/</loc>
   </url><url>
     <loc>//localhost:1313/publications/</loc>
+  </url><url>
+    <loc>//localhost:1313/teaching/</loc>
   </url>
 </urlset>
