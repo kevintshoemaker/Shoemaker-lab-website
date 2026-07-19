@@ -102,8 +102,8 @@ name = "linkedin"
 url = "https://www.linkedin.com/in/kevin-shoemaker-10a561a"
 
 [[params.socialIcons]]
-name = "twitter"
-url = "https://twitter.com/KevinT_Kevin"
+name = "x"
+url = "https://x.com/KevinT_Kevin"
 
 [[params.socialIcons]]
 name = "facebook"

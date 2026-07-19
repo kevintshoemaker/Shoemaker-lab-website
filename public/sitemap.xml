@@ -2,102 +2,120 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/about/</loc>
-    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+    <loc>//localhost:1313/about/</loc>
+    <lastmod>2026-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2026-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/great-basin-ecosystem/</loc>
+    <loc>//localhost:1313/projects/mojave-tortoise-survival/</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/mojave-desert-ecosystem/</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/population-modeling/</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/projects/</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/wildlife-management/</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/climate-change/</loc>
+    <lastmod>2025-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/projects/black-bear-frost-snowpack/</loc>
+    <lastmod>2025-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/projects/reevaluating-conservation-policy/</loc>
+    <lastmod>2025-05-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/projects/tortoise-outbreeding-depression/</loc>
+    <lastmod>2024-08-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/projects/woodrat-hybrid-zone/</loc>
+    <lastmod>2024-08-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/great-basin-ecosystem/</loc>
+    <lastmod>2024-08-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/projects/gopher-tortoise-flawed-model/</loc>
+    <lastmod>2024-07-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/herpetology/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/herpetology/</loc>
+    <loc>//localhost:1313/projects/bifurcation/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/population-modeling/</loc>
-    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/projects/</loc>
-    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/projects/bifurcation/</loc>
-    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/a.p.e.-lab/</loc>
+    <loc>//localhost:1313/tags/a.p.e.-lab/</loc>
     <lastmod>2020-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/people/shoemaker/</loc>
+    <loc>//localhost:1313/people/shoemaker/</loc>
     <lastmod>2020-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/people/</loc>
+    <loc>//localhost:1313/people/</loc>
     <lastmod>2020-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/climate-change/</loc>
+    <loc>//localhost:1313/projects/gopherus/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/projects/gopherus/</loc>
-    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/mojave-desert-ecosystem/</loc>
-    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/movement-ecology/</loc>
+    <loc>//localhost:1313/tags/movement-ecology/</loc>
     <lastmod>2020-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/projects/geolocator/</loc>
+    <loc>//localhost:1313/projects/geolocator/</loc>
     <lastmod>2020-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/projects/bog-turtles/</loc>
+    <loc>//localhost:1313/projects/bog-turtles/</loc>
     <lastmod>2020-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/galapagos/</loc>
+    <loc>//localhost:1313/tags/galapagos/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/projects/galapagos-tortoise/</loc>
+    <loc>//localhost:1313/projects/galapagos-tortoise/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/tortoises/</loc>
+    <loc>//localhost:1313/tags/tortoises/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/wildlife-management/</loc>
-    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/people/crowell/</loc>
+    <loc>//localhost:1313/people/crowell/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/projects/pygmy-rabbit/</loc>
+    <loc>//localhost:1313/projects/pygmy-rabbit/</loc>
     <lastmod>2020-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/people/walden/</loc>
+    <loc>//localhost:1313/people/walden/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/people/dcmiles/</loc>
+    <loc>//localhost:1313/people/dcmiles/</loc>
     <lastmod>2019-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/projects/cots/</loc>
+    <loc>//localhost:1313/projects/cots/</loc>
     <lastmod>2019-09-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/central-grasslands-ecosystem/</loc>
+    <loc>//localhost:1313/tags/central-grasslands-ecosystem/</loc>
     <lastmod>2018-10-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/prairie-dogs/</loc>
+    <loc>//localhost:1313/tags/prairie-dogs/</loc>
     <lastmod>2018-10-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/projects/plague-dieoff-prediction/</loc>
+    <loc>//localhost:1313/projects/plague-dieoff-prediction/</loc>
     <lastmod>2018-10-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/people/hunter/</loc>
+    <loc>//localhost:1313/people/hunter/</loc>
     <lastmod>2018-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/projects/plague-modeling/</loc>
+    <loc>//localhost:1313/projects/plague-modeling/</loc>
     <lastmod>2018-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/projects/pj-removal/</loc>
+    <loc>//localhost:1313/projects/pj-removal/</loc>
     <lastmod>2016-10-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/archive/</loc>
+    <loc>//localhost:1313/archive/</loc>
   </url>
 </urlset>

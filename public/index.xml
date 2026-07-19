@@ -6,8 +6,50 @@
     <description>Recent content on Shoemaker Lab</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An integrated model improves inferences about survival in the Mojave desert tortoise</title>
+      <link>//localhost:1313/projects/mojave-tortoise-survival/</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/mojave-tortoise-survival/</guid>
+      <description>Combining mark-recapture and telemetry data reveals survival patterns missed by either data source alone</description>
+    </item>
+    <item>
+      <title>Late season frosts and changing snowpack may exacerbate human-bear conflicts</title>
+      <link>//localhost:1313/projects/black-bear-frost-snowpack/</link>
+      <pubDate>Wed, 27 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/black-bear-frost-snowpack/</guid>
+      <description>Late frosts and low snowpack are linked to higher human-black bear conflict in northwestern Nevada</description>
+    </item>
+    <item>
+      <title>We need better ways to re-evaluate conservation policies when they&#39;re founded on flawed research</title>
+      <link>//localhost:1313/projects/reevaluating-conservation-policy/</link>
+      <pubDate>Wed, 07 May 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/reevaluating-conservation-policy/</guid>
+      <description>An opinion piece on why flawed models are hard to correct once they&amp;#39;ve shaped conservation policy</description>
+    </item>
+    <item>
+      <title>Common-garden experiment reveals outbreeding depression and region-of-origin effects in a frequently translocated tortoise</title>
+      <link>//localhost:1313/projects/tortoise-outbreeding-depression/</link>
+      <pubDate>Tue, 13 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/tortoise-outbreeding-depression/</guid>
+      <description>Hatching success in translocated gopher tortoises declines with parental genetic distance and depends on mothers&amp;#39; region of origin</description>
+    </item>
+    <item>
+      <title>Asymmetric mate preference and reproductive interference mediate climate-induced changes in mate availability in a small mammal hybrid zone</title>
+      <link>//localhost:1313/projects/woodrat-hybrid-zone/</link>
+      <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/woodrat-hybrid-zone/</guid>
+      <description>Drought-driven mortality is reshaping mate availability and hybridization rates in a woodrat hybrid zone</description>
+    </item>
+    <item>
+      <title>Inflated predictions from a flawed model influenced the decision to deny federal protection to the gopher tortoise</title>
+      <link>//localhost:1313/projects/gopher-tortoise-flawed-model/</link>
+      <pubDate>Tue, 16 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/gopher-tortoise-flawed-model/</guid>
+      <description>A coding error in a widely-cited population model overstated the resilience of gopher tortoise populations</description>
+    </item>
     <item>
       <title>Tail bifurcation in Plestiodon skiltonianus</title>
       <link>//localhost:1313/projects/bifurcation/</link>
