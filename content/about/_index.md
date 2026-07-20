@@ -10,11 +10,14 @@ Our expertise is in population ecology, simulation modeling and statistics, and 
 - Built Population Viability Analysis (PVA) models to assess the conservation status and rank management options for turtles and tortoises, including the desert tortoise, gopher tortoise, and bog turtle.
 - Used capture-mark-recapture and telemetry data to model survival for desert tortoise, red knot, and many other species.   
 - Developed landscape scale resource selection function (RSF) models to assess habitat use intensity for mule deer, elk, and bighorn sheep- in collaboration with the Stewart lab at UNR.
+- Examined the demographic drivers of shifting range margins at a woodrat hybrid zone in CA (in collaboration with Matocq lab at UNR). 
 - Modeled the impact of sylvatic plague on prairie dog and black-footed ferret populations.
 - Assessed the success of a long-term effort to reintroduce tortoises to Espanola island in Galapagos.
 
 ## Who we are
-The A.P.E. lab currently includes [Dr. Kevin Shoemaker](https://www.unr.edu/nres/people/shoemaker-kevin) (Associate Professor, NRES Department, UNR), PhD student Chris Smith, and MS student Colton Irons. Former A.P.E. lab members include Dr. [Elizabeth Hunter](/people/hunter/) (former postdoc; now Assistant Unit Leader at the Virginia Cooperative Fish and Wildlife Research Unit), [Danielle Miles](/people/dcmiles/), [Dr. Margarete Walden](/people/walden/) and [Dr. Miranda Crowell](/people/crowell/) and Nathan Cook (completed M.S. in 2018; now Biologist with the State of Washington).    
+The A.P.E. lab currently includes [Dr. Kevin Shoemaker](https://www.unr.edu/nres/people/shoemaker-kevin) (Associate Professor, NRES Department, UNR), PhD student Chris Smith, and MS student Colton Irons. 
+
+Former A.P.E. lab members include Dr. [Elizabeth Hunter](/people/hunter/) (former postdoc; now Assistant Unit Leader at the Virginia Cooperative Fish and Wildlife Research Unit), [Danielle Miles](/people/dcmiles/), [Dr. Margarete Walden](/people/walden/) and [Dr. Miranda Crowell](/people/crowell/) and Nathan Cook (completed M.S. in 2018; now Biologist with the State of Washington).    
 
 ![](/img/ApeLabPeople1.jpg)
 *(clockwise from top left: Nathan Cook, Miranda Crowell, Margarete Walden, Danielle Miles, Kevin Shoemaker, and Elizabeth Hunter)*

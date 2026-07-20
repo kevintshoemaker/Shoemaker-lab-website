@@ -1,0 +1,44 @@
+{{- define "main" }}
+
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+</header>
+
+{{- if .Content }}
+<div class="post-content">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
+
+{{- $current := where .RegularPages "Params.status" "current" }}
+{{- $former := where .RegularPages "Params.status" "former" }}
+{{- $other := where (where .RegularPages "Params.status" "!=" "current") "Params.status" "!=" "former" }}
+
+<div class="people-list">
+
+{{- with $current }}
+<h2 class="people-group-heading">Current Lab Members</h2>
+{{- range . }}
+{{- partial "people_card.html" . }}
+{{- end }}
+{{- end }}
+
+{{- with $former }}
+<h2 class="people-group-heading">Former Lab Members</h2>
+{{- range . }}
+{{- partial "people_card.html" . }}
+{{- end }}
+{{- end }}
+
+{{- with $other }}
+{{- range . }}
+{{- partial "people_card.html" . }}
+{{- end }}
+{{- end }}
+
+</div>
+
+{{- end }}{{- /* end main */ -}}

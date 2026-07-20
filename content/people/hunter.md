@@ -4,6 +4,7 @@ author = "Elizabeth Hunter"
 date = "2018-10-22"
 description = ""
 tags = ["A.P.E. Lab"]
+status = "former"
 
 [cover]
 image = "/img/GalapSunsetEAH2.JPG"
