@@ -1,0 +1,4 @@
+.projects-list .entry-cover img {
+    object-fit: contain;
+    background: var(--entry);
+}

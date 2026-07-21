@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status *)",
+      "Bash(pip show *)",
+      "Bash(pip install *)",
+      "Bash(mkdir -p \"/c/Users/KSHOEM~1/AppData/Local/Temp/claude/E--GIT-Shoemaker-lab-website/abf9b542-909b-40f6-998e-35a0a7277569/scratchpad/figs\")",
+      "Read(//c/Users/KSHOEM~1/AppData/Local/Temp/claude/E--GIT-Shoemaker-lab-website/abf9b542-909b-40f6-998e-35a0a7277569/scratchpad/**)",
+      "Bash(pdftoppm -f 12 -l 12 -r 300 -png \"E:/GIT/Shoemaker-lab-website/static/pdf/to_post/Dyck et al 2023 JWM - Simulated effects of roadkill and harvest on the viability of a recovering bobcat population.pdf\" dyck_p12)",
+      "Bash(python -c ' *)",
+      "Bash(cp \"/c/Users/KSHOEM~1/AppData/Local/Temp/claude/E--GIT-Shoemaker-lab-website/abf9b542-909b-40f6-998e-35a0a7277569/scratchpad/figs/dyck_fig1_final.jpg\" \"E:/GIT/Shoemaker-lab-website/static/img/bobcat-ohio-population-trajectories.jpg\" *)",
+      "Bash(pdftoppm -f 9 -l 9 -r 300 -png \"E:/GIT/Shoemaker-lab-website/static/pdf/to_post/Goldman et al. 2023 Integrating multiple sign types to improve occupancy estimation for inconspicuous.pdf\" goldman_p9)",
+      "Bash(cp \"/c/Users/KSHOEM~1/AppData/Local/Temp/claude/E--GIT-Shoemaker-lab-website/abf9b542-909b-40f6-998e-35a0a7277569/scratchpad/figs/goldman_fig3_final3.jpg\" \"E:/GIT/Shoemaker-lab-website/static/img/pika-occupancy-model-comparison.jpg\")",
+      "Bash(pdftoppm -f 10 -l 10 -r 300 -png \"E:/GIT/Shoemaker-lab-website/static/pdf/to_post/Loope et al 2022 sexing young gopher tortoises.pdf\" loope_p10)",
+      "Bash(cp \"/c/Users/KSHOEM~1/AppData/Local/Temp/claude/E--GIT-Shoemaker-lab-website/abf9b542-909b-40f6-998e-35a0a7277569/scratchpad/figs/loope_fig2_final.jpg\" \"E:/GIT/Shoemaker-lab-website/static/img/gopher-tortoise-sexing-testosterone.jpg\")",
+      "Bash(pdftoppm -f 12 -l 12 -r 300 -png \"E:/GIT/Shoemaker-lab-website/static/pdf/to_post/McIlroy et al 2024 Blandings turtle headstarting.pdf\" mcilroy_p12)",
+      "Bash(cp \"/c/Users/KSHOEM~1/AppData/Local/Temp/claude/E--GIT-Shoemaker-lab-website/abf9b542-909b-40f6-998e-35a0a7277569/scratchpad/figs/mcilroy_fig4_crop.jpg\" \"E:/GIT/Shoemaker-lab-website/static/img/blandings-turtle-population-recovery.jpg\")",
+      "Bash(pdftoppm -f 10 -l 10 -r 300 -png \"E:/GIT/Shoemaker-lab-website/static/pdf/to_post/Mitchell et al 2021 unscrambling the drivers of egg production in desert tortoise.pdf\" mitchell_egg_p10)",
+      "Bash(cp \"/c/Users/KSHOEM~1/AppData/Local/Temp/claude/E--GIT-Shoemaker-lab-website/abf9b542-909b-40f6-998e-35a0a7277569/scratchpad/figs/mitchell_egg_fig4_crop.jpg\" \"E:/GIT/Shoemaker-lab-website/static/img/desert-tortoise-egg-production-projections.jpg\")",
+      "WebFetch(domain:doi.org)",
+      "Bash(pdftoppm -f 14 -l 14 -r 300 -png \"E:/GIT/Shoemaker-lab-website/static/pdf/to_post/Macey et al 2024 bog turtle predator excluders.pdf\" macey_p14)",
+      "Bash(cp \"/c/Users/KSHOEM~1/AppData/Local/Temp/claude/E--GIT-Shoemaker-lab-website/abf9b542-909b-40f6-998e-35a0a7277569/scratchpad/figs/macey_fig4_final.jpg\" \"E:/GIT/Shoemaker-lab-website/static/img/bog-turtle-predator-excluder-results.jpg\")",
+      "WebFetch(domain:api.crossref.org)"
+    ]
+  }
+}
