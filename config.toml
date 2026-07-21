@@ -39,7 +39,7 @@ weight = 5
 
 [[menu.main]]
 name = "CV"
-url = "/pdf/KTS_fullCV.pdf"
+url = "/pdf/Shoemaker_CV_full.pdf"
 weight = 6
 
 [params]
@@ -96,7 +96,7 @@ url = "teaching/"
 
 [[params.profileMode.buttons]]
 name = "CV"
-url = "pdf/KTS_fullCV.pdf"
+url = "pdf/Shoemaker_CV_full.pdf"
 
 [[params.socialIcons]]
 name = "email"
