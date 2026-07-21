@@ -7,7 +7,7 @@ tags = ["A.P.E. Lab"]
 status = "former"
 
 [cover]
-image = "/img/GalapSunsetEAH2.JPG"
+image = "/img/GalapSunsetEAH2.jpg"
 alt = ""
 relative = false
 +++
